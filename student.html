@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#f3eee4" />
+    <title>BEAM LAB · 学生体验页</title>
+    <link rel="stylesheet" href="./static/styles.css?v=v6-oct01-m4" />
+    <link rel="stylesheet" href="./static/displacement.css?v=2" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" id="brandLink" href="" aria-label="刷新学生体验页">
+        <span class="brand-mark">B</span>
+        <span><strong>BEAM LAB</strong><small>E—A 数智判验实验场</small></span>
+      </a>
+      <div class="session-pill" id="sessionPill">正在进入课堂…</div>
+    </header>
+    <main id="app" aria-live="polite"></main>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="./static/compat.js?v=v5-sep27-5"></script>
+    <script src="./static/offline-config.js"></script>
+    <script>
+      window.BEAM_OFFLINE = { role: "student", assetBase: "./static", selfGuided: true };
+    </script>
+    <script src="./static/offline-data.js?v=v5-sep27-5"></script>
+    <!-- 版面调试保存的配置（由 static/layout-tuner.js 读取） -->
+    <script>document.write('<script src="./static/layout-overrides.js?t=' + Date.now() + '"><\/script>');</script>
+    <script src="./static/displacement.js?v=3"></script>
+    <script src="./static/app.js?v=disp-shell-20261015-1"></script>
+    <script src="./static/typography.js?v=v5-sep27-5"></script>
+    <!-- 版面：套用保存的版面（手机上先继承教师版）；手机版面在 student-edit.html 里调 -->
+    <script src="./static/layout-tuner.js?v=tuner-disp-20261015-2"></script>
+  </body>
+</html>
+
+
+
+
