@@ -1,0 +1,785 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg:svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25cm" height="12.7cm" viewBox="-82 -112 944.58242 480.20338" version="1.1" id="svg307" sodipodi:docname="BEAM-02-A1-3-(1)-L-M12.svg" inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)" inkscape:export-filename="BEAM-02-A1-2.png" inkscape:export-xdpi="96" inkscape:export-ydpi="96">
+  <sodipodi:namedview id="namedview307" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.6207627" inkscape:cx="480.05462" inkscape:cy="324.60069" inkscape:window-width="1842" inkscape:window-height="1057" inkscape:window-x="1150" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer2" inkscape:document-units="cm" />
+  <svg:defs id="defs9">
+    <svg:linearGradient id="gr1" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="-72" y2="0">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop1" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop2" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop3" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp2">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr3" gradientUnits="userSpaceOnUse" x1="333.60001" y1="86.400002" x2="474" y2="-54">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop4" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop5" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop6" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp4">
+      <svg:path d="M 333.6,86.4 H 474 V -54 H 333.6 Z" id="path6" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr5" gradientUnits="userSpaceOnUse" x1="420" y1="525.09998" x2="420" y2="586.29999">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop7" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop8" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop9" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp6">
+      <svg:path d="m 301.2,525.1 h 237.6 v 61.2 H 301.2 Z" id="path9" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr1-6" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="-72" y2="0">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop1-5" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop2-7" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop3-8" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp2-8">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-1" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr3-5" gradientUnits="userSpaceOnUse" x1="420" y1="0" x2="492" y2="0">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop4-8" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop5-6" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop6-9" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp4-6">
+      <svg:path d="M 420,79.2 V -79.2 h 72 V 79.2 Z" id="path6-8" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr1-1" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="-72" y2="0">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop1-0" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop2-6" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop3-4" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp2-6">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-9" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr3-51" gradientUnits="userSpaceOnUse" x1="333.60001" y1="86.400002" x2="474" y2="-54">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop4-2" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop5-7" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop6-5" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp4-3">
+      <svg:path d="M 333.6,86.4 H 474 V -54 H 333.6 Z" id="path6-7" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr5-4" gradientUnits="userSpaceOnUse" x1="420" y1="525.09998" x2="420" y2="586.29999">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop7-8" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop8-8" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop9-0" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp6-7">
+      <svg:path d="m 301.2,525.1 h 237.6 v 61.2 H 301.2 Z" id="path9-3" />
+    </svg:clipPath>
+    <svg:marker style="overflow:visible" id="Triangle-2" refX="0" refY="0" orient="auto-start-reverse" inkscape:stockid="Triangle arrow" markerWidth="0.94999999" markerHeight="0.64999998" viewBox="0 0 1 1" inkscape:isstock="true" inkscape:collect="always" preserveAspectRatio="none">
+      <svg:path transform="scale(0.5)" style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt" d="M 5.77,0 -2.88,5 V -5 Z" id="path307-3" />
+    </svg:marker>
+    <svg:marker style="overflow:visible" id="Triangle-2-4" refX="0" refY="0" orient="auto-start-reverse" inkscape:stockid="Triangle arrow" markerWidth="0.94999999" markerHeight="0.64999998" viewBox="0 0 1 1" inkscape:isstock="true" inkscape:collect="always" preserveAspectRatio="none">
+      <svg:path transform="scale(0.5)" style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt" d="M 5.77,0 -2.88,5 V -5 Z" id="path307-3-9" />
+    </svg:marker>
+    <svg:marker style="overflow:visible" id="Triangle-2-4-1" refX="0" refY="0" orient="auto-start-reverse" inkscape:stockid="Triangle arrow" markerWidth="0.94999999" markerHeight="0.64999998" viewBox="0 0 1 1" inkscape:isstock="true" inkscape:collect="always" preserveAspectRatio="none">
+      <svg:path transform="scale(0.5)" style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt" d="M 5.77,0 -2.88,5 V -5 Z" id="path307-3-9-8" />
+    </svg:marker>
+    <svg:linearGradient id="gr1-2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="-96" y2="0">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop1-9" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop2-1" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop3-9" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp2-67">
+      <svg:path d="M 0,-105.6 V 105.6 H -96 V -105.6 Z" id="path3-3" />
+    </svg:clipPath>
+    <svg:clipPath id="cp2-6-1">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-9-9" />
+    </svg:clipPath>
+    <svg:clipPath id="cp6-7-8">
+      <svg:path d="m 301.2,525.1 h 237.6 v 61.2 H 301.2 Z" id="path9-3-5" />
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath291">
+      <svg:circle style="fill:none;stroke:#008000;stroke-width:2.16477;stroke-linecap:square;stroke-dasharray:none" id="circle291" cx="867.99579" cy="31.439856" r="52.384857" />
+    </svg:clipPath>
+    <svg:clipPath id="cp2-60">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-95" />
+    </svg:clipPath>
+    <svg:clipPath id="cp4-1">
+      <svg:path d="m 301.2,525.1 h 237.6 v 61.2 H 301.2 Z" id="path6-3" />
+    </svg:clipPath>
+    <svg:linearGradient inkscape:collect="always" xlink:href="#gr5-4" id="linearGradient304" gradientUnits="userSpaceOnUse" x1="420" y1="525.09998" x2="420" y2="586.29999" />
+    <svg:clipPath id="cp2-4">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-37" />
+    </svg:clipPath>
+    <svg:clipPath id="cp4-30">
+      <svg:path d="M 333.6,86.4 H 474 V -54 H 333.6 Z" id="path6-5" />
+    </svg:clipPath>
+    <svg:clipPath id="cp6-9">
+      <svg:path d="m 301.2,525.1 h 237.6 v 61.2 H 301.2 Z" id="path9-63" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr1-11" gradientUnits="userSpaceOnUse" x1="733.90002" y1="190.10001" x2="1042.8" y2="-118.8" gradientTransform="matrix(1,0,0,0.92195383,0,14.836577)">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop1-7" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop2-8" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop3-5" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp2-65">
+      <svg:path d="m 733.9,190.1 h 308.9 V -118.8 H 733.9 Z" id="path3-94" />
+    </svg:clipPath>
+    <svg:clipPath id="cp2-45">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-15" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr3-6" gradientUnits="userSpaceOnUse" x1="352.5" y1="101.8" x2="462.20001" y2="-63.700001">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop4-87" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop5-9" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop6-3" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp4-9">
+      <svg:path d="M 352.5,101.8 490.1,73.9 462.2,-63.7 324.6,-35.8 Z" id="path6-37" />
+    </svg:clipPath>
+    <svg:clipPath id="cp6-4">
+      <svg:path d="m 301.2,525.1 h 237.6 v 61.2 H 301.2 Z" id="path9-0" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr1-24" gradientUnits="userSpaceOnUse" x1="855.90002" y1="250.7" x2="1103.1" y2="-156.7">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop1-03" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop2-3" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop3-2" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp2-0">
+      <svg:path d="m 855.9,250.7 327.3,-80.1 -80.1,-327.3 -327.3,80.1 z" id="path3-8" />
+    </svg:clipPath>
+    <svg:clipPath id="cp2-4-8">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-37-4" />
+    </svg:clipPath>
+    <svg:clipPath id="cp4-30-3">
+      <svg:path d="M 333.6,86.4 H 474 V -54 H 333.6 Z" id="path6-5-3" />
+    </svg:clipPath>
+    <svg:clipPath id="cp6-9-7">
+      <svg:path d="m 301.2,525.1 h 237.6 v 61.2 H 301.2 Z" id="path9-63-8" />
+    </svg:clipPath>
+    <svg:clipPath id="cp2-65-1">
+      <svg:path d="m 733.9,190.1 h 308.9 V -118.8 H 733.9 Z" id="path3-94-3" />
+    </svg:clipPath>
+    <svg:clipPath id="cp2-8-1">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-1-3" />
+    </svg:clipPath>
+    <svg:clipPath id="cp4-6-7">
+      <svg:path d="M 420,79.2 V -79.2 h 72 V 79.2 Z" id="path6-8-2" />
+    </svg:clipPath>
+    <svg:clipPath id="cp2-08">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-35" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr3-1" gradientUnits="userSpaceOnUse" x1="420" y1="0" x2="490.60001" y2="-14.3">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop4-24" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop5-1" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop6-2" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp4-5">
+      <svg:path d="M 435.7,77.6 404.3,-77.6 474.8,-91.9 506.3,63.3 Z" id="path6-17" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr1-4" gradientUnits="userSpaceOnUse" x1="420" y1="0" x2="490.60001" y2="-14.3">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop1-54" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop2-4" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop3-26" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp2-7">
+      <svg:path d="M 435.7,77.6 404.3,-77.6 474.8,-91.9 506.3,63.3 Z" id="path3-4" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr3-2" gradientUnits="userSpaceOnUse" x1="0" y1="105.1" x2="0" y2="166.3">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop4-1" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop5-71" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop6-25" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp4-37">
+      <svg:path d="m -118.8,105.1 h 237.6 v 61.2 h -237.6 z" id="path6-14" />
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath437-7-7-8-3">
+      <svg:g id="g438-2-9-0-6">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect437-1-5-9-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath id="cp2-8-1-8">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-1-3-9" />
+    </svg:clipPath>
+    <svg:clipPath id="cp4-6-7-3">
+      <svg:path d="M 420,79.2 V -79.2 h 72 V 79.2 Z" id="path6-8-2-2" />
+    </svg:clipPath>
+    <svg:clipPath id="cp2-08-0">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-35-1" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr3-1-6" gradientUnits="userSpaceOnUse" x1="420" y1="0" x2="490.60001" y2="-14.3">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop4-24-4" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop5-1-0" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop6-2-3" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp4-5-1">
+      <svg:path d="M 435.7,77.6 404.3,-77.6 474.8,-91.9 506.3,63.3 Z" id="path6-17-1" />
+    </svg:clipPath>
+    <svg:clipPath id="cp2-7-2">
+      <svg:path d="M 435.7,77.6 404.3,-77.6 474.8,-91.9 506.3,63.3 Z" id="path3-4-4" />
+    </svg:clipPath>
+    <svg:linearGradient id="gr3-2-2" gradientUnits="userSpaceOnUse" x1="0" y1="105.1" x2="0" y2="166.3">
+      <svg:stop offset="0" stop-color="#D0D2D3" id="stop4-1-6" />
+      <svg:stop offset="0.55" stop-color="#D0D2D3" id="stop5-71-0" />
+      <svg:stop offset="1" stop-color="#D0D2D3" stop-opacity="0" id="stop6-25-6" />
+    </svg:linearGradient>
+    <svg:clipPath id="cp4-37-0">
+      <svg:path d="m -118.8,105.1 h 237.6 v 61.2 h -237.6 z" id="path6-14-3" />
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath444-2">
+      <svg:g id="g445-5">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect444-3" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath443-9">
+      <svg:g id="g444-0">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect443-5" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath442-3">
+      <svg:g id="g443-2">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect442-7" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath441-4">
+      <svg:g id="g442-0">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect441-0" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath440-5">
+      <svg:g id="g441-3">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect440-7" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath439-9">
+      <svg:g id="g440-5">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect439-1" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath438-3">
+      <svg:g id="g439-6">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect438-1" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath444-2-9">
+      <svg:g id="g445-5-8">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect444-3-2" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath443-9-2">
+      <svg:g id="g444-0-8">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect443-5-7" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath442-3-0">
+      <svg:g id="g443-2-4">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect442-7-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath441-4-9">
+      <svg:g id="g442-0-9">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect441-0-8" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath440-5-2">
+      <svg:g id="g441-3-4">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect440-7-6" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath439-9-8">
+      <svg:g id="g440-5-2">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect439-1-1" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath438-3-9">
+      <svg:g id="g439-6-2">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect438-1-6" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath437-7">
+      <svg:g id="g438-2">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect437-1" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath437-7-7">
+      <svg:g id="g438-2-9">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect437-1-5" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath444-2-0">
+      <svg:g id="g445-5-4">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect444-3-6" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath443-9-23">
+      <svg:g id="g444-0-1">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect443-5-6" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath442-3-08">
+      <svg:g id="g443-2-6">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect442-7-2" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath441-4-17">
+      <svg:g id="g442-0-8">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect441-0-7" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath440-5-6">
+      <svg:g id="g441-3-9">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect440-7-1" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath439-9-3">
+      <svg:g id="g440-5-4">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect439-1-3" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath438-3-45">
+      <svg:g id="g439-6-7">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect438-1-8" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath444-2-9-8">
+      <svg:g id="g445-5-8-9">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect444-3-2-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath443-9-2-3">
+      <svg:g id="g444-0-8-5">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect443-5-7-7" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath442-3-0-5">
+      <svg:g id="g443-2-4-3">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect442-7-4-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath441-4-9-7">
+      <svg:g id="g442-0-9-5">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect441-0-8-7" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath440-5-2-9">
+      <svg:g id="g441-3-4-4">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect440-7-6-9" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath439-9-8-1">
+      <svg:g id="g440-5-2-8">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect439-1-1-6" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath438-3-9-0">
+      <svg:g id="g439-6-2-6">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect438-1-6-6" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath444-2-9-8-4">
+      <svg:g id="g445-5-8-9-1">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect444-3-2-4-6" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath443-9-2-3-2">
+      <svg:g id="g444-0-8-5-4">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect443-5-7-7-9" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath442-3-0-5-8">
+      <svg:g id="g443-2-4-3-7">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect442-7-4-4-0" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath441-4-9-7-4">
+      <svg:g id="g442-0-9-5-4">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect441-0-8-7-3" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath440-5-2-9-2">
+      <svg:g id="g441-3-4-4-7">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect440-7-6-9-3" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath439-9-8-1-2">
+      <svg:g id="g440-5-2-8-1">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect439-1-1-6-7" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath438-3-9-0-7">
+      <svg:g id="g439-6-2-6-9">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect438-1-6-6-5" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath437-7-4">
+      <svg:g id="g438-2-5">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect437-1-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath444-2-9-8-6-1">
+      <svg:g id="g445-5-8-9-6-2">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect444-3-2-4-8-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath443-9-2-3-6-3">
+      <svg:g id="g444-0-8-5-44-4">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect443-5-7-7-17-9" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath442-3-0-5-5-7">
+      <svg:g id="g443-2-4-3-3-7">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect442-7-4-4-4-0" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath441-4-9-7-0-0">
+      <svg:g id="g442-0-9-5-1-0">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect441-0-8-7-0-9" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath440-5-2-9-1-1">
+      <svg:g id="g441-3-4-4-3-3">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect440-7-6-9-1-0" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath439-9-8-1-4-5">
+      <svg:g id="g440-5-2-8-5-8">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect439-1-1-6-9-0" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath438-3-9-0-2-9">
+      <svg:g id="g439-6-2-6-7-2">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect438-1-6-6-4-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath444-2-9-8-4-38-4">
+      <svg:g id="g445-5-8-9-1-0-3">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect444-3-2-4-6-3-7" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath443-9-2-3-2-9-5">
+      <svg:g id="g444-0-8-5-4-6-9">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect443-5-7-7-9-1-0" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath442-3-0-5-8-3-4">
+      <svg:g id="g443-2-4-3-7-7-6">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect442-7-4-4-0-3-9" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath441-4-9-7-4-5-0">
+      <svg:g id="g442-0-9-5-4-9-2">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect441-0-8-7-3-1-0" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath440-5-2-9-2-3-4">
+      <svg:g id="g441-3-4-4-7-0-1">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect440-7-6-9-3-4-7" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath439-9-8-1-2-2-1">
+      <svg:g id="g440-5-2-8-1-20-8">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect439-1-1-6-7-5-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath438-3-9-0-7-5-4">
+      <svg:g id="g439-6-2-6-9-6-8">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect438-1-6-6-5-0-6" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath437-7-4-2-2">
+      <svg:g id="g438-2-5-9-9">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect437-1-4-3-0" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath451-0">
+      <svg:g id="g452-2">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect451-1" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath450-0">
+      <svg:g id="g451-5">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect450-8" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath449-4">
+      <svg:g id="g450-9">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect449-8" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath448-2">
+      <svg:g id="g449-3">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect448-9" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath447-9">
+      <svg:g id="g448-3">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect447-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath446-4">
+      <svg:g id="g447-8">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect446-1" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath445-6">
+      <svg:g id="g446-4">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect445-5" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath451-0-8">
+      <svg:g id="g452-2-9">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect451-1-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath450-0-8">
+      <svg:g id="g451-5-1">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect450-8-9" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath449-4-3">
+      <svg:g id="g450-9-9">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect449-8-0" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath448-2-1">
+      <svg:g id="g449-3-4">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect448-9-1" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath447-9-9">
+      <svg:g id="g448-3-5">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect447-4-6" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath446-4-8">
+      <svg:g id="g447-8-5">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect446-1-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath445-6-0">
+      <svg:g id="g446-4-2">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect445-5-6" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath437-7-7-8">
+      <svg:g id="g438-2-9-0">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect437-1-5-9" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath437-7-7-0">
+      <svg:g id="g438-2-9-8">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect437-1-5-2" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath437-7-7-8-3-0">
+      <svg:g id="g438-2-9-0-6-3">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect437-1-5-9-4-4" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath clipPathUnits="userSpaceOnUse" id="clipPath437-7-7-0-2">
+      <svg:g id="g438-2-9-8-8">
+        <svg:rect x="0" y="0" width="1280" height="720" id="rect437-1-5-2-1" />
+      </svg:g>
+    </svg:clipPath>
+    <svg:clipPath id="cp2-60-2">
+      <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" id="path3-95-2" />
+    </svg:clipPath>
+    <svg:clipPath id="cp4-1-4">
+      <svg:path d="m 301.2,525.1 h 237.6 v 61.2 H 301.2 Z" id="path6-3-2" />
+    </svg:clipPath>
+  </svg:defs>
+  <svg:g inkscape:groupmode="layer" id="layer2" inkscape:label="Layer 0">
+    <svg:g id="g17" transform="translate(763.81365,151.77084)">
+      <svg:g id="g82-5" transform="matrix(0.54265173,0,0,0.54265173,-800.20801,-170.99363)">
+        <svg:path d="M 0,-79.2 V 79.2 H -72 V -79.2 Z" fill="url(#gr1)" id="path13-05" style="fill:url(#gr1-1)" />
+        <svg:g clip-path="url(#cp2-6)" id="g81-2">
+          <svg:path d="m -10.4,5.7 c 1,-0.6 2.6,-1.9 3.8,-2.5 1.1,-0.6 2,-1.7 3,-1.2 1,0.5 2.8,2.9 3,4.2 0.2,1.3 -0.9,2.8 -1.6,3.7 -0.8,0.8 -1.4,1.6 -2.8,1.6 -1.5,0 -4.7,-0.8 -6,-1.6 -1.3,-0.7 -1.8,-2.2 -1.8,-2.9 0.1,-0.7 1.4,-0.6 2.4,-1.3 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path14-2" />
+          <svg:path d="m -3.9,44.2 c -1.3,-0.4 -3.3,-0.8 -4,-1.7 -0.6,-0.9 -0.4,-2.7 0.2,-3.6 0.6,-1 1.8,-1.5 3.3,-1.9 1.5,-0.4 4.4,-1.2 5.8,-0.7 1.3,0.5 1.8,3 2.3,3.9 0.5,0.8 1.1,0.4 0.5,1.1 -0.5,0.7 -2.5,2.8 -3.9,3.2 -1.3,0.5 -2.8,0 -4.2,-0.3 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path15-6" />
+          <svg:path d="m -37.2,-28.7 c -1.1,-1.1 -1.6,-3 -1.3,-4.2 0.2,-1.2 1.5,-2.7 2.9,-3.2 1.4,-0.5 4.1,0.1 5.4,0.2 1.2,0 1.4,-0.7 2.2,0.3 0.7,1 2.4,4.5 2.4,5.8 0,1.3 -1.7,1.5 -2.7,2 -1,0.6 -2,1.5 -3.4,1.4 -1.5,-0.2 -4.3,-1.3 -5.5,-2.3 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path16-0" />
+          <svg:path d="m -26,-38.4 c 0.6,0.8 0.9,2.6 1.3,3.7 0.3,1.2 1.5,2.4 0.9,3 -0.7,0.6 -3.5,0.6 -4.5,0.6 -1.1,0 -1.3,-0.2 -1.9,-0.7 -0.6,-0.5 -1.5,-1.2 -1.8,-2.2 -0.2,-1.1 -0.2,-3.1 0.4,-4 0.5,-0.9 1.9,-1.2 2.8,-1.2 0.9,-0.1 2.1,0 2.8,0.8 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path17-5" />
+          <svg:path d="m -4,-66.4 c -0.6,0.8 -1.9,1.1 -3.3,1.6 -1.4,0.5 -3.6,1.3 -5.3,1.2 -1.8,0 -4.4,-1.1 -5,-1.7 -0.6,-0.7 0.6,-1.3 1.2,-2.2 0.6,-1 1,-2.7 2.3,-3.3 1.2,-0.6 3.5,-0.6 5.2,-0.4 1.7,0.2 4.3,0.8 5.1,1.6 0.8,0.8 0.4,2.4 -0.2,3.2 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path18-0" />
+          <svg:path d="m -24.3,-6.2 c -1.4,-0.2 -1,-1.5 -1.9,-2.2 -1,-0.7 -3.1,-1.1 -3.7,-1.9 -0.5,-0.8 -0.6,-2 0.5,-2.7 1.1,-0.7 4.5,-1.2 6.3,-1.4 1.8,-0.2 3.5,-0.4 4.5,0.2 1,0.6 1.4,2.2 1.5,3.4 0.1,1.2 0.3,3.1 -0.9,3.8 -1.2,0.8 -5,1 -6.3,0.8 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path19-74" />
+          <svg:path d="m 6.4,-70.8 c 0.4,1.1 -0.5,2.2 -1.3,3 -0.7,0.9 -1.9,1.9 -3.3,2.1 -1.4,0.3 -3.7,-0.2 -5.2,-0.6 -1.5,-0.4 -3.3,-1 -3.8,-1.8 -0.6,-0.7 -0.4,-1.9 0.7,-2.8 1.1,-1 4.2,-2.1 5.8,-2.7 1.5,-0.6 2.3,-1.3 3.5,-0.9 1.2,0.5 3.2,2.6 3.6,3.7 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path20-5" />
+          <svg:path d="m -9,-52.5 c 1.4,-0.1 4.2,-0.3 5.3,0.2 1.1,0.4 0.9,1.7 1.3,2.4 0.4,0.7 1.8,1.2 1.1,1.8 -0.6,0.7 -3.9,1.9 -5,2.1 -1.2,0.2 -1.1,-0.4 -1.9,-0.8 -0.8,-0.4 -2.4,-0.9 -3.1,-1.8 -0.7,-0.9 -1.4,-2.8 -1,-3.5 0.4,-0.6 1.9,-0.4 3.3,-0.4 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path21-9" />
+          <svg:path d="m -8.3,-38.5 c 1,-0.8 2.3,-3.6 3.7,-3.7 1.3,-0.1 3.3,1.9 4.4,3.1 1.1,1.3 2,2.8 2.2,4.4 0.2,1.6 0.1,4.6 -0.9,5.2 -1,0.7 -3,-0.8 -5.2,-1.2 -2.2,-0.5 -6.9,-0.2 -8,-1.3 -1.1,-1.1 0.8,-4.1 1.4,-5.2 0.7,-1.1 1.4,-0.5 2.4,-1.3 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path22-5" />
+          <svg:path d="m -62.7,63.3 c 0.9,0.1 1.7,0.6 2.3,1.2 0.5,0.7 0.9,1.6 0.9,2.6 0.1,1 0.1,2.7 -0.6,3.3 -0.7,0.7 -2.2,0.5 -3.4,0.5 -1.3,0 -3.1,0.2 -4,-0.5 -0.9,-0.7 -1.6,-2.7 -1.3,-3.8 0.2,-1.1 1.9,-2.1 3,-2.7 1,-0.5 2.2,-0.7 3.1,-0.6 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path23-2" />
+          <svg:path d="m -1.5,42.4 c -1.1,-0.6 -3,-1.9 -3.4,-2.6 -0.4,-0.7 0.3,-0.9 0.9,-1.7 0.6,-0.8 1.7,-2.6 2.7,-3 1,-0.4 2.3,0.3 3.2,0.6 0.8,0.2 1.6,0 1.8,0.8 C 4,37.2 3.6,39.2 3.3,40.4 2.9,41.5 2.5,43.1 1.7,43.5 0.9,43.8 -0.4,43 -1.5,42.4 Z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path24-7" />
+          <svg:path d="m -51.5,49.5 c 0.6,-0.7 1.6,-1.8 2.6,-2 1,-0.2 2.7,0.4 3.2,1.1 0.6,0.7 0.1,2.4 0.1,3.1 0,0.7 0.3,0.7 -0.1,1.1 -0.4,0.4 -1,1.1 -2.2,1.2 -1.1,0.1 -4.1,-0.3 -4.9,-0.6 -0.7,-0.4 0.1,-0.7 0.3,-1.4 0.3,-0.6 0.4,-1.7 1,-2.5 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path25-5" />
+          <svg:path d="m -13.7,-32 c 0.9,-0.4 1.8,-0.7 3.1,-0.7 1.2,-0.1 4,-0.1 4.6,0.5 0.7,0.6 -0.6,2.1 -0.8,3.1 -0.2,0.9 0.4,1.6 -0.4,2.4 -0.9,0.8 -3.4,2.1 -4.8,2.2 -1.4,0.1 -2.9,-0.6 -3.5,-1.6 -0.6,-0.9 -0.6,-3.1 -0.3,-4.1 0.3,-1 1.2,-1.4 2.1,-1.8 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path26-2" />
+          <svg:path d="m -18.3,-3.2 3.4,3.2 -4.5,1.4 z" fill="#000000" id="path27-7" />
+          <svg:path d="m -23.4,31.4 3.4,-3.2 1.1,4.5 z" fill="#000000" id="path28-3" />
+          <svg:path d="m -10.7,3.1 3.6,3.1 -4.4,1.5 z" fill="#000000" id="path29-5" />
+          <svg:path d="m -4.2,-10.7 2.6,-3.9 2.1,4.2 z" fill="#000000" id="path30-4" />
+          <svg:path d="m -60.3,71.1 1.2,-4.6 3.3,3.3 z" fill="#000000" id="path31-1" />
+          <svg:path d="m -60.3,48.8 -2,-4.2 4.7,0.3 z" fill="#000000" id="path32-4" />
+          <svg:path d="m -22.8,-62.2 0.6,4.7 -4.3,-1.9 z" fill="#000000" id="path33-3" />
+          <svg:path d="m -38.5,58.8 1.2,4.5 -4.5,-1.3 z" fill="#000000" id="path34-8" />
+          <svg:path d="m -42.1,36 4.6,-0.6 -1.8,4.3 z" fill="#000000" id="path35-48" />
+          <svg:path d="m -0.2,14 -4.1,2.2 0.1,-4.7 z" fill="#000000" id="path36-00" />
+          <svg:path d="m -2,44.2 -4.6,1.1 1.3,-4.5 z" fill="#000000" id="path37-8" />
+          <svg:path d="m -0.5,-65.3 -1.4,4.5 -3.1,-3.5 z" fill="#000000" id="path38-5" />
+          <svg:path d="m -4.8,-77.7 -0.3,4.6 -3.9,-2.5 z" fill="#000000" id="path39-1" />
+          <svg:path d="m -4.9,52.1 4,2.5 -4.2,2.2 z" fill="#000000" id="path40-8" />
+          <svg:path d="m -56.7,70.4 4.6,-0.2 -2.2,4.2 z" fill="#000000" id="path41-2" />
+          <svg:path d="m -50.7,-76.1 1.9,4.2 -4.7,-0.5 z" fill="#000000" id="path42-9" />
+          <svg:path d="m -25.2,35.8 -4.6,-0.7 2.9,-3.7 z" fill="#000000" id="path43-6" />
+          <svg:path d="m -44.1,69.8 -4.6,0.7 1.7,-4.3 z" fill="#000000" id="path44-4" />
+          <svg:path d="m -13.2,7.8 0.2,4.6 -4.1,-2.2 z" fill="#000000" id="path45-8" />
+          <svg:path d="m -9.6,-48 -2.3,-4.1 h 4.6 z" fill="#000000" id="path46-8" />
+          <svg:path d="m -37.6,41.8 1.8,-4.3 2.9,3.7 z" fill="#000000" id="path47-9" />
+          <svg:path d="m -18.8,-14.2 0.5,-4.6 3.8,2.7 z" fill="#000000" id="path48-98" />
+          <svg:path d="m -23.3,-66 4,-2.3 v 4.6 z" fill="#000000" id="path49-6" />
+          <svg:path d="m -67.3,-16.5 2.4,4 -4.6,0.1 z" fill="#000000" id="path50-9" />
+          <svg:path d="m -5.3,27.5 2.2,4.2 -4.7,-0.2 z" fill="#000000" id="path51-9" />
+          <svg:path d="m -42.9,3 3.8,-2.8 0.5,4.7 z" fill="#000000" id="path52-3" />
+          <svg:path d="m -36,65.1 -4.3,-1.9 3.8,-2.7 z" fill="#000000" id="path53-9" />
+          <svg:path d="M -0.3,38 -2.6,42 -5,38 Z" fill="#000000" id="path54-2" />
+          <svg:path d="m -28.3,-11.7 3.1,3.5 -4.6,1 z" fill="#000000" id="path55-3" />
+          <svg:path d="m -5.8,-34.3 -3.5,-3.1 4.5,-1.5 z" fill="#000000" id="path56-3" />
+          <svg:path d="m -32.7,-26.6 -2.8,-3.8 4.7,-0.5 z" fill="#000000" id="path57-0" />
+          <svg:path d="m -42.4,74.4 -1.1,-4.5 4.5,1.3 z" fill="#000000" id="path58-9" />
+          <svg:path d="m -41.2,-15.9 -0.6,4.6 -3.7,-2.8 z" fill="#000000" id="path59-3" />
+          <svg:path d="m -32.4,-34.2 -3.1,-3.5 4.6,-1 z" fill="#000000" id="path60-3" />
+          <svg:path d="m -2.4,-1.4 1.5,-4.5 3.1,3.5 z" fill="#000000" id="path61-0" />
+          <svg:path d="m -7.1,-19.7 -0.4,-4.6 4.2,2 z" fill="#000000" id="path62-9" />
+          <svg:path d="m -46.1,-56.6 -3.9,2.6 -0.3,-4.7 z" fill="#000000" id="path63-4" />
+          <svg:path d="m -27.6,16.2 3.5,-3.1 0.9,4.6 z" fill="#000000" id="path64-6" />
+          <svg:path d="m -56.8,50 4.7,-0.8 -1.7,4.4 z" fill="#000000" id="path65-3" />
+          <svg:path d="m -23.4,32.8 -0.7,4.7 -3.7,-2.9 z" fill="#000000" id="path66-7" />
+          <svg:path d="m -16.8,36.3 -3.3,3.3 -1.2,-4.5 z" fill="#000000" id="path67-4" />
+          <svg:path d="m -23.8,-40.1 -2.7,-3.9 4.6,-0.4 z" fill="#000000" id="path68-4" />
+          <svg:path d="m -41.3,27.1 -3.3,3.3 -1.2,-4.5 z" fill="#000000" id="path69-98" />
+          <svg:path d="m -55,-38.3 -3.7,-2.9 4.4,-1.8 z" fill="#000000" id="path70-2" />
+          <svg:path d="m -11.3,-52.1 3.4,3.2 -4.5,1.3 z" fill="#000000" id="path71-1" />
+          <svg:path d="M -56.5,66 -58.7,61.9 -54,62 Z" fill="#000000" id="path72-8" />
+          <svg:path d="m -59.4,-28.3 2.5,-4 2.2,4.2 z" fill="#000000" id="path73-4" />
+          <svg:path d="m -42.6,-64.1 -4.7,-0.3 2.6,-3.9 z" fill="#000000" id="path74-2" />
+          <svg:path d="m -55.8,-30.9 0.6,-4.6 3.7,2.9 z" fill="#000000" id="path75-2" />
+          <svg:path d="m -29.9,27.9 -4.1,2.2 0.2,-4.7 z" fill="#000000" id="path76-4" />
+          <svg:path d="m -17.8,-9.9 3.8,-2.7 0.5,4.7 z" fill="#000000" id="path77-4" />
+          <svg:path d="m -5.3,12.7 -3.2,3.4 -1.3,-4.5 z" fill="#000000" id="path78-7" />
+          <svg:path d="m -16.8,8.9 -4.5,-1.1 3.1,-3.4 z" fill="#000000" id="path79-3" />
+          <svg:path d="m -9.4,28 -4.6,-0.9 3,-3.6 z" fill="#000000" id="path80-97" />
+          <svg:path d="m -56.8,66.3 -4.7,-0.4 2.7,-3.8 z" fill="#000000" id="path81-8" />
+          <svg:path d="m -63.8,-22.6 1.8,4.3 -4.7,-0.6 z" fill="#000000" id="path82-3" />
+          <svg:path d="m -48.5,-34.8 3.9,2.6 -4.2,2.1 z" fill="#000000" id="path83-5" />
+          <svg:path d="m -38.8,51.2 -1.9,-4.3 4.6,0.5 z" fill="#000000" id="path84-2" />
+        </svg:g>
+      </svg:g>
+      <svg:path d="m -800.20801,-213.97165 v 85.95608" fill="none" stroke="#000000" stroke-width="2.71326" stroke-linejoin="round" stroke-linecap="butt" id="path85-5" />
+      <svg:path d="M -800.208010,-180.761361 L -797.766072,-180.761361 L -795.378404,-180.761361 L -792.936476,-180.761361 L -790.494539,-180.761361 L -788.106871,-180.761361 L -785.664943,-180.761361 L -783.223005,-180.761361 L -780.835337,-180.761361 L -778.393409,-180.761361 L -775.951471,-180.761361 L -773.563804,-180.761361 L -771.121876,-180.761361 L -768.679938,-180.761361 L -766.292270,-180.761361 L -763.850342,-180.761361 L -761.408404,-180.761361 L -759.020746,-180.761361 L -756.578809,-180.761361 L -754.136881,-180.761361 L -751.749213,-180.761361 L -749.307275,-180.761361 L -746.865347,-180.761361 L -744.477679,-180.761361 L -742.035741,-180.761361 L -739.593814,-180.761361 L -737.206146,-180.761361 L -734.764208,-180.761361 L -732.322280,-180.761361 L -729.934612,-180.761361 L -727.492674,-180.761361 L -725.050746,-180.761361 L -722.663079,-180.761361 L -720.221141,-180.761361 L -717.779213,-180.761361 L -715.391545,-180.761361 L -712.949607,-180.761361 L -710.507679,-180.761361 L -708.120011,-180.761361 L -705.678074,-180.761361 L -703.236146,-180.761361 L -700.848478,-180.761361 L -698.406540,-180.761361 L -695.964612,-180.761361 L -693.576944,-180.761361 L -691.135006,-180.761361 L -688.693079,-180.761361 L -686.305411,-180.761361 L -683.863473,-180.761361 L -681.421545,-180.761361 L -679.033877,-180.761361 L -676.591939,-180.761361 L -674.150012,-180.761361 L -671.762344,-180.761361 L -669.320406,-180.761361 L -666.878478,-180.761361 L -664.490810,-180.761361 L -662.048882,-180.761361 L -659.606944,-180.761361 L -657.219276,-180.761361 L -654.777349,-180.761361 L -652.335411,-180.761361 L -649.947743,-180.761361 L -647.505815,-180.761361 L -645.063877,-180.761361 L -642.676209,-180.761361 L -640.234282,-180.761361 L -637.792344,-180.761361 L -635.404676,-180.761361 L -632.962748,-180.761361 L -630.520810,-180.761361 L -628.133142,-180.761361 L -625.691214,-180.761361 L -623.249277,-180.761361 L -620.861609,-180.761361 L -618.419681,-180.761361 L -615.977743,-180.761361 L -613.590075,-180.761361 L -611.148147,-180.761361 L -608.706209,-180.761361 L -606.318542,-180.761361 L -603.876614,-180.761361 L -601.434676,-180.761361 L -599.047008,-180.761361 L -596.605080,-180.761361 L -594.163142,-180.761361 L -591.775474,-180.761361 L -589.333547,-180.761361 L -586.891609,-180.761361 L -584.503941,-180.761361 L -582.062013,-180.761361 L -562.526550,-180.761361 L -562.526550,-161.225909 L -562.526550,-158.783981 L -562.526550,-156.396313 L -562.526550,-153.954385 L -562.526550,-151.512437 L -562.526550,-149.124779 L -562.526550,-146.682842 L -562.526550,-144.240904 L -562.526550,-141.853246 L -562.526550,-139.411298 L -562.526550,-136.969370 L -562.526550,-134.581702 L -562.526550,-132.139764 L -562.526550,-129.697837 L -562.526550,-127.310169 L -562.526550,-124.868231 L -562.526550,-122.426303 L -562.526550,-120.038655 L -562.526550,-117.596717 L -562.526550,-115.154789 L -562.526550,-112.767122 L -562.526550,-110.325184 L -562.526550,-107.883256 L -562.526550,-105.495588 L -562.526550,-103.053650 L -562.526550,-100.611722 L -562.526550,-98.224054 L -562.526550,-95.782127 L -562.526550,-93.340189 L -562.526550,-90.952521 L -562.526550,-88.510593 L -562.526550,-86.068651 L -562.526550,-83.680983 L -562.526550,-81.239045 L -562.526550,-78.797118 L -562.526550,-76.409450 L -562.526550,-73.967522 L -562.526550,-71.525584 L -562.526550,-69.137916 L -562.526550,-66.695988 L -562.526550,-64.254050 L -562.526550,-61.866383 L -562.526550,-59.424455 L -562.526550,-56.982524 L -562.526550,-54.594869 L -562.526550,-52.152934 L -562.526550,-49.711084 L -562.526550,-47.323416 L -562.526550,-44.881479 L -562.526550,-42.439551 L -562.526550,-40.051883 L -562.526550,-37.609945 L -562.526550,-35.168017 L -562.526550,-32.780349 L -562.526550,-30.338411 L -562.526550,-27.896484 L -562.526550,-25.508816 L -562.526550,-23.066878 L -562.526550,-20.624950 L -562.526550,-18.237282 L -562.526550,-15.795344 L -562.526550,-13.353416 L -562.526550,-10.965749 L -562.526550,-8.523811 L -562.526550,-6.081883 L -562.526550,-3.694215 L -562.526550,-1.252277 L -562.526550,1.189651 L -562.526550,3.577318 L -562.526550,6.019256 L -562.526550,8.461184 L -562.526550,10.848852 L -562.526550,13.290790 L -562.526550,15.732717 L -562.526550,18.120385 L -562.526550,20.562323 L -562.526550,23.004251 L -562.526550,25.391919 L -562.526550,27.833847 L -562.526550,30.275785 L -562.526550,32.663453 L -562.526550,35.105381 L -562.526550,37.547318 L -562.526550,39.934986 L -562.526550,42.376914 L -562.526550,44.818852 L -562.526550,47.206520 L -562.526550,49.648448 L -562.526550,52.090386 L -562.526550,54.478054 L -562.526550,56.919981 L -582.062013,56.919981 L -582.062013,54.478054 L -582.062013,52.090386 L -582.062013,49.648448 L -582.062013,47.206520 L -582.062013,44.818852 L -582.062013,42.376914 L -582.062013,39.934986 L -582.062013,37.547318 L -582.062013,35.105381 L -582.062013,32.663453 L -582.062013,30.275785 L -582.062013,27.833847 L -582.062013,25.391919 L -582.062013,23.004251 L -582.062013,20.562323 L -582.062013,18.120385 L -582.062013,15.732717 L -582.062013,13.290790 L -582.062013,10.848852 L -582.062013,8.461184 L -582.062013,6.019256 L -582.062013,3.577318 L -582.062013,1.189651 L -582.062013,-1.252277 L -582.062013,-3.694215 L -582.062013,-6.081883 L -582.062013,-8.523811 L -582.062013,-10.965749 L -582.062013,-13.353416 L -582.062013,-15.795344 L -582.062013,-18.237282 L -582.062013,-20.624950 L -582.062013,-23.066878 L -582.062013,-25.508816 L -582.062013,-27.896484 L -582.062013,-30.338411 L -582.062013,-32.780349 L -582.062013,-35.168017 L -582.062013,-37.609945 L -582.062013,-40.051883 L -582.062013,-42.439551 L -582.062013,-44.881479 L -582.062013,-47.323416 L -582.062013,-49.711084 L -582.062013,-52.152934 L -582.062013,-54.594869 L -582.062013,-56.982524 L -582.062013,-59.424455 L -582.062013,-61.866383 L -582.062013,-64.254050 L -582.062013,-66.695988 L -582.062013,-69.137916 L -582.062013,-71.525584 L -582.062013,-73.967522 L -582.062013,-76.409450 L -582.062013,-78.797118 L -582.062013,-81.239045 L -582.062013,-83.680983 L -582.062013,-86.068651 L -582.062013,-88.510593 L -582.062013,-90.952521 L -582.062013,-93.340189 L -582.062013,-95.782127 L -582.062013,-98.224054 L -582.062013,-100.611722 L -582.062013,-103.053650 L -582.062013,-105.495588 L -582.062013,-107.883256 L -582.062013,-110.325184 L -582.062013,-112.767122 L -582.062013,-115.154789 L -582.062013,-117.596717 L -582.062013,-120.038655 L -582.062013,-122.426303 L -582.062013,-124.868231 L -582.062013,-127.310169 L -582.062013,-129.697837 L -582.062013,-132.139764 L -582.062013,-134.581702 L -582.062013,-136.969370 L -582.062013,-139.411298 L -582.062013,-141.853246 L -582.062013,-144.240904 L -582.062013,-146.682842 L -582.062013,-149.124779 L -582.062013,-151.512437 L -582.062013,-153.954385 L -582.062013,-156.396313 L -582.062013,-158.783981 L -582.062013,-161.225909 L -582.062013,-161.225909 L -584.503941,-161.225909 L -586.891609,-161.225909 L -589.333547,-161.225909 L -591.775474,-161.225909 L -594.163142,-161.225909 L -596.605080,-161.225909 L -599.047008,-161.225909 L -601.434676,-161.225909 L -603.876614,-161.225909 L -606.318542,-161.225909 L -608.706209,-161.225909 L -611.148147,-161.225909 L -613.590075,-161.225909 L -615.977743,-161.225909 L -618.419681,-161.225909 L -620.861609,-161.225909 L -623.249277,-161.225909 L -625.691214,-161.225909 L -628.133142,-161.225909 L -630.520810,-161.225909 L -632.962748,-161.225909 L -635.404676,-161.225909 L -637.792344,-161.225909 L -640.234282,-161.225909 L -642.676209,-161.225909 L -645.063877,-161.225909 L -647.505815,-161.225909 L -649.947743,-161.225909 L -652.335411,-161.225909 L -654.777349,-161.225909 L -657.219276,-161.225909 L -659.606944,-161.225909 L -662.048882,-161.225909 L -664.490810,-161.225909 L -666.878478,-161.225909 L -669.320406,-161.225909 L -671.762344,-161.225909 L -674.150012,-161.225909 L -676.591939,-161.225909 L -679.033877,-161.225909 L -681.421545,-161.225909 L -683.863473,-161.225909 L -686.305411,-161.225909 L -688.693079,-161.225909 L -691.135006,-161.225909 L -693.576944,-161.225909 L -695.964612,-161.225909 L -698.406540,-161.225909 L -700.848478,-161.225909 L -703.236146,-161.225909 L -705.678074,-161.225909 L -708.120011,-161.225909 L -710.507679,-161.225909 L -712.949607,-161.225909 L -715.391545,-161.225909 L -717.779213,-161.225909 L -720.221141,-161.225909 L -722.663079,-161.225909 L -725.050746,-161.225909 L -727.492674,-161.225909 L -729.934612,-161.225909 L -732.322280,-161.225909 L -734.764208,-161.225909 L -737.206146,-161.225909 L -739.593814,-161.225909 L -742.035741,-161.225909 L -744.477679,-161.225909 L -746.865347,-161.225909 L -749.307275,-161.225909 L -751.749213,-161.225909 L -754.136881,-161.225909 L -756.578809,-161.225909 L -759.020746,-161.225909 L -761.408404,-161.225909 L -763.850342,-161.225909 L -766.292270,-161.225909 L -768.679938,-161.225909 L -771.121876,-161.225909 L -773.563804,-161.225909 L -775.951471,-161.225909 L -778.393409,-161.225909 L -780.835337,-161.225909 L -783.223005,-161.225909 L -785.664943,-161.225909 L -788.106871,-161.225909 L -790.494539,-161.225909 L -792.936476,-161.225909 L -795.378404,-161.225909 L -797.766072,-161.225909 L -800.208010,-161.225909 Z" fill="none" stroke="#8c8c8c" stroke-width="0.813678" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7, 5" id="reference-0" opacity="0.5714285714285714" />
+      <svg:path d="M -800.208010,-170.993630 L -797.657542,-170.993630 L -795.161344,-170.993630 L -792.610887,-170.993630 L -790.060419,-170.993630 L -787.564221,-170.993630 L -785.013763,-170.993630 L -782.463296,-170.993630 L -779.967098,-170.993630 L -777.416640,-170.993630 L -774.866172,-170.993630 L -772.369975,-170.993630 L -769.819507,-170.993630 L -767.269049,-170.993630 L -764.772851,-170.993630 L -762.222384,-170.993630 L -759.671926,-170.993630 L -757.175728,-170.993630 L -754.625260,-170.993630 L -752.074803,-170.993630 L -749.578605,-170.993630 L -747.028137,-170.993630 L -744.477679,-170.993630 L -741.981482,-170.993630 L -739.431014,-170.993630 L -736.880556,-170.993630 L -734.384348,-170.993630 L -731.833890,-170.993630 L -729.283423,-170.993630 L -726.787225,-170.993630 L -724.236767,-170.993630 L -721.686299,-170.993630 L -719.190102,-170.993630 L -716.639644,-170.993630 L -714.089176,-170.993630 L -711.592978,-170.993630 L -709.042521,-170.993630 L -706.492053,-170.993630 L -703.995855,-170.993630 L -701.445397,-170.993630 L -698.894930,-170.993630 L -696.398732,-170.993630 L -693.848264,-170.993630 L -691.297806,-170.993630 L -688.801609,-170.993630 L -686.251141,-170.993630 L -683.700683,-170.993630 L -681.204485,-170.993630 L -678.654018,-170.993630 L -676.103560,-170.993630 L -673.607362,-170.993630 L -671.056894,-170.993630 L -668.506436,-170.993630 L -666.010239,-170.993630 L -663.459771,-170.993630 L -660.909313,-170.993630 L -658.413115,-170.993630 L -655.862648,-170.993630 L -653.312180,-170.993630 L -650.815982,-170.993630 L -648.265524,-170.993630 L -645.715057,-170.993630 L -643.218859,-170.993630 L -640.668401,-170.993630 L -638.117933,-170.993630 L -635.621736,-170.993630 L -633.071278,-170.993630 L -630.520810,-170.993630 L -628.024612,-170.993630 L -625.474155,-170.993630 L -622.923687,-170.993630 L -620.427489,-170.993630 L -617.877031,-170.993630 L -615.326564,-170.993630 L -612.830366,-170.993630 L -610.279898,-170.993630 L -607.729440,-170.993630 L -605.233242,-170.993630 L -602.682775,-170.993630 L -600.132317,-170.993630 L -597.636119,-170.993630 L -595.085651,-170.993630 L -592.535194,-170.993630 L -590.038996,-170.993630 L -587.488528,-170.993630 L -584.938070,-170.993630 L -582.441873,-170.993630 L -579.891405,-170.993630 L -577.340947,-170.993630 L -574.844749,-170.993630 L -572.294282,-170.993630" fill="none" stroke="#8c8c8c" stroke-width="0.596697" stroke-linejoin="round" stroke-linecap="butt" stroke-dasharray="16, 5, 3, 5" id="reference-1" opacity="0.5714285714285714" />
+      <svg:path d="M -572.294282,-170.993630 L -572.294282,-168.443162 L -572.294282,-165.946964 L -572.294282,-163.396517 L -572.294282,-160.846049 L -572.294282,-158.349861 L -572.294282,-155.799403 L -572.294282,-153.248936 L -572.294282,-150.752728 L -572.294282,-148.202270 L -572.294282,-145.651802 L -572.294282,-143.155605 L -572.294282,-140.605147 L -572.294282,-138.054669 L -572.294282,-135.558471 L -572.294282,-133.008014 L -572.294282,-130.457546 L -572.294282,-127.961348 L -572.294282,-125.410880 L -572.294282,-122.860423 L -572.294282,-120.364245 L -572.294282,-117.813777 L -572.294282,-115.263319 L -572.294282,-112.767122 L -572.294282,-110.216654 L -572.294282,-107.666196 L -572.294282,-105.169998 L -572.294282,-102.619530 L -572.294282,-100.069073 L -572.294282,-97.572875 L -572.294282,-95.022407 L -572.294282,-92.471949 L -572.294282,-89.975752 L -572.294282,-87.425284 L -572.294282,-84.874822 L -572.294282,-82.378624 L -572.294282,-79.828157 L -572.294282,-77.277689 L -572.294282,-74.781491 L -572.294282,-72.231033 L -572.294282,-69.680566 L -572.294282,-67.184368 L -572.294282,-64.633910 L -572.294282,-62.083442 L -572.294282,-59.587245 L -572.294282,-57.036794 L -572.294282,-54.486339 L -572.294282,-51.990144 L -572.294282,-49.439755 L -572.294282,-46.889287 L -572.294282,-44.393089 L -572.294282,-41.842631 L -572.294282,-39.292164 L -572.294282,-36.795966 L -572.294282,-34.245508 L -572.294282,-31.695040 L -572.294282,-29.198842 L -572.294282,-26.648385 L -572.294282,-24.097917 L -572.294282,-21.601719 L -572.294282,-19.051261 L -572.294282,-16.500794 L -572.294282,-14.004596 L -572.294282,-11.454138 L -572.294282,-8.903670 L -572.294282,-6.407473 L -572.294282,-3.857005 L -572.294282,-1.306547 L -572.294282,1.189651 L -572.294282,3.740118 L -572.294282,6.290576 L -572.294282,8.786774 L -572.294282,11.337241 L -572.294282,13.887699 L -572.294282,16.383897 L -572.294282,18.934365 L -572.294282,21.484822 L -572.294282,23.981020 L -572.294282,26.531488 L -572.294282,29.081946 L -572.294282,31.578144 L -572.294282,34.128612 L -572.294282,36.679079 L -572.294282,39.175277 L -572.294282,41.725735 L -572.294282,44.276203 L -572.294282,46.772400 L -572.294282,49.322858 L -572.294282,51.873326 L -572.294282,54.369524 L -572.294282,56.919981" fill="none" stroke="#8c8c8c" stroke-width="0.596697" stroke-linejoin="round" stroke-linecap="butt" stroke-dasharray="16, 5, 3, 5" id="reference-2" opacity="0.5714285714285714" />
+      <svg:path d="M -800.208010,-180.761361 L -797.673049,-180.761361 L -795.192353,-180.699344 L -792.688408,-180.668361 L -790.153447,-180.575333 L -787.672751,-180.482310 L -785.199812,-180.358276 L -782.695863,-180.234242 L -780.215166,-180.079196 L -777.742227,-179.924151 L -775.269283,-179.738099 L -772.819599,-179.552048 L -770.346659,-179.365997 L -767.873716,-179.148934 L -765.424031,-178.931877 L -762.951092,-178.714815 L -760.509154,-178.466746 L -758.090484,-178.249684 L -755.617541,-178.001615 L -753.175607,-177.753547 L -750.756934,-177.505479 L -748.314996,-177.257410 L -745.873068,-177.009336 L -743.485400,-176.761268 L -741.043462,-176.513199 L -738.632540,-176.265131 L -736.213867,-176.017063 L -733.802940,-175.768989 L -731.392018,-175.551932 L -728.973339,-175.303863 L -726.562418,-175.086801 L -724.151496,-174.838732 L -721.763828,-174.621670 L -719.352902,-174.404613 L -716.941979,-174.218556 L -714.585317,-174.001499 L -712.174391,-173.815448 L -709.763469,-173.629391 L -707.406812,-173.443339 L -704.995886,-173.288299 L -702.615969,-173.102242 L -700.228301,-172.978208 L -697.848386,-172.823168 L -695.468470,-172.699134 L -693.080808,-172.575100 L -690.700887,-172.482072 L -688.320976,-172.358037 L -685.964314,-172.296020 L -683.584399,-172.202998 L -681.204482,-172.140980 L -678.847826,-172.109998 L -676.467905,-172.047981 L -674.056983,-172.016998 L -671.700327,-172.016998 L -669.320406,-172.016998 L -666.940495,-172.016998 L -664.583839,-172.047981 L -662.203922,-172.078963 L -659.824007,-172.140980 L -657.467345,-172.171963 L -655.087434,-172.264986 L -652.707513,-172.326997 L -650.350857,-172.451032 L -647.970940,-172.544060 L -645.591025,-172.668094 L -643.234369,-172.792128 L -640.854452,-172.947168 L -638.474537,-173.102214 L -636.117875,-173.257259 L -633.737964,-173.443311 L -631.327038,-173.629362 L -628.970376,-173.846425 L -626.590465,-174.063482 L -624.179539,-174.280544 L -621.822876,-174.497607 L -619.411954,-174.745675 L -617.032039,-174.993744 L -614.644371,-175.241812 L -612.264461,-175.520892 L -609.853534,-175.799971 L -607.465866,-176.079045 L -605.054944,-176.389131 L -602.644018,-176.668211 L -600.256350,-176.978296 L -597.845428,-177.288387 L -595.434501,-177.598473 L -593.046833,-177.939570 L -590.635911,-178.249655 L -588.193973,-178.590752 L -585.806305,-178.931843 L -583.240343,-179.272940 L -564.014966,-181.939686 L -561.348220,-162.714319 L -561.100152,-159.900283 L -560.821072,-157.450603 L -560.541998,-154.977664 L -560.293924,-152.504716 L -560.014850,-150.086041 L -559.797787,-147.613098 L -559.549719,-145.140154 L -559.332656,-142.690474 L -559.115599,-140.217526 L -558.898536,-137.744581 L -558.712485,-135.325902 L -558.526434,-132.852958 L -558.340383,-130.380019 L -558.185337,-127.930334 L -558.030291,-125.488402 L -557.875251,-123.015462 L -557.720206,-120.565786 L -557.596172,-118.092854 L -557.472138,-115.650920 L -557.348103,-113.201235 L -557.255075,-110.728292 L -557.162052,-108.286364 L -557.069024,-105.836679 L -556.976001,-103.363736 L -556.882972,-100.921802 L -556.820955,-98.472117 L -556.758938,-95.999178 L -556.696921,-93.557246 L -556.665881,-91.107561 L -556.603864,-88.665627 L -556.572881,-86.192680 L -556.541841,-83.774006 L -556.541841,-81.301062 L -556.510858,-78.859129 L -556.510858,-76.409444 L -556.510858,-73.967516 L -556.510858,-71.494573 L -556.541841,-69.075893 L -556.541841,-66.602954 L -556.572881,-64.161022 L -556.603864,-61.742343 L -556.634847,-59.269403 L -556.665830,-56.827478 L -556.727847,-54.408806 L -556.758887,-51.935867 L -556.820904,-49.494016 L -556.882921,-47.075337 L -556.944938,-44.602393 L -557.006955,-42.160465 L -557.099984,-39.741786 L -557.162001,-37.299854 L -557.255023,-34.826915 L -557.348052,-32.408235 L -557.441075,-29.966303 L -557.534103,-27.524370 L -557.627132,-25.105696 L -557.720154,-22.632753 L -557.844189,-20.190819 L -557.937217,-17.772145 L -558.061251,-15.330208 L -558.185285,-12.888280 L -558.309320,-10.469600 L -558.433354,-8.027668 L -558.557388,-5.585735 L -558.681422,-3.167061 L -558.836468,-0.725123 L -558.960502,1.716804 L -559.084536,4.135478 L -559.239582,6.577416 L -559.394622,9.019343 L -559.518656,11.438023 L -559.673701,13.879955 L -559.828747,16.321888 L -559.983787,18.740562 L -560.138832,21.182500 L -560.293872,23.624428 L -560.448918,26.043107 L -560.603963,28.454029 L -560.759003,30.895962 L -560.914049,33.314641 L -561.069089,35.756569 L -561.255146,38.198506 L -561.410185,40.586174 L -561.565231,43.028102 L -561.751282,45.470040 L -561.906328,47.888714 L -562.061368,50.299636 L -562.247419,52.741574 L -562.402465,55.160247 L -562.557510,57.571169 L -582.030950,56.268805 L -581.844899,53.826877 L -581.689859,51.408198 L -581.534813,48.997271 L -581.348762,46.555343 L -581.193717,44.136664 L -581.038677,41.725738 L -580.852625,39.283810 L -580.697580,36.896142 L -580.542534,34.454204 L -580.387494,32.043282 L -580.232449,29.624608 L -580.077409,27.213682 L -579.922363,24.771754 L -579.767318,22.384086 L -579.612278,19.942152 L -579.457232,17.531226 L -579.302187,15.112552 L -579.147147,12.701630 L -578.992101,10.259692 L -578.868067,7.872024 L -578.713027,5.461102 L -578.588987,3.019170 L -578.433948,0.631503 L -578.309913,-1.779420 L -578.185879,-4.221357 L -578.061845,-6.609025 L -577.906799,-9.019947 L -577.813771,-11.430874 L -577.689737,-13.849547 L -577.565703,-16.260470 L -577.441668,-18.671396 L -577.348646,-21.059064 L -577.224612,-23.500998 L -577.131583,-25.911924 L -577.038555,-28.299592 L -576.945532,-30.710508 L -576.852503,-33.121435 L -576.759480,-35.509103 L -576.697463,-37.920025 L -576.604435,-40.361963 L -576.542418,-42.749630 L -576.480401,-45.160553 L -576.418384,-47.571479 L -576.356367,-49.959136 L -576.294349,-52.369991 L -576.232332,-54.780915 L -576.201292,-57.168569 L -576.170310,-59.579489 L -576.139327,-61.990411 L -576.108344,-64.378079 L -576.077304,-66.789005 L -576.077304,-69.168933 L -576.046321,-71.556601 L -576.046321,-73.967528 L -576.046321,-76.378450 L -576.046321,-78.766118 L -576.077304,-81.177034 L -576.077304,-83.587960 L -576.108344,-85.944623 L -576.139327,-88.355553 L -576.201344,-90.766475 L -576.232384,-93.154143 L -576.294401,-95.565070 L -576.356418,-97.944980 L -576.418435,-100.332648 L -576.480452,-102.743570 L -576.573481,-105.123491 L -576.666503,-107.511159 L -576.759532,-109.922081 L -576.852555,-112.301996 L -576.976589,-114.689664 L -577.100623,-117.100586 L -577.224663,-119.480501 L -577.348697,-121.868149 L -577.503737,-124.248066 L -577.658783,-126.658992 L -577.813822,-129.046660 L -577.968868,-131.426571 L -578.154919,-133.837497 L -578.340971,-136.194154 L -578.527022,-138.605076 L -578.744084,-140.985007 L -578.930136,-143.372670 L -579.178204,-145.752585 L -579.395267,-148.163512 L -579.643335,-150.520170 L -579.891403,-152.931106 L -580.139478,-155.311017 L -580.418552,-157.698685 L -580.573597,-160.047590 L -580.573597,-160.047590 L -583.170571,-159.706493 L -585.589244,-159.365402 L -588.031182,-159.024305 L -590.473110,-158.683208 L -592.891789,-158.373123 L -595.364733,-158.032026 L -597.806660,-157.721940 L -600.225340,-157.411855 L -602.698283,-157.101764 L -605.140211,-156.791678 L -607.589902,-156.512604 L -610.031834,-156.202513 L -612.504773,-155.923439 L -614.954458,-155.644354 L -617.427402,-155.396285 L -619.869335,-155.148217 L -622.319020,-154.900143 L -624.791964,-154.652074 L -627.264903,-154.435018 L -629.714588,-154.217955 L -632.187531,-154.000892 L -634.691476,-153.814841 L -637.141161,-153.659801 L -639.614105,-153.473744 L -642.087044,-153.318704 L -644.536729,-153.194670 L -647.040684,-153.039624 L -649.513623,-152.946602 L -651.963308,-152.822562 L -654.467257,-152.729539 L -656.940197,-152.667522 L -659.389882,-152.605505 L -661.893837,-152.543488 L -664.366776,-152.512505 L -666.816461,-152.481522 L -669.320406,-152.481522 L -671.793355,-152.481522 L -674.243040,-152.512505 L -676.715979,-152.512505 L -679.219928,-152.574522 L -681.669613,-152.636539 L -684.142553,-152.698556 L -686.615496,-152.760573 L -689.096193,-152.853602 L -691.569132,-152.977636 L -694.042075,-153.070664 L -696.491760,-153.225704 L -698.964700,-153.349738 L -701.437643,-153.504784 L -703.887328,-153.659830 L -706.360267,-153.814869 L -708.833211,-154.000921 L -711.251884,-154.186972 L -713.724824,-154.373029 L -716.197767,-154.590086 L -718.616446,-154.807149 L -721.089386,-155.024211 L -723.531318,-155.241268 L -725.981003,-155.458331 L -728.422936,-155.706399 L -730.864868,-155.923468 L -733.283548,-156.171536 L -735.725476,-156.419604 L -738.167413,-156.667673 L -740.586087,-156.915741 L -743.028021,-157.163815 L -745.469953,-157.411883 L -747.857621,-157.659952 L -750.299554,-157.908020 L -752.710481,-158.156089 L -755.098148,-158.404157 L -757.540076,-158.621220 L -759.951003,-158.869288 L -762.338666,-159.086351 L -764.749593,-159.303413 L -767.129509,-159.520470 L -769.517177,-159.737533 L -771.897092,-159.923584 L -774.308014,-160.109635 L -776.664671,-160.295687 L -779.044592,-160.450732 L -781.424502,-160.605766 L -783.781165,-160.760812 L -786.130074,-160.853840 L -788.509985,-160.977875 L -790.835635,-161.070897 L -793.184545,-161.132914 L -795.533450,-161.194937 L -797.859101,-161.225920 L -800.208010,-161.225920 Z" fill="#ffc7a3" stroke="#000000" stroke-width="1.30236" stroke-linejoin="round" stroke-linecap="round" id="path188-6" />
+      <svg:g id="g275-0" transform="matrix(0.54265173,0,0,0.54265173,-800.20801,-170.99363)">
+        <svg:path d="m 301.2,525.1 h 237.6 v 61.2 H 301.2 Z" fill="url(#gr5)" id="path189-9" style="fill:url(#linearGradient304)" />
+        <svg:g clip-path="url(#cp6-7)" id="g274-5">
+          <svg:path d="m 428.3,542.2 c -0.5,-1.1 -1.6,-3.2 -0.6,-4.1 0.9,-0.8 4.7,-0.9 6.2,-1 1.5,-0.1 1.4,-0.2 2.8,0.4 1.4,0.7 4.5,2.7 5.6,3.7 1,1 2.1,1.4 0.7,2.5 -1.4,1.1 -7.1,3.7 -9.1,4 -2.1,0.2 -2.2,-1.6 -3.2,-2.5 -0.9,-0.9 -1.8,-1.8 -2.4,-3 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path190-2" />
+          <svg:path d="m 429.2,527.5 c -0.8,0.5 -3.2,1.2 -4.3,1 -1.2,-0.2 -2.1,-1.4 -2.5,-2.2 -0.4,-0.7 -0.4,-1.8 0.1,-2.4 0.4,-0.6 1.5,-0.8 2.8,-1.1 1.3,-0.3 3.9,-0.9 4.9,-0.6 1.1,0.3 1.3,1.8 1.2,2.4 0,0.6 -0.8,0.9 -1.2,1.4 -0.4,0.4 -0.1,1.1 -1,1.5 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path191-81" />
+          <svg:path d="m 311.3,538 c -0.6,-1.6 2,-4.7 2.1,-6.4 0.1,-1.7 -2.3,-2.7 -1.4,-3.8 1,-1 5.5,-2.7 7.1,-2.3 1.6,0.4 1.7,3.2 2.7,4.7 1.1,1.6 3.7,3.5 3.7,4.5 -0.1,1 -2.8,0.8 -4.1,1.8 -1.4,1 -2.4,4 -4.1,4.2 -1.6,0.3 -5.3,-1.2 -6,-2.7 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path192-6" />
+          <svg:path d="m 332,564.3 c -0.9,0.7 -1.3,1 -2.2,1.2 -0.9,0.2 -2.1,0.4 -3,0.1 -1,-0.3 -2.3,-1.2 -2.6,-2 -0.3,-0.7 0.1,-1.8 0.7,-2.4 0.7,-0.6 1.6,-1.2 3,-1.4 1.5,-0.1 4.7,0.1 5.9,0.3 1.1,0.3 1.5,0.7 1.2,1.4 -0.2,0.6 -2.1,2.1 -3,2.8 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path193-7" />
+          <svg:path d="m 392.6,526.4 c 1.1,-0.8 0.9,-1.9 2,-1.8 1.2,0.1 3.8,1.7 4.7,2.5 0.9,0.8 1,1.4 0.9,2.4 -0.2,1 -0.7,2.8 -1.8,3.6 -1,0.8 -2.9,0.9 -4.6,1 -1.7,0.1 -4.6,0.4 -5.7,-0.4 -1,-0.8 -1.2,-3 -0.5,-4.2 0.7,-1.2 3.8,-2.3 5,-3.1 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path194-41" />
+          <svg:path d="m 347.5,569.1 c 0.8,1.1 2.4,3 2.6,4 0.1,1 -0.3,1.7 -1.5,2 -1.3,0.4 -4.8,0.5 -6,0.2 -1.1,-0.3 -0.2,-1.5 -0.9,-2.1 -0.6,-0.6 -2.8,-0.7 -2.9,-1.6 -0.1,-0.9 1.4,-2.8 2.4,-3.7 1.1,-0.8 2.8,-1.6 3.8,-1.4 1.1,0.2 1.7,1.5 2.5,2.6 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path195-9" />
+          <svg:path d="m 369.3,547.6 c 1.3,-0.2 4,0.4 5.2,0.7 1.2,0.3 2,0.6 1.9,1.1 0,0.5 -1.7,1.4 -2.4,2.1 -0.7,0.6 -0.9,1.6 -1.7,1.8 -0.7,0.3 -1.7,-0.1 -2.7,-0.5 -1,-0.3 -2.9,-0.9 -3.4,-1.4 -0.4,-0.6 0.2,-1.3 0.7,-1.9 0.6,-0.6 1.2,-1.7 2.4,-1.9 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path196-0" />
+          <svg:path d="m 531.7,570.3 c 1.3,-0.5 1.9,-3.4 3.6,-3.1 1.7,0.2 5.7,3.4 6.6,4.6 1,1.2 -0.1,1.3 -1,2.5 -0.8,1.1 -2.5,3.7 -4.1,4.6 -1.5,0.9 -3.8,1.3 -5.2,0.9 -1.3,-0.4 -2.1,-1.7 -2.8,-3.3 -0.7,-1.6 -1.8,-5.3 -1.3,-6.4 0.5,-1 2.9,0.7 4.2,0.2 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path197-7" />
+          <svg:path d="m 476,558.2 c 0.4,1.2 -1,3.4 -1.8,4.7 -0.8,1.4 -1.5,3 -2.8,3.5 -1.3,0.6 -3.6,0 -5.1,-0.5 -1.5,-0.4 -3.3,-1.1 -3.8,-2.1 -0.5,-1.1 0.6,-2.7 1,-4.2 0.3,-1.4 -0.3,-3.9 1.1,-4.6 1.3,-0.6 5.3,0.2 7.2,0.7 2,0.6 3.8,1.3 4.2,2.5 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path198-0" />
+          <svg:path d="m 470.1,541.5 c -0.8,-0.9 -1.2,-3.1 -0.6,-4.4 0.6,-1.3 2.9,-2.8 4.4,-3.4 1.6,-0.7 3.5,-0.9 5,-0.5 1.5,0.4 3.9,1.7 4.1,2.7 0.2,0.9 -2.3,1.9 -3,3.1 -0.6,1.2 -0.1,3.7 -1,4.2 -0.9,0.6 -2.9,-0.7 -4.3,-1 -1.5,-0.3 -3.7,0.1 -4.6,-0.7 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path199-1" />
+          <svg:path d="m 461.9,572.9 c 0.8,0.6 2.8,1.1 2.7,2.2 -0.2,1 -2.5,3.5 -3.6,4.1 -1.2,0.7 -2.2,0.2 -3.2,-0.2 -1,-0.4 -1.9,-1.2 -2.9,-2 -1.1,-0.8 -3.6,-1.7 -3.5,-2.8 0,-1 2.3,-3 3.7,-3.5 1.4,-0.5 3.5,0.4 4.6,0.7 1.1,0.4 1.4,0.9 2.2,1.5 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path200-3" />
+          <svg:path d="m 409,532.2 c -1,0.6 -2.4,1 -3.4,0.4 -0.9,-0.7 -2.1,-3.4 -2.2,-4.3 -0.1,-0.8 0.6,-0.2 1.4,-0.7 0.8,-0.4 2.3,-1.5 3.4,-1.9 1.1,-0.4 2.4,-0.5 3.3,-0.3 1,0.2 2.2,1 2.3,1.7 0.1,0.6 -0.9,1.4 -1.7,2.3 -0.8,0.8 -2,2.3 -3.1,2.8 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path201-2" />
+          <svg:path d="m 309.5,546.3 c -1.6,0.3 -5.3,0 -7.1,-0.8 -1.8,-0.8 -3.5,-2.6 -3.5,-3.9 0.1,-1.4 2.7,-3.5 3.8,-4.2 1.1,-0.7 1.6,-0.4 2.7,-0.2 1.1,0.2 2.6,0.9 4.2,1.5 1.5,0.7 4.8,1.6 5.2,2.4 0.5,0.8 -1.6,1.7 -2.5,2.5 -0.9,0.9 -1.1,2.4 -2.8,2.7 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path202-5" />
+          <svg:path d="m 461.5,532.1 c 1,-0.5 4.3,-0.3 6.1,-0.2 1.8,0.1 3.9,0.1 4.7,0.6 0.8,0.4 0.1,0.6 0.1,1.9 -0.1,1.3 0.4,4.7 -0.4,5.8 -0.8,1.1 -2.5,1 -4.3,0.8 -1.8,-0.2 -5.2,-0.7 -6.3,-1.7 -1.1,-1 -0.2,-3.3 -0.2,-4.5 0.1,-1.2 -0.8,-2.2 0.3,-2.7 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path203-1" />
+          <svg:path d="m 352.8,550.5 c 1.6,0.7 5,1.7 5.4,3 0.4,1.2 -2,3.5 -3.2,4.5 -1.2,0.9 -2.3,0.9 -4,1.2 -1.7,0.3 -5,0.9 -6,0.4 -0.9,-0.5 0.6,-2.2 0.4,-3.4 -0.3,-1.3 -2.3,-2.8 -1.7,-4 0.5,-1.1 3.3,-2.8 4.9,-3.1 1.5,-0.3 2.5,0.7 4.2,1.4 z" fill="#ffffff" stroke="#000000" stroke-width="1.6" id="path204-8" />
+          <svg:path d="m 495.9,526.6 -4.6,0.5 1.8,-4.3 z" fill="#000000" id="path205-4" />
+          <svg:path d="m 340.9,570.9 0.1,-4.7 4,2.4 z" fill="#000000" id="path206-3" />
+          <svg:path d="m 336.2,569.8 -4.3,-1.9 3.8,-2.7 z" fill="#000000" id="path207-0" />
+          <svg:path d="m 474.6,546.4 -0.2,4.7 -4,-2.5 z" fill="#000000" id="path208-3" />
+          <svg:path d="m 523.2,560.5 3.9,-2.5 0.3,4.7 z" fill="#000000" id="path209-0" />
+          <svg:path d="m 322.1,583 -3,-3.6 4.6,-0.8 z" fill="#000000" id="path210-0" />
+          <svg:path d="m 369.8,546.6 2.8,3.7 -4.6,0.7 z" fill="#000000" id="path211-4" />
+          <svg:path d="m 426.9,554.6 -0.3,4.6 -3.9,-2.5 z" fill="#000000" id="path212-4" />
+          <svg:path d="m 373.3,553.3 1.4,-4.5 3.1,3.5 z" fill="#000000" id="path213-9" />
+          <svg:path d="m 515.9,574.6 -3.3,-3.3 4.5,-1.2 z" fill="#000000" id="path214-0" />
+          <svg:path d="m 528.6,572.1 4.4,-1.7 -0.7,4.6 z" fill="#000000" id="path215-9" />
+          <svg:path d="m 346.3,551.7 4.5,-1.3 -1.1,4.5 z" fill="#000000" id="path216-2" />
+          <svg:path d="m 447.7,548.3 -4.4,1.6 0.8,-4.6 z" fill="#000000" id="path217-7" />
+          <svg:path d="m 421.6,583.5 1.9,-4.2 2.8,3.8 z" fill="#000000" id="path218-2" />
+          <svg:path d="m 432.2,568.8 4,-2.6 0.2,4.7 z" fill="#000000" id="path219-3" />
+          <svg:path d="m 314.2,559.9 4.5,-1.3 -1.1,4.5 z" fill="#000000" id="path220-1" />
+          <svg:path d="m 530.9,541.1 -2.5,4 -2.1,-4.2 z" fill="#000000" id="path221-3" />
+          <svg:path d="m 415.5,536.5 -4.5,-1.3 3.4,-3.2 z" fill="#000000" id="path222-6" />
+          <svg:path d="m 497.2,542 -1.9,4.2 -2.7,-3.8 z" fill="#000000" id="path223-0" />
+          <svg:path d="m 377.5,548.7 -3.6,-3 4.4,-1.7 z" fill="#000000" id="path224-2" />
+          <svg:path d="m 522.9,557.3 -4.5,-1.3 3.4,-3.2 z" fill="#000000" id="path225-3" />
+          <svg:path d="m 307.5,569.5 -3.5,-3 4.3,-1.6 z" fill="#000000" id="path226-8" />
+          <svg:path d="m 463.3,535 -0.4,-4.7 4.2,2.1 z" fill="#000000" id="path227-7" />
+          <svg:path d="m 450.6,540.7 -4.6,-0.6 2.8,-3.7 z" fill="#000000" id="path228-3" />
+          <svg:path d="m 327.7,563.2 4.2,-2 -0.3,4.6 z" fill="#000000" id="path229-4" />
+          <svg:path d="m 345.5,533.2 4.4,-1.6 -0.8,4.6 z" fill="#000000" id="path230-4" />
+          <svg:path d="m 388.2,545.1 2.2,-4.1 2.4,4 z" fill="#000000" id="path231-2" />
+          <svg:path d="m 339.9,552.1 -3.4,-3.2 4.5,-1.4 z" fill="#000000" id="path232-6" />
+          <svg:path d="m 450.2,555.8 4.5,-1.5 -0.9,4.5 z" fill="#000000" id="path233-2" />
+          <svg:path d="m 448.2,570.4 -0.7,4.6 -3.6,-2.9 z" fill="#000000" id="path234-3" />
+          <svg:path d="m 478.2,530.3 0.7,4.6 -4.4,-1.7 z" fill="#000000" id="path235-0" />
+          <svg:path d="m 375.2,579 -0.6,-4.6 4.3,1.8 z" fill="#000000" id="path236-9" />
+          <svg:path d="m 355.7,578.1 -4,2.4 v -4.7 z" fill="#000000" id="path237-0" />
+          <svg:path d="m 333.2,578 -2.6,-3.8 4.7,-0.4 z" fill="#000000" id="path238-2" />
+          <svg:path d="m 365.1,564.6 -4.7,-0.4 2.7,-3.8 z" fill="#000000" id="path239-5" />
+          <svg:path d="m 402,568.4 1.3,4.5 -4.5,-1.2 z" fill="#000000" id="path240-0" />
+          <svg:path d="m 395.8,525.9 3.8,2.8 -4.3,1.9 z" fill="#000000" id="path241-8" />
+          <svg:path d="m 347.8,522.9 3.8,2.7 -4.2,1.9 z" fill="#000000" id="path242-0" />
+          <svg:path d="m 533.3,579 -4.6,-0.9 3.1,-3.5 z" fill="#000000" id="path243-1" />
+          <svg:path d="m 478.6,547.9 4.1,-2.2 -0.1,4.6 z" fill="#000000" id="path244-4" />
+          <svg:path d="m 348.5,561.3 -4.6,0.4 2,-4.3 z" fill="#000000" id="path245-1" />
+          <svg:path d="m 307.5,526.8 4.6,-0.9 -1.5,4.4 z" fill="#000000" id="path246-2" />
+          <svg:path d="m 438,550.7 -4.3,-1.8 3.7,-2.8 z" fill="#000000" id="path247-0" />
+          <svg:path d="m 351.1,528.4 -0.2,4.7 -3.9,-2.5 z" fill="#000000" id="path248-5" />
+          <svg:path d="m 523.7,585.2 -4.7,-0.3 2.6,-3.9 z" fill="#000000" id="path249-7" />
+          <svg:path d="m 524.7,527 3.3,-3.3 1.1,4.6 z" fill="#000000" id="path250-7" />
+          <svg:path d="m 376.2,566.5 3.5,-3.2 1,4.6 z" fill="#000000" id="path251-2" />
+          <svg:path d="m 401.2,547 4.7,0.5 -2.8,3.8 z" fill="#000000" id="path252-8" />
+          <svg:path d="m 469.3,523 -0.3,4.7 -3.9,-2.6 z" fill="#000000" id="path253-8" />
+          <svg:path d="m 408.9,527.9 2.6,3.8 -4.7,0.4 z" fill="#000000" id="path254-7" />
+          <svg:path d="m 348.9,544.2 -4,-2.3 4,-2.4 z" fill="#000000" id="path255-4" />
+          <svg:path d="m 307,546.7 -1.7,4.4 -2.9,-3.7 z" fill="#000000" id="path256-1" />
+          <svg:path d="m 470.4,566.6 -0.8,4.6 -3.6,-3 z" fill="#000000" id="path257-1" />
+          <svg:path d="m 395.1,554.6 4.7,0.5 -2.8,3.8 z" fill="#000000" id="path258-0" />
+          <svg:path d="m 535.6,545.3 0.8,4.6 -4.4,-1.5 z" fill="#000000" id="path259-7" />
+          <svg:path d="m 517.6,531.3 2.5,4 -4.7,0.2 z" fill="#000000" id="path260-7" />
+          <svg:path d="m 492.5,568.4 2.1,-4.2 2.6,3.9 z" fill="#000000" id="path261-7" />
+          <svg:path d="m 509.3,573.5 3.6,3 -4.4,1.6 z" fill="#000000" id="path262-8" />
+          <svg:path d="m 480.8,567.6 2,-4.2 2.6,3.9 z" fill="#000000" id="path263-6" />
+          <svg:path d="m 316.5,565.1 0.2,-4.7 4,2.5 z" fill="#000000" id="path264-1" />
+          <svg:path d="m 302.1,547.8 0.6,-4.6 3.7,2.9 z" fill="#000000" id="path265-7" />
+          <svg:path d="m 449.8,559.5 -2.8,-3.8 4.6,-0.5 z" fill="#000000" id="path266-0" />
+          <svg:path d="m 458,582.2 0.2,-4.6 4,2.4 z" fill="#000000" id="path267-9" />
+          <svg:path d="m 433.9,557.7 4.4,-1.4 -0.9,4.5 z" fill="#000000" id="path268-1" />
+          <svg:path d="m 537.1,538.9 4.3,1.7 -3.6,2.9 z" fill="#000000" id="path269-7" />
+          <svg:path d="m 484.9,560.9 -3.8,2.8 -0.5,-4.6 z" fill="#000000" id="path270-7" />
+          <svg:path d="m 447.2,522.7 2.6,3.9 -4.6,0.3 z" fill="#000000" id="path271-6" />
+          <svg:path d="m 399.2,534.8 -4.6,1 1.5,-4.5 z" fill="#000000" id="path272-0" />
+          <svg:path d="m 392.7,532.7 -4.7,-0.4 2.7,-3.8 z" fill="#000000" id="path273-7" />
+          <svg:path d="m 513.8,532.9 4.6,-1 -1.5,4.4 z" fill="#000000" id="path274-6" />
+          <svg:path d="m 528.5,547 4.7,-0.5 -1.9,4.3 z" fill="#000000" id="path275-9" />
+          <svg:path d="m 453.8,581.6 0.7,4.6 -4.4,-1.7 z" fill="#000000" id="path276-8" />
+          <svg:path d="m 443.3,524 2.1,4.2 -4.6,-0.3 z" fill="#000000" id="path277-1" />
+        </svg:g>
+      </svg:g>
+      <svg:path d="m -636.76141,113.95282 h 128.934" fill="none" stroke="#000000" stroke-width="2.44193" stroke-linejoin="round" stroke-linecap="butt" id="path278-5" />
+      <svg:path d="m -619.17951,105.75878 h 93.7702 v 8.19404 h -93.7702 z" fill="#b7b9bb" stroke="#000000" stroke-width="1.62796" stroke-linejoin="round" stroke-linecap="round" id="path279-9" />
+      <svg:path d="m -553.73571,56.920118 -0.1628,-2.44194 -0.4884,-2.38766 -0.7597,-2.27914 -1.0853,-2.17061 -1.3566,-2.00781 -1.5737,-1.84502 -1.845,-1.57368 -2.0078,-1.35663 -2.1706,-1.0853 -2.2792,-0.75972 -2.3876,-0.48838 -2.442,-0.1628 -2.4419,0.1628 -2.3877,0.48838 -2.2791,0.75972 -2.1706,1.0853 -2.0078,1.35663 -1.8451,1.57368 -1.5736,1.84502 -1.3567,2.00781 -1.0853,2.17061 -0.7597,2.27914 -0.4884,2.38766 -0.1628,2.44194 -14.6516,48.838662 h 66.4206 z" fill="#b7b9bb" stroke="#000000" stroke-width="1.62796" stroke-linejoin="round" stroke-linecap="round" id="path280-4" />
+      <svg:circle cx="-572.29492" cy="56.920174" r="7.0544724" fill="#ffffff" stroke="#000000" stroke-width="1.73648" id="circle277-3" />
+      <svg:circle cx="-572.29492" cy="56.920174" r="4.2869487" fill="#8f9194" stroke="none" stroke-width="0" id="circle278-7" />
+      <svg:path d="m -577.61241,58.873668 0.1086,0.27132 0.1085,0.27132 0.1628,0.27134 0.1628,0.27132 0.1628,0.21706 0.1628,0.27132 0.217,0.21707 0.1628,0.21706 0.2171,0.21706 0.2171,0.16279 0.2713,0.21706 0.217,0.1628 0.2714,0.1628 0.2713,0.16279 0.2713,0.10853 0.2713,0.10853 0.2714,0.10853 0.2713,0.10853 0.3256,0.0543 0.2713,0.0543 0.3256,0.0543 h 0.2713 0.3256 0.2713 0.3256 l 0.2714,-0.0543 0.3256,-0.0543 0.2713,-0.0543" fill="none" stroke="#ffffff" stroke-width="1.4109" stroke-linejoin="round" stroke-linecap="round" id="path281-6" />
+      <svg:path d="M -800.208010,-170.993630 L -797.657542,-170.993630 L -795.161344,-170.931613 L -792.610887,-170.869596 L -790.060419,-170.807579 L -787.564221,-170.714550 L -785.013763,-170.590516 L -782.463296,-170.435476 L -779.967098,-170.280431 L -777.416640,-170.125385 L -774.866172,-169.939334 L -772.369975,-169.753283 L -769.819507,-169.536220 L -767.269049,-169.319163 L -764.772851,-169.102100 L -762.222384,-168.854032 L -759.671926,-168.636969 L -757.175728,-168.388901 L -754.625260,-168.140833 L -752.074803,-167.861758 L -749.578605,-167.613690 L -747.028137,-167.365622 L -744.477679,-167.086542 L -741.981482,-166.838474 L -739.431014,-166.559394 L -736.880556,-166.311326 L -734.384348,-166.063257 L -731.833890,-165.815189 L -729.283423,-165.567121 L -726.787225,-165.319046 L -724.236767,-165.070978 L -721.686299,-164.853921 L -719.190102,-164.605853 L -716.639644,-164.388796 L -714.089176,-164.202745 L -711.592978,-163.985682 L -709.042521,-163.799631 L -706.492053,-163.613579 L -703.995855,-163.427528 L -701.445397,-163.272483 L -698.894930,-163.117437 L -696.398732,-162.962397 L -693.848264,-162.838363 L -691.297806,-162.714329 L -688.801609,-162.621300 L -686.251141,-162.528272 L -683.700683,-162.435249 L -681.204485,-162.373232 L -678.654018,-162.342249 L -676.103560,-162.280232 L -673.607362,-162.249249 L -671.056894,-162.249249 L -668.506436,-162.249249 L -666.010239,-162.249249 L -663.459771,-162.280232 L -660.909313,-162.342249 L -658.413115,-162.404266 L -655.862648,-162.466283 L -653.312180,-162.559312 L -650.815982,-162.652335 L -648.265524,-162.776374 L -645.715057,-162.900409 L -643.218859,-163.024443 L -640.668401,-163.179483 L -638.117933,-163.334528 L -635.621736,-163.520579 L -633.071278,-163.737642 L -630.520810,-163.923693 L -628.024612,-164.140756 L -625.474155,-164.357813 L -622.923687,-164.605881 L -620.427489,-164.853950 L -617.877031,-165.133024 L -615.326564,-165.412104 L -612.830366,-165.691183 L -610.279898,-165.970263 L -607.729440,-166.280348 L -605.233242,-166.590434 L -602.682775,-166.900519 L -600.132317,-167.210605 L -597.636119,-167.551702 L -595.085651,-167.861787 L -592.535194,-168.202878 L -590.038996,-168.543975 L -587.488528,-168.885072 L -584.938070,-169.257174 L -582.441873,-169.598271 L -579.891405,-169.939362 L -577.340947,-170.280459 L -574.844749,-170.652562 L -572.294282,-170.993659" fill="none" stroke="#3c3c3c" stroke-width="0.705447" stroke-linejoin="round" stroke-linecap="butt" stroke-dasharray="16, 5, 3, 5" id="path282-3" />
+      <svg:path d="M -572.294282,-170.993630 L -571.953185,-168.443162 L -571.612088,-165.946964 L -571.302002,-163.396517 L -570.991917,-160.846049 L -570.712837,-158.349861 L -570.402752,-155.799403 L -570.154683,-153.248936 L -569.875604,-150.752728 L -569.627535,-148.202270 L -569.379467,-145.651802 L -569.131399,-143.155605 L -568.914336,-140.605147 L -568.697273,-138.054669 L -568.511222,-135.558471 L -568.325171,-133.008014 L -568.139120,-130.457546 L -567.953068,-127.961348 L -567.798023,-125.410880 L -567.642983,-122.860423 L -567.487937,-120.364245 L -567.363903,-117.813777 L -567.239869,-115.263319 L -567.115835,-112.767122 L -566.991801,-110.216654 L -566.898772,-107.666196 L -566.805749,-105.169998 L -566.712721,-102.619530 L -566.650704,-100.069073 L -566.557675,-97.572875 L -566.495658,-95.022407 L -566.464675,-92.471949 L -566.402658,-89.975752 L -566.371675,-87.425284 L -566.340693,-84.874822 L -566.309653,-82.378624 L -566.278670,-79.828157 L -566.278670,-77.277689 L -566.278670,-74.781491 L -566.278670,-72.231033 L -566.278670,-69.680566 L -566.309653,-67.184368 L -566.340693,-64.633910 L -566.371675,-62.083442 L -566.402658,-59.587245 L -566.433641,-57.036794 L -566.464681,-54.486339 L -566.526698,-51.990144 L -566.588715,-49.439755 L -566.650732,-46.889287 L -566.712749,-44.393089 L -566.805778,-41.842631 L -566.867795,-39.292164 L -566.960818,-36.795966 L -567.053846,-34.245508 L -567.146869,-31.695040 L -567.239898,-29.198842 L -567.332920,-26.648385 L -567.425949,-24.097917 L -567.549983,-21.601719 L -567.674017,-19.051261 L -567.767046,-16.500794 L -567.891080,-14.004596 L -568.015114,-11.454138 L -568.170160,-8.903670 L -568.294194,-6.407473 L -568.418228,-3.857005 L -568.573268,-1.306547 L -568.697302,1.189651 L -568.852348,3.740118 L -569.007393,6.290576 L -569.131427,8.786774 L -569.286467,11.337241 L -569.441513,13.887699 L -569.596558,16.383897 L -569.751598,18.934365 L -569.906644,21.484822 L -570.092695,23.981020 L -570.247741,26.531488 L -570.402780,29.081946 L -570.588832,31.578144 L -570.743877,34.128612 L -570.929929,36.679079 L -571.084974,39.175277 L -571.271025,41.725735 L -571.426065,44.276203 L -571.612116,46.772400 L -571.767162,49.322858 L -571.953213,51.873326 L -572.108259,54.369524 L -572.294310,56.919981" fill="none" stroke="#3c3c3c" stroke-width="0.705447" stroke-linejoin="round" stroke-linecap="butt" stroke-dasharray="16, 5, 3, 5" id="path283" />
+      <svg:path d="M -583.310312,-179.328363 L -563.959677,-182.009532 L -561.278508,-162.658897 L -580.629143,-159.977728 Z" fill="#000000" id="path284-42" style="stroke-width:0.542651" />
+      <svg:path d="m -791.09141,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path285" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2)" />
+      <svg:path d="m -772.74981,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path286-8" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2)" />
+      <svg:path d="m -754.40821,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path287" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2)" />
+      <svg:path d="m -736.06661,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path288-8" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2)" />
+      <svg:path d="m -717.72501,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path290-0" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2)" />
+      <svg:path d="m -699.38341,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path292-0" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2)" />
+      <svg:path d="m -681.04181,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path294-2" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2)" />
+      <svg:path d="m -662.70021,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path296-1" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2)" />
+      <svg:path d="m -644.35851,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path298-6" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2)" />
+      <svg:path d="m -626.01691,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path300-6" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2)" />
+      <svg:path d="m -607.67531,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path300-6-9" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2-4)" />
+      <svg:path d="m -589.33361,-211.04132 v 24.63638" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="butt" id="path300-6-9-0" style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-2-4-1)" />
+      <svg:path d="m -791.09141,-211.04132 h 201.7578" fill="none" stroke="#ff3300" stroke-width="1.0853" stroke-linejoin="round" stroke-linecap="round" id="path302-8" style="stroke-width:1.80076;stroke-dasharray:none" sodipodi:nodetypes="cc" />
+      <svg:text x="-694.1311" y="-219.57475" font-size="13.0236px" fill="#000000" id="text302-5" style="font-size:20.0085px;stroke-width:0.542651"><svg:tspan style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic'" id="tspan308-9">q</svg:tspan></svg:text>
+      <svg:text x="-808.70581" y="-214.895" font-size="13.0236px" fill="#000000" id="text303-5" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0085px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.542651"><svg:tspan font-family="'Times New Roman', Times, 'Liberation Serif', serif" id="tspan303-2" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0085px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.542651">A</svg:tspan></svg:text>
+      <svg:text x="-559" y="-185.04832" font-size="13.0236px" fill="#000000" id="text304-8" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0085px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.542651"><svg:tspan font-family="'Times New Roman', Times, 'Liberation Serif', serif" id="tspan304-6" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0085px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.542651">B</svg:tspan></svg:text>
+      <svg:text x="-610.52478" y="60.013252" font-size="13.0236px" fill="#000000" id="text305-8" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0085px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.542651"><svg:tspan font-family="'Times New Roman', Times, 'Liberation Serif', serif" id="tspan305-3" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0085px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.542651">C</svg:tspan></svg:text>
+    </svg:g>
+  </svg:g>
+</svg:svg>

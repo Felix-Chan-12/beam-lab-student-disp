@@ -25,9 +25,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.43894551"
-     inkscape:cx="861.15473"
-     inkscape:cy="-183.39406"
+     inkscape:zoom="0.87789102"
+     inkscape:cx="607.70641"
+     inkscape:cy="302.42934"
      inkscape:window-width="1842"
      inkscape:window-height="1057"
      inkscape:window-x="1150"
@@ -2092,33 +2092,6 @@
      x="313.07834"
      y="-97.082199"
      ry="12.887955" />
-  <text
-     x="331.95599"
-     y="-65.160332"
-     font-size="9.76775px"
-     fill="#2f5597"
-     id="text306-3-5-7-1"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651"><tspan
-       style="writing-mode:tb-rl"
-       id="tspan316">载常数</tspan></text>
-  <text
-     x="708.57697"
-     y="87.218201"
-     font-size="9.76775px"
-     fill="#2f5597"
-     id="text306-3-5-7-1-71"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651"><tspan
-       style="writing-mode:tb-rl"
-       id="tspan316-8">形常数</tspan></text>
-  <text
-     x="708.57697"
-     y="237.76962"
-     font-size="9.76775px"
-     fill="#2f5597"
-     id="text306-3-5-7-1-71-2"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651"><tspan
-       style="writing-mode:tb-rl"
-       id="tspan316-8-2">形常数</tspan></text>
   <g
      id="g314"
      transform="matrix(0.82011615,0,0,0.82011615,122.27791,-10.22911)">
@@ -9917,4 +9890,82 @@
        style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Bold Italic';fill:#2f5597;fill-opacity:1">Z</tspan><tspan
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:65%;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Bold';baseline-shift:sub;fill:#2f5597;fill-opacity:1"
        id="tspan4-1">1</tspan></text>
+  <g
+     id="g3">
+    <g
+       id="g2"
+       transform="translate(-0.01470352,0.01230008)">
+      <text
+         x="319.61584"
+         y="-51.461697"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-5-7-1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">载</text>
+      <text
+         x="319.65494"
+         y="-20.848185"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-5-7-1-5"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">常</text>
+      <text
+         x="319.74612"
+         y="9.8695393"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-5-7-1-58"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">数</text>
+    </g>
+    <g
+       id="g2-8"
+       transform="translate(371.6085,163.37807)">
+      <text
+         x="319.61584"
+         y="-51.461697"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-5-7-1-7"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">形</text>
+      <text
+         x="319.65494"
+         y="-20.848185"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-5-7-1-5-0"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">常</text>
+      <text
+         x="319.74612"
+         y="9.8695393"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-5-7-1-58-4"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">数</text>
+    </g>
+    <g
+       id="g2-8-7"
+       transform="translate(371.6085,313.74862)">
+      <text
+         x="319.61584"
+         y="-51.461697"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-5-7-1-7-2"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">形</text>
+      <text
+         x="319.65494"
+         y="-20.848185"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-5-7-1-5-0-8"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">常</text>
+      <text
+         x="319.74612"
+         y="9.8695393"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-5-7-1-58-4-9"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">数</text>
+    </g>
+  </g>
 </svg>

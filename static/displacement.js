@@ -4,6 +4,9 @@
   const scriptBase = new URL('.', document.currentScript.src);
   // 仅使用已随仓库提供、与当前页面对应的 SVG。
   const svgAssets = new Set(["BEAM-01-E", "BEAM-02-A1-2", "BEAM-02-A1-0-(1)", "BEAM-02-A1-0-(2)", "BEAM-02-A1-0-(3)", "BEAM-02-A1-1-(1)", "BEAM-02-A1-1-(2)", "BEAM-02-A1-1-(3)", "BEAM-02-A1-1-(4)", "BEAM-02-A1-1-(5)", "BEAM-02-A1-1-(6)", "BEAM-02-A1-1-(7)"]);
+
+  for (const side of ['L', 'R', 'D-R']) for (let n = 1; n <= 20; n++) svgAssets.add(`BEAM-02-A1-3-(1)-${side}-M${n}`);
+  for (const name of ['BEAM-02-A2-0', 'BEAM-02-A2-1-(4)', 'BEAM-02-A2-2', 'BEAM-02-A2-3', 'BEAM-02-A2-4', 'BEAM-02-A2-5']) svgAssets.add(name);
   const asset = name => {
     const stem = name.replace(/\.png$/, "");
     return new URL(`assets/displacement/${svgAssets.has(stem) ? stem + ".svg" : name}`, scriptBase).href;
@@ -192,7 +195,7 @@
       if (connection?.saveData || ['slow-2g', '2g'].includes(connection?.effectiveType)) return;
       for (const source of sources) for (const next of [frame - 1, frame + 1]) {
         if (next < 0 || next > 19) continue;
-        const url = source.replace(/-M\d+\.png$/, `-M${next + 1}.png`);
+        const url = source.replace(/-M\d+(\.(?:png|svg))$/, `-M${next + 1}$1`);
         if (prefetched.has(url)) continue;
         prefetched.add(url);
         const image = new Image();
