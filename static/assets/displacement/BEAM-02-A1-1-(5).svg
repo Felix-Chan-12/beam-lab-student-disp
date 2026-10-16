@@ -26,14 +26,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.2415254"
-     inkscape:cx="483.67919"
-     inkscape:cy="216.26622"
+     inkscape:cx="459.11264"
+     inkscape:cy="199.35154"
      inkscape:window-width="1842"
      inkscape:window-height="1057"
      inkscape:window-x="1150"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg307"
+     inkscape:current-layer="g27"
      inkscape:document-units="cm" />
   <metadata
      id="metadata1">
@@ -706,123 +706,18 @@
            id="rect437-1-5-9-4" />
       </g>
     </clipPath>
-    <marker
-       style="overflow:visible"
-       id="Triangle-6-4-3"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Triangle arrow"
-       markerWidth="0.94999999"
-       markerHeight="0.64999998"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="none">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path307-6-5-8" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="Triangle-6-4-5"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Triangle arrow"
-       markerWidth="0.94999999"
-       markerHeight="0.64999998"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="none">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path307-6-5-6" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="Triangle-6-3-1-6"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Triangle arrow"
-       markerWidth="0.94999999"
-       markerHeight="0.64999998"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="none">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path307-6-1-3-7" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="Triangle-6-3-0-2-2"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Triangle arrow"
-       markerWidth="0.94999999"
-       markerHeight="0.64999998"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="none">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path307-6-1-9-18-0" />
-    </marker>
     <clipPath
        id="cp2-8-1-8">
       <path
          d="M 0,-79.2 V 79.2 H -72 V -79.2 Z"
          id="path3-1-3-9" />
     </clipPath>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gr3-5"
-       id="linearGradient308-4"
-       gradientUnits="userSpaceOnUse"
-       x1="420"
-       y1="0"
-       x2="492"
-       y2="0" />
     <clipPath
        id="cp4-6-7-3">
       <path
          d="M 420,79.2 V -79.2 h 72 V 79.2 Z"
          id="path6-8-2-2" />
     </clipPath>
-    <marker
-       style="overflow:visible"
-       id="ArrowWide-51-7"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Wide arrow"
-       markerWidth="1"
-       markerHeight="1"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
-         d="M 3,-3 0,0 3,3"
-         transform="rotate(180,0.125,0)"
-         sodipodi:nodetypes="ccc"
-         id="path10-14-7" />
-    </marker>
     <clipPath
        id="cp2-08-0">
       <path
@@ -1812,10 +1707,229 @@
            id="rect437-1-5-2-1" />
       </g>
     </clipPath>
+    <marker
+       style="overflow:visible"
+       id="Triangle-6-4-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="0.94999999"
+       markerHeight="0.64999998"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="none">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path307-6-5-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-6-4-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="0.94999999"
+       markerHeight="0.64999998"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="none">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path307-6-5-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-6-3-1-6"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="0.94999999"
+       markerHeight="0.64999998"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="none">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path307-6-1-3-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-6-3-0-2-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="0.94999999"
+       markerHeight="0.64999998"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="none">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path307-6-1-9-18-0" />
+    </marker>
+    <clipPath
+       id="cp2-8-1-8-4">
+      <path
+         d="M 0,-79.2 V 79.2 H -72 V -79.2 Z"
+         id="path3-1-3-9-6" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gr3-5"
+       id="linearGradient308-4"
+       gradientUnits="userSpaceOnUse"
+       x1="420"
+       y1="0"
+       x2="492"
+       y2="0" />
+    <clipPath
+       id="cp4-6-7-3-2">
+      <path
+         d="M 420,79.2 V -79.2 h 72 V 79.2 Z"
+         id="path6-8-2-2-0" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       id="ArrowWide-51-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path10-14-7" />
+    </marker>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath437-7-7-86">
+      <g
+         id="g438-2-9-4">
+        <rect
+           x="0"
+           y="0"
+           width="1280"
+           height="720"
+           id="rect437-1-5-4" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath437-7-7-8-6">
+      <g
+         id="g438-2-9-0-5">
+        <rect
+           x="0"
+           y="0"
+           width="1280"
+           height="720"
+           id="rect437-1-5-9-7" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath437-7-7-8-3-1">
+      <g
+         id="g438-2-9-0-6-7">
+        <rect
+           x="0"
+           y="0"
+           width="1280"
+           height="720"
+           id="rect437-1-5-9-4-6" />
+      </g>
+    </clipPath>
+    <clipPath
+       id="cp2-08-0-2">
+      <path
+         d="M 0,-79.2 V 79.2 H -72 V -79.2 Z"
+         id="path3-35-1-6" />
+    </clipPath>
+    <clipPath
+       id="cp4-5-1-6">
+      <path
+         d="M 435.7,77.6 404.3,-77.6 474.8,-91.9 506.3,63.3 Z"
+         id="path6-17-1-7" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath437-7-7-0-1">
+      <g
+         id="g438-2-9-8-0">
+        <rect
+           x="0"
+           y="0"
+           width="1280"
+           height="720"
+           id="rect437-1-5-2-16" />
+      </g>
+    </clipPath>
+    <clipPath
+       id="cp2-7-2-1">
+      <path
+         d="M 435.7,77.6 404.3,-77.6 474.8,-91.9 506.3,63.3 Z"
+         id="path3-4-4-9" />
+    </clipPath>
+    <clipPath
+       id="cp4-37-0-6">
+      <path
+         d="m -118.8,105.1 h 237.6 v 61.2 h -237.6 z"
+         id="path6-14-3-0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath437-7-7-8-3-0-3">
+      <g
+         id="g438-2-9-0-6-3-7">
+        <rect
+           x="0"
+           y="0"
+           width="1280"
+           height="720"
+           id="rect437-1-5-9-4-4-0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath437-7-7-0-2-9">
+      <g
+         id="g438-2-9-8-8-2">
+        <rect
+           x="0"
+           y="0"
+           width="1280"
+           height="720"
+           id="rect437-1-5-2-1-8" />
+      </g>
+    </clipPath>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#gr1"
-       id="linearGradient311"
+       id="linearGradient1"
        gradientUnits="userSpaceOnUse"
        x1="0"
        y1="0"
@@ -1831,1561 +1945,1485 @@
      y="-97.099487"
      ry="12.887955" />
   <g
-     id="g1">
-    <text
-       x="319.61584"
-       y="-51.461697"
-       font-size="9.76775px"
-       fill="#2f5597"
-       id="text306-3-5-7-1"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">载</text>
-    <text
-       x="319.65494"
-       y="-20.848185"
-       font-size="9.76775px"
-       fill="#2f5597"
-       id="text306-3-5-7-1-5"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">常</text>
-    <text
-       x="319.74612"
-       y="9.8695393"
-       font-size="9.76775px"
-       fill="#2f5597"
-       id="text306-3-5-7-1-58"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">数</text>
-  </g>
-  <g
      id="g314"
      transform="matrix(0.82011615,0,0,0.82011615,122.27791,-10.22911)">
     <g
-       id="g308-0-1-1"
-       transform="matrix(0.71699836,0,0,0.71699836,338.2597,-113.73955)">
+       id="g27"
+       transform="matrix(1.2193395,0,0,1.2193395,-149.09829,12.492366)">
+      <g
+         id="g308-0-1-1"
+         transform="matrix(0.58802193,0,0,0.58802193,399.69015,-103.50875)">
+        <path
+           d="M -27.035733,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path282-7-7-5"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+        <path
+           d="M -8.6941053,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path284-4-1-8"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+        <path
+           d="M 9.6475234,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path286-91-8-1"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+        <path
+           d="M 27.989153,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path288-5-5-3"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+        <path
+           d="M 46.330781,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path290-2-8-7"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+        <path
+           d="M 64.67241,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path292-1-7-0"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+        <path
+           d="M 83.014038,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path294-4-5-5"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+        <path
+           d="M 101.35566,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path296-9-5-45"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+        <path
+           d="M 119.69729,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path298-3-2-7"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+        <path
+           d="M 138.03893,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path300-4-6-5"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+        <path
+           d="M -27.035733,39.357469 H 138.03893"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="round"
+           id="path302-9-3-77"
+           style="stroke-width:1.80076;stroke-dasharray:none" />
+      </g>
+      <text
+         x="429.41177"
+         y="-84.621742"
+         font-size="13.0236px"
+         fill="#000000"
+         id="text302-7-1-9"
+         style="font-size:11.7655px;stroke-width:0.319092"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke-width:0.319092"
+           id="tspan308-7-1-6">q</tspan></text>
+      <g
+         id="g308-0-1-7"
+         transform="matrix(0.58802193,0,0,0.58802193,575.53341,-103.50875)">
+        <path
+           d="M -27.035733,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path282-7-7-1"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+        <path
+           d="M -8.6941053,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path284-4-1-7"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+        <path
+           d="M 9.6475234,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path286-91-8-3"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+        <path
+           d="M 27.989153,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path288-5-5-4"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+        <path
+           d="M 46.330781,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path290-2-8-1"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+        <path
+           d="M 64.67241,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path292-1-7-5"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+        <path
+           d="M 83.014038,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path294-4-5-7"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+        <path
+           d="M 101.35566,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path296-9-5-4"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+        <path
+           d="M 119.69729,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path298-3-2-1"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+        <path
+           d="M 138.03893,39.357469 V 63.99385"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="butt"
+           id="path300-4-6-6"
+           style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+        <path
+           d="M -27.035733,39.357469 H 138.03893"
+           fill="none"
+           stroke="#ff3300"
+           stroke-width="1.0853"
+           stroke-linejoin="round"
+           stroke-linecap="round"
+           id="path302-9-3-7"
+           style="stroke-width:1.80076;stroke-dasharray:none" />
+      </g>
+      <text
+         x="605.25537"
+         y="-84.621742"
+         font-size="13.0236px"
+         fill="#000000"
+         id="text302-7-1-73"
+         style="font-size:11.7655px;stroke-width:0.319092"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke-width:0.319092"
+           id="tspan308-7-1-1">q</tspan></text>
+      <text
+         x="430.02789"
+         y="-28.445154"
+         font-size="13.0236px"
+         fill="#000000"
+         id="text302-7-2-6-3"
+         style="font-size:11.7655px;stroke-width:0.319092"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke-width:0.319092"
+           id="tspan308-7-7-4-99">l</tspan></text>
       <path
-         d="M -27.035733,39.357469 V 63.99385"
+         d="M 382.6348,-16.952087 V -35.703281"
          fill="none"
          stroke="#ff3300"
          stroke-width="1.0853"
          stroke-linejoin="round"
          stroke-linecap="butt"
-         id="path282-7-7-5"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+         id="path300-4-8-8-4"
+         style="fill:#2f5597;fill-opacity:1;stroke:#2f5597;stroke-width:1.05888;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-6-3-1-6)"
+         sodipodi:nodetypes="cc" />
+      <text
+         x="357.97049"
+         y="-22.179655"
+         font-size="13.0236px"
+         fill="#000000"
+         id="text303-2-7-9-8"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7655px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke-width:0.319092"
+           id="tspan311-3-8">F</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.64752px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke-width:0.319092"
+           id="tspan310-2-3">QAB</tspan></text>
       <path
-         d="M -8.6941053,39.357469 V 63.99385"
+         d="M 480.29009,-16.952087 V -35.703281"
          fill="none"
          stroke="#ff3300"
          stroke-width="1.0853"
          stroke-linejoin="round"
          stroke-linecap="butt"
-         id="path284-4-1-8"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
+         id="path300-4-8-6-9-7"
+         style="fill:#2f5597;fill-opacity:1;stroke:#2f5597;stroke-width:1.05888;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-6-3-0-2-2)"
+         sodipodi:nodetypes="cc" />
+      <text
+         x="483.36401"
+         y="-22.179655"
+         font-size="13.0236px"
+         fill="#000000"
+         id="text303-2-7-4-3-6"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7655px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke-width:0.319092"
+           id="tspan311-9-0-5">F</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.64752px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke-width:0.319092"
+           id="tspan310-3-1-2">QBA</tspan></text>
+      <text
+         x="476.23434"
+         y="-42.134094"
+         font-size="13.0236px"
+         fill="#000000"
+         id="text304-4-1-3"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7655px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092"><tspan
+           font-family="'Times New Roman', Times, 'Liberation Serif', serif"
+           id="tspan304-3-2-71"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7655px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092">B</tspan></text>
+      <text
+         x="362.85214"
+         y="7.8503199"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-7-4-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.7655px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092"><tspan
+           sodipodi:role="line"
+           id="tspan10-6"
+           x="362.85214"
+           y="7.8503199"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.7655px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;stroke-width:0.319092">剪</tspan><tspan
+           sodipodi:role="line"
+           x="362.85214"
+           y="22.557196"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.7655px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;stroke-width:0.319092"
+           id="tspan1">力</tspan><tspan
+           sodipodi:role="line"
+           x="362.85214"
+           y="37.264069"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.7655px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;stroke-width:0.319092"
+           id="tspan2">图</tspan></text>
+      <text
+         x="537.89502"
+         y="7.8503199"
+         font-size="9.76775px"
+         fill="#2f5597"
+         id="text306-3-7-4-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.7655px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092"><tspan
+           sodipodi:role="line"
+           id="tspan3"
+           x="537.89502"
+           y="7.8503199">弯</tspan><tspan
+           sodipodi:role="line"
+           id="tspan4"
+           x="537.89502"
+           y="22.557196">矩</tspan><tspan
+           sodipodi:role="line"
+           x="537.89502"
+           y="37.264069"
+           id="tspan5">图</tspan></text>
       <path
-         d="M 9.6475234,39.357469 V 63.99385"
+         d="m 378.39452,-62.512427 h 106.33312 v 11.529062 H 378.39452 Z"
          fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path286-91-8-1"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
-      <path
-         d="M 27.989153,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path288-5-5-3"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
-      <path
-         d="M 46.330781,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path290-2-8-7"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
-      <path
-         d="M 64.67241,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path292-1-7-0"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
-      <path
-         d="M 83.014038,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path294-4-5-5"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
-      <path
-         d="M 101.35566,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path296-9-5-45"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
-      <path
-         d="M 119.69729,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path298-3-2-7"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
-      <path
-         d="M 138.03893,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path300-4-6-5"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-3)" />
-      <path
-         d="M -27.035733,39.357469 H 138.03893"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
+         stroke="#8c8c8c"
+         stroke-width="0.427116"
          stroke-linejoin="round"
          stroke-linecap="round"
-         id="path302-9-3-77"
-         style="stroke-width:1.80076;stroke-dasharray:none" />
-    </g>
-    <text
-       x="374.50046"
-       y="-90.709869"
-       font-size="13.0236px"
-       fill="#000000"
-       id="text302-7-1-9"
-       style="font-size:14.3461px;stroke-width:0.389082"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke-width:0.389082"
-         id="tspan308-7-1-6">q</tspan></text>
-    <g
-       id="g308-0-1-7"
-       transform="matrix(0.71699836,0,0,0.71699836,552.67232,-113.73955)">
+         stroke-dasharray="7, 5"
+         id="path12-9-9" />
       <path
-         d="M -27.035733,39.357469 V 63.99385"
+         d="M 378.39452,-56.747896 H 484.72764"
          fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
+         stroke="#8c8c8c"
+         stroke-width="0.313218"
          stroke-linejoin="round"
          stroke-linecap="butt"
-         id="path282-7-7-1"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+         stroke-dasharray="16, 5, 3, 5"
+         id="path13-67-0" />
+      <g
+         id="g81-1-8-2"
+         transform="matrix(0.31897616,0,0,0.31897616,378.43562,-56.729771)">
+        <path
+           d="M 0,-79.2 V 79.2 H -72 V -79.2 Z"
+           fill="url(#gr1)"
+           id="path9-6-6-6"
+           style="fill:url(#linearGradient1)" />
+        <g
+           clip-path="url(#cp2-8-1-8-4)"
+           id="g80-2-9">
+          <path
+             d="m -27.1,37.8 c 0.5,1.3 3.3,2.2 2.9,3.4 -0.5,1.3 -4,3.6 -5.6,4.1 -1.5,0.4 -2.2,-0.7 -3.6,-1.3 -1.5,-0.7 -4.3,-1.5 -4.8,-2.8 -0.5,-1.2 1.2,-3.6 1.7,-4.8 0.6,-1.2 -0.1,-2 1.5,-2.6 1.5,-0.5 6.4,-1.5 7.7,-0.9 1.3,0.7 -0.4,3.5 0.2,4.9 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path10-7-0-2" />
+          <path
+             d="m -8.6,45.4 c 0.5,-0.3 2.6,-0.7 4.2,-0.8 1.6,-0.1 4.4,0.2 5.4,0.5 1.1,0.3 1.2,0.6 1,1.3 -0.1,0.7 -1.2,2.2 -2,3 -0.7,0.7 -1.1,1.3 -2.4,1.4 -1.4,0 -4.7,-0.5 -5.5,-1.2 -0.9,-0.7 0.4,-2.3 0.3,-3 -0.1,-0.7 -1.5,-0.8 -1,-1.2 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path11-5-8-1" />
+          <path
+             d="m -10.5,-51.9 c -0.3,0.6 -1,1.4 -1.8,1.9 -0.7,0.4 -1.9,1.1 -2.7,0.8 -0.8,-0.3 -1.7,-1.7 -2.2,-2.6 -0.5,-0.9 -1,-1.8 -0.9,-2.5 0,-0.8 0.4,-1.6 1.3,-2 0.9,-0.4 3,-0.8 4.1,-0.3 1.1,0.5 2.2,2.5 2.5,3.3 0.4,0.8 0.1,0.9 -0.3,1.4 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path12-6-7-5" />
+          <path
+             d="m -39.1,-21.8 c 0.2,1.1 -0.5,2.5 -2.2,3.4 -1.6,0.8 -6.1,1.9 -7.6,1.8 -1.6,0 -0.8,-1.2 -1.6,-2 -0.8,-0.8 -2.9,-2.1 -3.2,-2.9 -0.3,-0.9 -0.1,-1.6 1.4,-2.3 1.4,-0.7 5.6,-1.7 7.2,-1.9 1.7,-0.3 1.6,-0.2 2.6,0.5 1,0.6 3.2,2.3 3.4,3.4 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path13-0-5-0" />
+          <path
+             d="m 4.6,-26.5 c 0.8,0.9 -0.1,1.3 -0.6,1.9 -0.5,0.7 -1.5,1.3 -2.5,2 -1,0.7 -2.2,2.7 -3.5,2.4 -1.3,-0.3 -3.1,-3.3 -4.3,-4.2 -1.3,-0.8 -3.4,-0.2 -3.1,-0.9 0.4,-0.8 3.7,-2.9 5.1,-3.7 1.5,-0.8 2.1,-1.4 3.6,-1 1.5,0.5 4.5,2.6 5.3,3.5 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path14-8-9-9" />
+          <path
+             d="m -44.9,-6.6 c -0.9,0.8 -3,2.6 -4.4,3.5 -1.5,0.8 -3.1,2.1 -4.3,1.8 -1.2,-0.3 -2.5,-2.6 -2.8,-3.6 -0.4,-1.1 0.4,-1.6 0.7,-2.8 0.4,-1.1 0.3,-3.6 1.4,-4.2 1.1,-0.7 3.4,-0.6 5.1,0.1 1.8,0.6 4.7,2.9 5.4,3.8 0.7,0.9 -0.2,0.6 -1.1,1.4 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path15-0-2-1" />
+          <path
+             d="m -67.1,-11.5 c 1.1,0 2.3,-0.4 3.7,0.4 1.4,0.8 4.5,3.4 4.8,4.6 0.3,1.1 -1.9,1.7 -2.9,2.1 -1,0.4 -2.1,0.1 -3.3,0.4 -1.3,0.2 -3.3,1.7 -4.4,1.1 -1,-0.6 -1.7,-3.4 -1.9,-4.8 -0.2,-1.4 0.1,-2.8 0.7,-3.4 0.7,-0.7 2.1,-0.4 3.3,-0.4 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path16-9-5-2" />
+          <path
+             d="m -41.9,30.7 c -1.2,-1.2 -3.1,-3.8 -3.7,-5.2 -0.5,-1.5 -0.8,-2.6 0.5,-3.5 1.2,-1 5.4,-1.8 7,-2 1.6,-0.2 1.7,-0.1 2.8,0.7 1.2,0.8 3.8,2.4 4.3,4 0.5,1.6 0.1,4.2 -1.1,5.6 -1.2,1.3 -4.5,2.3 -6.2,2.4 -1.6,0 -2.3,-0.8 -3.6,-2 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path17-8-1-3" />
+          <path
+             d="m -7.6,18.2 c 2,0.7 3.3,2.1 3.2,3.5 0,1.3 -2.2,3.6 -3.3,4.5 -1.2,0.8 -1.8,0.2 -3.5,0.4 -1.6,0.2 -5.2,1.3 -6.6,1 -1.4,-0.4 -1.7,-1.8 -1.8,-3.1 -0.2,-1.4 0.3,-3.7 0.9,-4.9 0.5,-1.1 0.7,-1.6 2.5,-1.8 1.9,-0.2 6.7,-0.2 8.6,0.4 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path18-1-7-5" />
+          <path
+             d="m -32.8,22.1 c 0.6,-0.7 1.6,0.3 2.9,0.4 1.4,0 4.1,-0.6 5.3,-0.1 1.2,0.4 2.2,1.9 1.9,2.9 -0.2,1.1 -2.3,2.8 -3.3,3.6 -1,0.8 -1.8,1.3 -2.6,1.4 -0.8,0.1 -1.5,-0.2 -2.3,-0.8 -0.7,-0.6 -1.9,-1.6 -2.3,-2.8 -0.3,-1.3 -0.1,-3.9 0.4,-4.6 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path19-7-1-7" />
+          <path
+             d="m -8.6,-71 c -0.7,-0.9 -0.3,-2.5 -0.2,-3.4 0,-0.9 -0.3,-1.5 0.3,-2 0.6,-0.4 2.2,-0.9 3.5,-0.8 1.3,0.1 3.5,0.9 4.5,1.3 1,0.4 1.4,0.4 1.5,1.2 0,0.9 -0.2,2.8 -1.1,3.8 -0.9,1 -3.1,2.2 -4.5,2.2 -1.4,0 -3.3,-1.3 -4,-2.3 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path20-9-3-0" />
+          <path
+             d="m -62.5,47 c 1.2,0.6 3.3,0.7 4,1.9 0.7,1.2 0.8,4.2 0.2,5.1 -0.7,0.9 -2.7,0.6 -4,0.4 -1.3,-0.1 -2.8,-1.1 -3.9,-1.3 -1,-0.2 -2.1,0.8 -2.4,0.1 -0.3,-0.7 0.4,-3 0.8,-4.4 0.4,-1.3 0.9,-3.4 1.8,-3.7 0.9,-0.3 2.2,1.3 3.5,1.9 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path21-2-3-0" />
+          <path
+             d="m -15.5,-5.2 c -1.1,-0.4 -2.9,-3.2 -3.7,-4.2 -0.8,-1.1 -1.7,-1.3 -1.2,-2.2 0.4,-0.8 2.6,-2.1 3.8,-3 1.2,-0.8 2.3,-2.3 3.3,-2 1,0.3 2.2,2.7 2.7,3.8 0.4,1.1 0.3,1.9 0,2.9 -0.3,1 -0.8,2.2 -1.6,3 -0.8,0.8 -2.1,2.2 -3.3,1.7 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path22-9-2-8" />
+          <path
+             d="m -11.3,42.2 0.2,4.7 -4.1,-2.2 z"
+             fill="#000000"
+             id="path23-9-9-7" />
+          <path
+             d="M -0.6,7.8 -2.3,3.5 2.3,4.2 Z"
+             fill="#000000"
+             id="path24-3-1-6" />
+          <path
+             d="m -63.5,47.4 -2.5,-4 4.7,-0.2 z"
+             fill="#000000"
+             id="path25-0-4-9" />
+          <path
+             d="m -8.3,-54.9 -3.9,2.6 -0.3,-4.6 z"
+             fill="#000000"
+             id="path26-7-0-0" />
+          <path
+             d="m -15.2,17.5 3.6,-2.9 0.8,4.6 z"
+             fill="#000000"
+             id="path27-9-5-5" />
+          <path
+             d="m -37.9,13.8 2.5,3.9 -4.7,0.2 z"
+             fill="#000000"
+             id="path28-7-1-5" />
+          <path
+             d="m -4.4,43.8 -0.9,-4.6 4.4,1.5 z"
+             fill="#000000"
+             id="path29-8-9-5" />
+          <path
+             d="m -29.8,-23.4 -1,-4.5 4.4,1.3 z"
+             fill="#000000"
+             id="path30-5-2-0" />
+          <path
+             d="m -30.4,-3.6 0.8,-4.6 3.6,3 z"
+             fill="#000000"
+             id="path31-4-4-9" />
+          <path
+             d="m -43.6,15 -4.5,1.4 1.1,-4.6 z"
+             fill="#000000"
+             id="path32-2-4-3" />
+          <path
+             d="m -7.8,-8.4 -2.4,4.1 -2.3,-4.1 z"
+             fill="#000000"
+             id="path33-2-0-9" />
+          <path
+             d="m -56.4,7.5 -4.3,1.9 0.4,-4.6 z"
+             fill="#000000"
+             id="path34-4-9-0" />
+          <path
+             d="m -51.6,-12.7 4.7,-0.2 -2.1,4.1 z"
+             fill="#000000"
+             id="path35-4-2-1" />
+          <path
+             d="m -45.8,21.3 3.8,-2.8 0.5,4.6 z"
+             fill="#000000"
+             id="path36-0-6-3" />
+          <path
+             d="m -63.5,-16.4 1.7,-4.4 3,3.6 z"
+             fill="#000000"
+             id="path37-9-6-2" />
+          <path
+             d="m -56.6,-45.5 -1.1,-4.5 4.5,1.3 z"
+             fill="#000000"
+             id="path38-6-7-8" />
+          <path
+             d="m -52.4,-71 -0.1,4.6 -4,-2.4 z"
+             fill="#000000"
+             id="path39-4-3-6" />
+          <path
+             d="m -42.5,-8 -1.4,-4.5 4.6,1.1 z"
+             fill="#000000"
+             id="path40-7-7-2" />
+          <path
+             d="m -47.7,67.2 -4.4,-1.7 3.7,-3 z"
+             fill="#000000"
+             id="path41-3-4-2" />
+          <path
+             d="m -27.6,7.8 4,-2.4 0.1,4.7 z"
+             fill="#000000"
+             id="path42-6-0-9" />
+          <path
+             d="m -17.2,-56.3 4.7,0.1 -2.4,4 z"
+             fill="#000000"
+             id="path43-5-4-8" />
+          <path
+             d="m -51.8,-65.7 -2.9,-3.7 4.7,-0.6 z"
+             fill="#000000"
+             id="path44-5-9-7" />
+          <path
+             d="m -54.3,43.9 4.1,2.3 -4,2.4 z"
+             fill="#000000"
+             id="path45-5-4-7" />
+          <path
+             d="m 2.3,34.9 -3.7,2.9 -0.7,-4.7 z"
+             fill="#000000"
+             id="path46-5-9-1" />
+          <path
+             d="m -67.1,32.7 -4.6,1 1.4,-4.5 z"
+             fill="#000000"
+             id="path47-6-8-4" />
+          <path
+             d="m -56.5,-46.6 4.3,1.8 -3.7,2.8 z"
+             fill="#000000"
+             id="path48-9-5-8" />
+          <path
+             d="m -63.4,35.7 -4.5,-1.5 3.5,-3.1 z"
+             fill="#000000"
+             id="path49-4-3-1" />
+          <path
+             d="m -10.9,68.4 -4.3,-1.9 3.8,-2.8 z"
+             fill="#000000"
+             id="path50-7-5-5" />
+          <path
+             d="m -33.6,-11.3 -4.1,-2.2 4,-2.5 z"
+             fill="#000000"
+             id="path51-4-0-8" />
+          <path
+             d="m -33.9,-70.6 -4.6,-0.7 3,-3.7 z"
+             fill="#000000"
+             id="path52-9-3-0" />
+          <path
+             d="m -15.4,-66.8 -4.7,0.7 1.7,-4.4 z"
+             fill="#000000"
+             id="path53-0-9-8" />
+          <path
+             d="m -30.3,36.5 -1.3,4.5 -3.2,-3.4 z"
+             fill="#000000"
+             id="path54-0-5-1" />
+          <path
+             d="m -5.3,-8.3 -0.5,-4.7 4.3,1.9 z"
+             fill="#000000"
+             id="path55-4-8-6" />
+          <path
+             d="M -31.7,-2.7 -34.5,1 -36.3,-3.3 Z"
+             fill="#000000"
+             id="path56-9-5-7" />
+          <path
+             d="m -18.5,-72.9 3.5,3 -4.4,1.6 z"
+             fill="#000000"
+             id="path57-7-7-6" />
+          <path
+             d="m -7.7,20.7 4.2,-2.2 -0.2,4.7 z"
+             fill="#000000"
+             id="path58-7-3-6" />
+          <path
+             d="m -63.2,6.8 4.5,1.1 -3.2,3.4 z"
+             fill="#000000"
+             id="path59-8-8-9" />
+          <path
+             d="m -10.9,10.9 -2.2,-4.1 4.7,0.1 z"
+             fill="#000000"
+             id="path60-2-9-2" />
+          <path
+             d="m -44.9,4.7 -4.5,-1.5 3.5,-3.1 z"
+             fill="#000000"
+             id="path61-2-0-8" />
+          <path
+             d="m -9.4,-23.1 2.7,3.9 -4.7,0.3 z"
+             fill="#000000"
+             id="path62-0-7-5" />
+          <path
+             d="m -7.8,31.6 4.2,2 -3.9,2.6 z"
+             fill="#000000"
+             id="path63-1-5-3" />
+          <path
+             d="m 0,28.1 -4.6,-0.3 2.5,-3.9 z"
+             fill="#000000"
+             id="path64-8-0-8" />
+          <path
+             d="m -3.6,17.6 -2.6,-3.9 4.6,-0.3 z"
+             fill="#000000"
+             id="path65-1-4-8" />
+          <path
+             d="m -59.3,-0.7 -0.3,-4.6 4.2,2 z"
+             fill="#000000"
+             id="path66-9-9-0" />
+          <path
+             d="m -51.2,-77.2 2.9,3.6 -4.6,0.8 z"
+             fill="#000000"
+             id="path67-8-0-6" />
+          <path
+             d="m 1.4,-56.1 -3.2,3.4 -1.3,-4.4 z"
+             fill="#000000"
+             id="path68-6-3-3" />
+          <path
+             d="m -38.8,-42.1 -4.6,-0.9 3.2,-3.5 z"
+             fill="#000000"
+             id="path69-9-5-4" />
+          <path
+             d="m -66,23.7 0.3,4.7 -4.2,-2 z"
+             fill="#000000"
+             id="path70-6-3-5" />
+          <path
+             d="m -6.1,21.9 0.6,-4.6 3.7,2.8 z"
+             fill="#000000"
+             id="path71-0-2-6" />
+          <path
+             d="m -11.2,-28.2 4.6,0.9 -3.1,3.5 z"
+             fill="#000000"
+             id="path72-4-9-2" />
+          <path
+             d="m -14.2,-16.1 -4.4,-1.5 3.5,-3 z"
+             fill="#000000"
+             id="path73-9-9-1" />
+          <path
+             d="m -53,20.9 0.8,4.6 -4.4,-1.6 z"
+             fill="#000000"
+             id="path74-7-6-6" />
+          <path
+             d="m -24.3,55.4 4.2,-1.9 -0.5,4.7 z"
+             fill="#000000"
+             id="path75-1-2-9" />
+          <path
+             d="m -33.7,8.9 2.5,3.9 -4.6,0.3 z"
+             fill="#000000"
+             id="path76-3-0-4" />
+          <path
+             d="m -16.4,-63.3 -4.5,1.5 1,-4.6 z"
+             fill="#000000"
+             id="path77-1-2-8" />
+          <path
+             d="m -5.4,-74.7 -1.6,4.4 -3,-3.6 z"
+             fill="#000000"
+             id="path78-8-4-0" />
+          <path
+             d="m -22.4,41.2 -4,2.4 v -4.7 z"
+             fill="#000000"
+             id="path79-8-4-7" />
+          <path
+             d="m -26.3,59.9 4.6,1.1 -3.2,3.4 z"
+             fill="#000000"
+             id="path80-9-8-5" />
+        </g>
+      </g>
       <path
-         d="M -8.6941053,39.357469 V 63.99385"
+         d="m 378.43562,-81.992695 v 50.525847"
          fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
+         stroke="#000000"
+         stroke-width="1.59489"
          stroke-linejoin="round"
          stroke-linecap="butt"
-         id="path284-4-1-7"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+         id="path81-0-4-9" />
+      <g
+         id="g154-2-2"
+         transform="matrix(0.31897616,0,0,0.31897616,351.13824,-56.729771)">
+        <path
+           d="M 420,79.2 V -79.2 h 72 V 79.2 Z"
+           fill="url(#gr3)"
+           id="path82-4-2-9"
+           style="fill:url(#linearGradient308-4)" />
+        <g
+           clip-path="url(#cp4-6-7-3-2)"
+           id="g153-0-1">
+          <path
+             d="m 443.7,17.5 c 0.6,0.3 1,1.1 0.8,1.7 -0.3,0.7 -1.6,1.7 -2.2,2.4 -0.7,0.6 -0.8,1.4 -1.7,1.6 -1,0.2 -3.3,-0.3 -4,-0.7 -0.7,-0.4 -0.3,-1.2 -0.4,-1.8 -0.1,-0.7 -1,-1.4 -0.2,-2 0.7,-0.6 3.5,-1.4 4.8,-1.6 1.3,-0.2 2.3,0 2.9,0.4 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path83-7-9-9" />
+          <path
+             d="m 471,22 c -0.8,0.9 -3.2,0 -4.6,0 -1.4,0 -2.3,0.2 -3.7,-0.1 -1.4,-0.4 -4.1,-1 -4.8,-2 -0.8,-1 -1,-3.3 0.3,-4.1 1.3,-0.8 5.7,-0.7 7.5,-0.9 1.8,-0.2 2.4,-0.7 3.3,-0.5 0.9,0.3 1.9,0.9 2.2,2.2 0.4,1.3 0.6,4.5 -0.2,5.4 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path84-3-0-6" />
+          <path
+             d="m 481.3,64.9 c -0.9,0.8 -0.5,0.3 -1.5,0.2 -1,-0.2 -3.3,-0.7 -4.5,-1.1 -1.2,-0.4 -2.8,-0.2 -2.8,-1.3 0,-1.1 1.9,-4.1 2.8,-5.2 0.9,-1.1 1.5,-1.3 2.6,-1.4 1.1,-0.1 2.7,0.2 3.8,0.9 1.2,0.7 3.2,2 3.1,3.4 -0.1,1.3 -2.7,3.7 -3.5,4.5 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path85-9-5-4" />
+          <path
+             d="m 477.3,68 c 1.3,-0.7 5.4,-0.3 7.4,-0.5 1.9,-0.1 3.6,-0.8 4.5,-0.5 0.9,0.4 0.9,1.7 0.8,2.5 0,0.8 0,1.7 -1,2.6 -1,0.9 -3.6,2.6 -5,2.7 -1.4,0.1 -2.2,-1.6 -3.4,-2.1 -1.2,-0.5 -3.2,-0.3 -3.8,-1.1 -0.5,-0.8 -0.8,-2.9 0.5,-3.6 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path86-0-8-6" />
+          <path
+             d="m 454.9,5.9 c 0.1,1 -0.9,3.2 -1.6,4.2 -0.8,1 -2,1.7 -3.1,1.8 -1.1,0 -2.7,-0.7 -3.6,-1.4 -0.9,-0.7 -1.8,-1.9 -1.9,-2.7 0,-0.9 0.9,-1.6 1.6,-2.5 0.8,-0.9 2,-2.5 3.1,-2.8 1.1,-0.2 2.5,0.9 3.5,1.4 0.9,0.6 2,1 2,2 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path87-3-2-4" />
+          <path
+             d="m 428.3,-32.9 c -1.3,0.3 -3.9,-0.9 -4.8,-1.6 -0.9,-0.8 -0.8,-1.9 -0.6,-3 0.1,-1.1 1,-2.5 1.3,-3.5 0.4,-1.1 -0.5,-2.4 0.6,-2.8 1.1,-0.4 4.4,-0.8 5.8,0.4 1.4,1.1 2.5,5.4 2.6,6.6 0.1,1.2 -1.2,0 -2,0.6 -0.8,0.7 -1.7,3 -2.9,3.3 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path88-8-6-7" />
+          <path
+             d="m 431.4,15.7 c -0.1,0.9 -0.7,2 -1.4,3.2 -0.8,1.1 -2.1,3.2 -3.2,3.7 -1.1,0.5 -1.8,-0.1 -3.2,-0.8 -1.4,-0.8 -4.3,-2.5 -5.1,-3.7 -0.8,-1.1 -0.3,-2.3 0.5,-3.2 0.7,-0.9 2,-1.8 3.9,-2 1.9,-0.3 6.2,0.1 7.7,0.6 1.4,0.4 0.9,1.3 0.8,2.2 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path89-0-0-5" />
+          <path
+             d="m 439,62.9 c 0.4,-0.8 1.2,-1.3 1.6,-1.6 0.5,-0.3 0.4,-0.2 1.2,-0.1 0.9,0 3.3,0.1 3.9,0.5 0.6,0.5 0,1.3 -0.1,2.1 -0.1,0.7 0.4,2.1 -0.4,2.6 -0.7,0.6 -3,0.6 -4.1,0.6 -1.1,0 -2.1,0 -2.5,-0.7 -0.3,-0.7 0.1,-2.5 0.4,-3.4 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path90-8-3-7" />
+          <path
+             d="m 470.3,-7 c 0.3,-0.9 2.3,-3.2 3.7,-4.2 1.5,-0.9 3.8,-1.5 5,-1.5 1.2,0 1.8,0.3 2.3,1.5 0.6,1.1 1.5,4 1.1,5.3 -0.5,1.3 -2.5,1.8 -3.7,2.4 -1.3,0.7 -2.5,1.6 -3.6,1.3 -1.1,-0.4 -2.3,-2.5 -3.1,-3.3 -0.8,-0.8 -2,-0.5 -1.7,-1.5 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path91-0-9-7" />
+          <path
+             d="m 475.1,-39.1 c 1,0.8 1,2.4 0.9,3.1 -0.1,0.8 -0.5,0.9 -1.5,1.3 -1.1,0.5 -3.5,1.3 -4.7,1.5 -1.3,0.3 -1.7,0.4 -2.7,-0.1 -1,-0.5 -2.8,-2.1 -3.4,-3 -0.5,-0.9 -0.8,-1.6 0.2,-2.4 0.9,-0.7 3.7,-2.1 5.6,-2.2 1.8,-0.1 4.5,0.9 5.6,1.8 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path92-2-7-8" />
+          <path
+             d="m 424.8,-71.8 c 0.1,1.2 0.4,1.7 -0.4,2.4 -0.8,0.8 -3.3,2 -4.4,2.2 -1.1,0.3 -1,-0.4 -2.2,-0.7 -1.1,-0.4 -4.7,-0.1 -4.9,-1.5 -0.2,-1.3 2.5,-5.4 3.6,-6.7 1.2,-1.4 2.3,-1.5 3.5,-1.5 1.1,0 2.6,0.5 3.4,1.4 0.8,1 1.2,3.3 1.4,4.4 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path93-3-0-2" />
+          <path
+             d="m 446.9,41.5 c 0.3,-0.6 1.9,-0.9 3.1,-1.3 1.2,-0.3 2.9,-0.6 4.1,-0.8 1.2,-0.3 2.5,-1.1 3,-0.6 0.6,0.5 0.2,2.7 0,3.5 -0.1,0.8 0.1,0.7 -0.6,1.3 -0.7,0.6 -2,2.2 -3.4,2.2 -1.5,-0.1 -4.3,-1.7 -5.3,-2.4 -1.1,-0.8 -1.3,-1.4 -0.9,-1.9 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path94-0-9-8" />
+          <path
+             d="m 482.7,-72.2 c 1.1,1.2 3,3.4 2.7,5 -0.3,1.5 -2.5,3.5 -4.3,4.3 -1.7,0.8 -4.8,0.6 -6.2,0.3 -1.3,-0.3 -1.1,-0.8 -1.8,-2 -0.7,-1.3 -2.7,-3.9 -2.4,-5.4 0.3,-1.6 2.9,-3.2 4.2,-4 1.3,-0.7 2.5,-0.8 3.8,-0.5 1.3,0.3 2.9,1.1 4,2.3 z"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="1.6"
+             id="path95-3-7-7" />
+          <path
+             d="m 431.9,51.4 4.5,-1.1 -1.3,4.5 z"
+             fill="#000000"
+             id="path96-7-4-5" />
+          <path
+             d="m 425.3,-35.8 4.2,2.1 -4,2.6 z"
+             fill="#000000"
+             id="path97-4-8-9" />
+          <path
+             d="m 422.9,-17.6 0.2,-4.6 3.9,2.4 z"
+             fill="#000000"
+             id="path98-3-6-5" />
+          <path
+             d="m 442.8,-19.6 2.1,4.2 -4.7,-0.3 z"
+             fill="#000000"
+             id="path99-7-9-4" />
+          <path
+             d="m 479.4,-34.4 -3.3,-3.3 4.6,-1.2 z"
+             fill="#000000"
+             id="path100-9-0-7" />
+          <path
+             d="m 452.3,26.4 -4.3,1.8 0.6,-4.6 z"
+             fill="#000000"
+             id="path101-9-0-2" />
+          <path
+             d="m 452.2,2.7 -0.9,4.5 -3.5,-3.1 z"
+             fill="#000000"
+             id="path102-4-8-0" />
+          <path
+             d="m 431.7,-53.1 4.2,-1.9 -0.4,4.6 z"
+             fill="#000000"
+             id="path103-7-7-3" />
+          <path
+             d="m 422.2,-31.7 -1.4,-4.5 4.5,1 z"
+             fill="#000000"
+             id="path104-0-2-7" />
+          <path
+             d="m 451.7,68.1 -4.2,2 0.3,-4.6 z"
+             fill="#000000"
+             id="path105-9-7-4" />
+          <path
+             d="m 483.8,74.7 -4.2,-1.9 3.7,-2.7 z"
+             fill="#000000"
+             id="path106-2-3-9" />
+          <path
+             d="m 426.7,61.6 0.3,4.6 -4.2,-2.1 z"
+             fill="#000000"
+             id="path107-4-3-6" />
+          <path
+             d="m 487.2,-22 1.8,-4.3 2.9,3.7 z"
+             fill="#000000"
+             id="path108-4-2-3" />
+          <path
+             d="m 481,1 -4.5,-1.4 3.5,-3.1 z"
+             fill="#000000"
+             id="path109-5-4-1" />
+          <path
+             d="m 461.2,25 -1.8,-4.3 4.6,0.6 z"
+             fill="#000000"
+             id="path110-3-6-2" />
+          <path
+             d="m 435.3,20.7 -3.8,-2.8 4.3,-1.9 z"
+             fill="#000000"
+             id="path111-7-0-1" />
+          <path
+             d="m 452.7,-59.5 4.7,-0.4 -2,4.2 z"
+             fill="#000000"
+             id="path112-8-0-6" />
+          <path
+             d="m 422.8,-28.8 -4.3,1.8 0.6,-4.7 z"
+             fill="#000000"
+             id="path113-1-5-0" />
+          <path
+             d="m 443.7,-60.4 3.9,2.6 -4.2,2.1 z"
+             fill="#000000"
+             id="path114-5-5-9" />
+          <path
+             d="m 480.6,-37.7 -1.7,-4.3 4.6,0.7 z"
+             fill="#000000"
+             id="path115-1-7-3" />
+          <path
+             d="m 423.5,5.2 3.8,2.7 -4.2,2 z"
+             fill="#000000"
+             id="path116-3-2-1" />
+          <path
+             d="m 429,24.1 2.4,4 h -4.7 z"
+             fill="#000000"
+             id="path117-3-5-7" />
+          <path
+             d="m 433.3,-16.7 4.6,-1.1 -1.3,4.4 z"
+             fill="#000000"
+             id="path118-3-4-4" />
+          <path
+             d="m 484,77.5 -3.7,-2.8 4.3,-1.8 z"
+             fill="#000000"
+             id="path119-9-8-1" />
+          <path
+             d="m 471.4,-25.2 -4.6,-0.4 2.6,-3.9 z"
+             fill="#000000"
+             id="path120-2-8-1" />
+          <path
+             d="m 421.6,45.1 4.5,-1.2 -1.2,4.5 z"
+             fill="#000000"
+             id="path121-0-2-6" />
+          <path
+             d="m 481.3,47.5 -3.4,-3.2 4.4,-1.4 z"
+             fill="#000000"
+             id="path122-6-3-6" />
+          <path
+             d="m 462.7,10 -0.4,4.6 -3.8,-2.6 z"
+             fill="#000000"
+             id="path123-6-7-5" />
+          <path
+             d="m 489.2,-71.7 3.1,3.4 -4.6,1 z"
+             fill="#000000"
+             id="path124-0-3-5" />
+          <path
+             d="m 447.1,67 0.8,4.6 -4.4,-1.6 z"
+             fill="#000000"
+             id="path125-4-2-2" />
+          <path
+             d="m 437.4,3.8 4.5,1.4 -3.4,3.1 z"
+             fill="#000000"
+             id="path126-6-6-9" />
+          <path
+             d="m 488.7,-10.2 -2.4,4 -2.3,-4 z"
+             fill="#000000"
+             id="path127-5-1-3" />
+          <path
+             d="m 484.7,67.9 0.6,-4.6 3.7,2.8 z"
+             fill="#000000"
+             id="path128-3-0-1" />
+          <path
+             d="m 481.8,-42.9 -3.5,3.1 -0.9,-4.6 z"
+             fill="#000000"
+             id="path129-0-4-0" />
+          <path
+             d="m 429.1,-6 -2.7,3.7 -1.9,-4.2 z"
+             fill="#000000"
+             id="path130-7-9-3" />
+          <path
+             d="m 452.1,-27.4 -3.6,2.9 -0.7,-4.6 z"
+             fill="#000000"
+             id="path131-9-0-9" />
+          <path
+             d="m 427.6,68.1 -0.6,4.6 -3.7,-2.8 z"
+             fill="#000000"
+             id="path132-9-8-8" />
+          <path
+             d="m 454,45.1 v 4.7 l -4,-2.3 z"
+             fill="#000000"
+             id="path133-8-3-7" />
+          <path
+             d="m 431.2,61.2 -1.1,-4.5 4.5,1.3 z"
+             fill="#000000"
+             id="path134-5-2-7" />
+          <path
+             d="m 421.2,12.3 1.5,4.4 -4.6,-0.9 z"
+             fill="#000000"
+             id="path135-3-2-8" />
+          <path
+             d="m 445.7,-72.9 -4.5,1.2 1.2,-4.5 z"
+             fill="#000000"
+             id="path136-9-1-3" />
+          <path
+             d="m 423.6,55.2 4.7,-0.3 -2.2,4.2 z"
+             fill="#000000"
+             id="path137-6-5-1" />
+          <path
+             d="m 424.6,-26.9 4.4,-1.7 -0.7,4.6 z"
+             fill="#000000"
+             id="path138-9-6-4" />
+          <path
+             d="m 453.3,-57.3 1.3,4.5 -4.6,-1.1 z"
+             fill="#000000"
+             id="path139-8-6-6" />
+          <path
+             d="m 480.4,57 1.3,-4.5 3.3,3.4 z"
+             fill="#000000"
+             id="path140-4-5-8" />
+          <path
+             d="m 485.4,19 -1.4,-4.5 4.6,1 z"
+             fill="#000000"
+             id="path141-7-3-4" />
+          <path
+             d="m 446.7,48.3 -0.4,4.7 -3.9,-2.7 z"
+             fill="#000000"
+             id="path142-2-0-0" />
+          <path
+             d="m 459.7,63.6 -3.4,3.2 -1.1,-4.6 z"
+             fill="#000000"
+             id="path143-5-3-7" />
+          <path
+             d="m 445.9,37.3 4.6,0.8 -3,3.6 z"
+             fill="#000000"
+             id="path144-4-6-5" />
+          <path
+             d="m 487.7,24.5 -4.3,2 0.4,-4.7 z"
+             fill="#000000"
+             id="path145-6-1-3" />
+          <path
+             d="m 424.6,69.4 4.4,-1.6 -0.9,4.7 z"
+             fill="#000000"
+             id="path146-6-8-5" />
+          <path
+             d="m 434.4,-53.1 -3.4,-3.3 4.5,-1.2 z"
+             fill="#000000"
+             id="path147-5-2-0" />
+          <path
+             d="M 422.1,7.5 417.6,6.3 420.9,3 Z"
+             fill="#000000"
+             id="path148-7-1-5" />
+          <path
+             d="m 434.8,45.9 -3.9,-2.6 4.2,-2.1 z"
+             fill="#000000"
+             id="path149-3-4-0" />
+          <path
+             d="m 455.2,-67.1 1.1,-4.6 3.4,3.2 z"
+             fill="#000000"
+             id="path150-3-0-0" />
+          <path
+             d="m 459.6,26.6 -2.3,4.1 -2.4,-4 z"
+             fill="#000000"
+             id="path151-8-8-6" />
+          <path
+             d="m 450.3,71.9 2.6,3.9 -4.7,0.2 z"
+             fill="#000000"
+             id="path152-6-8-1" />
+          <path
+             d="m 430.5,72.1 -4.3,1.8 0.6,-4.6 z"
+             fill="#000000"
+             id="path153-6-2-8" />
+        </g>
+      </g>
       <path
-         d="M 9.6475234,39.357469 V 63.99385"
+         d="M 485.10814,-31.466848 V -81.992695"
          fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
+         stroke="#000000"
+         stroke-width="1.59489"
          stroke-linejoin="round"
          stroke-linecap="butt"
-         id="path286-91-8-3"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
+         id="path154-5-4-2" />
       <path
-         d="M 27.989153,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path288-5-5-4"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
-      <path
-         d="M 46.330781,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path290-2-8-1"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
-      <path
-         d="M 64.67241,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path292-1-7-5"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
-      <path
-         d="M 83.014038,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path294-4-5-7"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
-      <path
-         d="M 101.35566,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path296-9-5-4"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
-      <path
-         d="M 119.69729,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path298-3-2-1"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
-      <path
-         d="M 138.03893,39.357469 V 63.99385"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
-         stroke-linejoin="round"
-         stroke-linecap="butt"
-         id="path300-4-6-6"
-         style="stroke-width:1.80076;stroke-dasharray:none;marker-end:url(#Triangle-6-4-5)" />
-      <path
-         d="M -27.035733,39.357469 H 138.03893"
-         fill="none"
-         stroke="#ff3300"
-         stroke-width="1.0853"
+         d="m 378.39452,-62.512427 1.29118,0.03199 1.2659,0.03198 1.29117,0.09606 1.26589,0.128061 1.24055,0.128069 1.26584,0.192104 1.24061,0.192096 1.24049,0.224187 1.24061,0.224162 1.21519,0.256205 1.21528,0.256196 1.2405,0.288238 1.18998,0.288221 1.2152,0.288214 1.18993,0.288246 1.21525,0.320231 1.18987,0.32028 1.18991,0.288213 1.16463,0.320264 1.18994,0.32023 1.16457,0.288238 1.18992,0.320256 1.16464,0.288221 1.16457,0.288214 1.16458,0.288246 1.16458,0.288213 1.1393,0.288238 1.16463,0.256205 1.13929,0.256196 1.16458,0.224162 1.13929,0.224187 1.13929,0.224187 1.1393,0.192096 1.13924,0.192104 1.13929,0.160078 1.13929,0.160087 1.11394,0.128069 1.1393,0.12807 1.13929,0.128061 1.11396,0.09606 1.13928,0.06405 1.11401,0.06405 1.13922,0.03198 1.11402,0.03198 h 1.1393 1.13923 l 1.114,-0.03198 1.1393,-0.03198 1.11394,-0.06405 1.13929,-0.06405 1.11396,-0.09606 1.13929,-0.128061 1.13929,-0.12807 1.11394,-0.128069 1.1393,-0.160087 1.13931,-0.160078 1.13923,-0.192104 1.13927,-0.192096 1.13931,-0.224187 1.13929,-0.224187 1.16463,-0.224162 1.13924,-0.256196 1.16463,-0.256205 1.13929,-0.288238 1.16458,-0.288213 1.16458,-0.288246 1.16464,-0.288214 1.16458,-0.288221 1.18992,-0.320256 1.16456,-0.288238 1.18999,-0.32023 1.16458,-0.320264 1.18992,-0.288213 1.18992,-0.32028 1.2152,-0.320231 1.18993,-0.288246 1.21527,-0.288214 1.18991,-0.288221 1.24055,-0.288238 1.21522,-0.256196 1.21526,-0.256205 1.24055,-0.224162 1.24055,-0.224187 1.24054,-0.192096 1.2659,-0.192104 1.24055,-0.128069 1.26583,-0.128061 1.29118,-0.09606 1.2659,-0.03198 1.29117,-0.03199 v 11.529062 l -1.06333,0.03198 -1.08865,0.03198 -1.08861,0.06405 -1.11399,0.12807 -1.08862,0.128069 -1.114,0.128061 -1.11396,0.192104 -1.13929,0.192096 -1.11395,0.224187 -1.13928,0.224162 -1.1393,0.256204 -1.13929,0.256221 -1.16458,0.256196 -1.16464,0.288222 -1.16457,0.288213 -1.16464,0.320264 -1.16457,0.288213 -1.16459,0.320256 -1.18992,0.288246 -1.18992,0.320255 -1.18992,0.320231 -1.18991,0.320255 -1.18992,0.288222 -1.18993,0.320255 -1.21527,0.288238 -1.18986,0.288222 -1.21525,0.288213 -1.21522,0.256205 -1.18992,0.288238 -1.21527,0.224178 -1.24054,0.256205 -1.21527,0.224154 -1.21521,0.224195 -1.21525,0.192096 -1.24051,0.192104 -1.21525,0.160086 -1.24056,0.160079 -1.24055,0.128069 -1.21526,0.128061 -1.24056,0.09606 -1.24054,0.09604 -1.24054,0.06405 -1.21522,0.03207 -1.24055,0.03198 h -1.24054 -1.24056 l -1.24055,-0.03198 -1.21526,-0.03207 -1.24056,-0.06405 -1.24054,-0.09604 -1.24054,-0.09606 -1.21527,-0.128061 -1.24056,-0.128069 -1.24055,-0.160079 -1.2152,-0.160086 -1.24055,-0.192104 -1.21527,-0.192096 -1.2152,-0.224195 -1.21528,-0.224154 -1.24054,-0.256205 -1.21521,-0.224178 -1.18992,-0.288238 -1.21526,-0.256205 -1.21526,-0.288213 -1.18988,-0.288222 -1.21525,-0.288238 -1.18993,-0.320255 -1.18992,-0.288222 -1.18992,-0.320255 -1.18992,-0.320231 -1.18986,-0.320255 -1.18992,-0.288246 -1.16464,-0.320256 -1.16458,-0.288213 -1.16464,-0.320264 -1.16456,-0.288213 -1.16459,-0.288222 -1.16463,-0.256196 -1.13929,-0.256221 -1.1393,-0.256204 -1.13929,-0.224162 -1.11395,-0.224187 -1.13928,-0.192096 -1.11397,-0.192104 -1.11394,-0.128061 -1.08867,-0.128069 -1.11394,-0.12807 -1.08866,-0.06405 -1.08867,-0.03198 -1.06332,-0.03198 z"
+         fill="#ffc7a3"
+         stroke="#000000"
+         stroke-width="0.683387"
          stroke-linejoin="round"
          stroke-linecap="round"
-         id="path302-9-3-7"
-         style="stroke-width:1.80076;stroke-dasharray:none" />
-    </g>
-    <text
-       x="588.91345"
-       y="-90.709869"
-       font-size="13.0236px"
-       fill="#000000"
-       id="text302-7-1-73"
-       style="font-size:14.3461px;stroke-width:0.389082"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke-width:0.389082"
-         id="tspan308-7-1-1">q</tspan></text>
-    <text
-       x="375.25171"
-       y="-22.211542"
-       font-size="13.0236px"
-       fill="#000000"
-       id="text302-7-2-6-3"
-       style="font-size:14.3461px;stroke-width:0.389082"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke-width:0.389082"
-         id="tspan308-7-7-4-99">l</tspan></text>
-    <path
-       d="M 317.46344,-8.1975918 V -31.061662"
-       fill="none"
-       stroke="#ff3300"
-       stroke-width="1.0853"
-       stroke-linejoin="round"
-       stroke-linecap="butt"
-       id="path300-4-8-8-4"
-       style="fill:#2f5597;fill-opacity:1;stroke:#2f5597;stroke-width:1.29114;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-6-3-1-6)"
-       sodipodi:nodetypes="cc" />
-    <text
-       x="287.38925"
-       y="-14.571771"
-       font-size="13.0236px"
-       fill="#000000"
-       id="text303-2-7-9-8"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.3461px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke-width:0.389082"
-         id="tspan311-3-8">F</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.32492px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke-width:0.389082"
-         id="tspan310-2-3">QAB</tspan></text>
-    <path
-       d="M 436.53838,-8.1975918 V -31.061662"
-       fill="none"
-       stroke="#ff3300"
-       stroke-width="1.0853"
-       stroke-linejoin="round"
-       stroke-linecap="butt"
-       id="path300-4-8-6-9-7"
-       style="fill:#2f5597;fill-opacity:1;stroke:#2f5597;stroke-width:1.29114;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-6-3-0-2-2)"
-       sodipodi:nodetypes="cc" />
-    <text
-       x="440.28653"
-       y="-14.571771"
-       font-size="13.0236px"
-       fill="#000000"
-       id="text303-2-7-4-3-6"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.3461px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke-width:0.389082"
-         id="tspan311-9-0-5">F</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.32492px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke-width:0.389082"
-         id="tspan310-3-1-2">QBA</tspan></text>
-    <text
-       x="431.59305"
-       y="-38.903008"
-       font-size="13.0236px"
-       fill="#000000"
-       id="text304-4-1-3"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.3461px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082"><tspan
-         font-family="'Times New Roman', Times, 'Liberation Serif', serif"
-         id="tspan304-3-2-71"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.3461px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082">B</tspan></text>
-    <text
-       x="299.59454"
-       y="9.5251522"
-       font-size="9.76775px"
-       fill="#2f5597"
-       id="text306-3-7-4-8"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.3461px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082"><tspan
-         sodipodi:role="line"
-         id="tspan10-6"
-         x="299.59454"
-         y="9.5251522"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.3461px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:tb-rl;stroke-width:0.389082">剪力图</tspan></text>
-    <text
-       x="516.50507"
-       y="9.5391903"
-       font-size="9.76775px"
-       fill="#2f5597"
-       id="text306-3-7-4-1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.3461px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082"><tspan
-         font-family="SimSun, '宋体', 'Songti SC', 'AR PL UMing CN', serif"
-         id="tspan306-7-3-5-0"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.3461px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:vertical-lr;stroke-width:0.389082">弯矩图</tspan></text>
-    <path
-       d="m 312.29309,-63.751112 h 129.65618 v 14.05784 H 312.29309 Z"
-       fill="none"
-       stroke="#8c8c8c"
-       stroke-width="0.5208"
-       stroke-linejoin="round"
-       stroke-linecap="round"
-       stroke-dasharray="7, 5"
-       id="path12-9-9" />
-    <path
-       d="M 312.29309,-56.722192 H 441.94927"
-       fill="none"
-       stroke="#8c8c8c"
-       stroke-width="0.381919"
-       stroke-linejoin="round"
-       stroke-linecap="butt"
-       stroke-dasharray="16, 5, 3, 5"
-       id="path13-67-0" />
-    <g
-       id="g81-1-8-2"
-       transform="matrix(0.38894023,0,0,0.38894023,312.34321,-56.700092)">
+         id="path155-6-7-3" />
       <path
-         d="M 0,-79.2 V 79.2 H -72 V -79.2 Z"
-         fill="url(#gr1)"
-         id="path9-6-6-6"
-         style="fill:url(#linearGradient311)" />
-      <g
-         clip-path="url(#cp2-8-1-8)"
-         id="g80-2-9">
-        <path
-           d="m -27.1,37.8 c 0.5,1.3 3.3,2.2 2.9,3.4 -0.5,1.3 -4,3.6 -5.6,4.1 -1.5,0.4 -2.2,-0.7 -3.6,-1.3 -1.5,-0.7 -4.3,-1.5 -4.8,-2.8 -0.5,-1.2 1.2,-3.6 1.7,-4.8 0.6,-1.2 -0.1,-2 1.5,-2.6 1.5,-0.5 6.4,-1.5 7.7,-0.9 1.3,0.7 -0.4,3.5 0.2,4.9 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path10-7-0-2" />
-        <path
-           d="m -8.6,45.4 c 0.5,-0.3 2.6,-0.7 4.2,-0.8 1.6,-0.1 4.4,0.2 5.4,0.5 1.1,0.3 1.2,0.6 1,1.3 -0.1,0.7 -1.2,2.2 -2,3 -0.7,0.7 -1.1,1.3 -2.4,1.4 -1.4,0 -4.7,-0.5 -5.5,-1.2 -0.9,-0.7 0.4,-2.3 0.3,-3 -0.1,-0.7 -1.5,-0.8 -1,-1.2 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path11-5-8-1" />
-        <path
-           d="m -10.5,-51.9 c -0.3,0.6 -1,1.4 -1.8,1.9 -0.7,0.4 -1.9,1.1 -2.7,0.8 -0.8,-0.3 -1.7,-1.7 -2.2,-2.6 -0.5,-0.9 -1,-1.8 -0.9,-2.5 0,-0.8 0.4,-1.6 1.3,-2 0.9,-0.4 3,-0.8 4.1,-0.3 1.1,0.5 2.2,2.5 2.5,3.3 0.4,0.8 0.1,0.9 -0.3,1.4 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path12-6-7-5" />
-        <path
-           d="m -39.1,-21.8 c 0.2,1.1 -0.5,2.5 -2.2,3.4 -1.6,0.8 -6.1,1.9 -7.6,1.8 -1.6,0 -0.8,-1.2 -1.6,-2 -0.8,-0.8 -2.9,-2.1 -3.2,-2.9 -0.3,-0.9 -0.1,-1.6 1.4,-2.3 1.4,-0.7 5.6,-1.7 7.2,-1.9 1.7,-0.3 1.6,-0.2 2.6,0.5 1,0.6 3.2,2.3 3.4,3.4 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path13-0-5-0" />
-        <path
-           d="m 4.6,-26.5 c 0.8,0.9 -0.1,1.3 -0.6,1.9 -0.5,0.7 -1.5,1.3 -2.5,2 -1,0.7 -2.2,2.7 -3.5,2.4 -1.3,-0.3 -3.1,-3.3 -4.3,-4.2 -1.3,-0.8 -3.4,-0.2 -3.1,-0.9 0.4,-0.8 3.7,-2.9 5.1,-3.7 1.5,-0.8 2.1,-1.4 3.6,-1 1.5,0.5 4.5,2.6 5.3,3.5 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path14-8-9-9" />
-        <path
-           d="m -44.9,-6.6 c -0.9,0.8 -3,2.6 -4.4,3.5 -1.5,0.8 -3.1,2.1 -4.3,1.8 -1.2,-0.3 -2.5,-2.6 -2.8,-3.6 -0.4,-1.1 0.4,-1.6 0.7,-2.8 0.4,-1.1 0.3,-3.6 1.4,-4.2 1.1,-0.7 3.4,-0.6 5.1,0.1 1.8,0.6 4.7,2.9 5.4,3.8 0.7,0.9 -0.2,0.6 -1.1,1.4 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path15-0-2-1" />
-        <path
-           d="m -67.1,-11.5 c 1.1,0 2.3,-0.4 3.7,0.4 1.4,0.8 4.5,3.4 4.8,4.6 0.3,1.1 -1.9,1.7 -2.9,2.1 -1,0.4 -2.1,0.1 -3.3,0.4 -1.3,0.2 -3.3,1.7 -4.4,1.1 -1,-0.6 -1.7,-3.4 -1.9,-4.8 -0.2,-1.4 0.1,-2.8 0.7,-3.4 0.7,-0.7 2.1,-0.4 3.3,-0.4 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path16-9-5-2" />
-        <path
-           d="m -41.9,30.7 c -1.2,-1.2 -3.1,-3.8 -3.7,-5.2 -0.5,-1.5 -0.8,-2.6 0.5,-3.5 1.2,-1 5.4,-1.8 7,-2 1.6,-0.2 1.7,-0.1 2.8,0.7 1.2,0.8 3.8,2.4 4.3,4 0.5,1.6 0.1,4.2 -1.1,5.6 -1.2,1.3 -4.5,2.3 -6.2,2.4 -1.6,0 -2.3,-0.8 -3.6,-2 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path17-8-1-3" />
-        <path
-           d="m -7.6,18.2 c 2,0.7 3.3,2.1 3.2,3.5 0,1.3 -2.2,3.6 -3.3,4.5 -1.2,0.8 -1.8,0.2 -3.5,0.4 -1.6,0.2 -5.2,1.3 -6.6,1 -1.4,-0.4 -1.7,-1.8 -1.8,-3.1 -0.2,-1.4 0.3,-3.7 0.9,-4.9 0.5,-1.1 0.7,-1.6 2.5,-1.8 1.9,-0.2 6.7,-0.2 8.6,0.4 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path18-1-7-5" />
-        <path
-           d="m -32.8,22.1 c 0.6,-0.7 1.6,0.3 2.9,0.4 1.4,0 4.1,-0.6 5.3,-0.1 1.2,0.4 2.2,1.9 1.9,2.9 -0.2,1.1 -2.3,2.8 -3.3,3.6 -1,0.8 -1.8,1.3 -2.6,1.4 -0.8,0.1 -1.5,-0.2 -2.3,-0.8 -0.7,-0.6 -1.9,-1.6 -2.3,-2.8 -0.3,-1.3 -0.1,-3.9 0.4,-4.6 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path19-7-1-7" />
-        <path
-           d="m -8.6,-71 c -0.7,-0.9 -0.3,-2.5 -0.2,-3.4 0,-0.9 -0.3,-1.5 0.3,-2 0.6,-0.4 2.2,-0.9 3.5,-0.8 1.3,0.1 3.5,0.9 4.5,1.3 1,0.4 1.4,0.4 1.5,1.2 0,0.9 -0.2,2.8 -1.1,3.8 -0.9,1 -3.1,2.2 -4.5,2.2 -1.4,0 -3.3,-1.3 -4,-2.3 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path20-9-3-0" />
-        <path
-           d="m -62.5,47 c 1.2,0.6 3.3,0.7 4,1.9 0.7,1.2 0.8,4.2 0.2,5.1 -0.7,0.9 -2.7,0.6 -4,0.4 -1.3,-0.1 -2.8,-1.1 -3.9,-1.3 -1,-0.2 -2.1,0.8 -2.4,0.1 -0.3,-0.7 0.4,-3 0.8,-4.4 0.4,-1.3 0.9,-3.4 1.8,-3.7 0.9,-0.3 2.2,1.3 3.5,1.9 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path21-2-3-0" />
-        <path
-           d="m -15.5,-5.2 c -1.1,-0.4 -2.9,-3.2 -3.7,-4.2 -0.8,-1.1 -1.7,-1.3 -1.2,-2.2 0.4,-0.8 2.6,-2.1 3.8,-3 1.2,-0.8 2.3,-2.3 3.3,-2 1,0.3 2.2,2.7 2.7,3.8 0.4,1.1 0.3,1.9 0,2.9 -0.3,1 -0.8,2.2 -1.6,3 -0.8,0.8 -2.1,2.2 -3.3,1.7 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path22-9-2-8" />
-        <path
-           d="m -11.3,42.2 0.2,4.7 -4.1,-2.2 z"
-           fill="#000000"
-           id="path23-9-9-7" />
-        <path
-           d="M -0.6,7.8 -2.3,3.5 2.3,4.2 Z"
-           fill="#000000"
-           id="path24-3-1-6" />
-        <path
-           d="m -63.5,47.4 -2.5,-4 4.7,-0.2 z"
-           fill="#000000"
-           id="path25-0-4-9" />
-        <path
-           d="m -8.3,-54.9 -3.9,2.6 -0.3,-4.6 z"
-           fill="#000000"
-           id="path26-7-0-0" />
-        <path
-           d="m -15.2,17.5 3.6,-2.9 0.8,4.6 z"
-           fill="#000000"
-           id="path27-9-5-5" />
-        <path
-           d="m -37.9,13.8 2.5,3.9 -4.7,0.2 z"
-           fill="#000000"
-           id="path28-7-1-5" />
-        <path
-           d="m -4.4,43.8 -0.9,-4.6 4.4,1.5 z"
-           fill="#000000"
-           id="path29-8-9-5" />
-        <path
-           d="m -29.8,-23.4 -1,-4.5 4.4,1.3 z"
-           fill="#000000"
-           id="path30-5-2-0" />
-        <path
-           d="m -30.4,-3.6 0.8,-4.6 3.6,3 z"
-           fill="#000000"
-           id="path31-4-4-9" />
-        <path
-           d="m -43.6,15 -4.5,1.4 1.1,-4.6 z"
-           fill="#000000"
-           id="path32-2-4-3" />
-        <path
-           d="m -7.8,-8.4 -2.4,4.1 -2.3,-4.1 z"
-           fill="#000000"
-           id="path33-2-0-9" />
-        <path
-           d="m -56.4,7.5 -4.3,1.9 0.4,-4.6 z"
-           fill="#000000"
-           id="path34-4-9-0" />
-        <path
-           d="m -51.6,-12.7 4.7,-0.2 -2.1,4.1 z"
-           fill="#000000"
-           id="path35-4-2-1" />
-        <path
-           d="m -45.8,21.3 3.8,-2.8 0.5,4.6 z"
-           fill="#000000"
-           id="path36-0-6-3" />
-        <path
-           d="m -63.5,-16.4 1.7,-4.4 3,3.6 z"
-           fill="#000000"
-           id="path37-9-6-2" />
-        <path
-           d="m -56.6,-45.5 -1.1,-4.5 4.5,1.3 z"
-           fill="#000000"
-           id="path38-6-7-8" />
-        <path
-           d="m -52.4,-71 -0.1,4.6 -4,-2.4 z"
-           fill="#000000"
-           id="path39-4-3-6" />
-        <path
-           d="m -42.5,-8 -1.4,-4.5 4.6,1.1 z"
-           fill="#000000"
-           id="path40-7-7-2" />
-        <path
-           d="m -47.7,67.2 -4.4,-1.7 3.7,-3 z"
-           fill="#000000"
-           id="path41-3-4-2" />
-        <path
-           d="m -27.6,7.8 4,-2.4 0.1,4.7 z"
-           fill="#000000"
-           id="path42-6-0-9" />
-        <path
-           d="m -17.2,-56.3 4.7,0.1 -2.4,4 z"
-           fill="#000000"
-           id="path43-5-4-8" />
-        <path
-           d="m -51.8,-65.7 -2.9,-3.7 4.7,-0.6 z"
-           fill="#000000"
-           id="path44-5-9-7" />
-        <path
-           d="m -54.3,43.9 4.1,2.3 -4,2.4 z"
-           fill="#000000"
-           id="path45-5-4-7" />
-        <path
-           d="m 2.3,34.9 -3.7,2.9 -0.7,-4.7 z"
-           fill="#000000"
-           id="path46-5-9-1" />
-        <path
-           d="m -67.1,32.7 -4.6,1 1.4,-4.5 z"
-           fill="#000000"
-           id="path47-6-8-4" />
-        <path
-           d="m -56.5,-46.6 4.3,1.8 -3.7,2.8 z"
-           fill="#000000"
-           id="path48-9-5-8" />
-        <path
-           d="m -63.4,35.7 -4.5,-1.5 3.5,-3.1 z"
-           fill="#000000"
-           id="path49-4-3-1" />
-        <path
-           d="m -10.9,68.4 -4.3,-1.9 3.8,-2.8 z"
-           fill="#000000"
-           id="path50-7-5-5" />
-        <path
-           d="m -33.6,-11.3 -4.1,-2.2 4,-2.5 z"
-           fill="#000000"
-           id="path51-4-0-8" />
-        <path
-           d="m -33.9,-70.6 -4.6,-0.7 3,-3.7 z"
-           fill="#000000"
-           id="path52-9-3-0" />
-        <path
-           d="m -15.4,-66.8 -4.7,0.7 1.7,-4.4 z"
-           fill="#000000"
-           id="path53-0-9-8" />
-        <path
-           d="m -30.3,36.5 -1.3,4.5 -3.2,-3.4 z"
-           fill="#000000"
-           id="path54-0-5-1" />
-        <path
-           d="m -5.3,-8.3 -0.5,-4.7 4.3,1.9 z"
-           fill="#000000"
-           id="path55-4-8-6" />
-        <path
-           d="M -31.7,-2.7 -34.5,1 -36.3,-3.3 Z"
-           fill="#000000"
-           id="path56-9-5-7" />
-        <path
-           d="m -18.5,-72.9 3.5,3 -4.4,1.6 z"
-           fill="#000000"
-           id="path57-7-7-6" />
-        <path
-           d="m -7.7,20.7 4.2,-2.2 -0.2,4.7 z"
-           fill="#000000"
-           id="path58-7-3-6" />
-        <path
-           d="m -63.2,6.8 4.5,1.1 -3.2,3.4 z"
-           fill="#000000"
-           id="path59-8-8-9" />
-        <path
-           d="m -10.9,10.9 -2.2,-4.1 4.7,0.1 z"
-           fill="#000000"
-           id="path60-2-9-2" />
-        <path
-           d="m -44.9,4.7 -4.5,-1.5 3.5,-3.1 z"
-           fill="#000000"
-           id="path61-2-0-8" />
-        <path
-           d="m -9.4,-23.1 2.7,3.9 -4.7,0.3 z"
-           fill="#000000"
-           id="path62-0-7-5" />
-        <path
-           d="m -7.8,31.6 4.2,2 -3.9,2.6 z"
-           fill="#000000"
-           id="path63-1-5-3" />
-        <path
-           d="m 0,28.1 -4.6,-0.3 2.5,-3.9 z"
-           fill="#000000"
-           id="path64-8-0-8" />
-        <path
-           d="m -3.6,17.6 -2.6,-3.9 4.6,-0.3 z"
-           fill="#000000"
-           id="path65-1-4-8" />
-        <path
-           d="m -59.3,-0.7 -0.3,-4.6 4.2,2 z"
-           fill="#000000"
-           id="path66-9-9-0" />
-        <path
-           d="m -51.2,-77.2 2.9,3.6 -4.6,0.8 z"
-           fill="#000000"
-           id="path67-8-0-6" />
-        <path
-           d="m 1.4,-56.1 -3.2,3.4 -1.3,-4.4 z"
-           fill="#000000"
-           id="path68-6-3-3" />
-        <path
-           d="m -38.8,-42.1 -4.6,-0.9 3.2,-3.5 z"
-           fill="#000000"
-           id="path69-9-5-4" />
-        <path
-           d="m -66,23.7 0.3,4.7 -4.2,-2 z"
-           fill="#000000"
-           id="path70-6-3-5" />
-        <path
-           d="m -6.1,21.9 0.6,-4.6 3.7,2.8 z"
-           fill="#000000"
-           id="path71-0-2-6" />
-        <path
-           d="m -11.2,-28.2 4.6,0.9 -3.1,3.5 z"
-           fill="#000000"
-           id="path72-4-9-2" />
-        <path
-           d="m -14.2,-16.1 -4.4,-1.5 3.5,-3 z"
-           fill="#000000"
-           id="path73-9-9-1" />
-        <path
-           d="m -53,20.9 0.8,4.6 -4.4,-1.6 z"
-           fill="#000000"
-           id="path74-7-6-6" />
-        <path
-           d="m -24.3,55.4 4.2,-1.9 -0.5,4.7 z"
-           fill="#000000"
-           id="path75-1-2-9" />
-        <path
-           d="m -33.7,8.9 2.5,3.9 -4.6,0.3 z"
-           fill="#000000"
-           id="path76-3-0-4" />
-        <path
-           d="m -16.4,-63.3 -4.5,1.5 1,-4.6 z"
-           fill="#000000"
-           id="path77-1-2-8" />
-        <path
-           d="m -5.4,-74.7 -1.6,4.4 -3,-3.6 z"
-           fill="#000000"
-           id="path78-8-4-0" />
-        <path
-           d="m -22.4,41.2 -4,2.4 v -4.7 z"
-           fill="#000000"
-           id="path79-8-4-7" />
-        <path
-           d="m -26.3,59.9 4.6,1.1 -3.2,3.4 z"
-           fill="#000000"
-           id="path80-9-8-5" />
-      </g>
-    </g>
-    <path
-       d="m 312.34321,-87.504172 v 61.60816"
-       fill="none"
-       stroke="#000000"
-       stroke-width="1.94471"
-       stroke-linejoin="round"
-       stroke-linecap="butt"
-       id="path81-0-4-9" />
-    <g
-       id="g154-2-2"
-       transform="matrix(0.38894023,0,0,0.38894023,279.05843,-56.700092)">
+         d="m 378.39452,-56.747896 1.18992,0.03198 1.16459,0.03198 1.18991,0.09606 1.18998,0.09604 1.16458,0.160079 1.18992,0.160086 1.18993,0.160087 1.16457,0.224179 1.18992,0.224162 1.18991,0.224187 1.16459,0.256204 1.18992,0.288214 1.18991,0.256204 1.16464,0.320256 1.18993,0.288238 1.18992,0.288221 1.16458,0.320256 1.18992,0.288213 1.18992,0.320255 1.16457,0.320256 1.18993,0.320263 1.18992,0.288214 1.16463,0.320255 1.18987,0.288222 1.18991,0.288238 1.16464,0.288221 1.18993,0.288214 1.18991,0.256204 1.16459,0.256196 1.18992,0.256204 1.18992,0.224187 1.16458,0.224179 1.18997,0.192104 1.18987,0.192096 1.16464,0.192104 1.18991,0.160087 1.18993,0.160078 1.16457,0.128069 1.18992,0.09605 1.18993,0.09606 1.16457,0.09605 1.18993,0.06405 1.18992,0.03198 1.16464,0.03199 h 1.18992 1.18986 l 1.16463,-0.03199 1.18992,-0.03198 1.18992,-0.06405 1.16458,-0.09605 1.18992,-0.09606 1.18992,-0.09605 1.16458,-0.128069 1.18998,-0.160078 1.18987,-0.160087 1.16463,-0.192104 1.18992,-0.192096 1.18994,-0.192104 1.16456,-0.224179 1.18992,-0.224187 1.18992,-0.256204 1.16464,-0.256196 1.18985,-0.256204 1.18993,-0.288214 1.16464,-0.288221 1.18991,-0.288238 1.18987,-0.288222 1.16463,-0.320255 1.18994,-0.288214 1.18992,-0.320263 1.16456,-0.320256 1.18993,-0.320255 1.18992,-0.288213 1.16464,-0.320256 1.18992,-0.288221 1.18992,-0.288238 1.16458,-0.320256 1.18992,-0.256204 1.18992,-0.288214 1.16458,-0.256204 1.18992,-0.224187 1.18992,-0.224162 1.16464,-0.224179 1.18986,-0.160087 1.18992,-0.160086 1.16463,-0.160079 1.18992,-0.09604 1.18994,-0.09606 1.16456,-0.03198 1.18992,-0.03198"
+         fill="none"
+         stroke="#3c3c3c"
+         stroke-width="0.370168"
+         stroke-linejoin="round"
+         stroke-linecap="butt"
+         stroke-dasharray="16, 5, 3, 5"
+         id="path156-5-2-6" />
+      <text
+         x="379.33865"
+         y="-42.053654"
+         font-size="13.0236px"
+         fill="#000000"
+         id="text303-2-5-20"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7655px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092"><tspan
+           font-family="'Times New Roman', Times, 'Liberation Serif', serif"
+           id="tspan303-9-5-0"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7655px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092">A</tspan></text>
+      <text
+         x="653.22888"
+         y="-42.134094"
+         font-size="13.0236px"
+         fill="#000000"
+         id="text304-4-1-5"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7655px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092"><tspan
+           font-family="'Times New Roman', Times, 'Liberation Serif', serif"
+           id="tspan304-3-2-9"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7655px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092">B</tspan></text>
+      <text
+         x="556.33295"
+         y="-42.053654"
+         font-size="13.0236px"
+         fill="#000000"
+         id="text303-2-5-2"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7655px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092"><tspan
+           font-family="'Times New Roman', Times, 'Liberation Serif', serif"
+           id="tspan303-9-5-5"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7655px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.319092">A</tspan></text>
       <path
-         d="M 420,79.2 V -79.2 h 72 V 79.2 Z"
-         fill="url(#gr3)"
-         id="path82-4-2-9"
-         style="fill:url(#linearGradient308-4)" />
-      <g
-         clip-path="url(#cp4-6-7-3)"
-         id="g153-0-1">
-        <path
-           d="m 443.7,17.5 c 0.6,0.3 1,1.1 0.8,1.7 -0.3,0.7 -1.6,1.7 -2.2,2.4 -0.7,0.6 -0.8,1.4 -1.7,1.6 -1,0.2 -3.3,-0.3 -4,-0.7 -0.7,-0.4 -0.3,-1.2 -0.4,-1.8 -0.1,-0.7 -1,-1.4 -0.2,-2 0.7,-0.6 3.5,-1.4 4.8,-1.6 1.3,-0.2 2.3,0 2.9,0.4 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path83-7-9-9" />
-        <path
-           d="m 471,22 c -0.8,0.9 -3.2,0 -4.6,0 -1.4,0 -2.3,0.2 -3.7,-0.1 -1.4,-0.4 -4.1,-1 -4.8,-2 -0.8,-1 -1,-3.3 0.3,-4.1 1.3,-0.8 5.7,-0.7 7.5,-0.9 1.8,-0.2 2.4,-0.7 3.3,-0.5 0.9,0.3 1.9,0.9 2.2,2.2 0.4,1.3 0.6,4.5 -0.2,5.4 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path84-3-0-6" />
-        <path
-           d="m 481.3,64.9 c -0.9,0.8 -0.5,0.3 -1.5,0.2 -1,-0.2 -3.3,-0.7 -4.5,-1.1 -1.2,-0.4 -2.8,-0.2 -2.8,-1.3 0,-1.1 1.9,-4.1 2.8,-5.2 0.9,-1.1 1.5,-1.3 2.6,-1.4 1.1,-0.1 2.7,0.2 3.8,0.9 1.2,0.7 3.2,2 3.1,3.4 -0.1,1.3 -2.7,3.7 -3.5,4.5 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path85-9-5-4" />
-        <path
-           d="m 477.3,68 c 1.3,-0.7 5.4,-0.3 7.4,-0.5 1.9,-0.1 3.6,-0.8 4.5,-0.5 0.9,0.4 0.9,1.7 0.8,2.5 0,0.8 0,1.7 -1,2.6 -1,0.9 -3.6,2.6 -5,2.7 -1.4,0.1 -2.2,-1.6 -3.4,-2.1 -1.2,-0.5 -3.2,-0.3 -3.8,-1.1 -0.5,-0.8 -0.8,-2.9 0.5,-3.6 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path86-0-8-6" />
-        <path
-           d="m 454.9,5.9 c 0.1,1 -0.9,3.2 -1.6,4.2 -0.8,1 -2,1.7 -3.1,1.8 -1.1,0 -2.7,-0.7 -3.6,-1.4 -0.9,-0.7 -1.8,-1.9 -1.9,-2.7 0,-0.9 0.9,-1.6 1.6,-2.5 0.8,-0.9 2,-2.5 3.1,-2.8 1.1,-0.2 2.5,0.9 3.5,1.4 0.9,0.6 2,1 2,2 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path87-3-2-4" />
-        <path
-           d="m 428.3,-32.9 c -1.3,0.3 -3.9,-0.9 -4.8,-1.6 -0.9,-0.8 -0.8,-1.9 -0.6,-3 0.1,-1.1 1,-2.5 1.3,-3.5 0.4,-1.1 -0.5,-2.4 0.6,-2.8 1.1,-0.4 4.4,-0.8 5.8,0.4 1.4,1.1 2.5,5.4 2.6,6.6 0.1,1.2 -1.2,0 -2,0.6 -0.8,0.7 -1.7,3 -2.9,3.3 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path88-8-6-7" />
-        <path
-           d="m 431.4,15.7 c -0.1,0.9 -0.7,2 -1.4,3.2 -0.8,1.1 -2.1,3.2 -3.2,3.7 -1.1,0.5 -1.8,-0.1 -3.2,-0.8 -1.4,-0.8 -4.3,-2.5 -5.1,-3.7 -0.8,-1.1 -0.3,-2.3 0.5,-3.2 0.7,-0.9 2,-1.8 3.9,-2 1.9,-0.3 6.2,0.1 7.7,0.6 1.4,0.4 0.9,1.3 0.8,2.2 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path89-0-0-5" />
-        <path
-           d="m 439,62.9 c 0.4,-0.8 1.2,-1.3 1.6,-1.6 0.5,-0.3 0.4,-0.2 1.2,-0.1 0.9,0 3.3,0.1 3.9,0.5 0.6,0.5 0,1.3 -0.1,2.1 -0.1,0.7 0.4,2.1 -0.4,2.6 -0.7,0.6 -3,0.6 -4.1,0.6 -1.1,0 -2.1,0 -2.5,-0.7 -0.3,-0.7 0.1,-2.5 0.4,-3.4 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path90-8-3-7" />
-        <path
-           d="m 470.3,-7 c 0.3,-0.9 2.3,-3.2 3.7,-4.2 1.5,-0.9 3.8,-1.5 5,-1.5 1.2,0 1.8,0.3 2.3,1.5 0.6,1.1 1.5,4 1.1,5.3 -0.5,1.3 -2.5,1.8 -3.7,2.4 -1.3,0.7 -2.5,1.6 -3.6,1.3 -1.1,-0.4 -2.3,-2.5 -3.1,-3.3 -0.8,-0.8 -2,-0.5 -1.7,-1.5 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path91-0-9-7" />
-        <path
-           d="m 475.1,-39.1 c 1,0.8 1,2.4 0.9,3.1 -0.1,0.8 -0.5,0.9 -1.5,1.3 -1.1,0.5 -3.5,1.3 -4.7,1.5 -1.3,0.3 -1.7,0.4 -2.7,-0.1 -1,-0.5 -2.8,-2.1 -3.4,-3 -0.5,-0.9 -0.8,-1.6 0.2,-2.4 0.9,-0.7 3.7,-2.1 5.6,-2.2 1.8,-0.1 4.5,0.9 5.6,1.8 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path92-2-7-8" />
-        <path
-           d="m 424.8,-71.8 c 0.1,1.2 0.4,1.7 -0.4,2.4 -0.8,0.8 -3.3,2 -4.4,2.2 -1.1,0.3 -1,-0.4 -2.2,-0.7 -1.1,-0.4 -4.7,-0.1 -4.9,-1.5 -0.2,-1.3 2.5,-5.4 3.6,-6.7 1.2,-1.4 2.3,-1.5 3.5,-1.5 1.1,0 2.6,0.5 3.4,1.4 0.8,1 1.2,3.3 1.4,4.4 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path93-3-0-2" />
-        <path
-           d="m 446.9,41.5 c 0.3,-0.6 1.9,-0.9 3.1,-1.3 1.2,-0.3 2.9,-0.6 4.1,-0.8 1.2,-0.3 2.5,-1.1 3,-0.6 0.6,0.5 0.2,2.7 0,3.5 -0.1,0.8 0.1,0.7 -0.6,1.3 -0.7,0.6 -2,2.2 -3.4,2.2 -1.5,-0.1 -4.3,-1.7 -5.3,-2.4 -1.1,-0.8 -1.3,-1.4 -0.9,-1.9 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path94-0-9-8" />
-        <path
-           d="m 482.7,-72.2 c 1.1,1.2 3,3.4 2.7,5 -0.3,1.5 -2.5,3.5 -4.3,4.3 -1.7,0.8 -4.8,0.6 -6.2,0.3 -1.3,-0.3 -1.1,-0.8 -1.8,-2 -0.7,-1.3 -2.7,-3.9 -2.4,-5.4 0.3,-1.6 2.9,-3.2 4.2,-4 1.3,-0.7 2.5,-0.8 3.8,-0.5 1.3,0.3 2.9,1.1 4,2.3 z"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="1.6"
-           id="path95-3-7-7" />
-        <path
-           d="m 431.9,51.4 4.5,-1.1 -1.3,4.5 z"
-           fill="#000000"
-           id="path96-7-4-5" />
-        <path
-           d="m 425.3,-35.8 4.2,2.1 -4,2.6 z"
-           fill="#000000"
-           id="path97-4-8-9" />
-        <path
-           d="m 422.9,-17.6 0.2,-4.6 3.9,2.4 z"
-           fill="#000000"
-           id="path98-3-6-5" />
-        <path
-           d="m 442.8,-19.6 2.1,4.2 -4.7,-0.3 z"
-           fill="#000000"
-           id="path99-7-9-4" />
-        <path
-           d="m 479.4,-34.4 -3.3,-3.3 4.6,-1.2 z"
-           fill="#000000"
-           id="path100-9-0-7" />
-        <path
-           d="m 452.3,26.4 -4.3,1.8 0.6,-4.6 z"
-           fill="#000000"
-           id="path101-9-0-2" />
-        <path
-           d="m 452.2,2.7 -0.9,4.5 -3.5,-3.1 z"
-           fill="#000000"
-           id="path102-4-8-0" />
-        <path
-           d="m 431.7,-53.1 4.2,-1.9 -0.4,4.6 z"
-           fill="#000000"
-           id="path103-7-7-3" />
-        <path
-           d="m 422.2,-31.7 -1.4,-4.5 4.5,1 z"
-           fill="#000000"
-           id="path104-0-2-7" />
-        <path
-           d="m 451.7,68.1 -4.2,2 0.3,-4.6 z"
-           fill="#000000"
-           id="path105-9-7-4" />
-        <path
-           d="m 483.8,74.7 -4.2,-1.9 3.7,-2.7 z"
-           fill="#000000"
-           id="path106-2-3-9" />
-        <path
-           d="m 426.7,61.6 0.3,4.6 -4.2,-2.1 z"
-           fill="#000000"
-           id="path107-4-3-6" />
-        <path
-           d="m 487.2,-22 1.8,-4.3 2.9,3.7 z"
-           fill="#000000"
-           id="path108-4-2-3" />
-        <path
-           d="m 481,1 -4.5,-1.4 3.5,-3.1 z"
-           fill="#000000"
-           id="path109-5-4-1" />
-        <path
-           d="m 461.2,25 -1.8,-4.3 4.6,0.6 z"
-           fill="#000000"
-           id="path110-3-6-2" />
-        <path
-           d="m 435.3,20.7 -3.8,-2.8 4.3,-1.9 z"
-           fill="#000000"
-           id="path111-7-0-1" />
-        <path
-           d="m 452.7,-59.5 4.7,-0.4 -2,4.2 z"
-           fill="#000000"
-           id="path112-8-0-6" />
-        <path
-           d="m 422.8,-28.8 -4.3,1.8 0.6,-4.7 z"
-           fill="#000000"
-           id="path113-1-5-0" />
-        <path
-           d="m 443.7,-60.4 3.9,2.6 -4.2,2.1 z"
-           fill="#000000"
-           id="path114-5-5-9" />
-        <path
-           d="m 480.6,-37.7 -1.7,-4.3 4.6,0.7 z"
-           fill="#000000"
-           id="path115-1-7-3" />
-        <path
-           d="m 423.5,5.2 3.8,2.7 -4.2,2 z"
-           fill="#000000"
-           id="path116-3-2-1" />
-        <path
-           d="m 429,24.1 2.4,4 h -4.7 z"
-           fill="#000000"
-           id="path117-3-5-7" />
-        <path
-           d="m 433.3,-16.7 4.6,-1.1 -1.3,4.4 z"
-           fill="#000000"
-           id="path118-3-4-4" />
-        <path
-           d="m 484,77.5 -3.7,-2.8 4.3,-1.8 z"
-           fill="#000000"
-           id="path119-9-8-1" />
-        <path
-           d="m 471.4,-25.2 -4.6,-0.4 2.6,-3.9 z"
-           fill="#000000"
-           id="path120-2-8-1" />
-        <path
-           d="m 421.6,45.1 4.5,-1.2 -1.2,4.5 z"
-           fill="#000000"
-           id="path121-0-2-6" />
-        <path
-           d="m 481.3,47.5 -3.4,-3.2 4.4,-1.4 z"
-           fill="#000000"
-           id="path122-6-3-6" />
-        <path
-           d="m 462.7,10 -0.4,4.6 -3.8,-2.6 z"
-           fill="#000000"
-           id="path123-6-7-5" />
-        <path
-           d="m 489.2,-71.7 3.1,3.4 -4.6,1 z"
-           fill="#000000"
-           id="path124-0-3-5" />
-        <path
-           d="m 447.1,67 0.8,4.6 -4.4,-1.6 z"
-           fill="#000000"
-           id="path125-4-2-2" />
-        <path
-           d="m 437.4,3.8 4.5,1.4 -3.4,3.1 z"
-           fill="#000000"
-           id="path126-6-6-9" />
-        <path
-           d="m 488.7,-10.2 -2.4,4 -2.3,-4 z"
-           fill="#000000"
-           id="path127-5-1-3" />
-        <path
-           d="m 484.7,67.9 0.6,-4.6 3.7,2.8 z"
-           fill="#000000"
-           id="path128-3-0-1" />
-        <path
-           d="m 481.8,-42.9 -3.5,3.1 -0.9,-4.6 z"
-           fill="#000000"
-           id="path129-0-4-0" />
-        <path
-           d="m 429.1,-6 -2.7,3.7 -1.9,-4.2 z"
-           fill="#000000"
-           id="path130-7-9-3" />
-        <path
-           d="m 452.1,-27.4 -3.6,2.9 -0.7,-4.6 z"
-           fill="#000000"
-           id="path131-9-0-9" />
-        <path
-           d="m 427.6,68.1 -0.6,4.6 -3.7,-2.8 z"
-           fill="#000000"
-           id="path132-9-8-8" />
-        <path
-           d="m 454,45.1 v 4.7 l -4,-2.3 z"
-           fill="#000000"
-           id="path133-8-3-7" />
-        <path
-           d="m 431.2,61.2 -1.1,-4.5 4.5,1.3 z"
-           fill="#000000"
-           id="path134-5-2-7" />
-        <path
-           d="m 421.2,12.3 1.5,4.4 -4.6,-0.9 z"
-           fill="#000000"
-           id="path135-3-2-8" />
-        <path
-           d="m 445.7,-72.9 -4.5,1.2 1.2,-4.5 z"
-           fill="#000000"
-           id="path136-9-1-3" />
-        <path
-           d="m 423.6,55.2 4.7,-0.3 -2.2,4.2 z"
-           fill="#000000"
-           id="path137-6-5-1" />
-        <path
-           d="m 424.6,-26.9 4.4,-1.7 -0.7,4.6 z"
-           fill="#000000"
-           id="path138-9-6-4" />
-        <path
-           d="m 453.3,-57.3 1.3,4.5 -4.6,-1.1 z"
-           fill="#000000"
-           id="path139-8-6-6" />
-        <path
-           d="m 480.4,57 1.3,-4.5 3.3,3.4 z"
-           fill="#000000"
-           id="path140-4-5-8" />
-        <path
-           d="m 485.4,19 -1.4,-4.5 4.6,1 z"
-           fill="#000000"
-           id="path141-7-3-4" />
-        <path
-           d="m 446.7,48.3 -0.4,4.7 -3.9,-2.7 z"
-           fill="#000000"
-           id="path142-2-0-0" />
-        <path
-           d="m 459.7,63.6 -3.4,3.2 -1.1,-4.6 z"
-           fill="#000000"
-           id="path143-5-3-7" />
-        <path
-           d="m 445.9,37.3 4.6,0.8 -3,3.6 z"
-           fill="#000000"
-           id="path144-4-6-5" />
-        <path
-           d="m 487.7,24.5 -4.3,2 0.4,-4.7 z"
-           fill="#000000"
-           id="path145-6-1-3" />
-        <path
-           d="m 424.6,69.4 4.4,-1.6 -0.9,4.7 z"
-           fill="#000000"
-           id="path146-6-8-5" />
-        <path
-           d="m 434.4,-53.1 -3.4,-3.3 4.5,-1.2 z"
-           fill="#000000"
-           id="path147-5-2-0" />
-        <path
-           d="M 422.1,7.5 417.6,6.3 420.9,3 Z"
-           fill="#000000"
-           id="path148-7-1-5" />
-        <path
-           d="m 434.8,45.9 -3.9,-2.6 4.2,-2.1 z"
-           fill="#000000"
-           id="path149-3-4-0" />
-        <path
-           d="m 455.2,-67.1 1.1,-4.6 3.4,3.2 z"
-           fill="#000000"
-           id="path150-3-0-0" />
-        <path
-           d="m 459.6,26.6 -2.3,4.1 -2.4,-4 z"
-           fill="#000000"
-           id="path151-8-8-6" />
-        <path
-           d="m 450.3,71.9 2.6,3.9 -4.7,0.2 z"
-           fill="#000000"
-           id="path152-6-8-1" />
-        <path
-           d="m 430.5,72.1 -4.3,1.8 0.6,-4.6 z"
-           fill="#000000"
-           id="path153-6-2-8" />
-      </g>
-    </g>
-    <path
-       d="m 442.41323,-25.896012 v -61.60816"
-       fill="none"
-       stroke="#000000"
-       stroke-width="1.94471"
-       stroke-linejoin="round"
-       stroke-linecap="butt"
-       id="path154-5-4-2" />
-    <path
-       d="m 312.29309,-63.751112 1.57439,0.039 1.54356,0.039 1.57438,0.11713 1.54355,0.15615 1.51265,0.15616 1.54349,0.23424 1.51272,0.23423 1.51258,0.27336 1.51273,0.27333 1.48173,0.3124 1.48183,0.31239 1.51259,0.35146 1.45099,0.35144 1.48174,0.35143 1.45093,0.35147 1.4818,0.39047 1.45086,0.39053 1.4509,0.35143 1.42009,0.39051 1.45093,0.39047 1.42001,0.35146 1.45092,0.3905 1.42009,0.35144 1.42001,0.35143 1.42002,0.35147 1.42001,0.35143 1.38919,0.35146 1.42008,0.3124 1.38919,0.31239 1.42002,0.27333 1.38918,0.27336 1.38918,0.27336 1.38919,0.23423 1.38912,0.23424 1.38918,0.19519 1.38918,0.1952 1.35827,0.15616 1.3892,0.15616 1.38918,0.15615 1.35829,0.11713 1.38917,0.0781 1.35836,0.0781 1.3891,0.039 1.35836,0.039 h 1.3892 1.38911 l 1.35834,-0.039 1.38919,-0.039 1.35828,-0.0781 1.38918,-0.0781 1.35829,-0.11713 1.38918,-0.15615 1.38918,-0.15616 1.35828,-0.15616 1.38919,-0.1952 1.3892,-0.19519 1.38911,-0.23424 1.38916,-0.23423 1.3892,-0.27336 1.38919,-0.27336 1.42007,-0.27333 1.38913,-0.31239 1.42008,-0.3124 1.38918,-0.35146 1.42002,-0.35143 1.42001,-0.35147 1.42009,-0.35143 1.42002,-0.35144 1.45092,-0.3905 1.42,-0.35146 1.451,-0.39047 1.42002,-0.39051 1.45091,-0.35143 1.45092,-0.39053 1.48174,-0.39047 1.45093,-0.35147 1.48182,-0.35143 1.45091,-0.35144 1.51265,-0.35146 1.48176,-0.31239 1.48182,-0.3124 1.51265,-0.27333 1.51265,-0.27336 1.51264,-0.23423 1.54356,-0.23424 1.51265,-0.15616 1.54348,-0.15615 1.57439,-0.11713 1.54356,-0.039 1.57438,-0.039 v 14.05784 l -1.29656,0.039 -1.32744,0.039 -1.32739,0.0781 -1.35833,0.15616 -1.32739,0.15616 -1.35835,0.15615 -1.35829,0.23424 -1.38918,0.23423 -1.35829,0.27336 -1.38917,0.27333 -1.38919,0.3124 -1.38918,0.31242 -1.42002,0.31239 -1.42009,0.35144 -1.42001,0.35143 -1.42009,0.39051 -1.42001,0.35143 -1.42002,0.3905 -1.45092,0.35147 -1.45092,0.3905 -1.45092,0.39047 -1.4509,0.3905 -1.45092,0.35144 -1.45093,0.3905 -1.48182,0.35146 -1.45084,0.35144 -1.48181,0.35143 -1.48176,0.3124 -1.45092,0.35146 -1.48182,0.27335 -1.51265,0.3124 -1.48182,0.27332 -1.48175,0.27337 -1.48181,0.23423 -1.5126,0.23424 -1.4818,0.1952 -1.51267,0.19519 -1.51265,0.15616 -1.48181,0.15615 -1.51266,0.11713 -1.51265,0.11711 -1.51264,0.0781 -1.48176,0.0391 -1.51265,0.039 h -1.51264 -1.51267 l -1.51265,-0.039 -1.48181,-0.0391 -1.51266,-0.0781 -1.51265,-0.11711 -1.51264,-0.11713 -1.48182,-0.15615 -1.51267,-0.15616 -1.51265,-0.19519 -1.48174,-0.1952 -1.51265,-0.23424 -1.48182,-0.23423 -1.48175,-0.27337 -1.48183,-0.27332 -1.51264,-0.3124 -1.48176,-0.27335 -1.45092,-0.35146 -1.48181,-0.3124 -1.48181,-0.35143 -1.45087,-0.35144 -1.4818,-0.35146 -1.45093,-0.3905 -1.45092,-0.35144 -1.45091,-0.3905 -1.45092,-0.39047 -1.45084,-0.3905 -1.45092,-0.35147 -1.42009,-0.3905 -1.42002,-0.35143 -1.42009,-0.39051 -1.42,-0.35143 -1.42003,-0.35144 -1.42008,-0.31239 -1.38918,-0.31242 -1.38919,-0.3124 -1.38918,-0.27333 -1.35829,-0.27336 -1.38917,-0.23423 -1.3583,-0.23424 -1.35827,-0.15615 -1.32746,-0.15616 -1.35827,-0.15616 -1.32745,-0.0781 -1.32746,-0.039 -1.29655,-0.039 z"
-       fill="#ffc7a3"
-       stroke="#000000"
-       stroke-width="0.833281"
-       stroke-linejoin="round"
-       stroke-linecap="round"
-       id="path155-6-7-3" />
-    <path
-       d="m 312.29309,-56.722192 1.45092,0.039 1.42003,0.039 1.45091,0.11713 1.45098,0.11711 1.42002,0.19519 1.45092,0.1952 1.45093,0.1952 1.42,0.27335 1.45092,0.27333 1.45091,0.27336 1.42002,0.3124 1.45092,0.35143 1.45091,0.3124 1.42009,0.3905 1.45093,0.35146 1.45091,0.35144 1.42002,0.3905 1.45092,0.35143 1.45092,0.3905 1.42,0.3905 1.45093,0.39051 1.45092,0.35143 1.42008,0.3905 1.45085,0.35144 1.45091,0.35146 1.42009,0.35144 1.45092,0.35143 1.45091,0.3124 1.42003,0.31239 1.45092,0.3124 1.45091,0.27336 1.42002,0.27335 1.45098,0.23424 1.45085,0.23423 1.42009,0.23424 1.45091,0.1952 1.45093,0.19519 1.42,0.15616 1.45092,0.11712 1.45093,0.11713 1.42001,0.11712 1.45092,0.0781 1.45092,0.039 1.42009,0.039 h 1.45092 1.45084 l 1.42008,-0.039 1.45092,-0.039 1.45092,-0.0781 1.42001,-0.11712 1.45092,-0.11713 1.45092,-0.11712 1.42001,-0.15616 1.45099,-0.19519 1.45086,-0.1952 1.42008,-0.23424 1.45092,-0.23423 1.45093,-0.23424 1.42,-0.27335 1.45092,-0.27336 1.45091,-0.3124 1.42009,-0.31239 1.45084,-0.3124 1.45092,-0.35143 1.42009,-0.35144 1.45091,-0.35146 1.45086,-0.35144 1.42008,-0.3905 1.45093,-0.35143 1.45092,-0.39051 1.42,-0.3905 1.45092,-0.3905 1.45092,-0.35143 1.42009,-0.3905 1.45092,-0.35144 1.45091,-0.35146 1.42002,-0.3905 1.45092,-0.3124 1.45091,-0.35143 1.42003,-0.3124 1.45091,-0.27336 1.45092,-0.27333 1.42009,-0.27335 1.45084,-0.1952 1.45092,-0.1952 1.42008,-0.19519 1.45092,-0.11711 1.45093,-0.11713 1.42,-0.039 1.45092,-0.039"
-       fill="none"
-       stroke="#3c3c3c"
-       stroke-width="0.451361"
-       stroke-linejoin="round"
-       stroke-linecap="butt"
-       stroke-dasharray="16, 5, 3, 5"
-       id="path156-5-2-6" />
-    <text
-       x="313.44431"
-       y="-38.804924"
-       font-size="13.0236px"
-       fill="#000000"
-       id="text303-2-5-20"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.3461px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082"><tspan
-         font-family="'Times New Roman', Times, 'Liberation Serif', serif"
-         id="tspan303-9-5-0"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.3461px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082">A</tspan></text>
-    <text
-       x="647.40948"
-       y="-38.903008"
-       font-size="13.0236px"
-       fill="#000000"
-       id="text304-4-1-5"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.3461px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082"><tspan
-         font-family="'Times New Roman', Times, 'Liberation Serif', serif"
-         id="tspan304-3-2-9"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.3461px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082">B</tspan></text>
-    <text
-       x="529.26044"
-       y="-38.804924"
-       font-size="13.0236px"
-       fill="#000000"
-       id="text303-2-5-2"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.3461px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082"><tspan
-         font-family="'Times New Roman', Times, 'Liberation Serif', serif"
-         id="tspan303-9-5-5"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.3461px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.389082">A</tspan></text>
-    <path
-       style="fill:#2f5597;fill-opacity:1;stroke:#000000;stroke-width:0.932492;stroke-linecap:square;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#ArrowWide-51-7);marker-end:url(#ArrowWide-51-7)"
-       d="M 318.89794,-20.153902 H 435.7255"
-       id="path311-15-4"
-       sodipodi:nodetypes="cc" />
-    <g
-       id="g5"
-       transform="matrix(2.7110632,0,0,2.7110632,157.99369,-264.20697)">
-      <g
-         id="g4-7"
-         transform="matrix(0.26801533,0,0,0.19643354,140.65581,4.3144324)">
-        <path
-           d="M 524,43 V 89.1382"
-           stroke="#000000"
-           stroke-width="6"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path17-3-5"
-           clip-path="url(#clipPath444-2)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-        <path
-           d="M 512,52.6051 524.5,46"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path18-4-8"
-           clip-path="url(#clipPath443-9)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-        <path
-           d="M 512,59.6051 524.5,53"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path19-3-1"
-           clip-path="url(#clipPath442-3)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-        <path
-           d="M 512,66.6051 524.5,60"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path20-0-7"
-           clip-path="url(#clipPath441-4)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-        <path
-           d="M 512,73.6051 524.5,67"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path21-4-4"
-           clip-path="url(#clipPath440-5)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-        <path
-           d="M 511,79.6051 523.5,73"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path22-0-1"
-           clip-path="url(#clipPath439-9)"
-           transform="matrix(1.329988,0,0,1.329988,-714.13817,281.54444)" />
-        <path
-           d="M 512,86.6051 524.5,80"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path23-1-0"
-           clip-path="url(#clipPath438-3)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-      </g>
-      <g
-         id="g4-7-0"
-         transform="matrix(-0.26801533,0,0,-0.19643354,180.14308,149.02753)">
-        <path
-           d="M 524,43 V 89.1382"
-           stroke="#000000"
-           stroke-width="6"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path17-3-5-4"
-           clip-path="url(#clipPath444-2-9)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-        <path
-           d="M 512,52.6051 524.5,46"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path18-4-8-3"
-           clip-path="url(#clipPath443-9-2)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-        <path
-           d="M 512,59.6051 524.5,53"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path19-3-1-1"
-           clip-path="url(#clipPath442-3-0)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-        <path
-           d="M 512,66.6051 524.5,60"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path20-0-7-7"
-           clip-path="url(#clipPath441-4-9)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-        <path
-           d="M 512,73.6051 524.5,67"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path21-4-4-0"
-           clip-path="url(#clipPath440-5-2)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-        <path
-           d="M 511,79.6051 523.5,73"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path22-0-1-1"
-           clip-path="url(#clipPath439-9-8)"
-           transform="matrix(1.329988,0,0,1.329988,-714.13817,281.54444)" />
-        <path
-           d="M 512,86.6051 524.5,80"
-           stroke="#000000"
-           stroke-width="2"
-           stroke-miterlimit="8"
-           fill="none"
-           fill-rule="evenodd"
-           id="path23-1-0-0"
-           clip-path="url(#clipPath438-3-9)"
-           transform="matrix(1.329988,0,0,1.329988,-715.69819,280.48019)" />
-      </g>
+         style="fill:#2f5597;fill-opacity:1;stroke:#000000;stroke-width:0.764752;stroke-linecap:square;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#ArrowWide-51-7);marker-end:url(#ArrowWide-51-7)"
+         d="m 383.81126,-26.757651 h 95.81217"
+         id="path311-15-4"
+         sodipodi:nodetypes="cc" />
       <path
-         d="m 525,68 139.20175,1e-4"
+         d="m 526.26591,68 134.7076,1e-4"
          stroke="#000000"
          stroke-width="4"
          stroke-miterlimit="8"
          fill="none"
          fill-rule="evenodd"
-         id="path24-9-8"
-         clip-path="url(#clipPath437-7)"
-         transform="matrix(0.35645717,0,0,0.35645717,-51.826929,52.431877)"
-         sodipodi:nodetypes="cc" />
-    </g>
-    <path
-       d="m 526.26591,68 134.7076,1e-4"
-       stroke="#000000"
-       stroke-width="4"
-       stroke-miterlimit="8"
-       fill="none"
-       fill-rule="evenodd"
-       id="path24-9-8-0"
-       clip-path="url(#clipPath437-7-7)"
-       transform="matrix(0.96637791,0,0,0.96637791,19.248107,-26.114992)"
-       sodipodi:nodetypes="cc"
-       style="fill:#cccccc;stroke:#b3b3b3;stroke-width:1.96377;stroke-dasharray:none" />
-    <path
-       style="fill:#ffc7a3;fill-opacity:1;stroke:none;stroke-width:0.952174;stroke-linecap:square;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 527.81986,39.612798 v -28.51239 c 0,0 13.35388,26.44984 33.74568,37.97059 20.39178,11.52074 42.51685,9.17393 56.99498,-0.21336 14.24812,-9.23809 39.1697,-37.28128 39.1697,-37.28128 l -0.11954,28.10735 z"
-       id="path309-2"
-       sodipodi:nodetypes="ccssccc" />
-    <path
-       style="fill:none;fill-opacity:0.840555;stroke:#d16022;stroke-width:1.7649;stroke-linecap:square;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 528.45943,11.739978 c 0,0 13.35394,26.44984 33.74566,37.97057 20.3918,11.52076 42.22798,8.3073 56.70611,-1.07997 14.24812,-9.2381 38.64148,-36.72105 38.64148,-36.72105"
-       id="path309-9-9"
-       sodipodi:nodetypes="cssc" />
-    <path
-       d="m 526.26591,68 134.7076,1e-4"
-       stroke="#000000"
-       stroke-width="4"
-       stroke-miterlimit="8"
-       fill="none"
-       fill-rule="evenodd"
-       id="path24-9-8-0-3"
-       clip-path="url(#clipPath437-7-7-8)"
-       transform="matrix(0.96637791,0,0,0.96637791,-195.29696,-26.114992)"
-       sodipodi:nodetypes="cc"
-       style="fill:#cccccc;stroke:#b3b3b3;stroke-width:1.96377;stroke-dasharray:none" />
-    <g
-       id="g9"
-       transform="matrix(2.7110632,0,0,2.7110632,206.51663,-155.52609)"
-       style="stroke:#000000">
-      <text
-         x="127.5149"
-         y="58.784515"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text302-7-1-73-5"
-         style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan308-7-1-1-0">ql<tspan
+         id="path24-9-8-0"
+         clip-path="url(#clipPath437-7-7-86)"
+         transform="matrix(0.79254213,0,0,0.79254213,138.06359,-31.646437)"
+         sodipodi:nodetypes="cc"
+         style="fill:#cccccc;stroke:#b3b3b3;stroke-width:1.96377;stroke-dasharray:none" />
+      <path
+         style="fill:#ffc7a3;fill-opacity:1;stroke:none;stroke-width:0.780893;stroke-linecap:square;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 555.1515,22.257985 V -1.1254861 c 0,0 10.95173,21.6919411 27.67538,31.1402941 16.72363,9.448345 34.86875,7.523688 46.7425,-0.17498 11.68512,-7.576307 32.12371,-30.57497985 32.12371,-30.57497985 l -0.098,23.05129185 z"
+         id="path309-2"
+         sodipodi:nodetypes="ccssccc" />
+      <path
+         style="fill:none;fill-opacity:0.840555;stroke:#d16022;stroke-width:1.44742;stroke-linecap:square;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 555.67602,-0.60096444 c 0,0 10.95179,21.69194144 27.67536,31.14027744 16.72365,9.448362 34.63185,6.812951 46.5056,-0.885701 11.68511,-7.576315 31.6905,-30.11552575 31.6905,-30.11552575"
+         id="path309-9-9"
+         sodipodi:nodetypes="cssc" />
+      <path
+         d="m 526.26591,68 134.7076,1e-4"
+         stroke="#000000"
+         stroke-width="4"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path24-9-8-0-3"
+         clip-path="url(#clipPath437-7-7-8-6)"
+         transform="matrix(0.79254213,0,0,0.79254213,-37.888281,-31.646437)"
+         sodipodi:nodetypes="cc"
+         style="fill:#cccccc;stroke:#b3b3b3;stroke-width:1.96377;stroke-dasharray:none" />
+      <g
+         id="g9"
+         transform="matrix(2.2233867,0,0,2.2233867,291.64553,-137.77857)"
+         style="stroke:#000000">
+        <text
+           x="127.5149"
+           y="58.784515"
+           font-size="13.0236px"
+           fill="#000000"
+           id="text302-7-1-73-5"
+           style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan308-7-1-1-0">ql<tspan
    style="font-style:normal;font-size:65%;baseline-shift:super;stroke:#000000"
    id="tspan7">2</tspan></tspan></text>
-      <text
-         x="106.94012"
-         y="58.177002"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text303-2-7-9-1"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan311-3-6">M</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.43959px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke:#000000;stroke-width:0.143516"
-           id="tspan310-2-0">AB</tspan></text>
-      <text
-         x="117.02605"
-         y="58.498276"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text303-2-7-9-1-3"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan311-3-6-7">=</tspan></text>
+        <text
+           x="106.94012"
+           y="58.177002"
+           font-size="13.0236px"
+           fill="#000000"
+           id="text303-2-7-9-1"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan311-3-6">M</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.43959px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke:#000000;stroke-width:0.143516"
+             id="tspan310-2-0">AB</tspan></text>
+        <text
+           x="117.02605"
+           y="58.498276"
+           font-size="13.0236px"
+           fill="#000000"
+           id="text303-2-7-9-1-3"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan311-3-6-7">=</tspan></text>
+        <g
+           id="g8"
+           transform="translate(13.558712,-1.8143591)"
+           style="stroke:#000000">
+          <text
+             x="109.15665"
+             y="58.416073"
+             font-size="13.0236px"
+             fill="#000000"
+             id="text302-7-1-73-5-5"
+             style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+               id="tspan308-7-1-1-0-6">1</tspan></text>
+          <text
+             x="107.62057"
+             y="63.048328"
+             font-size="13.0236px"
+             fill="#000000"
+             id="text302-7-1-73-5-5-7"
+             style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+               id="tspan308-7-1-1-0-6-3">12</tspan></text>
+          <path
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.351;stroke-dasharray:none;stroke-opacity:1"
+             d="m 107.55481,58.944195 h 5.82368"
+             id="path26-93" />
+        </g>
+      </g>
       <g
-         id="g8"
-         transform="translate(13.558712,-1.8143591)"
+         id="g9-4"
+         transform="matrix(2.2233867,0,0,2.2233867,143.19407,-133.00791)"
          style="stroke:#000000">
         <text
-           x="109.15665"
-           y="58.416073"
+           x="127.5149"
+           y="58.784515"
            font-size="13.0236px"
            fill="#000000"
-           id="text302-7-1-73-5-5"
+           id="text302-7-1-73-5-8"
            style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-             id="tspan308-7-1-1-0-6">1</tspan></text>
-        <text
-           x="107.62057"
-           y="63.048328"
-           font-size="13.0236px"
-           fill="#000000"
-           id="text302-7-1-73-5-5-7"
-           style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-             id="tspan308-7-1-1-0-6-3">12</tspan></text>
-        <path
-           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.351;stroke-dasharray:none;stroke-opacity:1"
-           d="m 107.55481,58.944195 h 5.82368"
-           id="path26-93" />
-      </g>
-    </g>
-    <g
-       id="g9-4"
-       transform="matrix(2.7110632,0,0,2.7110632,25.503897,-149.70904)"
-       style="stroke:#000000">
-      <text
-         x="127.5149"
-         y="58.784515"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text302-7-1-73-5-8"
-         style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan308-7-1-1-0-5">ql<tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan308-7-1-1-0-5">ql<tspan
    style="font-style:normal;font-size:65%;baseline-shift:super;stroke:#000000"
    id="tspan7-2" /></tspan></text>
-      <text
-         x="106.94012"
-         y="58.177002"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text303-2-7-9-1-8"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan311-3-6-03">F</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.43959px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke:#000000;stroke-width:0.143516"
-           id="tspan310-2-0-71">QAB</tspan></text>
-      <text
-         x="117.02605"
-         y="58.498276"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text303-2-7-9-1-3-5"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan311-3-6-7-9">=</tspan></text>
+        <text
+           x="106.94012"
+           y="58.177002"
+           font-size="13.0236px"
+           fill="#000000"
+           id="text303-2-7-9-1-8"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan311-3-6-03">F</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.43959px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke:#000000;stroke-width:0.143516"
+             id="tspan310-2-0-71">QAB</tspan></text>
+        <text
+           x="117.02605"
+           y="58.498276"
+           font-size="13.0236px"
+           fill="#000000"
+           id="text303-2-7-9-1-3-5"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan311-3-6-7-9">=</tspan></text>
+        <g
+           id="g8-7"
+           transform="translate(13.558712,-1.8143591)"
+           style="stroke:#000000">
+          <text
+             x="109.15665"
+             y="58.416073"
+             font-size="13.0236px"
+             fill="#000000"
+             id="text302-7-1-73-5-5-9"
+             style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+               id="tspan308-7-1-1-0-6-33">1</tspan></text>
+          <text
+             x="109.1967"
+             y="63.048328"
+             font-size="13.0236px"
+             fill="#000000"
+             id="text302-7-1-73-5-5-7-5"
+             style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+               id="tspan308-7-1-1-0-6-3-1">2</tspan></text>
+          <path
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.351;stroke-dasharray:none;stroke-opacity:1"
+             d="m 107.55481,58.944195 h 5.82368"
+             id="path7-4-0" />
+        </g>
+      </g>
       <g
-         id="g8-7"
-         transform="translate(13.558712,-1.8143591)"
+         id="g9-9"
+         transform="matrix(2.2233867,0,0,2.2233867,398.59002,-137.77857)"
          style="stroke:#000000">
         <text
-           x="109.15665"
-           y="58.416073"
+           x="127.5149"
+           y="58.784515"
            font-size="13.0236px"
            fill="#000000"
-           id="text302-7-1-73-5-5-9"
+           id="text302-7-1-73-5-2"
            style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-             id="tspan308-7-1-1-0-6-33">1</tspan></text>
-        <text
-           x="109.1967"
-           y="63.048328"
-           font-size="13.0236px"
-           fill="#000000"
-           id="text302-7-1-73-5-5-7-5"
-           style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-             id="tspan308-7-1-1-0-6-3-1">2</tspan></text>
-        <path
-           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.351;stroke-dasharray:none;stroke-opacity:1"
-           d="m 107.55481,58.944195 h 5.82368"
-           id="path7-4-0" />
-      </g>
-    </g>
-    <g
-       id="g9-9"
-       transform="matrix(2.7110632,0,0,2.7110632,336.91827,-155.52609)"
-       style="stroke:#000000">
-      <text
-         x="127.5149"
-         y="58.784515"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text302-7-1-73-5-2"
-         style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan308-7-1-1-0-1">ql<tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan308-7-1-1-0-1">ql<tspan
    style="font-style:normal;font-size:65%;baseline-shift:super;stroke:#000000"
    id="tspan7-5">2</tspan></tspan></text>
-      <text
-         x="106.94012"
-         y="58.177002"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text303-2-7-9-1-33"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan311-3-6-0">M</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.43959px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke:#000000;stroke-width:0.143516"
-           id="tspan310-2-0-7">BA</tspan></text>
-      <text
-         x="117.02605"
-         y="58.498276"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text303-2-7-9-1-3-6"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan311-3-6-7-3">=</tspan></text>
+        <text
+           x="106.94012"
+           y="58.177002"
+           font-size="13.0236px"
+           fill="#000000"
+           id="text303-2-7-9-1-33"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan311-3-6-0">M</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.43959px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke:#000000;stroke-width:0.143516"
+             id="tspan310-2-0-7">BA</tspan></text>
+        <text
+           x="117.02605"
+           y="58.498276"
+           font-size="13.0236px"
+           fill="#000000"
+           id="text303-2-7-9-1-3-6"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan311-3-6-7-3">=</tspan></text>
+        <g
+           id="g8-2"
+           transform="translate(13.558712,-1.8143591)"
+           style="stroke:#000000">
+          <text
+             x="109.15665"
+             y="58.416073"
+             font-size="13.0236px"
+             fill="#000000"
+             id="text302-7-1-73-5-5-2"
+             style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+               id="tspan308-7-1-1-0-6-4">1</tspan></text>
+          <text
+             x="107.62057"
+             y="63.048328"
+             font-size="13.0236px"
+             fill="#000000"
+             id="text302-7-1-73-5-5-7-8"
+             style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+               id="tspan308-7-1-1-0-6-3-7">12</tspan></text>
+          <path
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.351;stroke-dasharray:none;stroke-opacity:1"
+             d="m 107.55481,58.944195 h 5.82368"
+             id="path7-1" />
+        </g>
+      </g>
+      <path
+         style="fill:#c6daf3;fill-opacity:1;stroke:none;stroke-width:0.780406;stroke-dasharray:none;stroke-opacity:1"
+         d="M 432.16819,22.083506 H 379.28255 V -0.43640814 Z"
+         id="path27-90" />
+      <path
+         style="fill:#c6daf3;fill-opacity:1;stroke:none;stroke-width:0.780406;stroke-dasharray:none;stroke-opacity:1"
+         d="m 431.64156,21.858449 h 52.88557 v 22.519922 z"
+         id="path12-3-7" />
+      <path
+         style="fill:#c6daf3;fill-opacity:1;stroke:#2f5597;stroke-width:1.44742;stroke-dasharray:none;stroke-opacity:1"
+         d="M 379.23304,-1.0516675 483.90882,44.210945"
+         id="path28-17" />
       <g
-         id="g8-2"
-         transform="translate(13.558712,-1.8143591)"
+         id="g9-4-6"
+         transform="matrix(2.2233867,0,0,2.2233867,242.63611,-88.775072)"
          style="stroke:#000000">
         <text
-           x="109.15665"
-           y="58.416073"
+           x="127.5149"
+           y="58.784515"
            font-size="13.0236px"
            fill="#000000"
-           id="text302-7-1-73-5-5-2"
+           id="text302-7-1-73-5-8-6"
            style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-             id="tspan308-7-1-1-0-6-4">1</tspan></text>
-        <text
-           x="107.62057"
-           y="63.048328"
-           font-size="13.0236px"
-           fill="#000000"
-           id="text302-7-1-73-5-5-7-8"
-           style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-             id="tspan308-7-1-1-0-6-3-7">12</tspan></text>
-        <path
-           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.351;stroke-dasharray:none;stroke-opacity:1"
-           d="m 107.55481,58.944195 h 5.82368"
-           id="path7-1" />
-      </g>
-    </g>
-    <path
-       style="fill:#c6daf3;fill-opacity:1;stroke:none;stroke-width:0.95158;stroke-dasharray:none;stroke-opacity:1"
-       d="M 377.86145,39.400048 H 313.37591 V 11.940628 Z"
-       id="path27-90" />
-    <path
-       style="fill:#c6daf3;fill-opacity:1;stroke:none;stroke-width:0.95158;stroke-dasharray:none;stroke-opacity:1"
-       d="m 377.21931,39.125628 h 64.48547 v 27.45943 z"
-       id="path12-3-7" />
-    <path
-       style="fill:#c6daf3;fill-opacity:1;stroke:#2f5597;stroke-width:1.7649;stroke-dasharray:none;stroke-opacity:1"
-       d="m 313.31554,11.190418 127.63531,55.19049"
-       id="path28-17" />
-    <g
-       id="g9-4-6"
-       transform="matrix(2.7110632,0,0,2.7110632,154.07665,-95.774192)"
-       style="stroke:#000000">
-      <text
-         x="127.5149"
-         y="58.784515"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text302-7-1-73-5-8-6"
-         style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan308-7-1-1-0-5-8">ql<tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan308-7-1-1-0-5-8">ql<tspan
    style="font-style:normal;font-size:65%;baseline-shift:super;stroke:#000000"
    id="tspan7-2-1" /></tspan></text>
-      <text
-         x="106.94012"
-         y="58.177002"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text303-2-7-9-1-8-6"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan311-3-6-03-7">F</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.43959px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke:#000000;stroke-width:0.143516"
-           id="tspan310-2-0-71-1">QBA</tspan></text>
-      <text
-         x="117.02605"
-         y="58.498276"
-         font-size="13.0236px"
-         fill="#000000"
-         id="text303-2-7-9-1-3-5-1"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-           id="tspan311-3-6-7-9-5">=</tspan></text>
-      <g
-         id="g8-7-7"
-         transform="translate(13.558712,-1.8143591)"
-         style="stroke:#000000">
         <text
-           x="109.15665"
-           y="58.416073"
+           x="106.94012"
+           y="58.177002"
            font-size="13.0236px"
            fill="#000000"
-           id="text302-7-1-73-5-5-9-6"
-           style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-             id="tspan308-7-1-1-0-6-33-7">1</tspan></text>
+           id="text303-2-7-9-1-8-6"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+             id="tspan311-3-6-03-7">F</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.43959px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';baseline-shift:sub;stroke:#000000;stroke-width:0.143516"
+             id="tspan310-2-0-71-1">QBA</tspan></text>
         <text
-           x="109.1967"
-           y="63.048328"
+           x="117.02605"
+           y="58.498276"
            font-size="13.0236px"
            fill="#000000"
-           id="text302-7-1-73-5-5-7-5-1"
-           style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
+           id="text303-2-7-9-1-3-5-1"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.143516"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
-             id="tspan308-7-1-1-0-6-3-1-1">2</tspan></text>
-        <path
-           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.351;stroke-dasharray:none;stroke-opacity:1"
-           d="m 107.55481,58.944195 h 5.82368"
-           id="path7-4-2" />
+             id="tspan311-3-6-7-9-5">=</tspan></text>
+        <g
+           id="g8-7-7"
+           transform="translate(13.558712,-1.8143591)"
+           style="stroke:#000000">
+          <text
+             x="109.15665"
+             y="58.416073"
+             font-size="13.0236px"
+             fill="#000000"
+             id="text302-7-1-73-5-5-9-6"
+             style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+               id="tspan308-7-1-1-0-6-33-7">1</tspan></text>
+          <text
+             x="109.1967"
+             y="63.048328"
+             font-size="13.0236px"
+             fill="#000000"
+             id="text302-7-1-73-5-5-7-5-1"
+             style="font-size:5.29167px;stroke:#000000;stroke-width:0.143516"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';stroke:#000000;stroke-width:0.143516"
+               id="tspan308-7-1-1-0-6-3-1-1">2</tspan></text>
+          <path
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.351;stroke-dasharray:none;stroke-opacity:1"
+             d="m 107.55481,58.944195 h 5.82368"
+             id="path7-4-2" />
+        </g>
       </g>
+      <circle
+         style="fill:#ffc7a3;fill-opacity:1;stroke:#d16022;stroke-width:1.0739;stroke-dasharray:none;stroke-opacity:1"
+         id="circle28"
+         cx="555.77936"
+         cy="-0.91259706"
+         r="1.830917" />
+      <circle
+         style="fill:#c6daf3;fill-opacity:1;stroke:#2f5597;stroke-width:1.0739;stroke-dasharray:none;stroke-opacity:1"
+         id="path16-1"
+         cx="379.28256"
+         cy="-0.65410835"
+         r="1.830917" />
+      <circle
+         style="fill:#c6daf3;fill-opacity:1;stroke:#2f5597;stroke-width:1.0739;stroke-dasharray:none;stroke-opacity:1"
+         id="path16-1-6"
+         cx="483.59326"
+         cy="44.34396"
+         r="1.830917" />
+      <circle
+         style="fill:#ffc7a3;fill-opacity:1;stroke:#d16022;stroke-width:1.0739;stroke-dasharray:none;stroke-opacity:1"
+         id="path16-3-58"
+         cx="661.69312"
+         cy="-0.91259706"
+         r="1.830917" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#c6daf3;stroke-width:4.53735;stroke-dasharray:13.6121, 4.53735;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 326.09373,54.801024 h 394.0372"
+         id="path316" />
+      <g
+         id="g1">
+        <g
+           id="g2"
+           transform="translate(-0.01470352,0.01230008)">
+          <text
+             x="319.61584"
+             y="-51.461697"
+             font-size="9.76775px"
+             fill="#2f5597"
+             id="text306-3-5-7-1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">载</text>
+          <text
+             x="319.65494"
+             y="-20.848185"
+             font-size="9.76775px"
+             fill="#2f5597"
+             id="text306-3-5-7-1-5"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">常</text>
+          <text
+             x="319.74612"
+             y="9.8695393"
+             font-size="9.76775px"
+             fill="#2f5597"
+             id="text306-3-5-7-1-58"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.678px;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d16022;fill-opacity:1;stroke:none;stroke-width:0.542651">数</text>
+        </g>
+      </g>
+      <g
+         id="g22"
+         transform="translate(0,-30.37949)">
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:4.38611;stroke-dasharray:none"
+           d="m 553.57805,-37.500208 v 19.515242"
+           id="path26" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.13434;stroke-dasharray:none"
+           d="m 552.46388,-35.67432 -5.27054,3.561177"
+           id="path22" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.13434;stroke-dasharray:none"
+           d="m 552.46388,-32.236913 -5.27054,3.561177"
+           id="path22-7" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.13434;stroke-dasharray:none"
+           d="m 552.46388,-28.799506 -5.27054,3.561177"
+           id="path22-3" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.13434;stroke-dasharray:none"
+           d="m 552.46388,-25.362099 -5.27054,3.561177"
+           id="path22-9" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.13434;stroke-dasharray:none"
+           d="m 552.46388,-21.924692 -5.27054,3.561177"
+           id="path22-8" />
+      </g>
+      <g
+         id="g22-1"
+         transform="rotate(180,608.64132,-42.886638)">
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:4.38611;stroke-dasharray:none"
+           d="m 553.57805,-37.500208 v 19.515242"
+           id="path21-0" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.13434;stroke-dasharray:none"
+           d="m 552.46388,-35.67432 -5.27054,3.561177"
+           id="path22-94" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.13434;stroke-dasharray:none"
+           d="m 552.46388,-32.236913 -5.27054,3.561177"
+           id="path22-7-6" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.13434;stroke-dasharray:none"
+           d="m 552.46388,-28.799506 -5.27054,3.561177"
+           id="path22-3-8" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.13434;stroke-dasharray:none"
+           d="m 552.46388,-25.362099 -5.27054,3.561177"
+           id="path22-9-1" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.13434;stroke-dasharray:none"
+           d="m 552.46388,-21.924692 -5.27054,3.561177"
+           id="path22-8-1" />
+      </g>
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:3.0249;stroke-dasharray:none"
+         d="m 554.29029,-58.076374 h 109.6842"
+         id="path23" />
     </g>
-    <circle
-       style="fill:#ffc7a3;fill-opacity:1;stroke:#d16022;stroke-width:1.30945;stroke-dasharray:none;stroke-opacity:1"
-       id="circle28"
-       cx="528.58545"
-       cy="11.359992"
-       r="2.2325094" />
-    <circle
-       style="fill:#c6daf3;fill-opacity:1;stroke:#2f5597;stroke-width:1.30945;stroke-dasharray:none;stroke-opacity:1"
-       id="path16-1"
-       cx="313.37592"
-       cy="11.675178"
-       r="2.2325094" />
-    <circle
-       style="fill:#c6daf3;fill-opacity:1;stroke:#2f5597;stroke-width:1.30945;stroke-dasharray:none;stroke-opacity:1"
-       id="path16-1-6"
-       cx="440.56607"
-       cy="66.543098"
-       r="2.2325094" />
-    <circle
-       style="fill:#ffc7a3;fill-opacity:1;stroke:#d16022;stroke-width:1.30945;stroke-dasharray:none;stroke-opacity:1"
-       id="path16-3-58"
-       cx="657.73022"
-       cy="11.359992"
-       r="2.2325094" />
   </g>
-  <path
-     style="fill:#ffffff;fill-opacity:1;stroke:#c6daf3;stroke-width:4.53735477;stroke-dasharray:13.61206431,4.53735477;stroke-dashoffset:0;stroke-opacity:1"
-     d="m 326.09373,54.801024 h 394.0372"
-     id="path316" />
   <path
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:4.53735;stroke-dasharray:13.6121, 4.53735;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#DartArrow-6);marker-start:url(#Dot)"
      d="M 58.859544,9.9346518 V 53.238542 H 261.7041 l 43.30389,-54.6996565"
