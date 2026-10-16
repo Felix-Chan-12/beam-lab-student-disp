@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="480"
+   height="150"
+   viewBox="0 0 480 150"
+   role="img"
+   aria-labelledby="title"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="readme-logo.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0378788"
+     inkscape:cx="331.44525"
+     inkscape:cy="74.671532"
+     inkscape:window-width="1842"
+     inkscape:window-height="1057"
+     inkscape:window-x="1150"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <title
+     id="title">BEAM LAB · E—A 数智判验实验场</title>
+  <g
+     id="g4"
+     transform="matrix(1.32437,0,0,1.32437,-162.70049,-24.462904)">
+    <rect
+       x="124.35036"
+       y="27.890511"
+       width="94"
+       height="94"
+       rx="25"
+       fill="#2b579e"
+       id="rect2" />
+    <text
+       x="171.35037"
+       y="93.890511"
+       text-anchor="middle"
+       fill="#ffffff"
+       font-family="Georgia, 'Times New Roman', serif"
+       font-size="66px"
+       font-weight="700"
+       id="text2">B</text>
+    <text
+       x="244.35037"
+       y="67.890511"
+       fill="#171717"
+       font-family="Georgia, 'Times New Roman', serif"
+       font-size="36px"
+       font-weight="700"
+       letter-spacing="4"
+       id="text3">BEAM LAB</text>
+    <text
+       x="244.35037"
+       y="108.89051"
+       fill="#707781"
+       font-family="'Microsoft YaHei', 'PingFang SC', sans-serif"
+       font-size="25px"
+       id="text4">E—A 数智判验实验场</text>
+  </g>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>BEAM LAB · E—A 数智判验实验场</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
