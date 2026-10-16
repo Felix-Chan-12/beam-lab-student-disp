@@ -2,7 +2,12 @@
 (() => {
   'use strict';
   const scriptBase = new URL('.', document.currentScript.src);
-  const asset = name => new URL(`assets/displacement/${name}`, scriptBase).href;
+  // 仅使用已随仓库提供、与当前页面对应的 SVG。
+  const svgAssets = new Set(["BEAM-01-E", "BEAM-02-A1-2", "BEAM-02-A1-0-(1)", "BEAM-02-A1-0-(2)", "BEAM-02-A1-0-(3)", "BEAM-02-A1-1-(1)", "BEAM-02-A1-1-(2)", "BEAM-02-A1-1-(3)", "BEAM-02-A1-1-(4)", "BEAM-02-A1-1-(5)", "BEAM-02-A1-1-(6)", "BEAM-02-A1-1-(7)"]);
+  const asset = name => {
+    const stem = name.replace(/\.png$/, "");
+    return new URL(`assets/displacement/${svgAssets.has(stem) ? stem + ".svg" : name}`, scriptBase).href;
+  };
   const groups = [
     { id: 'E', stage: 'E', title: '把B点当固定端，算得木柱受力0.5ql。这个结果？', count: 1 },
     { id: 'A1-0', stage: 'A1', title: '为了能查表，我们做了什么？', count: 3,
@@ -131,6 +136,7 @@
     document.querySelectorAll('.disp-frame-left').forEach(el=>{el.src=asset(frameName('L'));});
     document.querySelectorAll('.disp-frame-right').forEach(el=>{el.src=asset(frameName(split?'D-R':'R'));});
     document.querySelectorAll('[data-moments]').forEach(moments);
+    prefetchNeighbours();
     const slider=document.querySelector('[data-disp-slider]');if(!slider)return;
     slider.value=state.frame;slider.setAttribute('aria-valuetext',`${theta().toFixed(5)} ql³/EI，第${state.frame+1}档`);
     document.querySelector('[data-disp-angle]').textContent=theta().toFixed(5);
@@ -170,5 +176,30 @@
   window.addEventListener('pointermove',e=>{if(drag){e.preventDefault();dragTo(e.clientX);}});
   window.addEventListener('pointerup',()=>{drag=null;});window.addEventListener('pointercancel',()=>{drag=null;});
   window.BEAM_DISPLACEMENT={render,update,asset};
-  const frames=[];for(const side of ['L','R','D-R'])for(let n=1;n<=20;n++){const im=new Image();im.src=asset(`BEAM-02-A1-3-(1)-${side}-M${n}.png`);frames.push(im);}
+  // 学生首屏不请求动态图；停下滑块后只预读当前两侧的相邻帧。
+  let prefetchTimer;
+  const prefetched = new Set();
+  function prefetchNeighbours() {
+    clearTimeout(prefetchTimer);
+    const images = [...document.querySelectorAll('.disp-frame-left, .disp-frame-right')];
+    if (!images.length) return;
+    const sources = images.map(image => image.src);
+    const frame = state.frame;
+    prefetchTimer = setTimeout(async () => {
+      await Promise.all(images.map(image => image.decode().catch(() => {})));
+      if (state.frame !== frame || images.some((image, i) => !image.isConnected || image.src !== sources[i])) return;
+      const connection = navigator.connection;
+      if (connection?.saveData || ['slow-2g', '2g'].includes(connection?.effectiveType)) return;
+      for (const source of sources) for (const next of [frame - 1, frame + 1]) {
+        if (next < 0 || next > 19) continue;
+        const url = source.replace(/-M\d+\.png$/, `-M${next + 1}.png`);
+        if (prefetched.has(url)) continue;
+        prefetched.add(url);
+        const image = new Image();
+        image.fetchPriority = 'low';
+        image.onerror = () => prefetched.delete(url);
+        image.src = url;
+      }
+    }, 250);
+  }
 })();
