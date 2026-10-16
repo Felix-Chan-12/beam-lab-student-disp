@@ -1,0 +1,38 @@
+.disp-mobile-toggle { display:none; }
+@media (max-width: 999px) {
+  html body.self-guided-page:not(.layout-mode) #app .force-free-canvas { container-type:normal!important; flex:none!important; }
+  html body.self-guided-page:not(.layout-mode) #app .hero { grid-template-columns:minmax(0,1fr)!important; }
+  html body.self-guided-page:not(.layout-mode) #app .panel, html body.self-guided-page:not(.layout-mode) #app .panel > * { min-width:0!important; max-width:100%; }
+  html body.self-guided-page:not(.layout-mode) { --text-small:14px; --text-body:17px; --text-title:24px; }
+  html body.self-guided-page:not(.layout-mode) .topbar { padding:8px 12px; min-height:48px; }
+  html body.self-guided-page:not(.layout-mode) #app { padding:8px; }
+  html body.self-guided-page:not(.layout-mode) #app .self-guided-nav { padding:8px; gap:8px; margin-bottom:12px; }
+  html body.self-guided-page:not(.layout-mode) #app .self-stage-roadmap { grid-template-columns:repeat(4,minmax(0,1fr)); gap:4px; }
+  html body.self-guided-page:not(.layout-mode) #app .self-stage-button { min-height:48px; padding:4px 2px; font-size:12px!important; }
+  html body.self-guided-page:not(.layout-mode) #app .self-stage-button span { display:none; }
+  html body.self-guided-page:not(.layout-mode) #app .self-step-control { flex-direction:row; flex-wrap:wrap; gap:6px; }
+  html body.self-guided-page:not(.layout-mode) #app .self-substeps { gap:4px; flex-wrap:wrap; }
+  html body.self-guided-page:not(.layout-mode) #app .self-substeps-label { display:none; }
+  html body.self-guided-page:not(.layout-mode) #app .self-nav-actions { margin-left:auto; }
+  html body.self-guided-page:not(.layout-mode) #app .self-nav-actions button { min-height:44px; padding:6px 10px; }
+  html body.self-guided-page:not(.layout-mode) #app .force-reveal-grid { display:flex; flex-wrap:wrap; gap:3px; }
+  html body.self-guided-page:not(.layout-mode) #app .force-reveal-grid button { width:34px; height:44px; }
+  html body.self-guided-page:not(.layout-mode) #app h1 { font-size:24px!important; line-height:1.3; margin:8px 0; }
+  html body.self-guided-page:not(.layout-mode) #app .force-composition { display:flex!important; flex-direction:column; gap:12px; }
+  html body.self-guided-page:not(.layout-mode) #app .force-free-canvas { zoom:1!important; width:100%!important; height:auto!important; aspect-ratio:auto!important; min-height:0!important; max-width:100%!important; display:flex; flex-direction:column; overflow:auto; --beam-unit:1px; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-scene { position:relative!important; left:auto!important; top:auto!important; width:100%!important; height:auto!important; min-height:0; aspect-ratio:945/480; flex:none; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-aspect { width:100%; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-substeps { position:sticky!important; left:0!important; top:0!important; width:100%!important; height:auto!important; order:-1; background:white; gap:0; padding:4px 0; z-index:12; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-substeps>span { font-size:13px!important; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-dot-track { width:100%; height:44px; padding:0 4px; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-dot { flex:none; width:36px; height:36px; font-size:16px!important; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-mobile-toggle { display:block; min-height:44px; margin:0 0 6px; font-size:14px; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-mobile-zoom .disp-scene { width:900px!important; }
+  html body.self-guided-page:not(.layout-mode) #app .force-controls { display:block!important; width:100%; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-control { padding:12px; gap:6px; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-control input[type=range] { min-height:44px; touch-action:pan-y; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-control button { min-height:44px; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-control .readout { padding:6px 8px; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-control .hint { font-size:14px!important; }
+  html body.self-guided-page:not(.layout-mode) #app .disp-e-figure { min-height:190px; aspect-ratio:945/480; }
+}

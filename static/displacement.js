@@ -143,6 +143,15 @@
   }
   const setFrame = n => change({type:'set_displacement_frame',value:n});
   function bind() {
+    if (window.BEAM_OFFLINE?.selfGuided) {
+      const heading = document.querySelector('.displacement-story h1');
+      heading.insertAdjacentHTML('afterend', '<button class="secondary disp-mobile-toggle" aria-pressed="false">放大图示（可左右滑动）</button>');
+      document.querySelector('.disp-mobile-toggle').addEventListener('click', event => {
+        const expanded = document.querySelector('.displacement-story').classList.toggle('disp-mobile-zoom');
+        event.currentTarget.setAttribute('aria-pressed', String(expanded));
+        event.currentTarget.textContent = expanded ? '还原整图' : '放大图示（可左右滑动）';
+      });
+    }
     document.querySelector('[data-disp-slider]')?.addEventListener('input',e=>setFrame(Number(e.target.value)));
     document.querySelector('[data-disp-zero]')?.addEventListener('click',()=>setFrame(0));
     document.querySelector('[data-disp-equilibrium]')?.addEventListener('click',()=>setFrame(10));
