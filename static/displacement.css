@@ -1,0 +1,31 @@
+/* 位移法内容只作用于原画布；外框、标题、控制台和底栏沿用 styles.css。 */
+.displacement-story .force-free-canvas { container-type: size; }
+.displacement-story[data-disp-controlled="false"] .force-composition { grid-template-columns: 1fr; }
+.displacement-story .disp-scene { position:absolute;left:1%;top:9%;width:98%;height:89%;display:flex;align-items:center;justify-content:center;container-type:size; }
+.displacement-story .disp-aspect { position:relative;flex:none;width:min(100cqw,196.875cqh);aspect-ratio:945/480; }
+.displacement-story .disp-aspect.disp-wide { width:min(100cqw,251.875cqh);aspect-ratio:1209/480; }
+.displacement-story .disp-layer { position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain;user-select:none; }
+.displacement-story .disp-pair { position:absolute;left:0;top:0;width:100%;height:100%; }
+.displacement-story .disp-pair.disp-mini { left:47.4%;top:0;width:52.6%;height:52.6%; }
+.displacement-story .disp-node-source { clip-path:polygon(0 0,47.4% 0,47.4% 52.7%,100% 52.7%,100% 100%,0 100%); }
+.displacement-story .disp-pisa { position:absolute;left:3%;top:7%;width:25%;height:82%;object-fit:contain;background:white; }
+.displacement-story .disp-substeps { position:absolute;left:70%;top:1.5%;width:28%;height:auto;z-index:10;display:flex;flex-direction:column;gap:5px;align-items:center; }
+.disp-substeps>span { font-size:13px;color:var(--blue); }
+.disp-dot-track { position:relative;display:flex;justify-content:space-between;align-items:center;height:36px;width:100%;padding:0 3px;touch-action:none;user-select:none;cursor:ew-resize; }
+.disp-dot-track::before { content:"";position:absolute;left:15px;right:15px;height:3px;background:#dce3ed; }
+.disp-dot { position:relative;display:grid;place-items:center;width:25px;height:25px;border-radius:50%;border:2px solid white;background:#dce3ed;font:700 13px Cambria,serif;color:#5c6b7e; }
+.disp-dot.active { background:var(--orange);color:white;box-shadow:0 0 0 3px #fbe7d9; }
+.disp-dot-track:focus-visible { outline:2px solid var(--orange);outline-offset:3px; }
+.disp-control .range-row { grid-template-columns:1fr; }
+.disp-control .readouts { grid-template-columns:1fr; }
+.disp-angle-title { font-weight:bold;color:var(--blue);font-size:24px; }
+.disp-control [data-disp-angle] { text-align:right; }
+.disp-control [data-disp-balance] { color:var(--blue);font-size:18px; }
+.disp-control.disp-disabled { filter:grayscale(1);opacity:.4; }
+.disp-e-image { display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain; }
+.disp-e-figure { position:relative;width:100%;height:100%;min-height:400px; }
+@media(max-width:699px) { .disp-substeps>span {font-size:10px;} .disp-dot {width:20px;height:20px;font-size:10px;} .disp-dot-track{height:28px;} .disp-control .disp-angle-title {font-size:18px;} }
+/* 右栏保持原来的字号与配色，只收紧新增读数的间距，避免撑高原预览。 */
+.displacement-story .disp-control { gap:8px; }
+.displacement-story .disp-control p { margin:4px 0; }
+.displacement-story .disp-control .readout { padding:7px 9px; }
