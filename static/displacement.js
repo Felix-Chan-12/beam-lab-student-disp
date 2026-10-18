@@ -48,6 +48,40 @@
       <text x="${b-67}" y="292" font-family="Cambria,serif" font-style="italic" font-size="26">M<tspan baseline-shift="sub" font-size="17">BC</tspan></text></g>`;
   }
 
+  // 两个模型B点的转角标记与Z₁：灰虚线为原位置，彩色线随Z₁转动；
+  // 中间折线连接彩色线与灰虚线，转角为0时不画，转角越大越长（最大转角时与原来的固定大小一致）。
+  // split：右图换成拆开的小方块（D-R）时，B点在图中更靠上、靠右，标记和Z₁随之挪过去。
+  function rotationMarks(split = false) {
+    const a = Math.atan2(state.frame / 19 * 13 * 2, 78), r = 55;
+    const leg = r * Math.sin(a) / (Math.cos(a) + Math.sin(a)); // 末端恰好落在灰虚线上
+    const angle = -a * 180 / Math.PI;
+    const mark = (x, y, color) => `<g fill="none" stroke-width="4"><path d="M${x},${y} h78" stroke="#999" stroke-dasharray="5 3"/><g transform="translate(${x} ${y}) rotate(${angle})" stroke="${color}"><path d="M0,0 H78${leg > .5 ? ` M${r},0 V${leg.toFixed(2)} H${(r - leg).toFixed(2)}` : ''}"/></g></g>`;
+    // Z₁ 跟着转：放在两条线夹角的平分线上、线端外侧，转角为0时就在两线的延长线上。
+    const label = (x, y, color) => `<text x="${(x + 84 * Math.cos(a / 2)).toFixed(2)}" y="${(y - 84 * Math.sin(a / 2)).toFixed(2)}" dominant-baseline="central" fill="${color}">Z₁</text>`;
+    const [rx, ry] = split ? [840.3, 62.6] : [830, 90];
+    return `<g font-family="Cambria,serif" font-style="italic" font-size="48" font-weight="bold">${label(269, 90, '#d86323')}${label(rx, ry, '#315795')}</g>
+      ${mark(269, 90, '#d86323')}${mark(rx, ry, '#315795')}`;
+  }
+
+  // 左右两组模型的说明文字；（未知）（已知）垫浅色底。底色先按字数估位，进入页面后再按实际字形量准（fitTags）。
+  function sideLabels(left, right, y, size) {
+    const tag = (x, fill) => `<rect data-disp-tag x="${x}" y="${y - size * .9}" width="${size * 4}" height="${size * 1.15}" rx="${size * .15}" fill="${fill}"/>`;
+    return `<g font-family="Microsoft YaHei,sans-serif" font-size="${size}" font-weight="bold">${tag(left + size * 6, '#fcdcc6')}${tag(right - size * 4, '#d5e5f6')}<text data-disp-tag x="${left}" y="${y}" fill="#d86323">待求解的结构（未知）</text><text data-disp-tag x="${right}" y="${y}" text-anchor="end" fill="#315795">可用载/形常数的结构（已知）</text></g>`;
+  }
+  // 底色只垫在末尾“（未知）”“（已知）”四个字下面。
+  function fitTags(svg) {
+    const rects = svg.querySelectorAll('rect[data-disp-tag]'), texts = svg.querySelectorAll('text[data-disp-tag]');
+    texts.forEach((text, i) => {
+      try {
+        const n = text.getNumberOfChars(), a = text.getExtentOfChar(n - 4), b = text.getExtentOfChar(n - 1);
+        if (!a.width) return;
+        rects[i].setAttribute('x', (a.x - 2).toFixed(2));
+        rects[i].setAttribute('width', (b.x + b.width - a.x + 4).toFixed(2));
+      } catch (_) { /* 未显示时量不到，保留估位 */ }
+    });
+  }
+  const marksLayer = split => rotationMarks(split) + sideLabels(9, 665, 14, 24);
+
   function moments(svg) {
     const two = Number(svg.dataset.moments) === 2;
     const connect = svg.dataset.connect === 'true';
@@ -60,8 +94,6 @@
     // 落点跟随弯矩曲线；编辑后可为每个分镜固定起终点。
     const redY = 232 + 460 * (-1 / 12 - 2 * theta() + (.5 + 6 * theta()) * .8 - .5 * .8 * .8);
     const blueX = 3 * theta() * 460 * (1 - 28 / 153);
-    const angle = Math.atan2(-turn * 2, 78) * 180 / Math.PI;
-    const rotationMark = (x, color) => `<g fill="none" stroke-width="4"><path d="M${x},90 h78" stroke="#999" stroke-dasharray="5 3"/><g transform="translate(${x} 90) rotate(${angle})" stroke="${color}"><path d="M0,0 H78 M55,0 V14 H41"/></g></g>`;
     svg.innerHTML = `<defs><marker id="red-tip" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto-start-reverse"><path d="M0,0 L7,3.5 L0,7" fill="#ff2934"/></marker><marker id="blue-tip" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto-start-reverse"><path d="M0,0 L7,3.5 L0,7" fill="#2543fa"/></marker></defs>
       ${two ? diagram(23, '#e97933') : ''}${diagram(515, '#3b69ac')}
       <g fill="none" stroke-width="2.5" stroke-dasharray="6 3">
@@ -69,9 +101,8 @@
         ${two ? line('cross-red', 639, redY, 147, redY) + line('cross-blue', 670 + blueX, 260, 178 + blueX, 260) : ''}
         ${connect ? line('left-red', 147, redY - 5, 234, 115) + line('left-blue', 178 + blueX, 255, 273, 141) + line('cut-red', 226, 72, 242, 148, 0) + line('cut-blue', 242, 148, 315, 133, 0) : ''}
       </g>
-      <g font-family="Cambria,serif" font-style="italic" font-size="48" font-weight="bold"><text x="305" y="44" fill="#d86323">Z₁</text><text x="866" y="44" fill="#315795">Z₁</text></g>
-      ${rotationMark(269, '#d86323')}${rotationMark(830, '#315795')}
-      <g font-family="Microsoft YaHei,sans-serif" font-size="29" font-weight="bold"><text x="12" y="466" fill="#d86323">待求解的对象（变形后）</text><text x="605" y="466" fill="#315795">转动B点嵌固的基础</text></g>`;
+      ${rotationMarks()}
+      ${sideLabels(12, 925, 466, 29)}`;
   }
 
 
@@ -84,18 +115,19 @@
   const img = (name, cls = 'disp-layer', alt = '', element = '') => `<img class="${cls}" src="${asset(name)}" alt="${alt}" ${element ? `data-disp-element="${element}"` : ''} draggable="false">`;
   const identity = value => value.stage === 2 ? `A1-${Number(value.force_reveal_step || 0)}` : `A2-${Number(value.deformation_reveal_step || 0)}`;
   const change = async action => { const next = await api(action); update(next); };
-  function pair({ split = false, moments = 0, connect = false, mini = false, overlay = false } = {}) {
+  function pair({ split = false, moments = 0, connect = false, mini = false, overlay = false, marks = false } = {}) {
     return `<div class="disp-pair ${mini ? 'disp-mini' : ''}" data-disp-element="${mini ? 'compactCompare' : 'compare'}">
       ${img(frameName('L'), 'disp-layer disp-frame-left', '待求解的对象', 'left')}
       ${img(frameName(split ? 'D-R' : 'R'), 'disp-layer disp-frame-right', '转动B点嵌固的基础', 'right')}
-      ${moments ? `<svg class="disp-layer disp-moments" viewBox="0 0 945 480" data-moments="${moments}" data-connect="${connect}" data-disp-element="moments" role="img" aria-label="随转角变化的弯矩图"></svg>` : ''}
+      ${moments ? `<svg class="disp-layer disp-moments" viewBox="0 0 945 480" style="overflow:visible" data-moments="${moments}" data-connect="${connect}" data-disp-element="moments" role="img" aria-label="随转角变化的弯矩图"></svg>` : ''}
       ${overlay ? img('BEAM-02-A2-0.png', 'disp-layer', '单跨梁的载常数与形常数', 'overlay') : ''}
+      ${marks ? `<svg class="disp-layer" viewBox="0 0 945 480" style="overflow:visible" data-disp-marks aria-hidden="true">${marksLayer(split)}</svg>` : ''}
     </div>`;
   }
   function scene() {
     const g = current();
-    if (g.id === 'A1-3') return pair({ split: state.sub === 1 });
-    if (g.id === 'A2-0') return pair({ split: true, overlay: true });
+    if (g.id === 'A1-3') return pair({ split: state.sub === 1, overlay: true, marks: true }); // 和 A2-0 一样叠上 BEAM-02-A2-0 这张图
+    if (g.id === 'A2-0') return pair({ split: true, overlay: true, marks: true });
     if (g.id === 'A2-1' && state.sub < 3) return pair({ moments: state.sub ? 2 : 1, connect: state.sub === 2 });
     if ((g.id === 'A2-1' && state.sub === 3) || g.solution) {
       // 用原图的比例裁切隐藏静态右上角，替换同名原图即生效，无派生PNG。
@@ -193,7 +225,8 @@
     const split=(activeId==='A1-3'&&state.sub===1)||activeId==='A2-0';
     document.querySelectorAll('.disp-frame-left').forEach(el=>{el.src=asset(frameName('L'));});
     document.querySelectorAll('.disp-frame-right').forEach(el=>{el.src=asset(frameName(split?'D-R':'R'));});
-    document.querySelectorAll('[data-moments]').forEach(moments);
+    document.querySelectorAll('[data-moments]').forEach(svg=>{moments(svg);fitTags(svg);});
+    document.querySelectorAll('[data-disp-marks]').forEach(svg=>{svg.innerHTML=marksLayer(split);fitTags(svg);});
     prefetchNeighbours();
     const slider=document.querySelector('[data-disp-slider]');if(!slider)return;
     slider.value=state.frame;slider.setAttribute('aria-valuetext',`${theta().toFixed(5)} ql³/EI`);
