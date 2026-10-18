@@ -29,3 +29,8 @@
 .displacement-story .disp-control { gap:8px; }
 .displacement-story .disp-control p { margin:4px 0; }
 .displacement-story .disp-control .readout { padding:7px 9px; }
+/* A1-3 AI 辅助计算：进度条（蓝→橙渐变），代替原来的“n / 20”档位读数；转角单位放在滑块下面。 */
+.disp-ai-card { margin-bottom:4px; }
+.disp-ai-progress { height:10px;border-radius:99px;background:linear-gradient(90deg,#e8f2fb,#fdeee3);box-shadow:inset 0 0 0 1px rgba(36,84,154,.14);overflow:hidden; }
+.disp-ai-progress > span { display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--blue),var(--orange)); }
+.disp-angle-unit { display:block;text-align:right;color:var(--muted);font-size:15px; }

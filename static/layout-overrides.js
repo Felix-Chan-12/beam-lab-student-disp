@@ -1,56 +1,62 @@
-// BEAM LAB 版面调试保存的配置（由「版面调试」窗口自动生成，2026-10-16 09:05:29）
+// BEAM LAB 版面调试保存的配置（由「版面调试」窗口自动生成，2026-10-18 13:14:28）
 // 放在 static 文件夹里，teacher.html 和 student.html 会自动读取。
 // "wide" "medium" "narrow" 是教师版（按宽度分档），"phone" 是学生页的手机版面。
 // 想恢复默认版面：把 "regimes" 后面的内容改成 {}，或在版面调试里重置后再保存。
 // "votes" 是 E 投票反馈页的人数（agree = A、doubt = B、unsure = C），在版面调试里选中「人数方块」可以改。
 // "transfer" 是 M 页「学生回答」：B、C 的人数（A = 第一次投票的总人数 − B − C）和每位同学的想法，在版面调试里选中 M 页右栏可以改。
+// "comments" 是 E 投票反馈页的匿名补充观点（一条一句），在版面调试里选中「匿名观点区」可以改。
 // "canvas" 是教师版各页画布的大小，手机照搬教师版时用；保存时自动量，不用改。
 window.BEAM_LAYOUT_OVERRIDES = {
   "canvas": {
     "pages": {
       "A1-0": [
-        1834.8,
+        1758.2,
         742.2
       ],
       "A1-1": [
-        1834.8,
+        1758.2,
         742.2
       ],
       "A1-2": [
-        1834.8,
+        1758.2,
         742.2
       ],
       "A1-3": [
-        1450.8,
+        1374.2,
         742.2
       ],
       "A2-0": [
-        1460,
+        1383,
         742.2
       ],
       "A2-1": [
-        1460,
+        1383,
         742.2
       ],
       "A2-2": [
-        1460,
+        1383,
         742.2
       ],
       "A2-3": [
-        1460,
+        1383,
         742.2
       ],
       "A2-4": [
-        1460,
+        1383,
         742.2
       ],
       "A2-5": [
-        1445,
+        1368,
         742.2
       ]
     },
-    "width": 1844
+    "width": 1767
   },
+  "comments": [
+    "用载常数算得，感觉挺准的。",
+    "刚结点和固定端真的一样吗，感觉哪里不对劲",
+    "没这么简单吧"
+  ],
   "regimes": {
     "phone": {
       "A1-0": {
@@ -555,6 +561,27 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "tvw": 4.979
           },
           "sel": "#app .force-free-canvas > [data-element-slot=\"originalStructure\"]"
+        },
+        "storyTitle": {
+          "kind": "text",
+          "label": "标题",
+          "props": {},
+          "sel": "#app .force-story > h1",
+          "text": "我们刚刚做了什么？"
+        },
+        "storyTitle-2": {
+          "kind": "text",
+          "label": "标题（第 2 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"2\"]",
+          "text": "刚结点 视为 固定端，未知→已知"
+        },
+        "storyTitle-3": {
+          "kind": "text",
+          "label": "标题（第 3 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"3\"]",
+          "text": "什么是固定端？"
         }
       },
       "A1-1": {
@@ -610,6 +637,55 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "tvw": 1.9616
           },
           "sel": "#app .force-free-canvas > [data-element-slot=\"originalStructure\"]"
+        },
+        "storyTitle-1": {
+          "kind": "text",
+          "label": "标题（第 1 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"1\"]",
+          "text": "原本&ensp;刚结点&ensp;满足&ensp;固定端&ensp;的定义（不能平动）吗？"
+        },
+        "storyTitle-2": {
+          "kind": "text",
+          "label": "标题（第 2 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"2\"]",
+          "text": "原本&ensp;刚结点&ensp;满足&ensp;固定端&ensp;的定义（不能转动）吗？"
+        },
+        "storyTitle-3": {
+          "kind": "text",
+          "label": "标题（第 3 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"3\"]",
+          "text": "刚结点&emsp;与&emsp;固定端&emsp;的转动差异"
+        },
+        "storyTitle-4": {
+          "kind": "text",
+          "label": "标题（第 4 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"4\"]",
+          "text": "刚结点&emsp;与&emsp;固定端&emsp;的转动差异"
+        },
+        "storyTitle-5": {
+          "kind": "text",
+          "label": "标题（第 5 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"5\"]",
+          "text": "转动之前：可用&ensp;载常数"
+        },
+        "storyTitle-6": {
+          "kind": "text",
+          "label": "标题（第 6 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"6\"]",
+          "text": "转动之后：可用&ensp;载常数&ensp;、形常数"
+        },
+        "storyTitle-7": {
+          "kind": "text",
+          "label": "标题（第 7 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"7\"]",
+          "text": "基础转动的解释：不均匀沉降"
         }
       },
       "A1-2": {
@@ -686,6 +762,13 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "tvw": 1.9616
           },
           "sel": "#app .force-free-canvas > [data-element-slot=\"originalStructure\"]"
+        },
+        "storyTitle": {
+          "kind": "text",
+          "label": "标题",
+          "props": {},
+          "sel": "#app .force-story > h1",
+          "text": "现在能算了吗？"
         }
       },
       "A1-3": {
@@ -824,6 +907,20 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "tvw": 1.9616
           },
           "sel": "#app .force-free-canvas > [data-element-slot=\"originalStructure\"]"
+        },
+        "storyTitle-1": {
+          "kind": "text",
+          "label": "标题（第 1 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"1\"]",
+          "text": "嵌固+转动基础，只实现了变形等效"
+        },
+        "storyTitle-2": {
+          "kind": "text",
+          "label": "标题（第 2 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"2\"]",
+          "text": "嵌固+转动基础，只实现了变形等效"
         }
       },
       "A2-0": {
@@ -860,6 +957,34 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "lvw": 47.6687
           },
           "sel": "#app .force-free-canvas > [data-element-slot=\"basicStructure\"]"
+        },
+        "storyTitle-1": {
+          "kind": "text",
+          "label": "标题（第 1 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"1\"]",
+          "text": "新条件：结点平衡"
+        },
+        "storyTitle-2": {
+          "kind": "text",
+          "label": "标题（第 2 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"2\"]",
+          "text": "新条件：结点平衡"
+        },
+        "storyTitle-3": {
+          "kind": "text",
+          "label": "标题（第 3 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"3\"]",
+          "text": "新条件：结点平衡"
+        },
+        "storyTitle-4": {
+          "kind": "text",
+          "label": "标题（第 4 个分镜）",
+          "props": {},
+          "sel": "#app .force-story > h1[data-disp-title=\"4\"]",
+          "text": "新条件：结点平衡"
         }
       },
       "A2-2": {
@@ -884,6 +1009,13 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "lvw": 47.6681
           },
           "sel": "#app .force-free-canvas > [data-element-slot=\"basicStructure\"]"
+        },
+        "storyTitle": {
+          "kind": "text",
+          "label": "标题",
+          "props": {},
+          "sel": "#app .force-story > h1",
+          "text": "AB杆&ensp;的B点杆端弯矩&ensp;<i>M</i><sub>BA</sub>"
         }
       },
       "A2-3": {
@@ -909,18 +1041,16 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "tvw": 24.7382
           },
           "sel": "#app .force-free-canvas > [data-element-slot=\"basicStructure\"]"
+        },
+        "storyTitle": {
+          "kind": "text",
+          "label": "标题",
+          "props": {},
+          "sel": "#app .force-story > h1",
+          "text": "BC杆&ensp;的B点杆端弯矩&ensp;<i>M</i><sub>BC</sub>"
         }
       },
       "A2-4": {
-        "controlCard": {
-          "kind": "panel",
-          "label": "滑块卡片",
-          "props": {
-            "dx": -7,
-            "dy": 2
-          },
-          "sel": "#app .force-control"
-        },
         "formula": {
           "kind": "abstext",
           "label": "位移公式",
@@ -1002,6 +1132,13 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "wvw": 24.6204
           },
           "sel": "#app .force-free-canvas > [data-element-slot=\"basicStructure\"]"
+        },
+        "storyTitle": {
+          "kind": "text",
+          "label": "标题",
+          "props": {},
+          "sel": "#app .force-story > h1",
+          "text": "补充的关键条件：内力平衡"
         },
         "zeroLabel": {
           "kind": "abstext",
@@ -1176,6 +1313,13 @@ window.BEAM_LAYOUT_OVERRIDES = {
         }
       },
       "E": {
+        "leftTitle": {
+          "kind": "text",
+          "label": "左栏标题",
+          "props": {},
+          "sel": "#app .hero > article.panel > h1",
+          "text": "B点当固定端，算得木柱受力0.5<i>ql</i>，准确吗？"
+        },
         "pick:#app div.candidate-heading > span:nth-child(2)": {
           "kind": "text",
           "label": "span「FxA = 0」",
@@ -1374,6 +1518,14 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "tvw": 15.1938
           },
           "sel": "#app .force-free-canvas > .structure-caption.top-caption"
+        },
+        "controlCard": {
+          "kind": "panel",
+          "label": "滑块卡片",
+          "props": {
+            "dy": 90
+          },
+          "sel": "#app .force-control"
         },
         "divider": {
           "kind": "bar",
@@ -1636,6 +1788,13 @@ window.BEAM_LAYOUT_OVERRIDES = {
         }
       },
       "M": {
+        "pick:#app button[data-transfer-choice=\"C\"] > span > small": {
+          "kind": "text",
+          "label": "small「补充小方块的平衡条件」",
+          "props": {},
+          "sel": "#app button[data-transfer-choice=\"C\"] > span > small",
+          "text": "补充内力平衡条件"
+        },
         "tfCount": {
           "kind": "box",
           "label": "M：人数（+1、+2）",
@@ -1643,6 +1802,13 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "text": 75
           },
           "sel": "#app .transfer-count"
+        },
+        "tfTitle": {
+          "kind": "text",
+          "label": "M：题目",
+          "props": {},
+          "sel": "#app .transfer-head h1",
+          "text": "游客倚靠栏杆，多了力偶<i>M</i><sub>1</sub>=<i>F</i>&sdot;<i>h</i>，哪一处求解条件需要调整？"
         }
       },
       "WAIT": {
@@ -1689,7 +1855,7 @@ window.BEAM_LAYOUT_OVERRIDES = {
       }
     }
   },
-  "savedAt": "2026-10-16 09:05:29",
+  "savedAt": "2026-10-18 13:14:28",
   "transfer": {
     "B": 0,
     "C": 4,
@@ -1697,10 +1863,10 @@ window.BEAM_LAYOUT_OVERRIDES = {
       "A": [],
       "B": [],
       "C": [
-        "Fh加在小方块上，不在杆上，两根杆查表还是原来那样。",
-        "小方块上多了Fh，杆端弯矩之和不能再要求为零。",
-        "第二次提问要补充：两杆B端的杆端弯矩之和等于Fh。",
-        "修改结点平衡条件，按真实外力偶的方向统一符号。"
+        "内力平衡等式要改。",
+        "结点多了个弯矩<i>F</i>&sdot;<i>h</i>",
+        "结点处内力平衡要考虑新增加的弯矩",
+        "修改结点平衡条件"
       ]
     }
   },

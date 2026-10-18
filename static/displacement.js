@@ -76,6 +76,8 @@
 
 
   let state = { frame: 0, sub: 0 }, activeId = '', rendered = '';
+  // A1-3「AI 辅助计算」：转角从 0 逐档增大到 0.02262（第 20 档），进度条代替原来的“n / 20”档位读数。
+  const aiState = { running: false, done: false, progress: 0, raf: 0, token: 0 };
   const current = () => groups.find(g => g.id === activeId);
   const theta = () => state.frame / 840;
   const frameName = side => `BEAM-02-A1-3-(1)-${side}-M${state.frame + 1}.png`;
@@ -108,24 +110,77 @@
     const g=current(); if(g.count<2)return '';
     return `<div class="disp-substeps" data-disp-element="substeps"><span>${g.id} · ${state.sub+1} / ${g.count}</span><div class="disp-dot-track" role="slider" tabindex="0" aria-label="${g.id}分镜，可点击、拖动或用方向键切换" aria-valuemin="1" aria-valuemax="${g.count}" aria-valuenow="${state.sub+1}">${Array.from({length:g.count},(_,i)=>`<span class="disp-dot ${i===state.sub?'active':''}">${i+1}</span>`).join('')}</div></div>`;
   }
+  const aiButtonText = () => aiState.running ? 'AI 正在逐档计算…' : aiState.done ? 'AI 计算完成' : '启动 AI 辅助计算';
+  const aiStatusText = () => aiState.running ? '两组模型随 Z₁ 同步计算中' : aiState.done ? '计算完成 · 可继续拖动滑块' : '让转角 Z₁ 从 0 开始逐档增大';
+  function aiCard() {
+    const pct = (aiState.progress * 100).toFixed(1);
+    return `<section class="ai-deformation-card disp-ai-card" data-ai-deformation-card data-disp-ai-card${aiState.running ? ' aria-busy="true"' : ''}><div class="ai-deformation-heading"><span>AI</span><strong>辅助计算两组模型的变形</strong></div><button type="button" class="primary ai-deformation-button" data-ai-deformation-button data-disp-ai-button ${aiState.running || aiState.done ? 'disabled' : ''}>${aiButtonText()}</button><div class="disp-ai-progress" data-disp-ai-progress role="progressbar" aria-label="AI 计算进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(aiState.progress * 100)}"><span style="width:${pct}%"></span></div><small data-ai-deformation-status data-disp-ai-status>${aiStatusText()}</small></section>`;
+  }
+  // 只改变了的地方才写进页面，免得每一帧都触发版面调试的重套用。
+  function paintAi() {
+    const g = current();
+    const slider = document.querySelector('[data-disp-slider]'), zero = document.querySelector('[data-disp-zero]');
+    if (g?.dynamic) { if (slider) slider.disabled = aiState.running; if (zero) zero.disabled = aiState.running; }
+    const card = document.querySelector('[data-disp-ai-card]'); if (!card) return;
+    if (aiState.running) card.setAttribute('aria-busy', 'true'); else card.removeAttribute('aria-busy');
+    const button = card.querySelector('[data-disp-ai-button]'), status = card.querySelector('[data-disp-ai-status]'), bar = card.querySelector('[data-disp-ai-progress]');
+    button.disabled = aiState.running || aiState.done;
+    if (button.textContent !== aiButtonText()) button.textContent = aiButtonText();
+    if (status.textContent !== aiStatusText()) status.textContent = aiStatusText();
+    const pct = Math.round(aiState.progress * 1000) / 10;
+    bar.setAttribute('aria-valuenow', String(Math.round(pct)));
+    bar.firstElementChild.style.width = `${pct}%`;
+  }
+  function resetAi() {
+    aiState.token++; if (aiState.raf) cancelAnimationFrame(aiState.raf);
+    Object.assign(aiState, { running: false, done: false, progress: 0, raf: 0 });
+  }
+  // 先把 20 档图预读好（本地文件很快，最多等 1.5 秒），动画时不闪。
+  function preloadAiFrames() {
+    const names = [];
+    for (let n = 1; n <= 20; n++) for (const side of ['L', state.sub === 1 ? 'D-R' : 'R']) names.push(`BEAM-02-A1-3-(1)-${side}-M${n}.png`);
+    const loads = names.map(name => new Promise(resolve => { const image = new Image(); image.onload = image.onerror = () => resolve(); image.src = asset(name); }));
+    return Promise.race([Promise.all(loads), new Promise(resolve => setTimeout(resolve, 1500))]);
+  }
+  async function startAi() {
+    if (aiState.running || aiState.done || activeId !== 'A1-3') return;
+    const token = ++aiState.token;
+    Object.assign(aiState, { running: true, progress: 0 }); paintAi();
+    await setFrame(0);
+    await preloadAiFrames();
+    if (token !== aiState.token) return;
+    const last = 19, duration = 2400, started = performance.now();
+    let shown = 0;
+    const tick = now => {
+      if (token !== aiState.token) return;
+      if (activeId !== 'A1-3') { resetAi(); return; }
+      aiState.progress = Math.min(1, (now - started) / duration);
+      const frame = Math.round(aiState.progress * last);
+      if (frame !== shown) { shown = frame; setFrame(frame); }
+      if (aiState.progress < 1) { paintAi(); aiState.raf = requestAnimationFrame(tick); return; }
+      Object.assign(aiState, { running: false, done: true, raf: 0 }); paintAi();
+    };
+    aiState.raf = requestAnimationFrame(tick);
+  }
   function controls() {
     const g=current();
     return `<div class="force-controls"><aside class="control-card force-control disp-control ${!g.dynamic?'disp-disabled':''}">
+      ${g.id==='A1-3'?aiCard():''}
       <div class="disp-angle-title">转角 <i>Z</i><sub>1</sub></div>
-      <div class="range-row"><input data-disp-slider type="range" min="0" max="19" step="1" value="${state.frame}" aria-label="转角Z1，20档" ${!g.dynamic?'disabled':''}><strong data-disp-angle></strong></div>
-      <div class="readouts"><div class="readout"><strong data-disp-frame></strong><small>转角单位：ql³/EI</small></div></div>
+      <div class="range-row"><input data-disp-slider type="range" min="0" max="19" step="1" value="${state.frame}" aria-label="转角Z1" ${!g.dynamic?'disabled':''}><strong data-disp-angle></strong></div>
+      <small class="disp-angle-unit">转角单位：ql³/EI</small>
       <button class="secondary" data-disp-zero ${!g.dynamic?'disabled':''}>转角归零</button>
       ${g.solution?'<div class="readouts disp-solution"><div class="readout"><strong data-disp-force></strong><small>木柱受力 N</small></div><div class="readout"><strong data-disp-residual></strong><small>结点弯矩代数和</small></div></div><p data-disp-balance></p><button class="primary" data-disp-equilibrium>定位平衡转角</button>':''}
       <p class="hint">${g.dynamic?'逆时针为正；拖动Z₁，比较两组模型。图中变形为放大示意。':'本页讲解杆端弯矩，转角滑块暂不启用。'}</p>
     </aside></div>`;
   }
   function render(value) {
-    activeId=identity(value); const g=current(); if(!g)return;
+    activeId=identity(value); if(activeId!=='A1-3')resetAi(); const g=current(); if(!g)return;
     state={frame:Number(value.displacement_frame||0),sub:Math.min(g.count-1,Number(value.displacement_substep||0))};
     const dynamic=g.dynamic||g.control;
-    document.getElementById('app').innerHTML=`<section class="panel force-story displacement-story ${value.stage===3?'deformation-story':''}" data-reveal-step="${value.stage===2?value.force_reveal_step:value.deformation_reveal_step}" data-disp-controlled="${Boolean(dynamic)}"><h1>${g.titles?.[state.sub]||g.title}</h1><div class="force-composition"><div class="force-free-canvas" data-disp-substep="${state.sub}" aria-label="位移法图片与交互画布"><div class="disp-scene" data-disp-element="scene"><div class="disp-aspect ${g.id.startsWith('A1')&&!g.dynamic?'disp-wide':''}">${scene()}</div></div>${dots()}</div>${dynamic?controls():''}</div></section>`;
+    document.getElementById('app').innerHTML=`<section class="panel force-story displacement-story ${value.stage===3?'deformation-story':''}" data-reveal-step="${value.stage===2?value.force_reveal_step:value.deformation_reveal_step}" data-disp-controlled="${Boolean(dynamic)}"><h1${g.count>1?` data-disp-title="${state.sub+1}"`:''}>${g.titles?.[state.sub]||g.title}</h1><div class="force-composition"><div class="force-free-canvas" data-disp-substep="${state.sub}" aria-label="位移法图片与交互画布"><div class="disp-scene" data-disp-element="scene"><div class="disp-aspect ${g.id.startsWith('A1')&&!g.dynamic?'disp-wide':''}">${scene()}</div></div>${dots()}</div>${dynamic?controls():''}</div></section>`;
     rendered=`${activeId}:${state.sub}`;
-    bind(); refresh();
+    bind(); refresh(); paintAi();
   }
   function update(value) {
     const id=identity(value), g=groups.find(x=>x.id===id);if(!g || id==='A2-6')return;
@@ -141,9 +196,8 @@
     document.querySelectorAll('[data-moments]').forEach(moments);
     prefetchNeighbours();
     const slider=document.querySelector('[data-disp-slider]');if(!slider)return;
-    slider.value=state.frame;slider.setAttribute('aria-valuetext',`${theta().toFixed(5)} ql³/EI，第${state.frame+1}档`);
+    slider.value=state.frame;slider.setAttribute('aria-valuetext',`${theta().toFixed(5)} ql³/EI`);
     document.querySelector('[data-disp-angle]').textContent=theta().toFixed(5);
-    document.querySelector('[data-disp-frame]').textContent=`${state.frame+1} / 20`;
     if(current().solution){
       document.querySelector('[data-disp-force]').textContent=`${(.5-6*theta()).toFixed(4)} ql`;
       document.querySelector('[data-disp-residual]').textContent=`${(7*theta()-1/12).toFixed(5)} ql²`;
@@ -163,6 +217,7 @@
     }
     document.querySelector('[data-disp-slider]')?.addEventListener('input',e=>setFrame(Number(e.target.value)));
     document.querySelector('[data-disp-zero]')?.addEventListener('click',()=>setFrame(0));
+    document.querySelector('[data-disp-ai-button]')?.addEventListener('click',startAi);
     document.querySelector('[data-disp-equilibrium]')?.addEventListener('click',()=>setFrame(10));
     const track=document.querySelector('.disp-dot-track');if(!track)return;
     track.addEventListener('pointerdown',event=>{
