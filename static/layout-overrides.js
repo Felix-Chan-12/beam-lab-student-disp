@@ -1,4 +1,4 @@
-// BEAM LAB 版面调试保存的配置（由「版面调试」窗口自动生成，2026-10-23 08:56:49）
+// BEAM LAB 版面调试保存的配置（由「版面调试」窗口自动生成，2026-10-23 21:33:48）
 // 放在 static 文件夹里，teacher.html 和 student.html 会自动读取。
 // "wide" "medium" "narrow" 是教师版（按宽度分档），"phone" 是学生页的手机版面。
 // 想恢复默认版面：把 "regimes" 后面的内容改成 {}，或在版面调试里重置后再保存。
@@ -791,6 +791,14 @@ window.BEAM_LAYOUT_OVERRIDES = {
           },
           "sel": "#app .force-free-canvas > .structure-caption.bottom-caption"
         },
+        "disp:labelRight": {
+          "kind": "dispLabel",
+          "label": "位移法：「用第1/2/3根梁拼出来的结构（已知）」这句话",
+          "props": {
+            "ldx": 81.5
+          },
+          "sel": "#app .disp-scene text[data-disp-element=\"labelRight\"]"
+        },
         "divider": {
           "kind": "bar",
           "label": "上下分隔线",
@@ -932,6 +940,14 @@ window.BEAM_LAYOUT_OVERRIDES = {
         }
       },
       "A2-0": {
+        "disp:labelRight": {
+          "kind": "dispLabel",
+          "label": "位移法：「用第1/2/3根梁拼出来的结构（已知）」这句话",
+          "props": {
+            "ldx": 81.5
+          },
+          "sel": "#app .disp-scene text[data-disp-element=\"labelRight\"]"
+        },
         "divider": {
           "kind": "bar",
           "label": "上下分隔线",
@@ -996,6 +1012,54 @@ window.BEAM_LAYOUT_OVERRIDES = {
         }
       },
       "A2-2": {
+        "disp:beamUse-3-1": {
+          "kind": "dispUse",
+          "label": "第3根梁用哪个矩形（第 1 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"3\"][data-sub=\"1\"]"
+        },
+        "disp:beamUse-3-2": {
+          "kind": "dispUse",
+          "label": "第3根梁用哪个矩形（第 2 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"3\"][data-sub=\"2\"]"
+        },
+        "disp:beamUse-3-3": {
+          "kind": "dispUse",
+          "label": "第3根梁用哪个矩形（第 3 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"3\"][data-sub=\"3\"]"
+        },
+        "disp:beamUse-3-4": {
+          "kind": "dispUse",
+          "label": "第3根梁用哪个矩形（第 4 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"3\"][data-sub=\"4\"]"
+        },
+        "disp:beamUse-3-5": {
+          "kind": "dispUse",
+          "label": "第3根梁用哪个矩形（第 5 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"3\"][data-sub=\"5\"]"
+        },
+        "disp:beamUse-3-6": {
+          "kind": "dispUse",
+          "label": "第3根梁用哪个矩形（第 6 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"3\"][data-sub=\"6\"]"
+        },
         "formula": {
           "kind": "abstext",
           "label": "位移公式",
@@ -1027,6 +1091,86 @@ window.BEAM_LAYOUT_OVERRIDES = {
         }
       },
       "A2-3": {
+        "disp:beamUse-1-1": {
+          "kind": "dispUse",
+          "label": "第1根梁用哪个矩形（第 1 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"1\"][data-sub=\"1\"]"
+        },
+        "disp:beamUse-1-2": {
+          "kind": "dispUse",
+          "label": "第1根梁用哪个矩形（第 2 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"1\"][data-sub=\"2\"]"
+        },
+        "disp:beamUse-1-3": {
+          "kind": "dispUse",
+          "label": "第1根梁用哪个矩形（第 3 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"1\"][data-sub=\"3\"]"
+        },
+        "disp:beamUse-1-4": {
+          "kind": "dispUse",
+          "label": "第1根梁用哪个矩形（第 4 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"1\"][data-sub=\"4\"]"
+        },
+        "disp:beamUse-1-5": {
+          "kind": "dispUse",
+          "label": "第1根梁用哪个矩形（第 5 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"1\"][data-sub=\"5\"]"
+        },
+        "disp:beamUse-2-1": {
+          "kind": "dispUse",
+          "label": "第2根梁用哪个矩形（第 1 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"2\"][data-sub=\"1\"]"
+        },
+        "disp:beamUse-2-2": {
+          "kind": "dispUse",
+          "label": "第2根梁用哪个矩形（第 2 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"2\"][data-sub=\"2\"]"
+        },
+        "disp:beamUse-2-3": {
+          "kind": "dispUse",
+          "label": "第2根梁用哪个矩形（第 3 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"2\"][data-sub=\"3\"]"
+        },
+        "disp:beamUse-2-4": {
+          "kind": "dispUse",
+          "label": "第2根梁用哪个矩形（第 4 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"2\"][data-sub=\"4\"]"
+        },
+        "disp:beamUse-2-5": {
+          "kind": "dispUse",
+          "label": "第2根梁用哪个矩形（第 5 个分镜）",
+          "props": {
+            "use": 1
+          },
+          "sel": "#app .disp-beam[data-beam=\"2\"][data-sub=\"5\"]"
+        },
         "formula": {
           "kind": "abstext",
           "label": "位移公式",
@@ -1197,10 +1341,22 @@ window.BEAM_LAYOUT_OVERRIDES = {
           },
           "sel": "#app .force-controls"
         },
+        "disp:beamCover1": {
+          "kind": "dispCover",
+          "label": "位移法：第1根梁的遮罩",
+          "props": {
+            "bcolor": 10921638,
+            "bstyle": 0,
+            "fcolor": 16777215
+          },
+          "sel": "#app [data-disp-element=\"beamCover1\"]"
+        },
         "disp:beamCover2": {
           "kind": "dispCover",
           "label": "位移法：第2根梁的遮罩",
           "props": {
+            "bcolor": 10921638,
+            "bstyle": 0,
             "fcolor": 16777215
           },
           "sel": "#app [data-disp-element=\"beamCover2\"]"
@@ -1209,9 +1365,20 @@ window.BEAM_LAYOUT_OVERRIDES = {
           "kind": "dispCover",
           "label": "位移法：第3根梁的遮罩",
           "props": {
+            "bcolor": 10921638,
+            "bstyle": 0,
             "fcolor": 16777215
           },
           "sel": "#app [data-disp-element=\"beamCover3\"]"
+        },
+        "disp:tagRight": {
+          "kind": "dispTag",
+          "label": "位移法：「（已知）」浅蓝色底",
+          "props": {
+            "tdw": -25,
+            "tdx": 12.5
+          },
+          "sel": "#app .disp-scene rect[data-disp-element=\"tagRight\"]"
         },
         "main": {
           "kind": "main",
@@ -1823,27 +1990,12 @@ window.BEAM_LAYOUT_OVERRIDES = {
         }
       },
       "M": {
-        "pick:#app button[data-transfer-choice=\"C\"] > span > small": {
-          "kind": "text",
-          "label": "small「补充小方块的平衡条件」",
-          "props": {},
-          "sel": "#app button[data-transfer-choice=\"C\"] > span > small",
-          "text": "补充内力平衡条件"
-        },
-        "tfCount": {
-          "kind": "box",
-          "label": "M：人数（+1、+2）",
-          "props": {
-            "text": 75
-          },
-          "sel": "#app .transfer-count"
-        },
         "tfTitle": {
           "kind": "text",
           "label": "M：题目",
           "props": {},
           "sel": "#app .transfer-head h1",
-          "text": "游客倚靠栏杆，多了力偶<i>M</i><sub>1</sub>=<i>F</i>&sdot;<i>h</i>，哪一处求解条件需要调整？"
+          "text": "游客推栏杆，多了力偶<i>F</i><i>h</i>，哪一处求解条件需要调整？"
         }
       },
       "WAIT": {
@@ -1890,7 +2042,7 @@ window.BEAM_LAYOUT_OVERRIDES = {
       }
     }
   },
-  "savedAt": "2026-10-23 08:56:49",
+  "savedAt": "2026-10-23 21:33:48",
   "transfer": {
     "B": 0,
     "C": 4,

@@ -411,7 +411,7 @@ function applyOfflineAction(state, action) {
     if (next.stage === 3) next.deformation_reveal_step = 0;
     if (next.stage === 4) next.migration_answers_visible = false; // 进入 M：学生回答先收起
   } else if (action.type === "set_displacement_substep") {
-    next.displacement_substep = Math.max(0, Math.min(6, Number(action.value || 0)));
+    next.displacement_substep = Math.max(0, Math.min(7, Number(action.value || 0))); // 位移法一页最多 8 个分镜（A1-0）
   } else if (action.type === "set_displacement_frame") {
     next.displacement_frame = Math.max(0, Math.min(19, Math.round(Number(action.value || 0))));
   } else if (action.type === "set_force_reveal") {

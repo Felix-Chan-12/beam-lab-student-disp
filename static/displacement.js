@@ -5,7 +5,8 @@
   // 版面调试（tune=1）里：平时藏着的框（A2-5 的红、蓝框，A1-0 中间的占位框）淡淡地显示出来，方便选中调整。
   if (new URLSearchParams(location.search).get('tune') === '1') document.documentElement.classList.add('disp-tune');
   // 仅使用已随仓库提供、与当前页面对应的 SVG。
-  const svgAssets = new Set(["01-top-3-Beams", "BEAM-01-E", "BEAM-02-A1-2", "BEAM-02-A1-0-(1)", "BEAM-02-A1-0-(2)", "BEAM-02-A1-0-(3)", "BEAM-02-A1-1-(1)", "BEAM-02-A1-1-(2)", "BEAM-02-A1-1-(3)", "BEAM-02-A1-1-(4)", "BEAM-02-A1-1-(5)", "BEAM-02-A1-1-(6)", "BEAM-02-A1-1-(7)"]);
+  const svgAssets = new Set(["01-top-3-Beams", "BEAM-01-E", "BEAM-02-A1-2", "BEAM-02-A1-1-(1)", "BEAM-02-A1-1-(2)", "BEAM-02-A1-1-(3)"]);
+  for (let n = 1; n <= 8; n++) svgAssets.add(`BEAM-02-A1-0-(${n})`);
 
   for (const side of ['L', 'R', 'D-R']) for (let n = 1; n <= 20; n++) svgAssets.add(`BEAM-02-A1-3-(1)-${side}-M${n}`);
   for (const name of ['BEAM-02-A2-0', 'BEAM-02-A2-1-(4)', 'BEAM-02-A2-4', 'BEAM-02-A2-5']) svgAssets.add(name);
@@ -17,18 +18,21 @@
   };
   const groups = [
     { id: 'E', stage: 'E', title: '把B点当固定端，算得木柱受力0.5ql。这个结果？', count: 1 },
-    // A1-0 四个分镜：第2、3个都用 A1-0-(2) 的图（第3个在画面中间放大显示「2个条件」框），第3→4个之间可以拖动转场。
-    { id: 'A1-0', stage: 'A1', title: '为了能查表，我们做了什么？', count: 4, pics: [1, 2, 2, 3],
-      titles: ['先看待求解的刚架', '把B点嵌进大地，将未知转成已知', '已知算未知，结果可信要满足2个条件', '固定端：管住截面的移动与转动'] },
-    { id: 'A1-1', stage: 'A1', title: '嵌固真正多管住的，只有转动', count: 7,
-      titles: ['原来的B点：移动被管住，转动没有被管住', '荷载作用下，小方块转过了Z₁', '把B点嵌固，转动也被管死了', '让嵌住B点的大地，也转过Z₁', '转动之前：用载常数', '转动之后：还可以用形常数', '支座可以转动：地基不均匀沉降的类比'] },
+    // A1-0 八个分镜（2026-10-23 起）：从「原结构 / 第1根梁代替」讲到「让B点的基础也转Z₁」，B点变形对比一口气讲完。
+    //   图是 BEAM-02-A1-0-(1)～(8)；(3) 和 (2) 是同一张图（第3个分镜在画面中间放大显示「2个条件」框），第3→4个之间可以拖动转场。
+    //   （原来的 A1-0-(3) 改名为 (4)，原来的 A1-1-(1)～(4) 改名为 A1-0-(5)～(8)。）
+    // A1-1 三个分镜：三根梁拼出来，图是 BEAM-02-A1-1-(1)～(3)（原来的 A1-1-(5)～(7)）。
+    { id: 'A1-0', stage: 'A1', title: '为了能查表，我们做了什么？', count: 8,
+      titles: ['先看待求解的刚架', '用第1根梁代替横梁AB', '已知算未知，结果可信要满足2个条件', '右边的B点：不能移动，也不能转动', '原结构的B点：也不能移动，这一点一致', '荷载作用下，原结构的B点转过了Z₁', '右边的B点转不了：变形不一致', '让右边B点的基础，也转过Z₁'] },
+    { id: 'A1-1', stage: 'A1', title: '右边的结构，由3根已知的梁拼出来', count: 3,
+      titles: ['右边的结构，由3根已知的梁拼出来', '横梁AB：第1根梁＋第2根梁', '木柱BC：第3根梁'] },
     { id: 'A1-2', stage: 'A1', title: '两根杆都能查表了，为什么还求不出木柱受力？', count: 1 },
     { id: 'A1-3', stage: 'A1', title: '同一个Z₁，原刚架与单跨梁的变形一致', count: 2,
       titles: ['转动嵌固，实现变形等效', '任意Z₁都能变形等效，真实值是哪一个？'], dynamic: true },
     { id: 'A2-0', stage: 'A2', title: '还有什么已知条件没有用过？', count: 1, dynamic: true },
     { id: 'A2-1', stage: 'A2', title: '把平衡条件，用在结点上', count: 4, dynamic: true,
       titles: ['假设某一个Z₁就是真实值，先看两个截面的弯矩', '相应截面的弯矩，应当一致', '把单跨梁的杆端弯矩，对应到原结构', '截开取出小方块：两个截面弯矩必须平衡'] },
-    // seq：分镜图名是 BEAM-02-A2-2-1、-2…（不带括号），圆球不写编号。
+    // seq：分镜图名是 BEAM-02-A2-2-1、-2…（不带括号）。
     { id: 'A2-2', stage: 'A2', title: 'AB杆的弯矩：荷载一份，转角一份', count: 6, control: true, seq: true },
     { id: 'A2-3', stage: 'A2', title: 'BC杆的弯矩：只有转角这一份', count: 5, control: true, seq: true },
     { id: 'A2-4', stage: 'A2', title: '补上结点平衡，这次能算了吗？', count: 1, dynamic: true, solution: true },
@@ -39,8 +43,8 @@
   // 顶部（A1-0～A2-5）：左边三根梁的配图，右边「已知算未知，结果可信的2个条件」。
   // 每个分镜两个条件后面的标记：0 不标，1 问号，2 叉，3 勾（[变形一致, 内力一致]）；版面调试里可以按页、按分镜改。
   const HEAD_MARKS = {
-    'A1-0': [[1, 0], [1, 0], [1, 0], [1, 0]],
-    'A1-1': [[1, 0], [1, 0], [2, 0], [3, 0], [3, 0], [3, 0], [3, 0]],
+    'A1-0': [[1, 0], [1, 0], [1, 0], [1, 0], [1, 0], [1, 0], [2, 0], [3, 0]],
+    'A1-1': [[3, 0], [3, 0], [3, 0]],
     'A1-2': [[3, 0]],
     'A1-3': [[3, 0], [3, 0]],
     'A2-0': [[3, 1]],
@@ -50,15 +54,14 @@
   };
   // 顶部三根梁，每根各有一个遮罩（半透明）和一个描边框（橘色、无填充），大小、位置在版面调试里调（所有页通用）。
   // 每页、每个分镜，每根梁用哪个：0 不用，1 遮罩，2 描边框（[第1根, 第2根, 第3根]）；版面调试里可以按页、按分镜改。
-  // 默认：A1-0 和 A1-1 前3个分镜盖住第2、3根梁；A1-1-(4) 圈出第2、3根梁；其余都不用。
+  // 默认：A1-0 前7个分镜盖住第2、3根梁；A1-0 第8个分镜（让基础也转Z₁）圈出第2、3根梁；其余都不用。
   const BEAM_USE = {
-    'A1-0': [[0, 1, 1], [0, 1, 1], [0, 1, 1], [0, 1, 1]],
-    'A1-1': [[0, 1, 1], [0, 1, 1], [0, 1, 1], [0, 2, 2], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+    'A1-0': [[0, 1, 1], [0, 1, 1], [0, 1, 1], [0, 1, 1], [0, 1, 1], [0, 1, 1], [0, 1, 1], [0, 2, 2]]
   };
   // 「2个条件」框每个分镜的样子：hide 不显示，big 放大摆在画面中间（位置在版面调试的「中间的「2个条件」框」里调），show 在右上角（默认）。
   const CONDS_SHOW = { 'A1-0': ['hide', 'hide', 'big', 'show'] };
   // 点顶部的梁切换矩形：哪一页哪个分镜、哪几根梁一起切；每点一次按 遮罩 → 描边框 → 不显示 → 遮罩… 轮换（只在本机画面上变，换页后复原）。
-  const CYCLE_BEAMS = { 'A1-1:2': [2, 3] };
+  const CYCLE_BEAMS = { 'A1-0:6': [2, 3] }; // A1-0 第7个分镜（右边的B点转不了）
   const cycle = { key: '', use: null };
   // 点「2个条件」里的某一条，画面里出现对应的框，这一条的字也变成框的颜色（再点一次收起）。只在下面这些页。
   const CLICK_FRAMES = { 'A2-5': true };
@@ -96,8 +99,8 @@
   // 每页（分镜）画哪几条：[第几根梁, 落点X, 落点Y（中间图的宽、高比例）, 终点方向（0 从上往下，1 从右往左，2 从左往右）]。
   const CURVES = {
     'A1-0:1': [[1, 0.46, 0.165, 0]], 'A1-0:2': [[1, 0.46, 0.165, 0]],     // A1-0-(2)：第1根梁 → 中间的空心箭头
-    'A1-1:5': [[1, 0.19, 0.10, 0], [2, 0.44, 0.16, 0]],                  // A1-1-(6)：第1根梁 → 左图，第2根梁 → 中图
-    'A1-1:6': [[3, 0.576, 0.56, 1]],                                     // A1-1-(7)：第3根梁 → 中图木柱（从右边指过去，竖线从 Z₁ 和等号之间穿过）
+    'A1-1:1': [[1, 0.19, 0.10, 0], [2, 0.44, 0.16, 0]],                  // A1-1 第2个分镜：第1根梁 → 左图，第2根梁 → 中图
+    'A1-1:2': [[3, 0.576, 0.56, 1]],                                     // A1-1 第3个分镜：第3根梁 → 中图木柱（从右边指过去，竖线从 Z₁ 和等号之间穿过）
     'A1-2:0': [[1, 0.80, 0.10, 0], [2, 0.915, 0.13, 0], [3, 0.94, 0.55, 1]] // A1-2：横梁、B端基础、木柱BC
   };
   const curvesHtml = (key = subKey()) => {
@@ -329,25 +332,45 @@
       return `${img(file, 'disp-layer disp-node-source', '小方块隔离体及杆端弯矩关系', 'overlay')}${pair({ moments: 2, connect: true, mini: true })}${hlFrames()}`;
     }
     const spot = CONDS_SHOW[g.id]?.[state.sub] === 'big' ? condsSpot() : '';
-    return img(picFile(g, state.sub), 'disp-layer', g.titles?.[state.sub] || g.title, 'image') + spot;
+    return img(picFile(g, state.sub), 'disp-layer', g.titles?.[state.sub] || g.title, 'image') + spot + revealHtml();
   }
-  // 第 sub 个分镜的主图：A2-2、A2-3 是 BEAM-02-A2-2-1…；A1-0 按 pics 指定用哪张（第2、3个分镜同一张）；其余按分镜编号。
+  // A2-2 第5、6个分镜，A2-3 第5个分镜：弯矩图先用「第n根梁」卡片盖住，公式里对应的那一项也先遮住；
+  // 点卡片，卡片和遮挡一起淡出，露出弯矩图和那一项。只在本机画面上，换分镜后复原。
+  // 位置按图宽、图高的 %：[左, 上, 宽, 高]；card 盖弯矩图，mask 盖公式里的那一项。版面调试里可调。
+  const REVEALS = {
+    'A2-2:4': { n: 1, card: [52.8, 47, 16.2, 18.8], mask: [66, 82.8, 10.6, 13.9] },   // 盖住 1/12ql² 的弯矩图和「−1/12ql²」
+    'A2-2:5': { n: 2, card: [52.8, 65.4, 16.2, 16.7], mask: [77.3, 83, 10.4, 13.7] }, // 盖住 4i·Z₁ 的弯矩图和「+4i·Z₁」
+    'A2-3:4': { n: 3, card: [52.8, 54.2, 16.2, 18.8], mask: [72.3, 83, 16.4, 13.7] }      // 盖住 3i·Z₁ 的弯矩图和「3i·Z₁」
+  };
+  const reveal = { key: '', open: false };
+  const boxStyle = ([l, t, w, h]) => `left:${l}%;top:${t}%;width:${w}%;height:${h}%`;
+  function revealHtml() {
+    const r = REVEALS[subKey()];
+    if (!r) return '';
+    const open = reveal.key === subKey() && reveal.open ? ' open' : '';
+    return `<div class="disp-reveal-mask${open}" data-disp-element="revealMask${r.n}" style="${boxStyle(r.mask)}" aria-hidden="true"></div>`
+      + `<div class="disp-reveal-card${open}" data-disp-element="revealCard${r.n}" style="${boxStyle(r.card)}" role="button" tabindex="0" aria-label="点一下，看第${r.n}根梁的弯矩"><span>第<b>${r.n}</b>根梁</span></div>`;
+  }
+  function openReveal() {
+    Object.assign(reveal, { key: subKey(), open: true });
+    document.querySelectorAll('.disp-reveal-card, .disp-reveal-mask').forEach(el => el.classList.add('open'));
+  }
+  // 第 sub 个分镜的主图：A2-2、A2-3 是 BEAM-02-A2-2-1…；其余是 BEAM-02-A1-0-(1)…（按分镜编号）。
   function picFile(g, sub) {
     if (g.seq) return `BEAM-02-${g.id}-${sub + 1}.png`;
-    const n = g.pics ? g.pics[sub] : sub + 1;
-    return `BEAM-02-${g.id}${g.count > 1 ? `-(${n})` : ''}.png`;
+    return `BEAM-02-${g.id}${g.count > 1 ? `-(${sub + 1})` : ''}.png`;
   }
   // 「2个条件」框放大摆在画面中间时的位置（看不见的占位框；版面调试里调它的位置、宽度，高度按框的比例自动定）。
   const condsSpot = () => '<div class="disp-conds-spot" data-disp-element="condsSpot" aria-hidden="true"></div>';
   // A2-5：点「变形一致」出现红框（框住右上角两组模型），点「内力一致」出现蓝框（框住左边B点）。
   const hlFrames = () => !CLICK_FRAMES[activeId] ? '' : [1, 2].map(n => `<div class="disp-hl${hl.page === activeId && hl.on[n - 1] ? ' on' : ''}" data-hl="${n}" data-disp-element="${n === 1 ? 'hlDeform' : 'hlForce'}" aria-hidden="true"></div>`).join('');
   // 分镜圆球：不再显示「A1-1 · 5 / 7」这行字。A2-1 第3、4个、A1-0 第3、4个圆球之间是一段进度条（拖动时显示转场进度）。
-  // A2-2、A2-3 的圆球不写编号。
+  // 圆球都不写编号；大小各页统一（displacement.css 里的 --disp-dot-size，版面调试的「分镜圆球大小」可改）。
   function dots() {
     const g=current(); if(g.count<2)return '';
     const parts=[], at=MORPHS[g.id]?.at;
     for(let i=0;i<g.count;i++){
-      parts.push(`<span class="disp-dot ${i===state.sub?'active':''}">${g.seq?'':i+1}</span>`);
+      parts.push(`<span class="disp-dot ${i===state.sub?'active':''}"></span>`);
       if(i<g.count-1)parts.push(i===at
         ?`<span class="disp-dot-gap disp-morph-bar" style="--disp-morph:${state.sub>at?1:0}" aria-hidden="true"><span class="disp-morph-fill"></span><span class="disp-morph-thumb"></span></span>`
         :'<span class="disp-dot-gap" aria-hidden="true"></span>');
@@ -424,6 +447,7 @@
     const dynamic=g.dynamic||g.control, before=rendered;
     if(cycle.key!==subKey())Object.assign(cycle,{key:subKey(),use:null}); // 换了页或分镜：顶部矩形恢复默认
     if(hl.page!==activeId)Object.assign(hl,{page:activeId,on:[false,false]}); // 换了页：A2-5 的红、蓝框收起
+    if(reveal.key!==subKey())Object.assign(reveal,{key:subKey(),open:false}); // 换了分镜：「第n根梁」卡片重新盖上
     const head=headHtml(), refocus=document.activeElement?.classList?.contains('disp-dot-track');
     document.getElementById('app').innerHTML=`<section class="panel force-story displacement-story ${value.stage===3?'deformation-story':''} ${head?'disp-has-head':''}" data-reveal-step="${value.stage===2?value.force_reveal_step:value.deformation_reveal_step}" data-disp-controlled="${Boolean(dynamic)}"><h1${g.count>1?` data-disp-title="${state.sub+1}"`:''}>${g.titles?.[state.sub]||g.title}</h1>${head}${curvesHtml()}<div class="force-composition"><div class="force-free-canvas" data-disp-substep="${state.sub}" aria-label="位移法图片与交互画布"><div class="disp-scene" data-disp-element="scene"><div class="disp-aspect ${g.id.startsWith('A1')&&!g.dynamic?'disp-wide':''}">${scene()}</div></div>${dots()}</div>${dynamic?controls():''}</div></section>`;
     rendered=`${activeId}:${state.sub}`;
@@ -485,6 +509,10 @@
     document.querySelector('[data-disp-ai-button]')?.addEventListener('click',startAi);
     document.querySelector('[data-disp-equilibrium]')?.addEventListener('click',()=>setFrame(10));
     document.querySelectorAll('.disp-beam[data-cycle]').forEach(cell=>cell.addEventListener('click',cycleBeams));
+    document.querySelectorAll('.disp-reveal-card').forEach(card=>{
+      card.addEventListener('click',openReveal);
+      card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();openReveal();}});
+    });
     document.querySelectorAll('.disp-cond[data-click]').forEach(item=>{
       item.addEventListener('click',()=>toggleHl(Number(item.dataset.dispCond)));
       item.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleHl(Number(item.dataset.dispCond));}});
@@ -678,7 +706,7 @@
     node.style.opacity = clamp01((v - .45) / .4).toFixed(3);
   }
   /* A1-0 第3→4分镜的转场：t 从 0 到 1。画面中间放大的「2个条件」框一边缩小、一边移回右上角原位；
-     第1根梁指过来的箭头先淡出；后半段 A1-0-(2) 的图淡出、A1-0-(3) 的图淡入，到第4分镜就是 A1-0-(3) 原来的画面。 */
+     第1根梁指过来的箭头先淡出；后半段 A1-0-(3) 的图（和 (2) 同一张）淡出、A1-0-(4) 的图淡入，到第4分镜就是 A1-0-(4) 的画面。 */
   function startCondsMorph() {
     const box = document.querySelector('.disp-aspect'), head = document.querySelector('.disp-head'), g = current(), at = MORPHS[g.id].at;
     if (!box || !head) return false;
@@ -723,7 +751,7 @@
   // 有转场的页：在第 at+1、at+2 个圆球之间（进度条上）拖动，或在这两个分镜之间切换。
   const MORPHS = {
     'A2-1': { at: 2, start: startNodeMorph, set: setNodeMorph, preload: preloadNode },
-    'A1-0': { at: 2, start: startCondsMorph, set: setCondsMorph, preload: () => { const image = new Image(); image.src = asset('BEAM-02-A1-0-(3).png'); } }
+    'A1-0': { at: 2, start: startCondsMorph, set: setCondsMorph, preload: () => { const image = new Image(); image.src = asset('BEAM-02-A1-0-(4).png'); } }
   };
   function startMorph() {
     const m = MORPHS[activeId];

@@ -76,7 +76,7 @@
   // 需要教师版各页画布的大小：保存时自动量，存在配置文件的 canvas 里。
   const PHONE_AUTO = true;
   const REPLICA_KINDS = new Set(["abs", "absbox", "abstext", "arrow", "bar", "label"]); // 画布里的元素：教师版的调整全部照搬
-  const DISP_PASS_KINDS = new Set(["dispLine", "dispMark", "dispFrame", "dispBox", "dispCurve", "dispCover", "dispTag", "dispUse", "dispLabel", "dispRule", "dispSpot"]); // 按比例或按页存的，手机原样照搬
+  const DISP_PASS_KINDS = new Set(["dispLine", "dispMark", "dispFrame", "dispBox", "dispCurve", "dispCover", "dispTag", "dispUse", "dispLabel", "dispRule", "dispSpot", "dispDots", "dispCard"]); // 按比例或按页存的，手机原样照搬
   const CANVAS_PAGE = /^A[12]-\d$/; // 有画布的页
   const PHONE_DEVICES = [
     { key: "iphone15", label: "iPhone 14 / 15（390×844）", w: 390, h: 844 },
@@ -89,8 +89,8 @@
     ["WAIT", "00 等待"],
     ["E", "01 E 投票"],
     ["E-FB", "01 E 投票反馈"],
-    ["A1-0", "02 A1-0 把 B 点嵌进大地"],
-    ["A1-1", "02 A1-1 让嵌固随 B 点转动"],
+    ["A1-0", "02 A1-0 把 B 点嵌进大地、让基础转 Z₁"],
+    ["A1-1", "02 A1-1 三根梁拼出来"],
     ["A1-2", "02 A1-2 用 Z₁ 表示杆端力"],
     ["A1-3", "02 A1-3 比较转动前后的变形"],
     ["A2-0", "03 A2-0 还有哪个平衡条件没用"],
@@ -126,6 +126,7 @@
     tdh: { label: "加高", unit: "", min: -50, max: 200, step: 0.5, digits: 1 },
     // 顶部每根梁用哪个矩形；底部两句话的位置、大小、颜色。
     use: { label: "用哪个", unit: "", min: 0, max: 2, step: 1, digits: 0, choices: ["不用", "遮罩", "描边框"] },
+    dsize: { label: "圆球大小", unit: "px", min: 8, max: 60, step: 1, digits: 0 },
     bstyle: { label: "框线", unit: "", min: 0, max: 3, step: 1, digits: 0, choices: ["实线", "虚线", "点线", "不画"] },
     ldx: { label: "左右移动", unit: "", min: -945, max: 945, step: 0.5, digits: 1 },
     ldy: { label: "上下移动", unit: "", min: -480, max: 480, step: 0.5, digits: 1 },
@@ -187,6 +188,8 @@
     dispCover: ["x", "y", "w", "hh", "fcolor", "fop", "bw", "bstyle", "bcolor"],
     dispRule: ["x", "y", "w", "hh", "fcolor", "fop"],
     dispSpot: ["x", "y", "w"],
+    dispDots: ["dsize"],
+    dispCard: ["x", "y", "w", "hh", "lsize"],
     dispTag: ["tdx", "tdy", "tdw", "tdh"],
     dispUse: ["use"],
     dispLabel: ["ldx", "ldy", "lsize", "lcolor"],
@@ -210,7 +213,7 @@
     guard: ["gsize"],
   };
   // 画布里（绝对定位）的元素：坐标、宽高存成相对画布的 vw；其他元素的坐标存成相对原位置的移动量（dx、dy）。
-  const CANVAS_KINDS = new Set(["abs", "absbox", "abstext", "arrow", "bar", "dispFrame", "dispBox", "dispCover", "dispRule", "dispSpot"]);
+  const CANVAS_KINDS = new Set(["abs", "absbox", "abstext", "arrow", "bar", "dispFrame", "dispBox", "dispCover", "dispRule", "dispSpot", "dispCard"]);
   // 手机版面从教师版（宽屏档）继承的属性：只继承按比例表示的位置、大小，px 数值和左右分栏不继承。
   const INHERIT_PROPS = {
     dispLine: ["ax", "ay", "bx", "by", "tip"],
@@ -221,6 +224,8 @@
     dispCover: ["left", "top", "width", "h", "fcolor", "fop", "bw", "bstyle", "bcolor"],
     dispRule: ["left", "top", "width", "h", "fcolor", "fop"],
     dispSpot: ["left", "top", "width"],
+    dispDots: ["dsize"],
+    dispCard: ["left", "top", "width", "h", "lsize"],
     dispTag: ["tdx", "tdy", "tdw", "tdh"],
     dispUse: ["use"],
     dispLabel: ["ldx", "ldy", "lsize", "lcolor"],
@@ -247,6 +252,7 @@
     dispCover: { w: "w", h: "hh" },
     dispRule: { w: "w", h: "hh" },
     dispSpot: { w: "w" },
+    dispCard: { w: "w", h: "hh" },
     abstext: { w: "w" },
     label: { scale: "text" },
     arrow: { h: "hh" },
@@ -264,8 +270,10 @@
     dispMark: "选这个条件后面的标记：不标、问号、叉、勾。每页、每个分镜分开保存；不标时这一行变灰。",
     dispFrame: "描边框：位置、大小按这根梁所在格子（顶部配图宽的约 1/4）的比例保存，所有页通用；线宽、颜色在下面改。哪一页显示：在「第n根梁用哪个矩形」里选。",
     dispBox: "「2个条件」框：位置、大小按顶部的比例保存；「文字大小」一起缩放框里的字。",
-    dispCurve: "起终点按白色页面（顶部＋画布）的宽、高百分比；「终点方向」选从上往下、从右往左或从左往右。每条曲线分开调，每页分开保存（A1-1 第6、7个分镜和 A1-2 各是各的）。",
+    dispCurve: "起终点按白色页面（顶部＋画布）的宽、高百分比；「终点方向」选从上往下、从右往左或从左往右。每条曲线分开调，每页分开保存（A1-0、A1-1 第2和第3个分镜、A1-2 各是各的）。",
     dispCover: "遮罩：位置、大小按这根梁所在格子（顶部配图宽的约 1/4）的比例保存，所有页通用；底色的颜色、不透明度，边框的粗细（线宽）、框线（实线 / 虚线 / 点线 / 不画）、颜色在下面改，边框不跟着底色变淡。哪一页显示：在「第n根梁用哪个矩形」里选。",
+    dispCard: "「第n根梁」卡片：位置、大小按画面的比例保存；里面的字按卡片大小自动定，「大小」再按比例放大缩小。点卡片后它会淡出，要再调就换个分镜再回来。",
+    dispDots: "分镜圆球的大小（直径），默认所有页通用，各页一样大。手机上圆球另按手指点按的大小显示，不受这里影响。",
     dispRule: "分割线：位置、长短、粗细按顶部的比例保存（所有页通用）；颜色、不透明度在下面改。",
     dispSpot: "A1-0 第3个分镜里，「2个条件」框放大后摆的位置：调左上角位置和宽度，高度按框的比例自动定，框里的字跟着一起放大。所有分镜通用。",
     dispTag: "浅色底：跟着那句话走；在自动量好的位置上再移动、加宽、加高（单位是图内坐标，整幅图宽 945）。默认只改本页。",
@@ -368,7 +376,13 @@
       { key: `disp:beamCover${n}`, label: `位移法：第${n}根梁的遮罩`, sel: `#app [data-disp-element="beamCover${n}"]`, kind: "dispCover", scope: "all" },
       { key: `disp:beamFrame${n}`, label: `位移法：第${n}根梁的描边框`, sel: `#app [data-disp-element="beamFrame${n}"]`, kind: "dispFrame", scope: "all" },
     ]),
-    ...[1, 2, 3, 4, 5, 6, 7].flatMap((sub) => [1, 2, 3].map((n) => ({ key: `disp:beamUse-${n}-${sub}`, label: `第${n}根梁用哪个矩形（第 ${sub} 个分镜）`, sel: `#app .disp-beam[data-beam="${n}"][data-sub="${sub}"]`, kind: "dispUse" }))),
+    ...[1, 2, 3, 4, 5, 6, 7, 8].flatMap((sub) => [1, 2, 3].map((n) => ({ key: `disp:beamUse-${n}-${sub}`, label: `第${n}根梁用哪个矩形（第 ${sub} 个分镜）`, sel: `#app .disp-beam[data-beam="${n}"][data-sub="${sub}"]`, kind: "dispUse" }))),
+    ...[[1, "A2-2 第5个分镜", "−1/12ql²"], [2, "A2-2 第6个分镜", "+4i·Z₁"], [3, "A2-3 第5个分镜", "3i·Z₁"]].flatMap(([n, where, term]) => [
+      { key: `disp:revealCard${n}`, label: `位移法：${where}「第${n}根梁」卡片`, sel: `#app [data-disp-element="revealCard${n}"]`, kind: "dispCard" },
+      { key: `disp:revealMask${n}`, label: `位移法：${where} 公式「${term}」的遮挡`, sel: `#app [data-disp-element="revealMask${n}"]`, kind: "dispRule",
+        tip: `白色遮挡，盖住公式里的「${term}」，点「第${n}根梁」卡片后和卡片一起淡出。位置、大小按画面的比例保存；颜色要和底色一样（默认白色）。` },
+    ]),
+    { key: "disp:dotSize", label: "位移法：分镜圆球大小（各页通用）", sel: "#app .disp-dot-track", kind: "dispDots", scope: "all" },
     { key: "disp:headRule", label: "位移法：顶部下面的分割线", sel: '#app [data-disp-element="headRule"]', kind: "dispRule", scope: "all" },
     { key: "disp:condsSpot", label: "位移法：中间的「2个条件」框（A1-0 第3个分镜）", sel: '#app [data-disp-element="condsSpot"]', kind: "dispSpot", scope: "all" },
     { key: "disp:hlDeform", label: "位移法：A2-5 红框（点「变形一致」出现）", sel: '#app [data-disp-element="hlDeform"]', kind: "dispFrame",
@@ -383,7 +397,7 @@
     { key: "disp:condsTitle", label: "位移法：「2个条件」标题", sel: '#app [data-disp-element="condsTitle"]', kind: "text", scope: "all", contentScope: "all" },
     { key: "disp:condText1", label: "位移法：条件1 文字", sel: '#app [data-disp-element="condText1"]', kind: "text", scope: "all", contentScope: "all" },
     { key: "disp:condText2", label: "位移法：条件2 文字", sel: '#app [data-disp-element="condText2"]', kind: "text", scope: "all", contentScope: "all" },
-    ...[1, 2, 3, 4, 5, 6, 7].flatMap((sub) => [1, 2].map((n) => ({ key: `disp:mark-${n}-${sub}`, label: `「${n === 1 ? "变形一致" : "内力一致"}」后的标记（第 ${sub} 个分镜）`, sel: `#app .disp-cond[data-disp-cond="${n}"][data-sub="${sub}"]`, kind: "dispMark" }))),
+    ...[1, 2, 3, 4, 5, 6, 7, 8].flatMap((sub) => [1, 2].map((n) => ({ key: `disp:mark-${n}-${sub}`, label: `「${n === 1 ? "变形一致" : "内力一致"}」后的标记（第 ${sub} 个分镜）`, sel: `#app .disp-cond[data-disp-cond="${n}"][data-sub="${sub}"]`, kind: "dispMark" }))),
     ...[1, 2, 3].map((n) => ({ key: `disp:curve-${n}`, label: `曲线箭头：第${n}根梁`, sel: `#app [data-disp-element="curve-${n}"]`, kind: "dispCurve" })),
     ...FORCE_SLOTS.map(([slot, label]) => ({ key: `slot:${slot}`, label, sel: `#app .force-free-canvas > [data-element-slot="${slot}"]`, kind: "abs" })),
     ...FORCE_LABELS.map(([slot, label]) => ({ key: `label:${slot}`, label, sel: `#app [data-force-label-slot="${slot}"]`, kind: "label" })),
@@ -427,7 +441,8 @@
   // 画布里的图和标注各页排布不同，默认只改本页。选中元素后可以随时改。
   const ALL_SCOPE_KEYS = new Set(["main", "story", "storyTitle", "composition", "controls", "controlCard", "aiCard", "rangeRow", "specials", "readouts", "readoutBoxes", "hint"]);
   const GROUP_SCOPE_KEYS = new Set(["hero", "leftPanel", "leftTitle", "options", "optionAll", "submitRow", "voteInput", "voteSubmit", "fbSummary", "fbTotal", "fbBars", "fbComments", "rightPanel", "rightTitle", "rightSubtitle", "rightLead", "equations", "candidates", "candidateRows", "symbolNotes"]);
-  PAGE_REGISTRY.forEach((def) => { def.scope = ALL_SCOPE_KEYS.has(def.key) ? "all" : GROUP_SCOPE_KEYS.has(def.key) ? "group" : "page"; });
+  // 列表里自己写了 scope 的（位移法顶部、遮罩、圆球大小等）按自己写的；其余按上面两组。
+  PAGE_REGISTRY.forEach((def) => { def.scope = def.scope || (ALL_SCOPE_KEYS.has(def.key) ? "all" : GROUP_SCOPE_KEYS.has(def.key) ? "group" : "page"); });
 
   // 学生页（手机）独有的顶部栏与导航。
   const STUDENT_REGISTRY = [
@@ -710,6 +725,17 @@
     if (entry.kind === "dispLabel") {
       for (const key of ["ldx", "ldy", "lsize"]) if (p[key] != null) d.push(`--disp-${key}: ${p[key]}${I}`);
       if (p.lcolor != null) d.push(`fill: ${hexColor(p.lcolor)}${I}`);
+      return d.join("; ");
+    }
+    // 「第n根梁」卡片：字的大小比例写成变量，位置、大小走下面的通用写法。
+    if (entry.kind === "dispCard" && p.lsize != null) {
+      d.push(`--disp-card-k: ${round(p.lsize / 100, 3)}${I}`);
+      p = Object.assign({}, p);
+      delete p.lsize;
+    }
+    // 分镜圆球大小：写成 displacement.css 里的变量 --disp-dot-size。
+    if (entry.kind === "dispDots") {
+      if (p.dsize != null) d.push(`--disp-dot-size: ${p.dsize}px${I}`);
       return d.join("; ");
     }
     // 顶部梁的遮罩：底色和边框写成变量（displacement.css 用 ::before 画底色、::after 画边框）。
@@ -1847,6 +1873,7 @@
       if (def.kind === "dispLine" || def.kind === "dispCurve") return Number(node.dataset[prop]) || 0;
       if (prop === "mark") return Number(node.dataset.mark) || 0;
       if (prop === "use") return Number(node.dataset.use) || 0;
+      if (prop === "dsize") { const dot = node.querySelector(".disp-dot"); return dot ? px(getComputedStyle(dot).width) : 25; }
       if (def.kind === "dispCover" && ["fcolor", "fop", "bw", "bstyle", "bcolor"].includes(prop)) {
         const v = (name) => getComputedStyle(node).getPropertyValue(name).trim();
         if (prop === "fop") { const f = parseFloat(v("--dc-fop")); return Number.isFinite(f) ? f * 100 : 90; }
