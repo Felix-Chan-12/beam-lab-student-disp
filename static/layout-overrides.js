@@ -1,4 +1,4 @@
-// BEAM LAB 版面调试保存的配置（由「版面调试」窗口自动生成，2026-10-18 13:14:28）
+// BEAM LAB 版面调试保存的配置（由「版面调试」窗口自动生成，2026-10-23 08:56:49）
 // 放在 static 文件夹里，teacher.html 和 student.html 会自动读取。
 // "wide" "medium" "narrow" 是教师版（按宽度分档），"phone" 是学生页的手机版面。
 // 想恢复默认版面：把 "regimes" 后面的内容改成 {}，或在版面调试里重置后再保存。
@@ -10,51 +10,51 @@ window.BEAM_LAYOUT_OVERRIDES = {
   "canvas": {
     "pages": {
       "A1-0": [
-        1758.2,
-        742.2
+        1844,
+        668.9
       ],
       "A1-1": [
-        1758.2,
-        742.2
+        1844,
+        668.9
       ],
       "A1-2": [
-        1758.2,
-        742.2
+        1844,
+        668.9
       ],
       "A1-3": [
-        1374.2,
-        742.2
+        1460,
+        668.9
       ],
       "A2-0": [
-        1383,
-        742.2
+        1460,
+        668.9
       ],
       "A2-1": [
-        1383,
-        742.2
+        1460,
+        668.9
       ],
       "A2-2": [
-        1383,
-        742.2
+        1460,
+        668.9
       ],
       "A2-3": [
-        1383,
-        742.2
+        1460,
+        668.9
       ],
       "A2-4": [
-        1383,
-        742.2
+        1460,
+        668.9
       ],
       "A2-5": [
-        1368,
-        742.2
+        1460,
+        668.9
       ]
     },
-    "width": 1767
+    "width": 1844
   },
   "comments": [
-    "用载常数算得，感觉挺准的。",
-    "刚结点和固定端真的一样吗，感觉哪里不对劲",
+    "用单跨超静定梁算的，感觉挺准的吧",
+    "B点的假设，感觉哪里不太对劲",
     "没这么简单吧"
   ],
   "regimes": {
@@ -713,6 +713,14 @@ window.BEAM_LAYOUT_OVERRIDES = {
           },
           "sel": "#app .force-free-canvas > .structure-caption.bottom-caption"
         },
+        "disp:curve-3": {
+          "kind": "dispCurve",
+          "label": "A1-2 曲线：第3根梁",
+          "props": {
+            "cdir": 1
+          },
+          "sel": "#app [data-disp-element=\"curve-3\"]"
+        },
         "label:basicFyB": {
           "kind": "label",
           "label": "下方 FyB 数值",
@@ -1051,6 +1059,15 @@ window.BEAM_LAYOUT_OVERRIDES = {
         }
       },
       "A2-4": {
+        "controlCard": {
+          "kind": "panel",
+          "label": "滑块卡片",
+          "props": {
+            "dx": -7,
+            "dy": 49
+          },
+          "sel": "#app .force-control"
+        },
         "formula": {
           "kind": "abstext",
           "label": "位移公式",
@@ -1093,6 +1110,15 @@ window.BEAM_LAYOUT_OVERRIDES = {
         }
       },
       "A2-5": {
+        "controlCard": {
+          "kind": "panel",
+          "label": "滑块卡片",
+          "props": {
+            "dx": -7,
+            "dy": 49
+          },
+          "sel": "#app .force-control"
+        },
         "formula": {
           "kind": "abstext",
           "label": "位移公式",
@@ -1161,6 +1187,31 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "dy": 161
           },
           "sel": "#app .force-control"
+        },
+        "controls": {
+          "kind": "group",
+          "label": "右侧控制栏",
+          "props": {
+            "dx": -2,
+            "dy": -32
+          },
+          "sel": "#app .force-controls"
+        },
+        "disp:beamCover2": {
+          "kind": "dispCover",
+          "label": "位移法：第2根梁的遮罩",
+          "props": {
+            "fcolor": 16777215
+          },
+          "sel": "#app [data-disp-element=\"beamCover2\"]"
+        },
+        "disp:beamCover3": {
+          "kind": "dispCover",
+          "label": "位移法：第3根梁的遮罩",
+          "props": {
+            "fcolor": 16777215
+          },
+          "sel": "#app [data-disp-element=\"beamCover3\"]"
         },
         "main": {
           "kind": "main",
@@ -1318,7 +1369,7 @@ window.BEAM_LAYOUT_OVERRIDES = {
           "label": "左栏标题",
           "props": {},
           "sel": "#app .hero > article.panel > h1",
-          "text": "B点当固定端，算得木柱受力0.5<i>ql</i>，准确吗？"
+          "text": "直接利用 第<span style=\"color:#d76322\">1</span>根梁，算得木柱受力0.5<i>ql</i>，准确吗？"
         },
         "pick:#app div.candidate-heading > span:nth-child(2)": {
           "kind": "text",
@@ -1432,14 +1483,6 @@ window.BEAM_LAYOUT_OVERRIDES = {
           },
           "sel": "#app .force-free-canvas > .structure-caption.top-caption"
         },
-        "main": {
-          "kind": "main",
-          "label": "页面主体",
-          "props": {
-            "width": 99.5
-          },
-          "sel": "#app"
-        },
         "slot:basicStructure": {
           "kind": "abs",
           "label": "07 基本体系图",
@@ -1518,14 +1561,6 @@ window.BEAM_LAYOUT_OVERRIDES = {
             "tvw": 15.1938
           },
           "sel": "#app .force-free-canvas > .structure-caption.top-caption"
-        },
-        "controlCard": {
-          "kind": "panel",
-          "label": "滑块卡片",
-          "props": {
-            "dy": 90
-          },
-          "sel": "#app .force-control"
         },
         "divider": {
           "kind": "bar",
@@ -1855,7 +1890,7 @@ window.BEAM_LAYOUT_OVERRIDES = {
       }
     }
   },
-  "savedAt": "2026-10-18 13:14:28",
+  "savedAt": "2026-10-23 08:56:49",
   "transfer": {
     "B": 0,
     "C": 4,

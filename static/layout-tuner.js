@@ -76,6 +76,7 @@
   // 需要教师版各页画布的大小：保存时自动量，存在配置文件的 canvas 里。
   const PHONE_AUTO = true;
   const REPLICA_KINDS = new Set(["abs", "absbox", "abstext", "arrow", "bar", "label"]); // 画布里的元素：教师版的调整全部照搬
+  const DISP_PASS_KINDS = new Set(["dispLine", "dispMark", "dispFrame", "dispBox", "dispCurve", "dispCover", "dispTag", "dispUse", "dispLabel", "dispRule", "dispSpot"]); // 按比例或按页存的，手机原样照搬
   const CANVAS_PAGE = /^A[12]-\d$/; // 有画布的页
   const PHONE_DEVICES = [
     { key: "iphone15", label: "iPhone 14 / 15（390×844）", w: 390, h: 844 },
@@ -108,6 +109,28 @@
   const bucketRank = (key) => (key === "ALL" || key === "CONSOLE" ? 0 : key.startsWith("G:") ? 1 : 2);
 
   const PROPS = {
+    // 位移法顶部「2个条件」后面的标记（按钮选择）、描边框和 A1-2 曲线的线宽与颜色、A1-2 曲线的起终点。
+    mark: { label: "标记", unit: "", min: 0, max: 3, step: 1, digits: 0, choices: ["不标", "？", "✗", "✓"] },
+    bw: { label: "线宽", unit: "px", min: 0, max: 20, step: 0.5, digits: 1 },
+    bcolor: { label: "颜色", unit: "", min: 0, max: 16777215, step: 1, digits: 0, color: true },
+    cax: { label: "起点 X（页面宽 %）", unit: "%", min: -10, max: 110, step: 0.1, digits: 2 },
+    cay: { label: "起点 Y（页面高 %）", unit: "%", min: -10, max: 110, step: 0.1, digits: 2 },
+    cbx: { label: "终点 X（页面宽 %）", unit: "%", min: -10, max: 110, step: 0.1, digits: 2 },
+    cby: { label: "终点 Y（页面高 %）", unit: "%", min: -10, max: 110, step: 0.1, digits: 2 },
+    cdir: { label: "终点方向", unit: "", min: 0, max: 2, step: 1, digits: 0, choices: ["从上往下", "从右往左", "从左往右"] },
+    fcolor: { label: "颜色", unit: "", min: 0, max: 16777215, step: 1, digits: 0, color: true },
+    fop: { label: "不透明度", unit: "%", min: 0, max: 100, step: 1, digits: 0 },
+    tdx: { label: "左右移动", unit: "", min: -200, max: 200, step: 0.5, digits: 1 },
+    tdy: { label: "上下移动", unit: "", min: -200, max: 200, step: 0.5, digits: 1 },
+    tdw: { label: "加宽", unit: "", min: -200, max: 400, step: 0.5, digits: 1 },
+    tdh: { label: "加高", unit: "", min: -50, max: 200, step: 0.5, digits: 1 },
+    // 顶部每根梁用哪个矩形；底部两句话的位置、大小、颜色。
+    use: { label: "用哪个", unit: "", min: 0, max: 2, step: 1, digits: 0, choices: ["不用", "遮罩", "描边框"] },
+    bstyle: { label: "框线", unit: "", min: 0, max: 3, step: 1, digits: 0, choices: ["实线", "虚线", "点线", "不画"] },
+    ldx: { label: "左右移动", unit: "", min: -945, max: 945, step: 0.5, digits: 1 },
+    ldy: { label: "上下移动", unit: "", min: -480, max: 480, step: 0.5, digits: 1 },
+    lsize: { label: "大小", unit: "%", min: 30, max: 300, step: 1, digits: 0 },
+    lcolor: { label: "颜色", unit: "", min: 0, max: 16777215, step: 1, digits: 0, color: true },
     ax: { label: "起点 X（图内坐标）", unit: "", min: 0, max: 945, step: 1, digits: 1 },
     ay: { label: "起点 Y（图内坐标）", unit: "", min: 0, max: 480, step: 1, digits: 1 },
     bx: { label: "终点 X（图内坐标）", unit: "", min: 0, max: 945, step: 1, digits: 1 },
@@ -157,6 +180,16 @@
 
   const KIND_PROPS = {
     dispLine: ["ax", "ay", "bx", "by", "tip"],
+    dispMark: ["mark"],
+    dispFrame: ["x", "y", "w", "hh", "bw", "bcolor"],
+    dispBox: ["x", "y", "w", "hh", "text"],
+    dispCurve: ["cax", "cay", "cbx", "cby", "cdir", "bw", "bcolor"],
+    dispCover: ["x", "y", "w", "hh", "fcolor", "fop", "bw", "bstyle", "bcolor"],
+    dispRule: ["x", "y", "w", "hh", "fcolor", "fop"],
+    dispSpot: ["x", "y", "w"],
+    dispTag: ["tdx", "tdy", "tdw", "tdh"],
+    dispUse: ["use"],
+    dispLabel: ["ldx", "ldy", "lsize", "lcolor"],
     main: ["x", "y", "width", "hpx", "mt", "mb", "text"],
     panel: ["x", "y", "wpx", "hpx", "pt", "px", "pb", "mt", "mb", "gap", "order", "text"],
     hero: ["heroL", "gap", "hpx", "mt", "mb", "text"],
@@ -177,10 +210,20 @@
     guard: ["gsize"],
   };
   // 画布里（绝对定位）的元素：坐标、宽高存成相对画布的 vw；其他元素的坐标存成相对原位置的移动量（dx、dy）。
-  const CANVAS_KINDS = new Set(["abs", "absbox", "abstext", "arrow", "bar"]);
+  const CANVAS_KINDS = new Set(["abs", "absbox", "abstext", "arrow", "bar", "dispFrame", "dispBox", "dispCover", "dispRule", "dispSpot"]);
   // 手机版面从教师版（宽屏档）继承的属性：只继承按比例表示的位置、大小，px 数值和左右分栏不继承。
   const INHERIT_PROPS = {
     dispLine: ["ax", "ay", "bx", "by", "tip"],
+    dispMark: ["mark"],
+    dispFrame: ["left", "top", "width", "h", "bw", "bcolor"],
+    dispBox: ["left", "top", "width", "h", "text"],
+    dispCurve: ["cax", "cay", "cbx", "cby", "cdir", "bw", "bcolor"],
+    dispCover: ["left", "top", "width", "h", "fcolor", "fop", "bw", "bstyle", "bcolor"],
+    dispRule: ["left", "top", "width", "h", "fcolor", "fop"],
+    dispSpot: ["left", "top", "width"],
+    dispTag: ["tdx", "tdy", "tdw", "tdh"],
+    dispUse: ["use"],
+    dispLabel: ["ldx", "ldy", "lsize", "lcolor"],
     canvas: ["ar"],
     abs: ["left", "top", "width", "h"],
     absbox: ["left", "top", "width", "h"],
@@ -199,6 +242,11 @@
     canvas: { w: "width", h: "ar" },
     abs: { w: "w" },
     absbox: { w: "w", h: "hh" },
+    dispFrame: { w: "w", h: "hh" },
+    dispBox: { w: "w", h: "hh" },
+    dispCover: { w: "w", h: "hh" },
+    dispRule: { w: "w", h: "hh" },
+    dispSpot: { w: "w" },
     abstext: { w: "w" },
     label: { scale: "text" },
     arrow: { h: "hh" },
@@ -213,6 +261,16 @@
   };
 
   const KIND_TIPS = {
+    dispMark: "选这个条件后面的标记：不标、问号、叉、勾。每页、每个分镜分开保存；不标时这一行变灰。",
+    dispFrame: "描边框：位置、大小按这根梁所在格子（顶部配图宽的约 1/4）的比例保存，所有页通用；线宽、颜色在下面改。哪一页显示：在「第n根梁用哪个矩形」里选。",
+    dispBox: "「2个条件」框：位置、大小按顶部的比例保存；「文字大小」一起缩放框里的字。",
+    dispCurve: "起终点按白色页面（顶部＋画布）的宽、高百分比；「终点方向」选从上往下、从右往左或从左往右。每条曲线分开调，每页分开保存（A1-1 第6、7个分镜和 A1-2 各是各的）。",
+    dispCover: "遮罩：位置、大小按这根梁所在格子（顶部配图宽的约 1/4）的比例保存，所有页通用；底色的颜色、不透明度，边框的粗细（线宽）、框线（实线 / 虚线 / 点线 / 不画）、颜色在下面改，边框不跟着底色变淡。哪一页显示：在「第n根梁用哪个矩形」里选。",
+    dispRule: "分割线：位置、长短、粗细按顶部的比例保存（所有页通用）；颜色、不透明度在下面改。",
+    dispSpot: "A1-0 第3个分镜里，「2个条件」框放大后摆的位置：调左上角位置和宽度，高度按框的比例自动定，框里的字跟着一起放大。所有分镜通用。",
+    dispTag: "浅色底：跟着那句话走；在自动量好的位置上再移动、加宽、加高（单位是图内坐标，整幅图宽 945）。默认只改本页。",
+    dispUse: "这根梁在这一页、这个分镜用哪个矩形：不用、遮罩（半透明）、描边框（橘色）。每页、每个分镜分开保存。矩形本身的大小、位置：点遮罩或描边框去调（所有页通用）。",
+    dispLabel: "这句话的位置、大小、颜色（单位是图内坐标，整幅图宽 945）。默认只改本页。颜色只改这句话的主色：「第」「根梁」的黑色和「1/2/3」的橘色不变。下面的浅色底跟着字走。",
     dispLine: "调整起终点坐标和箭头端；X 向右、Y 向下，图内范围 945×480。每个分镜独立保存，第4分镜与 A2-4/5 自动共用。修改后点保存到文件。",
     main: "整块内容的位置、宽度、高度和上下留白。四条边都可以拖：拖哪一边，哪一边动，对边不动。设了高度后，里面的内容跟着填满（E 页两栏变高；A1、A2 页画布变高或变矮）。最矮只到里面的内容放得下为止，再往小就停住。",
     canvas: "拖右下角同时改宽和高；宽高比越大，画布越扁。「文字大小」会一起缩放画布里的全部文字。",
@@ -303,6 +361,30 @@
       ["left-red", "左侧斜箭头·红"], ["left-blue", "左侧斜箭头·蓝"],
       ["cut-red", "截面虚线·红"], ["cut-blue", "截面虚线·蓝"],
     ].map(([name, label]) => ({ key: `disp:line-${page}-${name}`, label: `A2-1-(${page}) ${label}`, sel: `#app [data-disp-element="line-${page}-${name}"]`, kind: "dispLine", scope: "all" }))),
+    // 位移法顶部（A1-0～A2-5）：三根梁配图、每根梁的遮罩和描边框、分割线、「2个条件」框和每个分镜的标记。
+    { key: "disp:head", label: "位移法：顶部（配图＋条件框）", sel: '#app [data-disp-element="head"]', kind: "group", scope: "all" },
+    { key: "disp:headFigure", label: "位移法：顶部三根梁配图", sel: '#app [data-disp-element="headFigure"]', kind: "box", scope: "all" },
+    ...[1, 2, 3].flatMap((n) => [
+      { key: `disp:beamCover${n}`, label: `位移法：第${n}根梁的遮罩`, sel: `#app [data-disp-element="beamCover${n}"]`, kind: "dispCover", scope: "all" },
+      { key: `disp:beamFrame${n}`, label: `位移法：第${n}根梁的描边框`, sel: `#app [data-disp-element="beamFrame${n}"]`, kind: "dispFrame", scope: "all" },
+    ]),
+    ...[1, 2, 3, 4, 5, 6, 7].flatMap((sub) => [1, 2, 3].map((n) => ({ key: `disp:beamUse-${n}-${sub}`, label: `第${n}根梁用哪个矩形（第 ${sub} 个分镜）`, sel: `#app .disp-beam[data-beam="${n}"][data-sub="${sub}"]`, kind: "dispUse" }))),
+    { key: "disp:headRule", label: "位移法：顶部下面的分割线", sel: '#app [data-disp-element="headRule"]', kind: "dispRule", scope: "all" },
+    { key: "disp:condsSpot", label: "位移法：中间的「2个条件」框（A1-0 第3个分镜）", sel: '#app [data-disp-element="condsSpot"]', kind: "dispSpot", scope: "all" },
+    { key: "disp:hlDeform", label: "位移法：A2-5 红框（点「变形一致」出现）", sel: '#app [data-disp-element="hlDeform"]', kind: "dispFrame",
+      tip: "点「1. 变形一致」出现的框：位置、大小按画面的比例保存；线宽、颜色在下面改，「变形一致」这几个字点开后也变成这个颜色。版面调试里没点开时淡淡显示，方便选中。" },
+    { key: "disp:hlForce", label: "位移法：A2-5 蓝框（点「内力一致」出现）", sel: '#app [data-disp-element="hlForce"]', kind: "dispFrame",
+      tip: "点「2. 内力一致」出现的框：位置、大小按画面的比例保存；线宽、颜色在下面改，「内力一致」这几个字点开后也变成这个颜色。版面调试里没点开时淡淡显示，方便选中。" },
+    { key: "disp:labelLeft", label: "位移法：「待求解的 原结构 (未知)」这句话", sel: '#app .disp-scene text[data-disp-element="labelLeft"]', kind: "dispLabel" },
+    { key: "disp:labelRight", label: "位移法：「用第1/2/3根梁拼出来的结构（已知）」这句话", sel: '#app .disp-scene text[data-disp-element="labelRight"]', kind: "dispLabel" },
+    { key: "disp:tagLeft", label: "位移法：「(未知)」浅橘色底", sel: '#app .disp-scene rect[data-disp-element="tagLeft"]', kind: "dispTag" },
+    { key: "disp:tagRight", label: "位移法：「（已知）」浅蓝色底", sel: '#app .disp-scene rect[data-disp-element="tagRight"]', kind: "dispTag" },
+    { key: "disp:conds", label: "位移法：「2个条件」框", sel: '#app [data-disp-element="conds"]', kind: "dispBox", scope: "all" },
+    { key: "disp:condsTitle", label: "位移法：「2个条件」标题", sel: '#app [data-disp-element="condsTitle"]', kind: "text", scope: "all", contentScope: "all" },
+    { key: "disp:condText1", label: "位移法：条件1 文字", sel: '#app [data-disp-element="condText1"]', kind: "text", scope: "all", contentScope: "all" },
+    { key: "disp:condText2", label: "位移法：条件2 文字", sel: '#app [data-disp-element="condText2"]', kind: "text", scope: "all", contentScope: "all" },
+    ...[1, 2, 3, 4, 5, 6, 7].flatMap((sub) => [1, 2].map((n) => ({ key: `disp:mark-${n}-${sub}`, label: `「${n === 1 ? "变形一致" : "内力一致"}」后的标记（第 ${sub} 个分镜）`, sel: `#app .disp-cond[data-disp-cond="${n}"][data-sub="${sub}"]`, kind: "dispMark" }))),
+    ...[1, 2, 3].map((n) => ({ key: `disp:curve-${n}`, label: `曲线箭头：第${n}根梁`, sel: `#app [data-disp-element="curve-${n}"]`, kind: "dispCurve" })),
     ...FORCE_SLOTS.map(([slot, label]) => ({ key: `slot:${slot}`, label, sel: `#app .force-free-canvas > [data-element-slot="${slot}"]`, kind: "abs" })),
     ...FORCE_LABELS.map(([slot, label]) => ({ key: `label:${slot}`, label, sel: `#app [data-force-label-slot="${slot}"]`, kind: "label" })),
     { key: "momentTitleTop", label: "上方「弯矩图」小标题", sel: '#app [data-element-slot="originalMomentBg"] > .moment-diagram-title', kind: "abstext" },
@@ -591,9 +673,16 @@
       `--text-title: calc(${BASE_TEXT.title} * ${k} * var(--beam-unit, 1px))${I}`,
     ];
   }
+  const BORDER_STYLES = ["solid", "dashed", "dotted", "none"];
+  const hexColor = (n) => `#${(Math.max(0, Math.min(16777215, Math.round(Number(n) || 0)))).toString(16).padStart(6, "0")}`;
+  function markVars(mark) {
+    const m = Math.max(0, Math.min(3, Math.round(Number(mark) || 0)));
+    if (!m) return ['--dm-glyph: ""', "--dm-show: none", "--dm-bar: #d3d9e0", "--dm-bg: #f2f4f7", "--dm-fg: #a2aab4"];
+    return [`--dm-glyph: "${["", "?", "✗", "✓"][m]}"`, "--dm-show: grid", `--dm-badge: ${["", "#d86323", "#d71920", "#2e9d57"][m]}`, "--dm-bar: var(--orange)", "--dm-bg: var(--blue-soft)", "--dm-fg: var(--blue)"];
+  }
   function declarations(entry, only) {
     const all = entry.props || {};
-    const p = only ? only.reduce((o, key) => { if (all[key] != null) o[key] = all[key]; return o; }, {}) : all;
+    let p = only ? only.reduce((o, key) => { if (all[key] != null) o[key] = all[key]; return o; }, {}) : all;
     const d = [];
     const I = " !important";
     if (entry.kind === "dispLine") {
@@ -602,6 +691,46 @@
       if (p.tip != null) d.push(`marker-start: ${p.tip >= 2 ? `url(#${color}-tip)` : "none"}${I}`, `marker-end: ${p.tip === 1 || p.tip === 3 ? `url(#${color}-tip)` : "none"}${I}`);
       return d.join("; ");
     }
+    // 位移法「2个条件」的标记：写成 displacement.css 里同名的变量（0 不标、1 问号、2 叉、3 勾）。
+    if (entry.kind === "dispMark") {
+      if (p.mark != null) d.push(...markVars(p.mark).map((v) => v + I));
+      return d.join("; ");
+    }
+    // A1-2 曲线：起终点、线宽、颜色写成变量，由 displacement.js 按页面大小画出来。
+    if (entry.kind === "dispTag") {
+      for (const key of ["tdx", "tdy", "tdw", "tdh"]) if (p[key] != null) d.push(`--disp-${key}: ${p[key]}${I}`);
+      return d.join("; ");
+    }
+    // 顶部每根梁用哪个矩形（0 不用、1 遮罩、2 描边框），写成 displacement.css 里的变量。
+    if (entry.kind === "dispUse") {
+      if (p.use != null) { const u = Math.round(Number(p.use) || 0); d.push(`--db-cover: ${u === 1 ? "block" : "none"}${I}`, `--db-frame: ${u === 2 ? "block" : "none"}${I}`); }
+      return d.join("; ");
+    }
+    // 底部两句话：位置、大小写成变量，由 displacement.js 换算成图内坐标；颜色直接写 fill。
+    if (entry.kind === "dispLabel") {
+      for (const key of ["ldx", "ldy", "lsize"]) if (p[key] != null) d.push(`--disp-${key}: ${p[key]}${I}`);
+      if (p.lcolor != null) d.push(`fill: ${hexColor(p.lcolor)}${I}`);
+      return d.join("; ");
+    }
+    // 顶部梁的遮罩：底色和边框写成变量（displacement.css 用 ::before 画底色、::after 画边框）。
+    if (entry.kind === "dispCover") {
+      if (p.fcolor != null) d.push(`--dc-fill: ${hexColor(p.fcolor)}${I}`);
+      if (p.fop != null) d.push(`--dc-fop: ${round(p.fop / 100, 3)}${I}`);
+      if (p.bw != null) d.push(`--dc-bw: ${p.bw}px${I}`);
+      if (p.bstyle != null) d.push(`--dc-bs: ${BORDER_STYLES[Math.round(p.bstyle)] || "solid"}${I}`);
+      if (p.bcolor != null) d.push(`--dc-bc: ${hexColor(p.bcolor)}${I}`);
+      p = Object.assign({}, p);
+      for (const key of ["fcolor", "fop", "bw", "bstyle", "bcolor"]) delete p[key];
+    }
+    if (entry.kind === "dispCurve") {
+      for (const key of ["cax", "cay", "cbx", "cby", "cdir", "bw"]) if (p[key] != null) d.push(`--disp-${key}: ${p[key]}${I}`);
+      if (p.bcolor != null) d.push(`--disp-bcolor: ${hexColor(p.bcolor)}${I}`);
+      return d.join("; ");
+    }
+    if (p.bw != null) d.push(`border-width: ${p.bw}px${I}`, `border-style: solid${I}`);
+    if (p.bcolor != null) d.push(`border-color: ${hexColor(p.bcolor)}${I}`);
+    if (p.fcolor != null) d.push(`background-color: ${hexColor(p.fcolor)}${I}`);
+    if (p.fop != null) d.push(`opacity: ${round(p.fop / 100, 3)}${I}`);
     // 画布里的元素：vw（统一坐标）优先，旧数据里的 % 仍然有效。
     if (p.lvw != null) d.push(`left: ${p.lvw}vw${I}`, `right: auto${I}`);
     else if (p.left != null) d.push(`left: ${p.left}%${I}`, `right: auto${I}`);
@@ -792,7 +921,7 @@
           const scope = scopeFor(bucketKey, regimeKey);
           for (const [entryKey, entry] of Object.entries(pages[bucketKey])) {
             const body = !inherit ? declarations(entry)
-              : replica ? (entry.kind === "dispLine" ? declarations(entry) : REPLICA_KINDS.has(entry.kind) || entry.kind === "canvas" ? replicaDeclarations(entry, replica) : "")
+              : replica ? (DISP_PASS_KINDS.has(entry.kind) ? declarations(entry) : REPLICA_KINDS.has(entry.kind) || entry.kind === "canvas" ? replicaDeclarations(entry, replica) : "")
               : declarations(Object.assign({}, entry, { props: inheritedProps(entry) }));
             // :where() 不增加优先级，保持「两种视图 → 当前视图」的先后关系。
             const layoutScope = isConsoleKey(bucketKey) && FRAME_OWNED.has(entryKey) ? `${scope}:where(:not(.beam-frame))` : scope;
@@ -1331,7 +1460,7 @@
     const hasContent = (entry) => Boolean(entry && (typeof entry.text === "string" || entry.img));
     // 位置、大小的应用范围（默认值见各元素的 scope）；文字、图片另有自己的范围（默认只改本页，顶部栏与导航默认所有页）。
     const defaultLevel = (def) => (ctx.kind === "console" ? (def.shared ? "shared" : "view") : (def.scope || "page"));
-    const defaultContentLevel = (def) => (ctx.kind === "console" ? "shared" : String(def.key).startsWith("s:") ? "all" : "page");
+    const defaultContentLevel = (def) => (ctx.kind === "console" ? "shared" : String(def.key).startsWith("s:") || def.contentScope === "all" ? "all" : "page");
     function pickLevel(def, chosenMap, test, fallback) {
       const list = levels();
       const chosen = chosenMap[def.key];
@@ -1715,7 +1844,28 @@
       return containerOf(node).clientWidth || 1;
     }
     function measured(def, node, prop) {
-      if (def.kind === "dispLine") return Number(node.dataset[prop]) || 0;
+      if (def.kind === "dispLine" || def.kind === "dispCurve") return Number(node.dataset[prop]) || 0;
+      if (prop === "mark") return Number(node.dataset.mark) || 0;
+      if (prop === "use") return Number(node.dataset.use) || 0;
+      if (def.kind === "dispCover" && ["fcolor", "fop", "bw", "bstyle", "bcolor"].includes(prop)) {
+        const v = (name) => getComputedStyle(node).getPropertyValue(name).trim();
+        if (prop === "fop") { const f = parseFloat(v("--dc-fop")); return Number.isFinite(f) ? f * 100 : 90; }
+        if (prop === "bw") { const f = parseFloat(v("--dc-bw")); return Number.isFinite(f) ? f : 2; }
+        if (prop === "bstyle") { const i = BORDER_STYLES.indexOf(v("--dc-bs")); return i >= 0 ? i : 1; }
+        return colorNumber(v(prop === "fcolor" ? "--dc-fill" : "--dc-bc") || (prop === "fcolor" ? "#f4f7fb" : "#8fa3bf"));
+      }
+      if (prop === "lsize") return 100;
+      if (prop === "lcolor") {
+        const m = String(getComputedStyle(node).fill).match(/\d+(\.\d+)?/g) || [0, 0, 0];
+        return (Math.round(m[0]) << 16) + (Math.round(m[1]) << 8) + Math.round(m[2]);
+      }
+      if (prop === "bw") return px(getComputedStyle(node).borderTopWidth);
+      if (prop === "bcolor" || prop === "fcolor") {
+        const cs = getComputedStyle(node);
+        const m = String(prop === "bcolor" ? cs.borderTopColor : cs.backgroundColor).match(/\d+(\.\d+)?/g) || [0, 0, 0];
+        return (Math.round(m[0]) << 16) + (Math.round(m[1]) << 8) + Math.round(m[2]);
+      }
+      if (prop === "fop") return Math.round(Number(getComputedStyle(node).opacity) * 100);
       const cs = getComputedStyle(node);
       switch (prop) {
         case "left": return px(cs.left) / (containerOf(node).clientWidth || 1) * 100;
@@ -1747,6 +1897,13 @@
         case "minH": return px(cs.minHeight);
         default: return 0;
       }
+    }
+    // "#rrggbb" 或 "rgb(r, g, b)" → 0xRRGGBB
+    function colorNumber(text) {
+      const hex = /^#([0-9a-f]{6})$/i.exec(text);
+      if (hex) return parseInt(hex[1], 16);
+      const m = String(text).match(/\d+(\.\d+)?/g) || [0, 0, 0];
+      return (Math.round(m[0]) << 16) + (Math.round(m[1]) << 8) + Math.round(m[2]);
     }
     function valueOf(def, node, prop) {
       if (VOTE_PROPS[prop]) return currentVotes()[VOTE_PROPS[prop]];
@@ -2036,7 +2193,8 @@
           const props = propsFor(def, node);
           const level = editLevel(def);
           const group = nodes.length > 1 ? `<span class="badge">共 ${nodes.length} 个，一起调整</span>` : "";
-          let tip = KIND_TIPS[def.kind] ? `<p class="hint">${KIND_TIPS[def.kind]}</p>` : "";
+          const kindTip = def.tip || KIND_TIPS[def.kind];
+          let tip = kindTip ? `<p class="hint">${kindTip}</p>` : "";
           if (ctx.kind === "console" && frameOn() && def.key === "c:main") tip += '<p class="hint inherit">带外框时：控制台主体就是屏幕，外框跟着它走。改宽度就是改屏幕宽度（放大预览里，学生预览的页面也会跟着变宽或变窄）。</p>';
           if (def.kind === "canvas") {
             const mainDef = ctx.registry.find((d) => d.kind === "main");
@@ -2045,7 +2203,7 @@
           let content = "";
           const tdef = textDefFor(def, node);
           const perStep = tdef !== def;
-          if (textEditable(node) && nodes.length === 1) {
+          if (textEditable(node) && nodes.length === 1 && !DISP_PASS_KINDS.has(def.kind)) {
             const hasText = ownText(tdef);
             const sharedText = perStep && ownText(def);
             const source = perStep && !hasText ? currentSource(def, node) : currentSource(tdef, node);
@@ -2056,7 +2214,7 @@
               <textarea class="source" spellcheck="false">${escapeHtml(source)}</textarea>
               <p class="hint">可以直接写 HTML：&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;yB&lt;/sub&gt; 是斜体加下标，&lt;sup&gt;2&lt;/sup&gt; 是上标，&lt;br&gt; 换行，&lt;b&gt;加粗&lt;/b&gt;，&lt;span style="color:#d71920"&gt;红字&lt;/span&gt;。改完即时显示。</p>
               ${hasText ? '<div class="row"><button data-action="clear-text">恢复原文</button></div>' : ""}${sharedNote}</details>`;
-          } else if (node.textContent.trim() && !imageTarget(node) && nodes.length === 1 && !VOTE_DEFS.has(def.key) && !TRANSFER_DEFS.has(def.key) && !COMMENT_DEFS.has(def.key)) {
+          } else if (node.textContent.trim() && !imageTarget(node) && nodes.length === 1 && !VOTE_DEFS.has(def.key) && !TRANSFER_DEFS.has(def.key) && !COMMENT_DEFS.has(def.key) && !DISP_PASS_KINDS.has(def.kind)) {
             content += '<p class="hint">这里的文字由程序实时生成（或里面有按钮、输入框），不能改成固定文字。</p>';
           }
           if (imageTarget(node) && nodes.length === 1) {
@@ -2091,13 +2249,23 @@
     }
     function rowHtml(def, prop) {
       const meta = PROPS[prop];
-      return `<div class="prop" data-prop="${prop}">
+      // 选项（标记）用按钮、颜色用取色框；滑块和数字框仍在（隐藏），手机外壳页靠它们传数值。
+      const special = meta.choices
+        ? `<span class="choices">${meta.choices.map((label, i) => `<button type="button" class="choice" data-choice="${i}">${label}</button>`).join("")}</span>`
+        : meta.color ? '<input type="color" class="color">' : "";
+      return `<div class="prop${special ? " special" : ""}" data-prop="${prop}">
         <span class="name">${meta.label}</span>
-        <input type="range" min="${meta.min}" max="${meta.max}" step="${meta.step}">
-        <input type="number" step="${meta.step}">
+        ${special}<input type="range" min="${meta.min}" max="${meta.max}" step="${meta.step}"${special ? " hidden" : ""}>
+        <input type="number" step="${meta.step}"${special ? " hidden" : ""}>
         <span class="unit">${meta.unit}</span>
         <button class="reset" data-reset="${prop}" title="恢复默认" disabled>↺</button>
       </div>`;
+    }
+    // 选项按钮、取色框跟着数值更新（本窗口和手机外壳页共用）。
+    function paintSpecial(row, value) {
+      row.querySelectorAll("[data-choice]").forEach((b) => b.classList.toggle("on", Number(b.dataset.choice) === Math.round(Number(value))));
+      const color = row.querySelector("input.color");
+      if (color && root.activeElement !== color) color.value = hexColor(value);
     }
     function refreshRows() {
       if (!selected) return;
@@ -2122,6 +2290,7 @@
         if (value > Number(range.max)) range.max = String(Math.ceil(value));
         if (root.activeElement !== range) range.value = String(value);
         if (root.activeElement !== number) number.value = String(round(value, meta.digits));
+        paintSpecial(row, value);
         const vote = VOTE_PROPS[prop];
         const tf = TRANSFER_PROPS[prop];
         const own = vote ? currentVotes()[vote] !== defaultVotes()[vote] : tf ? currentTransfer()[tf] !== defaultTransfer()[tf] : ownProp(def, prop);
@@ -2614,6 +2783,13 @@
         if (def) select(def);
         return;
       }
+      const choice = event.target.closest("[data-choice]");
+      if (choice && selected) {
+        const row = choice.closest(".prop");
+        setProp(selected.def, row.dataset.prop, Number(choice.dataset.choice));
+        paintSpecial(row, Number(choice.dataset.choice));
+        return;
+      }
       const reset = event.target.closest("[data-reset]");
       if (reset && selected) {
         const vote = VOTE_PROPS[reset.dataset.reset];
@@ -2734,6 +2910,7 @@
       }
       const row = event.target.closest(".prop");
       if (!row || !selected) return;
+      if (event.target.type === "color") { setProp(selected.def, row.dataset.prop, parseInt(event.target.value.slice(1), 16)); return; }
       const value = Number(event.target.value);
       if (event.target.value === "" || !Number.isFinite(value)) return;
       setProp(selected.def, row.dataset.prop, value);
@@ -2859,6 +3036,11 @@
     .badge { font-size: 11px; color: #24549a; background: #e8f2fb; border-radius: 5px; padding: 0 5px; }
     .sel-text { font: 10.5px/1.35 Consolas, monospace; color: #8a96a3; margin: 2px 0 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .prop { display: grid; grid-template-columns: 70px minmax(0,1fr) 62px 18px 22px; gap: 4px; align-items: center; margin: 4px 0; }
+    .prop.special { grid-template-columns: 70px minmax(0,1fr) 18px 22px; }
+    .prop .choices { display: flex; gap: 4px; }
+    .prop .choice { flex: 1; padding: 3px 0; border: 1px solid #c9d6e6; border-radius: 6px; background: #fff; color: #1f2933; font-weight: 700; cursor: pointer; }
+    .prop .choice.on { background: #d76322; border-color: #d76322; color: #fff; }
+    .prop input.color { width: 100%; height: 26px; padding: 0 2px; border: 1px solid #c9d6e6; border-radius: 6px; background: #fff; cursor: pointer; }
     .prop .name { font-size: 12px; }
     .tf-choice { margin: 8px 0; }
     .tf-head { font-weight: 700; margin-bottom: 3px; }
@@ -3280,6 +3462,9 @@
         range.max = r.max;
         if (root.activeElement !== range) range.value = r.range;
         if (root.activeElement !== number) number.value = r.number;
+        row.querySelectorAll("[data-choice]").forEach((b) => b.classList.toggle("on", Number(b.dataset.choice) === Math.round(Number(r.number))));
+        const color = row.querySelector("input.color");
+        if (color && root.activeElement !== color) color.value = `#${Math.round(Number(r.number) || 0).toString(16).padStart(6, "0")}`;
         row.classList.toggle("changed", Boolean(r.changed));
         row.classList.toggle("general", Boolean(r.general));
         row.title = r.title || "";
@@ -3309,6 +3494,8 @@
     root.addEventListener("click", (event) => {
       const chip = event.target.closest(".chip");
       if (chip) { send({ kind: "click", chip: chip.dataset.key }); return; }
+      const choice = event.target.closest("[data-choice]");
+      if (choice) { send({ kind: "input", prop: choice.closest(".prop").dataset.prop, value: Number(choice.dataset.choice), from: "number" }); return; }
       const reset = event.target.closest("[data-reset]");
       if (reset) { if (!reset.disabled) send({ kind: "click", reset: reset.dataset.reset }); return; }
       const actionEl = event.target.closest("[data-action]");
@@ -3329,6 +3516,7 @@
       const target = event.target;
       if (target.classList.contains("source")) { send({ kind: "source", value: target.value }); return; }
       const row = target.closest(".prop");
+      if (row && target.type === "color") { send({ kind: "input", prop: row.dataset.prop, value: parseInt(target.value.slice(1), 16), from: "number" }); return; }
       if (!row || target.value === "" || !Number.isFinite(Number(target.value))) return;
       const from = target.type === "range" ? "range" : "number";
       if (from === "range") row.querySelector('input[type="number"]').value = target.value;

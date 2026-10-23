@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="25cm"
+   width="30cm"
    height="12.7cm"
-   viewBox="-82 -112 944.58242 480.20338"
+   viewBox="-82 -112 1133.4989 480.20338"
    version="1.1"
    id="svg307"
    sodipodi:docname="BEAM-02-A2-4.svg"
@@ -25,9 +25,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.31038135"
-     inkscape:cx="1101.8703"
-     inkscape:cy="146.59386"
+     inkscape:zoom="0.87789103"
+     inkscape:cx="435.70328"
+     inkscape:cy="260.28287"
      inkscape:window-width="1842"
      inkscape:window-height="1057"
      inkscape:window-x="1150"
@@ -48,8 +48,8 @@
        refY="0"
        orient="auto-start-reverse"
        inkscape:stockid="Triangle arrow"
-       markerWidth="0.4"
-       markerHeight="0.4"
+       markerWidth="0.40000001"
+       markerHeight="0.40000001"
        viewBox="0 0 1 1"
        inkscape:isstock="true"
        inkscape:collect="always"
@@ -1855,8 +1855,8 @@
        refY="0"
        orient="auto-start-reverse"
        inkscape:stockid="Dart arrow"
-       markerWidth="0.8"
-       markerHeight="0.8"
+       markerWidth="0.80000001"
+       markerHeight="0.80000001"
        viewBox="0 0 1 1"
        inkscape:isstock="true"
        inkscape:collect="always"
@@ -2569,8 +2569,8 @@
        refY="0"
        orient="auto-start-reverse"
        inkscape:stockid="Dart arrow"
-       markerWidth="0.8"
-       markerHeight="0.8"
+       markerWidth="0.80000001"
+       markerHeight="0.80000001"
        viewBox="0 0 1 1"
        inkscape:isstock="true"
        inkscape:collect="always"
@@ -5415,6 +5415,20 @@
      id="layer1"
      inkscape:label="Layer 1"
      style="display:inline">
+    <path
+       style="display:inline;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.983093;stroke-dasharray:2.94928, 0.983094;stroke-dashoffset:0"
+       d="M -71.621704,5.4390066 411.60673,4.8412871 C 436.95064,-23.008197 545.94224,-31.434305 588.0951,-42.090067 375.64377,-28.940409 150.86854,-17.511777 -71.621704,5.4390066 Z"
+       id="path15-27"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="display:inline;fill:#f2f2f2;fill-opacity:1;stroke:none;stroke-width:1.00203;stroke-dasharray:3.00609, 1.00203;stroke-dashoffset:0"
+       id="rect14"
+       width="510.45242"
+       height="369.64075"
+       x="-82.349915"
+       y="-1.4373838"
+       rx="1.7276978"
+       ry="0.31681809" />
     <text
        x="-1427.4598"
        y="-152.15326"
@@ -5430,7 +5444,7 @@
        stroke-linejoin="round"
        stroke-linecap="butt"
        id="path190-7"
-       style="stroke-width:13.234;stroke-dasharray:none;marker-start:url(#marker303);stroke:#ff0000" />
+       style="stroke:#ff0000;stroke-width:13.234;stroke-dasharray:none;marker-start:url(#marker303)" />
     <path
        d="m 179.3556,322.5145 3.93738,3.88933 4.07039,3.6702 4.37954,3.40797 4.51254,3.18879 4.64562,2.9696 4.77859,2.75046 4.91162,2.53128 5.00157,2.13602 5.13462,1.91687 5.26763,1.69768 5.35758,1.30244 5.31451,1.12631 5.44755,0.90719 5.53748,0.51186 5.45135,0.15973 5.58438,-0.0595 5.54133,-0.23557 5.41207,-0.76383 5.36904,-0.93995 5.50198,-1.15925 5.23985,-1.46808 5.1537,-1.82043 5.28664,-2.03962 4.84838,-2.30562 4.98137,-2.52481 4.71914,-2.83392 4.4569,-3.14308 4.41386,-3.31911 4.37074,-3.49526 3.93243,-3.76127 3.88935,-3.93738 3.62715,-4.24651 3.45104,-4.20343 3.01265,-4.4695 2.92658,-4.82166 2.75042,-4.77859"
        fill="none"
@@ -5479,17 +5493,6 @@
     <g
        id="g4"
        transform="matrix(1.5799306,0,0,1.5799306,-17.045621,-154.7173)">
-      <path
-         d="M 85.946834,129.92908 H 172.77223"
-         fill="none"
-         stroke="#8c8c8c"
-         stroke-width="0.867924"
-         stroke-linejoin="round"
-         stroke-linecap="round"
-         stroke-dasharray="7, 5"
-         id="path206-0-4"
-         style="stroke-width:4.65079;stroke-linecap:butt;stroke-dasharray:9.30158, 4.65079;stroke-dashoffset:0"
-         sodipodi:nodetypes="cc" />
       <path
          d="m 22.874934,132.53374 h 2.7747 2.7277 2.7748 2.7277 2.7747 2.7277 2.7747 2.7277 2.7748 2.7277 2.7747 2.7277 2.7277 2.7747 2.7748 2.7277 2.7747 2.7277 2.7747 2.7278 2.7747 2.7277 2.7747 2.7277 2.7748 2.7277 2.7747 2.7277 2.774796 2.7276 2.7748 2.7277 2.7277 2.7747 2.7748 2.7277 2.7747 2.7277 2.7747 2.7278 44.0195 v 44.01946 2.77472 2.72772 2.77473 2.72769 2.77471 2.72773 2.77474 2.72766 2.77473 2.72773 2.77472 2.72768 2.72772 2.77474 2.77472 2.72771 2.72769 2.77472 2.77474 2.72772 2.77472 2.72768 2.77472 2.72774 2.77475 2.72769 2.77476 2.72769 2.77467 2.72777 2.77468 2.72768 2.77476 2.72769 2.77476 2.72768 2.72769 2.77476 2.72769 2.77476 l -14.5321,5.26728 -14.9554,-10.53465 -14.532,5.26737 v -2.77476 -2.72769 -2.77476 -2.72769 -2.72768 -2.77476 -2.72769 -2.77476 -2.72768 -2.77468 -2.72777 -2.77467 -2.72769 -2.77476 -2.72769 -2.77475 -2.72774 -2.77472 -2.72768 -2.77472 -2.72772 -2.77474 -2.77472 -2.72769 -2.72771 -2.77472 -2.77474 -2.72772 -2.72768 -2.77472 -2.72773 -2.77473 -2.72766 -2.77474 -2.72773 -2.77471 -2.72769 -2.77473 -2.72772 -2.77472 0 h -2.7278 -2.7747 -2.7277 -2.7747 -2.7277 -2.7748 -2.7747 -2.7277 -2.7277 -2.7748 -2.7276 -2.774796 -2.7277 -2.7747 -2.7277 -2.7748 -2.7277 -2.7747 -2.7277 -2.7747 -2.7278 -2.7747 -2.7277 -2.7747 -2.7277 -2.7748 -2.7747 -2.7277 -2.7277 -2.7747 -2.7277 -2.7748 -2.7277 -2.7747 -2.7277 -2.7747 -2.7277 -2.7748 -2.7277 -2.7747 l -5.2673,-14.53206 10.5346,-14.95534 z"
          fill="none"
@@ -5570,7 +5573,7 @@
        transform="matrix(0.33555834,0,0,0.33555834,-627.32606,-575.95774)" />
     <g
        id="g3"
-       transform="matrix(0.51665573,0,0,0.51665573,409.06861,-51.940215)">
+       transform="matrix(0.51665573,0,0,0.51665573,522.52327,-51.940215)">
       <rect
          style="fill:#c6daf3;fill-opacity:1;stroke:none;stroke-width:1.70162;stroke-dasharray:3.40326, 1.70162;stroke-opacity:1"
          id="rect841-8-3"
@@ -9558,7 +9561,7 @@
          sodipodi:nodetypes="cc" />
     </g>
     <path
-       style="fill:none;stroke:#ff0000;stroke-width:9.83093534;stroke-dasharray:19.66187096,9.83093548;stroke-dashoffset:0"
+       style="fill:none;stroke:#ff0000;stroke-width:9.83094;stroke-dasharray:19.6619, 9.83094;stroke-dashoffset:0"
        d="M -1.7697116,87.033105 24.418853,133.76962 12.331824,161.16689 39.326196,203.0686"
        id="path291" />
     <path
@@ -9577,8 +9580,8 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:65%;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Bold';baseline-shift:sub;fill:#d16022;fill-opacity:1"
          id="tspan4-6">1</tspan></text>
     <text
-       x="-71.143784"
-       y="-42.083019"
+       x="10.756875"
+       y="-127.49804"
        font-size="9.76775px"
        fill="#2f5597"
        id="text306-3-5-7-5-1-8-6-7-9"
@@ -9590,8 +9593,8 @@
            style="font-size:65%;baseline-shift:sub;fill:#ff0000;stroke:#ff0000"
            id="tspan307-6">BA</tspan></tspan></text>
     <text
-       x="108.95412"
-       y="-40.213997"
+       x="8.1016245"
+       y="-23.454039"
        font-size="13.0236px"
        fill="#000000"
        id="text302-7-1-73-5-2-6-8"
@@ -9601,17 +9604,18 @@
    style="font-style:normal;font-size:24.4396px;baseline-shift:super;fill:#ff0000;stroke:#ff0000;stroke-width:1.01974"
    id="tspan7-5-5-0">2</tspan></tspan></text>
     <text
-       x="5.4179373"
-       y="-40.636234"
+       x="-38.057922"
+       y="2.9229221"
        font-size="13.0236px"
        fill="#000000"
        id="text303-2-7-9-1-3-6-9-9"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.5993px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#ff0000;stroke:#ff0000;stroke-width:1.01974"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.5993px;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#ff0000;stroke:#ff0000;stroke-width:1.01974"
+       transform="rotate(-55.872226)"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';fill:#ff0000;stroke:#ff0000;stroke-width:1.01974"
          id="tspan311-3-6-7-3-6-7">=</tspan></text>
     <g
        id="g8-2-9-2"
-       transform="matrix(7.1053823,0,0,7.1053823,-700.74817,-470.79216)"
+       transform="matrix(7.1053823,0,0,7.1053823,-801.60066,-454.0322)"
        style="display:inline;fill:#ff0000;stroke:#ff0000">
       <text
          x="109.15665"
@@ -9637,8 +9641,8 @@
          id="path7-1-7-0" />
     </g>
     <text
-       x="200.23079"
-       y="-36.765965"
+       x="99.378296"
+       y="-20.006006"
        font-size="13.0236px"
        fill="#000000"
        id="text302-7-1-73-5-2-3-6-8"
@@ -9650,8 +9654,8 @@
    style="font-style:normal;font-size:24.4396px;baseline-shift:sub;fill:#ff0000;stroke:#ff0000;stroke-width:1.01974"
    id="tspan26-3">1</tspan></tspan></text>
     <text
-       x="168.57707"
-       y="-37.899517"
+       x="67.724579"
+       y="-21.139559"
        font-size="13.0236px"
        fill="#000000"
        id="text303-2-7-9-1-3-6-8-3-3"
@@ -9659,8 +9663,8 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';fill:#ff0000;stroke:#ff0000;stroke-width:1.01974"
          id="tspan311-3-6-7-3-4-3-1">+</tspan></text>
     <text
-       x="24.990334"
-       y="-64.206924"
+       x="-44.212372"
+       y="-39.781815"
        font-size="13.0236px"
        fill="#000000"
        id="text303-2-7-9-1-3-6-8-3-3-0"
@@ -9669,8 +9673,8 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';fill:#ff0000;stroke:#ff0000;stroke-width:1.32336"
          id="tspan311-3-6-7-3-4-3-1-8">-</tspan></text>
     <text
-       x="458.02234"
-       y="289.35007"
+       x="448.77228"
+       y="475.10098"
        font-size="9.76775px"
        fill="#2f5597"
        id="text306-3-5-7-5-1-8-6-7-9-3"
@@ -9682,8 +9686,8 @@
            style="font-size:65%;baseline-shift:sub;fill:#0000ff;stroke:#0000ff"
            id="tspan307-6-6">BC</tspan></tspan></text>
     <text
-       x="534.58405"
-       y="290.79684"
+       x="397.35715"
+       y="268.29926"
        font-size="13.0236px"
        fill="#000000"
        id="text303-2-7-9-1-3-6-9-9-5"
@@ -9691,8 +9695,8 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman', Times, 'Liberation Serif', serif;-inkscape-font-specification:'Times New Roman, Times, Liberation Serif, serif Italic';fill:#0000ff;stroke:#0000ff;stroke-width:1.01974"
          id="tspan311-3-6-7-3-6-7-7">=</tspan></text>
     <text
-       x="567.00726"
-       y="290.10883"
+       x="429.78036"
+       y="267.61124"
        font-size="13.0236px"
        fill="#000000"
        id="text302-7-1-73-5-2-3-6-8-9"

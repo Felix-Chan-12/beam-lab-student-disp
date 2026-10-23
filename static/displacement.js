@@ -2,19 +2,24 @@
 (() => {
   'use strict';
   const scriptBase = new URL('.', document.currentScript.src);
+  // 版面调试（tune=1）里：平时藏着的框（A2-5 的红、蓝框，A1-0 中间的占位框）淡淡地显示出来，方便选中调整。
+  if (new URLSearchParams(location.search).get('tune') === '1') document.documentElement.classList.add('disp-tune');
   // 仅使用已随仓库提供、与当前页面对应的 SVG。
-  const svgAssets = new Set(["BEAM-01-E", "BEAM-02-A1-2", "BEAM-02-A1-0-(1)", "BEAM-02-A1-0-(2)", "BEAM-02-A1-0-(3)", "BEAM-02-A1-1-(1)", "BEAM-02-A1-1-(2)", "BEAM-02-A1-1-(3)", "BEAM-02-A1-1-(4)", "BEAM-02-A1-1-(5)", "BEAM-02-A1-1-(6)", "BEAM-02-A1-1-(7)"]);
+  const svgAssets = new Set(["01-top-3-Beams", "BEAM-01-E", "BEAM-02-A1-2", "BEAM-02-A1-0-(1)", "BEAM-02-A1-0-(2)", "BEAM-02-A1-0-(3)", "BEAM-02-A1-1-(1)", "BEAM-02-A1-1-(2)", "BEAM-02-A1-1-(3)", "BEAM-02-A1-1-(4)", "BEAM-02-A1-1-(5)", "BEAM-02-A1-1-(6)", "BEAM-02-A1-1-(7)"]);
 
   for (const side of ['L', 'R', 'D-R']) for (let n = 1; n <= 20; n++) svgAssets.add(`BEAM-02-A1-3-(1)-${side}-M${n}`);
-  for (const name of ['BEAM-02-A2-0', 'BEAM-02-A2-1-(4)', 'BEAM-02-A2-2', 'BEAM-02-A2-3', 'BEAM-02-A2-4', 'BEAM-02-A2-5']) svgAssets.add(name);
+  for (const name of ['BEAM-02-A2-0', 'BEAM-02-A2-1-(4)', 'BEAM-02-A2-4', 'BEAM-02-A2-5']) svgAssets.add(name);
+  for (let n = 1; n <= 6; n++) svgAssets.add(`BEAM-02-A2-2-${n}`);
+  for (let n = 1; n <= 5; n++) svgAssets.add(`BEAM-02-A2-3-${n}`);
   const asset = name => {
     const stem = name.replace(/\.png$/, "");
     return new URL(`assets/displacement/${svgAssets.has(stem) ? stem + ".svg" : name}`, scriptBase).href;
   };
   const groups = [
     { id: 'E', stage: 'E', title: '把B点当固定端，算得木柱受力0.5ql。这个结果？', count: 1 },
-    { id: 'A1-0', stage: 'A1', title: '为了能查表，我们做了什么？', count: 3,
-      titles: ['先看待求解的刚架', '把B点嵌进大地，将未知转成已知', '固定端：管住截面的移动与转动'] },
+    // A1-0 四个分镜：第2、3个都用 A1-0-(2) 的图（第3个在画面中间放大显示「2个条件」框），第3→4个之间可以拖动转场。
+    { id: 'A1-0', stage: 'A1', title: '为了能查表，我们做了什么？', count: 4, pics: [1, 2, 2, 3],
+      titles: ['先看待求解的刚架', '把B点嵌进大地，将未知转成已知', '已知算未知，结果可信要满足2个条件', '固定端：管住截面的移动与转动'] },
     { id: 'A1-1', stage: 'A1', title: '嵌固真正多管住的，只有转动', count: 7,
       titles: ['原来的B点：移动被管住，转动没有被管住', '荷载作用下，小方块转过了Z₁', '把B点嵌固，转动也被管死了', '让嵌住B点的大地，也转过Z₁', '转动之前：用载常数', '转动之后：还可以用形常数', '支座可以转动：地基不均匀沉降的类比'] },
     { id: 'A1-2', stage: 'A1', title: '两根杆都能查表了，为什么还求不出木柱受力？', count: 1 },
@@ -23,13 +28,177 @@
     { id: 'A2-0', stage: 'A2', title: '还有什么已知条件没有用过？', count: 1, dynamic: true },
     { id: 'A2-1', stage: 'A2', title: '把平衡条件，用在结点上', count: 4, dynamic: true,
       titles: ['假设某一个Z₁就是真实值，先看两个截面的弯矩', '相应截面的弯矩，应当一致', '把单跨梁的杆端弯矩，对应到原结构', '截开取出小方块：两个截面弯矩必须平衡'] },
-    { id: 'A2-2', stage: 'A2', title: 'AB杆的弯矩：荷载一份，转角一份', count: 1, control: true },
-    { id: 'A2-3', stage: 'A2', title: 'BC杆的弯矩：只有转角这一份', count: 1, control: true },
+    // seq：分镜图名是 BEAM-02-A2-2-1、-2…（不带括号），圆球不写编号。
+    { id: 'A2-2', stage: 'A2', title: 'AB杆的弯矩：荷载一份，转角一份', count: 6, control: true, seq: true },
+    { id: 'A2-3', stage: 'A2', title: 'BC杆的弯矩：只有转角这一份', count: 5, control: true, seq: true },
     { id: 'A2-4', stage: 'A2', title: '补上结点平衡，这次能算了吗？', count: 1, dynamic: true, solution: true },
     { id: 'A2-5', stage: 'A2', title: '变形等效，再补内力平衡', count: 1, dynamic: true, solution: true },
     { id: 'A2-6', stage: 'A2', title: '再次判断：把B点当固定端得到的0.5ql，能信吗？', count: 1 },
     { id: 'M', stage: 'M', title: '游客推栏杆，多了力偶Fh，求解过程哪里需要改？', count: 1 }
   ];
+  // 顶部（A1-0～A2-5）：左边三根梁的配图，右边「已知算未知，结果可信的2个条件」。
+  // 每个分镜两个条件后面的标记：0 不标，1 问号，2 叉，3 勾（[变形一致, 内力一致]）；版面调试里可以按页、按分镜改。
+  const HEAD_MARKS = {
+    'A1-0': [[1, 0], [1, 0], [1, 0], [1, 0]],
+    'A1-1': [[1, 0], [1, 0], [2, 0], [3, 0], [3, 0], [3, 0], [3, 0]],
+    'A1-2': [[3, 0]],
+    'A1-3': [[3, 0], [3, 0]],
+    'A2-0': [[3, 1]],
+    'A2-1': [[3, 1], [3, 1], [3, 1], [3, 1]],
+    'A2-2': [[3, 1]], 'A2-3': [[3, 1]], 'A2-4': [[3, 1]],
+    'A2-5': [[3, 3]]
+  };
+  // 顶部三根梁，每根各有一个遮罩（半透明）和一个描边框（橘色、无填充），大小、位置在版面调试里调（所有页通用）。
+  // 每页、每个分镜，每根梁用哪个：0 不用，1 遮罩，2 描边框（[第1根, 第2根, 第3根]）；版面调试里可以按页、按分镜改。
+  // 默认：A1-0 和 A1-1 前3个分镜盖住第2、3根梁；A1-1-(4) 圈出第2、3根梁；其余都不用。
+  const BEAM_USE = {
+    'A1-0': [[0, 1, 1], [0, 1, 1], [0, 1, 1], [0, 1, 1]],
+    'A1-1': [[0, 1, 1], [0, 1, 1], [0, 1, 1], [0, 2, 2], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+  };
+  // 「2个条件」框每个分镜的样子：hide 不显示，big 放大摆在画面中间（位置在版面调试的「中间的「2个条件」框」里调），show 在右上角（默认）。
+  const CONDS_SHOW = { 'A1-0': ['hide', 'hide', 'big', 'show'] };
+  // 点顶部的梁切换矩形：哪一页哪个分镜、哪几根梁一起切；每点一次按 遮罩 → 描边框 → 不显示 → 遮罩… 轮换（只在本机画面上变，换页后复原）。
+  const CYCLE_BEAMS = { 'A1-1:2': [2, 3] };
+  const cycle = { key: '', use: null };
+  // 点「2个条件」里的某一条，画面里出现对应的框，这一条的字也变成框的颜色（再点一次收起）。只在下面这些页。
+  const CLICK_FRAMES = { 'A2-5': true };
+  const hl = { page: '', on: [false, false] };
+  const subKey = () => `${activeId}:${state.sub}`;
+  function headHtml() {
+    const marks = HEAD_MARKS[activeId];
+    if (!marks) return '';
+    const sub = state.sub + 1, [m1, m2] = marks[state.sub] || marks[0];
+    const use = BEAM_USE[activeId]?.[state.sub] || [0, 0, 0];
+    const group = CYCLE_BEAMS[subKey()] || [];
+    const beam = n => {
+      const cyc = group.includes(n), u = cyc && cycle.key === subKey() && cycle.use != null ? cycle.use : use[n - 1];
+      const forced = cyc && cycle.key === subKey() && cycle.use != null ? ` style="${beamVars(u)}"` : '';
+      return `<div class="disp-beam" data-disp-element="beam${n}" data-beam="${n}" data-sub="${sub}" data-use="${u}"${cyc ? ' data-cycle' : ''}${forced}><div class="disp-beam-cover" data-disp-element="beamCover${n}"></div><div class="disp-beam-frame" data-disp-element="beamFrame${n}"></div></div>`;
+    };
+    const click = CLICK_FRAMES[activeId] ? ' data-click role="button" tabindex="0"' : '';
+    const cond = (n, text, mark) => `<li class="disp-cond" data-disp-element="mark${n}" data-disp-cond="${n}" data-sub="${sub}" data-mark="${mark}"${click}><span class="disp-cond-text" data-disp-element="condText${n}">${n}. ${text}</span><span class="disp-cond-mark" aria-hidden="true"></span></li>`;
+    return `<div class="disp-head" data-disp-element="head" data-conds="${CONDS_SHOW[activeId]?.[state.sub] || 'show'}">
+      <div class="disp-head-figure" data-disp-element="headFigure">
+        <img class="disp-head-image" src="${asset('01-top-3-Beams.png')}" alt="第1、2、3根梁" draggable="false">
+        ${beam(1)}${beam(2)}${beam(3)}
+      </div>
+      <aside class="disp-conds" data-disp-element="conds" aria-label="结果可信的2个条件">
+        <h2 class="disp-conds-title" data-disp-element="condsTitle">已知算未知，结果可信的2个条件</h2>
+        <ol>${cond(1, '变形一致', m1)}${cond(2, '内力一致', m2)}</ol>
+      </aside>
+      <div class="disp-head-rule" data-disp-element="headRule" aria-hidden="true"></div>
+    </div>`;
+  }
+
+  // 曲线箭头：从顶部第1、2、3根梁指向中间的图。起终点按白色页面（.force-story）的宽、高百分比；
+  // 版面调试改过的值写在变量 --disp-cax 等里，没改过时用下面按图算出的默认位置（每页分开存）。
+  const CURVE_START = [0.125, 0.39, 0.64]; // 三根梁在顶部配图里的横向位置（配图宽的比例）
+  // 每页（分镜）画哪几条：[第几根梁, 落点X, 落点Y（中间图的宽、高比例）, 终点方向（0 从上往下，1 从右往左，2 从左往右）]。
+  const CURVES = {
+    'A1-0:1': [[1, 0.46, 0.165, 0]], 'A1-0:2': [[1, 0.46, 0.165, 0]],     // A1-0-(2)：第1根梁 → 中间的空心箭头
+    'A1-1:5': [[1, 0.19, 0.10, 0], [2, 0.44, 0.16, 0]],                  // A1-1-(6)：第1根梁 → 左图，第2根梁 → 中图
+    'A1-1:6': [[3, 0.576, 0.56, 1]],                                     // A1-1-(7)：第3根梁 → 中图木柱（从右边指过去，竖线从 Z₁ 和等号之间穿过）
+    'A1-2:0': [[1, 0.80, 0.10, 0], [2, 0.915, 0.13, 0], [3, 0.94, 0.55, 1]] // A1-2：横梁、B端基础、木柱BC
+  };
+  const curvesHtml = (key = subKey()) => {
+    const list = CURVES[key];
+    return !list ? '' : `<svg class="disp-curves" aria-hidden="true"><g class="disp-curve-gaps"></g>${list.map(([n, ex, ey, dir]) => `<g data-disp-element="curve-${n}" data-beam="${n}" data-ex="${ex}" data-ey="${ey}" data-bw="3" data-bcolor="${0xd86323}" data-cdir="${dir}"><path class="disp-curve-line"/><path class="disp-curve-head"/></g>`).join('')}</svg>`;
+  };
+  function drawCurves() {
+    const svg = document.querySelector('.disp-curves'), story = svg?.closest('.force-story');
+    if (!svg || !story) return;
+    const box = story.getBoundingClientRect();
+    if (!box.width || !box.height) return;
+    svg.setAttribute('viewBox', `0 0 ${box.width.toFixed(1)} ${box.height.toFixed(1)}`);
+    const fig = story.querySelector('.disp-head-image')?.getBoundingClientRect();
+    const pic = story.querySelector('.disp-scene [data-disp-element="image"]')?.getBoundingClientRect();
+    const f = n => n.toFixed(1);
+    svg.querySelectorAll('g[data-disp-element^="curve-"]').forEach((g, i) => {
+      // 默认位置（按当前版面量出来），写回 data- 属性，版面调试里显示的就是这些数。
+      const pct = (v, total) => +(v / total * 100).toFixed(2);
+      if (fig && fig.width) { g.dataset.cax = pct(fig.left + CURVE_START[g.dataset.beam - 1] * fig.width - box.left, box.width); g.dataset.cay = pct(fig.bottom - box.top + 4, box.height); }
+      if (pic && pic.width) { g.dataset.cbx = pct(pic.left + g.dataset.ex * pic.width - box.left, box.width); g.dataset.cby = pct(pic.top + g.dataset.ey * pic.height - box.top, box.height); }
+      const cs = getComputedStyle(g);
+      const val = key => { const v = parseFloat(cs.getPropertyValue(`--disp-${key}`)); return Number.isFinite(v) ? v : Number(g.dataset[key]) || 0; };
+      const color = cs.getPropertyValue('--disp-bcolor').trim() || `#${Number(g.dataset.bcolor).toString(16).padStart(6, '0')}`;
+      const w = Math.max(.5, val('bw')), mode = Math.round(val('cdir'));
+      const ax = val('cax') / 100 * box.width, ay = val('cay') / 100 * box.height;
+      const bx = val('cbx') / 100 * box.width, by = val('cby') / 100 * box.height;
+      const head = Math.max(10, w * 3.4), r = box.width * .06;
+      // 先竖直离开配图，在顶部和画布之间的空白处横过去，再圆滑地拐弯落到终点（全程光滑）。
+      // 三条线横走的高度错开（第1根最低、第3根最高），互相不交叉。
+      const dir = by >= ay ? 1 : -1;
+      const cy = ay + dir * Math.min(Math.abs(by - ay) * .5, box.height * (.07 - .025 * i));
+      // 一段「先横后竖」的圆角：从 (x0,y0) 横走到 x1，再竖着到 y1；圆角半径不超过两段长度的一半。
+      const corner = (x0, y0, x1, y1, rad) => {
+        const sx = x1 >= x0 ? 1 : -1, sy = y1 >= y0 ? 1 : -1, k = Math.max(.5, Math.min(rad, Math.abs(x1 - x0) / 2, Math.abs(y1 - y0) / 2));
+        return ` L${f(x1 - sx * k)},${f(y0)} C${f(x1)},${f(y0)} ${f(x1)},${f(y0)} ${f(x1)},${f(y0 + sy * k)}`;
+      };
+      const [line, tip] = g.children;
+      let d = `M${f(ax)},${f(ay)}`, tipD;
+      if (mode === 1 || mode === 2) {
+        // 从右（或左）横着指向终点：横走到终点外侧，竖着落到终点高度，再横着拐进去。
+        const side = mode === 1 ? 1 : -1, xr = bx + side * box.width * .05, ex = bx + side * head * .85;
+        const k0 = Math.max(.5, Math.min(r, Math.abs(xr - ax) / 2, Math.abs(cy - ay))), sx0 = xr >= ax ? 1 : -1;
+        d += ` C${f(ax)},${f(cy)} ${f(ax)},${f(cy)} ${f(ax + sx0 * k0)},${f(cy)}` + corner(ax + sx0 * k0, cy, xr, by, r);
+        const k2 = Math.max(.5, Math.min(r, Math.abs(by - cy) / 2, Math.abs(xr - ex)));
+        d += ` L${f(xr)},${f(by - (by >= cy ? 1 : -1) * k2)} C${f(xr)},${f(by)} ${f(xr)},${f(by)} ${f(xr - side * k2)},${f(by)} L${f(ex)},${f(by)}`;
+        tipD = `M${f(bx + side * head)},${f(by - head * .55)} L${f(bx)},${f(by)} L${f(bx + side * head)},${f(by + head * .55)} Z`;
+      } else {
+        const ey = by - dir * head * .85, sx = bx >= ax ? 1 : -1, k0 = Math.max(.5, Math.min(r, Math.abs(bx - ax) / 2));
+        d += ` C${f(ax)},${f(cy)} ${f(ax)},${f(cy)} ${f(ax + sx * k0)},${f(cy)}` + corner(ax + sx * k0, cy, bx, ey, r) + ` L${f(bx)},${f(ey)}`;
+        tipD = `M${f(bx - head * .55)},${f(by - dir * head)} L${f(bx)},${f(by)} L${f(bx + head * .55)},${f(by - dir * head)} Z`;
+      }
+      line.setAttribute('d', d);
+      line.setAttribute('stroke', color); line.setAttribute('stroke-width', w);
+      tip.setAttribute('d', tipD);
+      tip.setAttribute('fill', color);
+    });
+    curveGaps(svg, story, box);
+  }
+  // 曲线和横线（顶部分割线、画布上沿）交叉的地方，在曲线下面垫一小块白色，横线在曲线两边断开一点。
+  function curveGaps(svg, story, box) {
+    const gaps = svg.querySelector('.disp-curve-gaps');
+    if (!gaps) return;
+    const lines = [];
+    const rule = story.querySelector('.disp-head-rule');
+    if (rule && getComputedStyle(rule).display !== 'none') {
+      const r = rule.getBoundingClientRect();
+      if (r.width) lines.push({ y: r.top + r.height / 2 - box.top, h: r.height, x0: r.left - box.left, x1: r.right - box.left });
+    }
+    const canvas = story.querySelector('.force-free-canvas');
+    if (canvas) {
+      const r = canvas.getBoundingClientRect(), bw = parseFloat(getComputedStyle(canvas).borderTopWidth) || 0;
+      if (bw && r.width) lines.push({ y: r.top + bw / 2 - box.top, h: bw, x0: r.left - box.left, x1: r.right - box.left });
+    }
+    let html = '';
+    svg.querySelectorAll('.disp-curve-line').forEach(line => {
+      let len = 0;
+      try { len = line.getTotalLength(); } catch (_) { return; }
+      const w = Number(line.getAttribute('stroke-width')) || 3;
+      let a = line.getPointAtLength(0);
+      for (let at = 2; at < len + 2; at += 2) {
+        const b = line.getPointAtLength(Math.min(at, len));
+        for (const L of lines) {
+          if ((a.y < L.y) === (b.y < L.y) || a.y === b.y) continue;
+          const x = a.x + (b.x - a.x) * (L.y - a.y) / (b.y - a.y);
+          if (x < L.x0 || x > L.x1) continue;
+          const gw = w + 14, gh = L.h + 6;
+          html += `<rect x="${(x - gw / 2).toFixed(1)}" y="${(L.y - gh / 2).toFixed(1)}" width="${gw}" height="${gh.toFixed(1)}" fill="#fff"/>`;
+        }
+        a = b;
+      }
+    });
+    if (gaps.innerHTML !== html) gaps.innerHTML = html;
+  }
+  let curveFrame = 0;
+  // 曲线和底色矩形：版面调试改了（写在 <head> 里的样式表）或版面变了，都重画一次。
+  const scheduleCurves = () => { if (curveFrame) return; curveFrame = requestAnimationFrame(() => { curveFrame = 0; drawCurves(); clipNode(); placeConds(); syncHl(); document.querySelectorAll('.displacement-story svg[data-moments], .displacement-story svg[data-disp-marks]').forEach(fitTags); }); };
+  window.addEventListener('resize', scheduleCurves);
+  // 版面调试改了曲线（写在 <head> 里的样式表）或版面变了：重画。
+  new MutationObserver(scheduleCurves).observe(document.head, { childList: true, subtree: true, characterData: true });
+  if ('ResizeObserver' in window) new ResizeObserver(scheduleCurves).observe(document.getElementById('app'));
+
   function diagram(x, color) {
     const y = 232, b = x + 155, end = 385, scale = 460, t = theta();
     const points = Array.from({ length: 49 }, (_, j) => {
@@ -63,24 +232,49 @@
       ${mark(269, 90, '#d86323')}${mark(rx, ry, '#315795')}`;
   }
 
-  // 左右两组模型的说明文字；（未知）（已知）垫浅色底。底色先按字数估位，进入页面后再按实际字形量准（fitTags）。
+  // 左右两组模型的说明文字（仿 BEAM-02-A1-2.svg）：放在模型下方；（未知）（已知）垫浅色底。
+  // 底色先按字数估位，进入页面后再按实际字形量准（fitTags）。
+  // 两句话（labelLeft、labelRight）和两块底色（tagLeft、tagRight）在版面调试里各自单独调。
   function sideLabels(left, right, y, size) {
-    const tag = (x, fill) => `<rect data-disp-tag x="${x}" y="${y - size * .9}" width="${size * 4}" height="${size * 1.15}" rx="${size * .15}" fill="${fill}"/>`;
-    return `<g font-family="Microsoft YaHei,sans-serif" font-size="${size}" font-weight="bold">${tag(left + size * 6, '#fcdcc6')}${tag(right - size * 4, '#d5e5f6')}<text data-disp-tag x="${left}" y="${y}" fill="#d86323">待求解的结构（未知）</text><text data-disp-tag x="${right}" y="${y}" text-anchor="end" fill="#315795">可用载/形常数的结构（已知）</text></g>`;
+    const tag = (x, fill, side) => `<rect data-disp-tag data-disp-element="tag${side}" x="${x}" y="${y - size * .9}" width="${size * 4}" height="${size * 1.15}" rx="${size * .15}" fill="${fill}"/>`;
+    const text = (side, x, attrs, body) => `<text data-disp-tag data-disp-element="label${side}" x="${x}" y="${y}" font-size="${size}" data-x="${x}" data-y="${y}" data-size="${size}" ${attrs} xml:space="preserve">${body}</text>`;
+    const num = 'font-family="Times New Roman,Liberation Serif,serif" font-size="1.14em"';
+    return `<g font-family="Microsoft YaHei,sans-serif" font-weight="bold" data-disp-element="sideLabels">${tag(left + size * 6, '#fcdcc6', 'Left')}${tag(right - size * 4, '#d5e5f6', 'Right')}`
+      + text('Left', left, 'fill="#d16022"', '待求解的 原结构 (未知)')
+      + text('Right', right, 'text-anchor="end" fill="#2f5597"', `用 <tspan fill="#000">第</tspan><tspan ${num} fill="#d16022">1/2/3</tspan><tspan fill="#000">根梁</tspan> 拼出来的结构<tspan>（已知）</tspan>`) + '</g>';
   }
-  // 底色只垫在末尾“（未知）”“（已知）”四个字下面。
+  // 两句话：版面调试改的位置、大小写在变量 --disp-ldx（左右）、--disp-ldy（上下）、--disp-lsize（大小 %）里，单位同图内坐标；颜色直接改 fill。
+  // 底色只垫在末尾“（未知）”“（已知）”四个字下面，跟着字走。版面调试里调过底色的位置、大小时，
+  // 改动写在变量 --disp-tdx（左右）、--disp-tdy（上下）、--disp-tdw（加宽）、--disp-tdh（加高）里，单位同图内坐标。
   function fitTags(svg) {
     const rects = svg.querySelectorAll('rect[data-disp-tag]'), texts = svg.querySelectorAll('text[data-disp-tag]');
+    const vars = el => { const cs = getComputedStyle(el); return key => { const x = parseFloat(cs.getPropertyValue(`--disp-${key}`)); return Number.isFinite(x) ? x : 0; }; };
     texts.forEach((text, i) => {
+      const lv = vars(text), scale = (lv('lsize') || 100) / 100;
+      const fs = Number(text.dataset.size) * scale, ty = Number(text.dataset.y) + lv('ldy');
+      text.setAttribute('x', (Number(text.dataset.x) + lv('ldx')).toFixed(2));
+      text.setAttribute('y', ty.toFixed(2));
+      // 页面统一字号（typography）会强制画布里文字的字号；改了「大小」时，在它的基础上按比例放大缩小（整句话一起变）。
+      text.style.removeProperty('font-size');
+      text.querySelectorAll('tspan').forEach(t => t.style.removeProperty('font-size'));
+      if (Math.abs(scale - 1) > 1e-3) {
+        const base = parseFloat(getComputedStyle(text).fontSize) || Number(text.dataset.size);
+        text.style.setProperty('font-size', `${(base * scale).toFixed(2)}px`, 'important');
+        text.querySelectorAll('tspan').forEach(t => t.style.setProperty('font-size', 'inherit', 'important'));
+      }
+      const rect = rects[i], v = vars(rect);
+      rect.setAttribute('y', (ty - fs * .9 + v('tdy')).toFixed(2));
+      rect.setAttribute('height', Math.max(1, fs * 1.15 + v('tdh')).toFixed(2));
       try {
         const n = text.getNumberOfChars(), a = text.getExtentOfChar(n - 4), b = text.getExtentOfChar(n - 1);
         if (!a.width) return;
-        rects[i].setAttribute('x', (a.x - 2).toFixed(2));
-        rects[i].setAttribute('width', (b.x + b.width - a.x + 4).toFixed(2));
+        rect.setAttribute('x', (a.x - 2 + v('tdx')).toFixed(2));
+        rect.setAttribute('width', Math.max(1, b.x + b.width - a.x + 4 + v('tdw')).toFixed(2));
       } catch (_) { /* 未显示时量不到，保留估位 */ }
     });
   }
-  const marksLayer = split => rotationMarks(split) + sideLabels(9, 665, 14, 24);
+  // 右图拆开（D-R）时，右边木柱和支座更靠下，右边那句话收到支座左边、字小一点，免得压在支座上。
+  const marksLayer = split => rotationMarks(split) + (split ? sideLabels(12, 700, 466, 25) : sideLabels(12, 925, 466, 29));
 
   function moments(svg) {
     const two = Number(svg.dataset.moments) === 2;
@@ -102,7 +296,7 @@
         ${connect ? line('left-red', 147, redY - 5, 234, 115) + line('left-blue', 178 + blueX, 255, 273, 141) + line('cut-red', 226, 72, 242, 148, 0) + line('cut-blue', 242, 148, 315, 133, 0) : ''}
       </g>
       ${rotationMarks()}
-      ${sideLabels(12, 925, 466, 29)}`;
+      ${svg.closest('.disp-mini') ? '' : sideLabels(12, 925, 466, 29)}`;
   }
 
 
@@ -126,21 +320,39 @@
   }
   function scene() {
     const g = current();
-    if (g.id === 'A1-3') return pair({ split: state.sub === 1, overlay: true, marks: true }); // 和 A2-0 一样叠上 BEAM-02-A2-0 这张图
-    if (g.id === 'A2-0') return pair({ split: true, overlay: true, marks: true });
+    if (g.id === 'A1-3') return pair({ split: state.sub === 1, marks: true }); // 不再叠「三根梁弯矩图」那张图（BEAM-02-A2-0）
+    if (g.id === 'A2-0') return pair({ split: true, marks: true });
     if (g.id === 'A2-1' && state.sub < 3) return pair({ moments: state.sub ? 2 : 1, connect: state.sub === 2 });
     if ((g.id === 'A2-1' && state.sub === 3) || g.solution) {
       // 用原图的比例裁切隐藏静态右上角，替换同名原图即生效，无派生PNG。
       const file = g.id === 'A2-1' ? 'BEAM-02-A2-1-(4).png' : `BEAM-02-${g.id}.png`;
-      return `${img(file, 'disp-layer disp-node-source', '小方块隔离体及杆端弯矩关系', 'overlay')}${pair({ moments: 2, connect: true, mini: true })}`;
+      return `${img(file, 'disp-layer disp-node-source', '小方块隔离体及杆端弯矩关系', 'overlay')}${pair({ moments: 2, connect: true, mini: true })}${hlFrames()}`;
     }
-    const file = `BEAM-02-${g.id}${g.count > 1 ? `-(${state.sub+1})` : ''}.png`;
-    return img(file, 'disp-layer', g.titles?.[state.sub] || g.title, 'image') +
-      (g.id === 'A1-1' && state.sub === 6 ? img('bisa.jpg', 'disp-pisa', '比萨斜塔', 'pisa') : '');
+    const spot = CONDS_SHOW[g.id]?.[state.sub] === 'big' ? condsSpot() : '';
+    return img(picFile(g, state.sub), 'disp-layer', g.titles?.[state.sub] || g.title, 'image') + spot;
   }
+  // 第 sub 个分镜的主图：A2-2、A2-3 是 BEAM-02-A2-2-1…；A1-0 按 pics 指定用哪张（第2、3个分镜同一张）；其余按分镜编号。
+  function picFile(g, sub) {
+    if (g.seq) return `BEAM-02-${g.id}-${sub + 1}.png`;
+    const n = g.pics ? g.pics[sub] : sub + 1;
+    return `BEAM-02-${g.id}${g.count > 1 ? `-(${n})` : ''}.png`;
+  }
+  // 「2个条件」框放大摆在画面中间时的位置（看不见的占位框；版面调试里调它的位置、宽度，高度按框的比例自动定）。
+  const condsSpot = () => '<div class="disp-conds-spot" data-disp-element="condsSpot" aria-hidden="true"></div>';
+  // A2-5：点「变形一致」出现红框（框住右上角两组模型），点「内力一致」出现蓝框（框住左边B点）。
+  const hlFrames = () => !CLICK_FRAMES[activeId] ? '' : [1, 2].map(n => `<div class="disp-hl${hl.page === activeId && hl.on[n - 1] ? ' on' : ''}" data-hl="${n}" data-disp-element="${n === 1 ? 'hlDeform' : 'hlForce'}" aria-hidden="true"></div>`).join('');
+  // 分镜圆球：不再显示「A1-1 · 5 / 7」这行字。A2-1 第3、4个、A1-0 第3、4个圆球之间是一段进度条（拖动时显示转场进度）。
+  // A2-2、A2-3 的圆球不写编号。
   function dots() {
     const g=current(); if(g.count<2)return '';
-    return `<div class="disp-substeps" data-disp-element="substeps"><span>${g.id} · ${state.sub+1} / ${g.count}</span><div class="disp-dot-track" role="slider" tabindex="0" aria-label="${g.id}分镜，可点击、拖动或用方向键切换" aria-valuemin="1" aria-valuemax="${g.count}" aria-valuenow="${state.sub+1}">${Array.from({length:g.count},(_,i)=>`<span class="disp-dot ${i===state.sub?'active':''}">${i+1}</span>`).join('')}</div></div>`;
+    const parts=[], at=MORPHS[g.id]?.at;
+    for(let i=0;i<g.count;i++){
+      parts.push(`<span class="disp-dot ${i===state.sub?'active':''}">${g.seq?'':i+1}</span>`);
+      if(i<g.count-1)parts.push(i===at
+        ?`<span class="disp-dot-gap disp-morph-bar" style="--disp-morph:${state.sub>at?1:0}" aria-hidden="true"><span class="disp-morph-fill"></span><span class="disp-morph-thumb"></span></span>`
+        :'<span class="disp-dot-gap" aria-hidden="true"></span>');
+    }
+    return `<div class="disp-substeps" data-disp-element="substeps"><div class="disp-dot-track" role="slider" tabindex="0" aria-label="${g.id}分镜，可点击、拖动或用方向键切换" aria-valuemin="1" aria-valuemax="${g.count}" aria-valuenow="${state.sub+1}">${parts.join('')}</div></div>`;
   }
   const aiButtonText = () => aiState.running ? 'AI 正在逐档计算…' : aiState.done ? 'AI 计算完成' : '启动 AI 辅助计算';
   const aiStatusText = () => aiState.running ? '两组模型随 Z₁ 同步计算中' : aiState.done ? '计算完成 · 可继续拖动滑块' : '让转角 Z₁ 从 0 开始逐档增大';
@@ -209,15 +421,35 @@
   function render(value) {
     activeId=identity(value); if(activeId!=='A1-3')resetAi(); const g=current(); if(!g)return;
     state={frame:Number(value.displacement_frame||0),sub:Math.min(g.count-1,Number(value.displacement_substep||0))};
-    const dynamic=g.dynamic||g.control;
-    document.getElementById('app').innerHTML=`<section class="panel force-story displacement-story ${value.stage===3?'deformation-story':''}" data-reveal-step="${value.stage===2?value.force_reveal_step:value.deformation_reveal_step}" data-disp-controlled="${Boolean(dynamic)}"><h1${g.count>1?` data-disp-title="${state.sub+1}"`:''}>${g.titles?.[state.sub]||g.title}</h1><div class="force-composition"><div class="force-free-canvas" data-disp-substep="${state.sub}" aria-label="位移法图片与交互画布"><div class="disp-scene" data-disp-element="scene"><div class="disp-aspect ${g.id.startsWith('A1')&&!g.dynamic?'disp-wide':''}">${scene()}</div></div>${dots()}</div>${dynamic?controls():''}</div></section>`;
+    const dynamic=g.dynamic||g.control, before=rendered;
+    if(cycle.key!==subKey())Object.assign(cycle,{key:subKey(),use:null}); // 换了页或分镜：顶部矩形恢复默认
+    if(hl.page!==activeId)Object.assign(hl,{page:activeId,on:[false,false]}); // 换了页：A2-5 的红、蓝框收起
+    const head=headHtml(), refocus=document.activeElement?.classList?.contains('disp-dot-track');
+    document.getElementById('app').innerHTML=`<section class="panel force-story displacement-story ${value.stage===3?'deformation-story':''} ${head?'disp-has-head':''}" data-reveal-step="${value.stage===2?value.force_reveal_step:value.deformation_reveal_step}" data-disp-controlled="${Boolean(dynamic)}"><h1${g.count>1?` data-disp-title="${state.sub+1}"`:''}>${g.titles?.[state.sub]||g.title}</h1>${head}${curvesHtml()}<div class="force-composition"><div class="force-free-canvas" data-disp-substep="${state.sub}" aria-label="位移法图片与交互画布"><div class="disp-scene" data-disp-element="scene"><div class="disp-aspect ${g.id.startsWith('A1')&&!g.dynamic?'disp-wide':''}">${scene()}</div></div>${dots()}</div>${dynamic?controls():''}</div></section>`;
     rendered=`${activeId}:${state.sub}`;
-    bind(); refresh(); paintAi();
+    stopMorph(); morph.t=MORPHS[activeId]&&state.sub>MORPHS[activeId].at?1:0;
+    // A1-0：从第2个分镜点到第3个，中间的「2个条件」框淡入。
+    if(CONDS_SHOW[activeId]?.[state.sub]==='big'&&before===`${activeId}:${state.sub-1}`)document.querySelector('.disp-head')?.classList.add('disp-conds-enter');
+    bind(); refresh(); paintAi(); fitAspect(); placeConds(); syncHl(); scheduleCurves();
+    if(refocus)document.querySelector('.disp-dot-track')?.focus({preventScroll:true}); // 用方向键翻分镜时，重画后还能接着按
+    MORPHS[activeId]?.preload?.();
+    if (g.seq) preloadSeq(g);
+    // 配图载入后版面会变：再画一次曲线。
+    document.querySelectorAll('.disp-head-image, .disp-scene img').forEach(image => { if (!image.complete) image.addEventListener('load', scheduleCurves, { once: true }); });
   }
   function update(value) {
     const id=identity(value), g=groups.find(x=>x.id===id);if(!g || id==='A2-6')return;
     const sub=Math.min(g.count-1,Number(value.displacement_substep||0));
-    if(!document.querySelector('.displacement-story') || rendered!==`${id}:${sub}`) {render(value); if(typeof mountSelfGuidedNavigation==='function')mountSelfGuidedNavigation();return;}
+    const target=`${id}:${sub}`;
+    if(morph.pending===target)return; // 转场正在播放，播完再换页
+    if(morph.active&&target===rendered)return; // 课堂状态没变（定时刷新），转场继续
+    if(morph.active&&!morph.dragging)stopMorph();
+    // 有转场的两个分镜（A2-1 第3、4个，A1-0 第3、4个）之间点圆球或用方向键切换：也播放转场（拖动时由拖动控制）。
+    const at=MORPHS[id]?.at, a=`${id}:${at}`, b=`${id}:${at+1}`;
+    if(at!=null&&!morph.dragging&&document.querySelector('.displacement-story')&&((rendered===a&&target===b)||(rendered===b&&target===a))){
+      playMorph(target===b?1:0,()=>{render(value);if(typeof mountSelfGuidedNavigation==='function')mountSelfGuidedNavigation();},target);return;
+    }
+    if(!document.querySelector('.displacement-story') || rendered!==target) {render(value); if(typeof mountSelfGuidedNavigation==='function')mountSelfGuidedNavigation();return;}
     const frame=Number(value.displacement_frame||0);
     if(state.frame!==frame){state.frame=frame;refresh();}
   }
@@ -252,20 +484,280 @@
     document.querySelector('[data-disp-zero]')?.addEventListener('click',()=>setFrame(0));
     document.querySelector('[data-disp-ai-button]')?.addEventListener('click',startAi);
     document.querySelector('[data-disp-equilibrium]')?.addEventListener('click',()=>setFrame(10));
+    document.querySelectorAll('.disp-beam[data-cycle]').forEach(cell=>cell.addEventListener('click',cycleBeams));
+    document.querySelectorAll('.disp-cond[data-click]').forEach(item=>{
+      item.addEventListener('click',()=>toggleHl(Number(item.dataset.dispCond)));
+      item.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleHl(Number(item.dataset.dispCond));}});
+    });
     const track=document.querySelector('.disp-dot-track');if(!track)return;
     track.addEventListener('pointerdown',event=>{
-      if(event.button!==0)return;event.preventDefault();const r=track.getBoundingClientRect();
-      drag={left:r.left+14,width:r.width-28,count:current().count,last:state.sub};dragTo(event.clientX);
+      if(event.button!==0)return;event.preventDefault();
+      // 按各圆球的实际圆心换算位置（A2-1 第3、4个圆球之间更宽）。
+      const centers=[...track.querySelectorAll('.disp-dot')].map(dot=>{const r=dot.getBoundingClientRect();return r.left+r.width/2;});
+      drag={centers,count:current().count,last:state.sub,moved:false};dragTo(event.clientX);
     });
     track.addEventListener('keydown',async event=>{
       const next=event.key==='Home'?0:event.key==='End'?current().count-1:['ArrowRight','ArrowUp'].includes(event.key)?state.sub+1:['ArrowLeft','ArrowDown'].includes(event.key)?state.sub-1:null;
       if(next===null)return;event.preventDefault();await change({type:'set_displacement_substep',value:Math.max(0,Math.min(current().count-1,next))});document.querySelector('.disp-dot-track')?.focus();
     });
   }
+  // 顶部的梁：点一下按 遮罩 → 描边框 → 不显示 轮换（同一组的几根梁一起换），盖过版面调试里的设置，只在本机画面上。
+  const beamVars = u => `--db-cover:${u === 1 ? 'block' : 'none'} !important;--db-frame:${u === 2 ? 'block' : 'none'} !important`;
+  function cycleBeams() {
+    const cells = [...document.querySelectorAll('.disp-beam[data-cycle]')];
+    if (!cells.length) return;
+    const cs = getComputedStyle(cells[0]);
+    const now = cs.getPropertyValue('--db-cover').trim() === 'block' ? 1 : cs.getPropertyValue('--db-frame').trim() === 'block' ? 2 : 0;
+    const next = now === 1 ? 2 : now === 2 ? 0 : 1;
+    Object.assign(cycle, { key: subKey(), use: next });
+    cells.forEach(cell => { cell.dataset.use = next; cell.setAttribute('style', beamVars(next)); });
+  }
+  // A2-5：点「2个条件」里的一条，出现（或收起）对应的框；这一条的字和左边竖条变成框的颜色，并放大闪一下，提醒大家看。
+  const flash = (el, cls, ms) => { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); clearTimeout(el._flash); el._flash = setTimeout(() => el.classList.remove(cls), ms); };
+  function toggleHl(n) {
+    if (!CLICK_FRAMES[activeId]) return;
+    hl.page = activeId; hl.on[n - 1] = !hl.on[n - 1];
+    const frame = document.querySelector(`.disp-hl[data-hl="${n}"]`), item = document.querySelector(`.disp-cond[data-disp-cond="${n}"]`);
+    if (frame) { frame.classList.toggle('on', hl.on[n - 1]); if (hl.on[n - 1]) flash(frame, 'disp-flash', 1900); }
+    syncHl();
+    if (item) flash(item, 'disp-pop', 1100);
+  }
+  function syncHl() {
+    if (!CLICK_FRAMES[activeId]) return;
+    [1, 2].forEach(n => {
+      const item = document.querySelector(`.disp-cond[data-disp-cond="${n}"]`), frame = document.querySelector(`.disp-hl[data-hl="${n}"]`);
+      if (!item || !frame) return;
+      const on = hl.page === activeId && hl.on[n - 1], color = on ? getComputedStyle(frame).borderTopColor : '';
+      item.classList.toggle('disp-hl-on', on);
+      if (on) { item.style.setProperty('--dm-fg', color, 'important'); item.style.setProperty('--dm-bar', color, 'important'); }
+      else { item.style.removeProperty('--dm-fg'); item.style.removeProperty('--dm-bar'); }
+    });
+  }
   let drag=null;
-  function dragTo(x){if(!drag)return;const sub=Math.max(0,Math.min(drag.count-1,Math.round((x-drag.left)/drag.width*(drag.count-1))));if(sub!==drag.last){drag.last=sub;change({type:'set_displacement_substep',value:sub});}}
-  window.addEventListener('pointermove',e=>{if(drag){e.preventDefault();dragTo(e.clientX);}});
-  window.addEventListener('pointerup',()=>{drag=null;});window.addEventListener('pointercancel',()=>{drag=null;});
+  function dragTo(x){
+    if(!drag)return;
+    const c=drag.centers;let pos=x<=c[0]?0:c.length-1;
+    for(let i=0;i<c.length-1;i++)if(x>c[i]&&x<=c[i+1]){pos=i+(x-c[i])/(c[i+1]-c[i]);break;}
+    // A2-1、A1-0：在第3、4个圆球之间拖动时，画面跟着连续变化（转场），松手再落到较近的那个分镜。
+    const at=MORPHS[activeId]?.at;
+    if(at!=null&&drag.moved&&pos>at&&pos<at+1){
+      if(!morph.active&&!startMorph())return;
+      if(morph.raf){cancelAnimationFrame(morph.raf);morph.raf=0;morph.pending='';} // 正在自动播放的转场让给拖动
+      morph.dragging=true;setMorph(pos-at);return;
+    }
+    const sub=Math.round(pos);
+    // 拖出了第3、4个圆球之间：转场停在端点，再按正常分镜重画。
+    if(morph.active){setMorph(pos>=at+1?1:0);stopMorph();rendered='';drag.last=sub;change({type:'set_displacement_substep',value:sub});return;}
+    if(sub!==drag.last){drag.last=sub;change({type:'set_displacement_substep',value:sub});}
+  }
+  function endDrag(){
+    if(morph.active&&morph.dragging){
+      morph.dragging=false;
+      const at=MORPHS[activeId].at, sub=morph.t>=.5?at+1:at;
+      playMorph(sub>at?1:0,()=>{stopMorph();rendered='';change({type:'set_displacement_substep',value:sub});},`${activeId}:${sub}`,500);
+    }
+    drag=null;
+  }
+  window.addEventListener('pointermove',e=>{if(drag){e.preventDefault();drag.moved=true;dragTo(e.clientX);}});
+  window.addEventListener('pointerup',endDrag);window.addEventListener('pointercancel',endDrag);
+
+  /* A2-1 第3→4分镜的转场：t 从 0 到 1。
+     前一半：整组双图缩小到右上角（第4分镜里右上角双图的位置）；
+     后一半：原结构B点的部分（红、蓝截面虚线围出的那块）从左图上分出来，一边往左下移动一边放大，
+     最后和第4分镜左边的B点大图重合（交叉淡入），落成第4分镜原有的画面。
+     位置都按第4分镜实际排好的版面量出来，版面调试改过右上角双图的位置也能对上。 */
+  const PAIR_B = [273.8, 92.2];   // 双图里左边原结构B点（黑方块中心），图内坐标（945×480）
+  const NODE_B = [311.5, 202];    // BEAM-02-A2-1-(4) 里B点大图的黑方块中心，同一坐标
+  const NODE_SCALE = 4.03;        // 大图黑方块边长 ÷ 双图里黑方块边长
+  const PIECE_CLIP = [[226, 82.8], [242, 148], [315, 133], [315, 58], [266, 58], [266, 82.8]]; // 沿红、蓝截面虚线切出的B点部分（不带均布荷载的箭头）
+  const morph = { active: false, dragging: false, t: 0, raf: 0, pending: '', geo: null };
+  const ease = u => u < .5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2;
+  const clamp01 = u => Math.max(0, Math.min(1, u));
+  // 只有一张主图的页（A1-0～A1-2、A2-1-(4)、A2-2～A2-5）：画面框按这张图本身的宽高比，图换宽了也不留白。
+  // 右上角小双图（A2-1-(4)、A2-4、A2-5）保持原来的大小、贴右上角；大图上被它盖住的那块按小双图的实际位置裁掉。
+  // 右上角小双图（945×480 的双图缩到 52.6%，宽 497 个图内单位）在大图里的左边位置（图内单位）。
+  // 25 cm 的图（宽 945）在 448；30 cm 的图（宽 1133.5，A2-2～A2-5）整体右移了 113.5，在 561.5。其他宽度按同样比例推。
+  const miniLeft = units => 448 + (units - 945) * .6;
+  // A2-1-(4) 还是 25 cm 的图：画面框按后面 A2-2 的宽度排（B点大图按原尺寸靠左），这样翻到 A2-2 时相同的部分不动。
+  function frameUnits(nw, nh) {
+    return activeId === 'A2-1' && wideSize.w ? Math.max(nw, wideSize.w / wideSize.h * nh) : nw;
+  }
+  function fitAspect(known) {
+    const box = document.querySelector('.disp-aspect');
+    const pic = box?.querySelector(':scope > img.disp-layer');
+    if (!pic) return;
+    known = known || naturalSize.get(pic.src);
+    const apply = () => {
+      const nw = known?.w || pic.naturalWidth, nh = known?.h || pic.naturalHeight;
+      if (!nw || !nh || !box.isConnected) return;
+      const fw = frameUnits(nw, nh), wider = fw > nw + 1;
+      box.style.setProperty('--disp-ar', (fw / nh).toFixed(5));
+      if (wider) pic.style.width = `${(nw / fw * 100).toFixed(3)}%`; else pic.style.removeProperty('width');
+      const mini = box.querySelector('.disp-mini'), units = fw / nh * 480;
+      if (mini && Math.abs(units - 945) > 2) { mini.style.width = `${(497.07 / units * 100).toFixed(3)}%`; mini.style.left = `${(miniLeft(units) / units * 100).toFixed(3)}%`; }
+      // 大图上被右上角小双图盖住的那块裁掉：图比画面框窄时按它自己原来的位置裁，否则按小双图实际的位置裁。
+      if (wider && pic.classList.contains('disp-node-source')) { pic.dataset.ownClip = '1'; pic.style.clipPath = 'polygon(0 0,47.4% 0,47.4% 52.7%,100% 52.7%,100% 100%,0 100%)'; }
+      else { delete pic.dataset.ownClip; clipNode(); }
+    };
+    if (known || pic.complete) apply(); else pic.addEventListener('load', () => { apply(); scheduleCurves(); }, { once: true });
+  }
+  // A2-1 就先把第4分镜的大图和 A2-2 的图读进来，转场一开始就知道它们的宽高。
+  const nodeSize = { w: 0, h: 0 }, wideSize = { w: 0, h: 0 };
+  function preloadNode() {
+    const load = (name, size) => {
+      if (size.w) return;
+      const image = new Image();
+      image.onload = () => { size.w = image.naturalWidth; size.h = image.naturalHeight; if (activeId === 'A2-1' && !morph.active) fitAspect(); };
+      image.src = asset(name);
+    };
+    load('BEAM-02-A2-1-(4).png', nodeSize);
+    load('BEAM-02-A2-2-1.png', wideSize);
+  }
+  // A2-2、A2-3：进页就把各分镜的图读进来，记下宽高；切分镜时画面框直接按这个宽高排，不闪、不跳。
+  const naturalSize = new Map();
+  function preloadSeq(g) {
+    for (let n = 1; n <= g.count; n++) {
+      const url = asset(`BEAM-02-${g.id}-${n}.png`);
+      if (naturalSize.has(url)) continue;
+      const image = new Image();
+      image.onload = () => naturalSize.set(url, { w: image.naturalWidth, h: image.naturalHeight });
+      image.src = url;
+    }
+  }
+  function clipNode() {
+    const box = document.querySelector('.disp-aspect'), node = box?.querySelector(':scope > .disp-node-source'), mini = box?.querySelector('.disp-mini');
+    if (!node || !mini || morph.active || node.dataset.ownClip) return;
+    const b = node.getBoundingClientRect(), m = mini.getBoundingClientRect();
+    if (!b.width || !b.height) return;
+    const lp = ((m.left - b.left) / b.width * 100).toFixed(2), bp = ((m.bottom - b.top) / b.height * 100).toFixed(2);
+    node.style.clipPath = `polygon(0 0,${lp}% 0,${lp}% ${bp}%,100% ${bp}%,100% 100%,0 100%)`;
+  }
+  function startNodeMorph() {
+    const box = document.querySelector('.disp-aspect');
+    if (!box) return false;
+    const clip = PIECE_CLIP.map(([x, y]) => `${(x / 945 * 100).toFixed(2)}% ${(y / 480 * 100).toFixed(2)}%`).join(',');
+    box.innerHTML = `${img('BEAM-02-A2-1-(4).png', 'disp-layer disp-node-source disp-morph-node', '小方块隔离体及杆端弯矩关系', 'overlay')}${pair({ moments: 2, connect: true, mini: true })}`
+      + `<div class="disp-morph-piece" aria-hidden="true" style="clip-path:polygon(${clip})">${img(frameName('L'), 'disp-layer disp-frame-left')}</div>`;
+    refresh(); fitAspect(nodeSize.w ? nodeSize : { w: 945, h: 480 });
+    const mini = box.querySelector('.disp-mini'), b = box.getBoundingClientRect(), m = mini.getBoundingClientRect();
+    const node = box.querySelector('.disp-morph-node'), natW = nodeSize.w || 945, natH = nodeSize.h || 480;
+    // 第3分镜里整幅双图的位置：画面框里按 945×480 的比例居中（第4分镜的大图换宽了也能对上）。
+    const sc = box.parentElement.getBoundingClientRect(), fw = Math.min(sc.width, sc.height * 945 / 480), fh = fw * 480 / 945;
+    const full = { x: sc.left + (sc.width - fw) / 2 - b.left, y: sc.top + (sc.height - fh) / 2 - b.top, w: fw, h: fh };
+    const piece = box.querySelector('.disp-morph-piece');
+    piece.style.width = `${(b.height * 945 / 480).toFixed(2)}px`; piece.style.height = `${b.height.toFixed(2)}px`;
+    // 右上角小双图不带底部那两句话；转场开头（双图还是整幅大小）先带着，缩小时淡出。
+    const msvg = mini.querySelector('[data-moments]');
+    if (msvg) { msvg.insertAdjacentHTML('beforeend', `<g class="disp-morph-labels">${sideLabels(12, 925, 466, 29)}</g>`); fitTags(msvg); }
+    morph.geo = { W: b.width, H: b.height, mx: m.left - b.left, my: m.top - b.top, mw: m.width, mh: m.height, full, cN: b.width / frameUnits(natW, natH), natH };
+    return true;
+  }
+  function setNodeMorph() {
+    const box = document.querySelector('.disp-aspect'), g = morph.geo;
+    if (!box) return;
+    const mini = box.querySelector('.disp-mini'), node = box.querySelector('.disp-morph-node'), piece = box.querySelector('.disp-morph-piece');
+    // 前一半：右上角双图从整幅大小缩到原位
+    const u = ease(clamp01(morph.t / .5)), F = g.full;
+    const s = (F.w + (g.mw - F.w) * u) / g.mw;
+    mini.style.transformOrigin = '0 0';
+    mini.style.transform = `translate(${(F.x + (g.mx - F.x) * u - g.mx).toFixed(2)}px,${(F.y + (g.my - F.y) * u - g.my).toFixed(2)}px) scale(${s.toFixed(5)})`;
+    const labels = mini.querySelector('.disp-morph-labels');
+    if (labels) labels.style.opacity = (1 - clamp01(morph.t / .3)).toFixed(3);
+    // 后一半：B点部分先沿截面分开一点，再往左下移动、放大，和大图重合
+    const v = clamp01((morph.t - .5) / .5), v1 = ease(clamp01(v / .15)), v2 = ease(clamp01((v - .15) / .85));
+    // c0：切下来那块（按双图 945×480 排）每个图内单位多少 px；cN：B点大图每个图内单位多少 px。
+    const c0 = g.H / 480, a = g.mw / 945, big = NODE_SCALE * g.cN;
+    const bm = [g.mx + PAIR_B[0] * a, g.my + PAIR_B[1] * a], bn = [NODE_B[0] * g.cN, NODE_B[1] * g.cN];
+    const gap = [-.025 * g.W * v1, .025 * g.W * v1];
+    const cx = bm[0] + gap[0] + (bn[0] - bm[0] - gap[0]) * v2, cy = bm[1] + gap[1] + (bn[1] - bm[1] - gap[1]) * v2;
+    const sig = a + (big - a) * v2;
+    piece.style.transform = `translate(${(cx - sig * PAIR_B[0]).toFixed(2)}px,${(cy - sig * PAIR_B[1]).toFixed(2)}px) scale(${(sig / c0).toFixed(5)})`;
+    piece.style.opacity = morph.t <= .5 ? 0 : (1 - clamp01((v - .6) / .3)).toFixed(3);
+    const k = sig / big;
+    node.style.transform = `translate(${(cx - k * bn[0]).toFixed(2)}px,${(cy - k * bn[1]).toFixed(2)}px) scale(${k.toFixed(5)})`;
+    node.style.opacity = clamp01((v - .45) / .4).toFixed(3);
+  }
+  /* A1-0 第3→4分镜的转场：t 从 0 到 1。画面中间放大的「2个条件」框一边缩小、一边移回右上角原位；
+     第1根梁指过来的箭头先淡出；后半段 A1-0-(2) 的图淡出、A1-0-(3) 的图淡入，到第4分镜就是 A1-0-(3) 原来的画面。 */
+  function startCondsMorph() {
+    const box = document.querySelector('.disp-aspect'), head = document.querySelector('.disp-head'), g = current(), at = MORPHS[g.id].at;
+    if (!box || !head) return false;
+    box.innerHTML = img(picFile(g, at), 'disp-layer', '', 'image') + img(picFile(g, at + 1), 'disp-layer disp-morph-next') + condsSpot();
+    fitAspect();
+    if (!document.querySelector('.disp-curves')) { head.insertAdjacentHTML('afterend', curvesHtml(`${g.id}:${at}`)); drawCurves(); }
+    head.classList.remove('disp-conds-enter');
+    head.dataset.conds = 'big';
+    morph.geo = condsGeo() || { k: 1, tx: 0, ty: 0 };
+    return true;
+  }
+  function setCondsMorph(t) {
+    const g = morph.geo, conds = document.querySelector('.disp-head > .disp-conds'), u = ease(t), k = g.k + (1 - g.k) * u;
+    if (conds) conds.style.transform = `translate(${(g.tx * (1 - u)).toFixed(2)}px,${(g.ty * (1 - u)).toFixed(2)}px) scale(${k.toFixed(5)})`;
+    const v = clamp01((t - .55) / .4), [a, b] = document.querySelectorAll('.disp-aspect > img.disp-layer');
+    if (a) a.style.opacity = (1 - v).toFixed(3);
+    if (b) b.style.opacity = v.toFixed(3);
+    const curves = document.querySelector('.disp-curves');
+    if (curves) curves.style.opacity = (1 - clamp01(t / .35)).toFixed(3);
+  }
+  // 「2个条件」框从右上角原位放大到画面中间占位框（condsSpot）的位置：左上角对齐，宽度一样。手机上不挪。
+  const phone = () => window.matchMedia('(max-width: 699px)').matches;
+  function condsGeo() {
+    const conds = document.querySelector('.disp-head > .disp-conds'), spot = document.querySelector('.disp-conds-spot');
+    if (!conds || !spot || phone()) return null;
+    const keep = conds.style.transform;
+    conds.style.transform = 'none';
+    const n = conds.getBoundingClientRect();
+    conds.style.transform = keep;
+    if (!n.width || !n.height) return null;
+    spot.style.aspectRatio = `${n.width.toFixed(2)} / ${n.height.toFixed(2)}`;
+    const s = spot.getBoundingClientRect(), unit = n.width / (conds.offsetWidth || n.width);
+    return { k: s.width / n.width, tx: (s.left - n.left) / unit, ty: (s.top - n.top) / unit };
+  }
+  function placeConds() {
+    const head = document.querySelector('.disp-head'), conds = head?.querySelector(':scope > .disp-conds');
+    if (!conds || morph.active) return;
+    const geo = head.dataset.conds === 'big' ? condsGeo() : null;
+    if (geo) conds.style.transform = `translate(${geo.tx.toFixed(2)}px,${geo.ty.toFixed(2)}px) scale(${geo.k.toFixed(5)})`;
+    else conds.style.removeProperty('transform');
+  }
+  // 有转场的页：在第 at+1、at+2 个圆球之间（进度条上）拖动，或在这两个分镜之间切换。
+  const MORPHS = {
+    'A2-1': { at: 2, start: startNodeMorph, set: setNodeMorph, preload: preloadNode },
+    'A1-0': { at: 2, start: startCondsMorph, set: setCondsMorph, preload: () => { const image = new Image(); image.src = asset('BEAM-02-A1-0-(3).png'); } }
+  };
+  function startMorph() {
+    const m = MORPHS[activeId];
+    if (!m || !m.start()) return false;
+    morph.active = true;
+    return true;
+  }
+  function setMorph(t) {
+    morph.t = clamp01(t);
+    const m = MORPHS[activeId];
+    if (!m || !morph.geo) return;
+    m.set(morph.t);
+    // 圆球：离哪个分镜近，就亮哪个；两个圆球之间的进度条跟着走
+    document.querySelectorAll('.disp-dot').forEach((dot, i) => dot.classList.toggle('active', i === (morph.t >= .5 ? m.at + 1 : m.at)));
+    const bar = document.querySelector('.disp-morph-bar');
+    if (bar) { bar.style.setProperty('--disp-morph', morph.t.toFixed(4)); bar.classList.toggle('moving', morph.t > 0 && morph.t < 1); }
+  }
+  function playMorph(to, done, pending = '', ms = 1600) {
+    if (!morph.active && !startMorph()) { done(); return; }
+    cancelAnimationFrame(morph.raf);
+    morph.pending = pending;
+    const from = morph.t, started = performance.now(), dur = Math.max(1, ms * Math.abs(to - from));
+    const tick = now => {
+      const p = clamp01((now - started) / dur);
+      setMorph(from + (to - from) * p);
+      if (p < 1) { morph.raf = requestAnimationFrame(tick); return; }
+      morph.raf = 0; morph.pending = ''; morph.active = false; done();
+    };
+    morph.raf = requestAnimationFrame(tick);
+  }
+  function stopMorph() {
+    cancelAnimationFrame(morph.raf);
+    Object.assign(morph, { active: false, dragging: false, raf: 0, pending: '' });
+  }
   window.BEAM_DISPLACEMENT={render,update,asset};
   // 学生首屏不请求动态图；停下滑块后只预读当前两侧的相邻帧。
   let prefetchTimer;
