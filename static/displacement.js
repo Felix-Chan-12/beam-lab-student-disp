@@ -786,7 +786,48 @@
     cancelAnimationFrame(morph.raf);
     Object.assign(morph, { active: false, dragging: false, raf: 0, pending: '' });
   }
-  window.BEAM_DISPLACEMENT={render,update,asset};
+  // 翻页笔（2026-10-23，见 app.js「翻页笔」）：本页里能往前走的先走——A2-5 先红框、再蓝框；「第n根梁」卡片先揭开；再换分镜。
+  // 走到本页头尾时返回 false，由 app.js 换页、换阶段。转场、A1-3 的 AI 动画播放时，按键不起作用（返回 true 吞掉）。
+  // A1-1 第3个分镜顶部梁的轮换不归翻页笔管。往回翻时停在上一个分镜（或上一页）的最后状态：卡片揭开、两个框都亮。
+  function closeReveal() {
+    Object.assign(reveal, { key: subKey(), open: false });
+    document.querySelectorAll('.disp-reveal-card, .disp-reveal-mask').forEach(el => el.classList.remove('open'));
+  }
+  function setHlAll(on) {
+    if (!CLICK_FRAMES[activeId]) return;
+    hl.page = activeId; hl.on = [on, on];
+    document.querySelectorAll('.disp-hl').forEach(frame => frame.classList.toggle('on', on));
+    syncHl();
+  }
+  async function clicker(dir) {
+    const g = current();
+    if (!g || !document.querySelector('.displacement-story')) return false;
+    if (morph.active || morph.pending || aiState.running) return true;
+    if (CLICK_FRAMES[activeId]) {
+      const on = hl.page === activeId ? hl.on : [false, false];
+      if (dir > 0 && !on[0]) { toggleHl(1); return true; }
+      if (dir > 0 && !on[1]) { toggleHl(2); return true; }
+      if (dir < 0 && on[1]) { toggleHl(2); return true; }
+      if (dir < 0 && on[0]) { toggleHl(1); return true; }
+    }
+    if (REVEALS[subKey()]) {
+      const opened = reveal.key === subKey() && reveal.open;
+      if (dir > 0 && !opened) { openReveal(); return true; }
+      if (dir < 0 && opened) { closeReveal(); return true; }
+    }
+    const sub = state.sub + dir;
+    if (sub < 0 || sub >= g.count) return false;
+    await change({ type: 'set_displacement_substep', value: sub });
+    if (dir < 0 && !morph.pending && REVEALS[subKey()]) openReveal();
+    return true;
+  }
+  function clickerEnd() {
+    if (!document.querySelector('.displacement-story')) return;
+    if (REVEALS[subKey()]) openReveal();
+    setHlAll(true);
+  }
+  const countOf = value => (value && (Number(value.stage) === 2 || Number(value.stage) === 3) && groups.find(x => x.id === identity(value))?.count) || 1;
+  window.BEAM_DISPLACEMENT={render,update,asset,clicker,clickerEnd,countOf};
   // 学生首屏不请求动态图；停下滑块后只预读当前两侧的相邻帧。
   let prefetchTimer;
   const prefetched = new Set();
