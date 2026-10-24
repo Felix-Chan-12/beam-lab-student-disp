@@ -2350,6 +2350,62 @@ async function clickerBeforeLanding() {
   if (count > 1) await api({ type: "set_displacement_substep", value: count - 1 });
 }
 function clickerLanded() { window.BEAM_DISPLACEMENT?.clickerEnd?.(); }
+// 翻页笔「滑一遍」（2026-10-24）：滑块左右来回几次，最后停在随机位置（离起点至少三成量程，不会只挪一点）。
+// 逐帧改滑块的值并发 input 事件，和用鼠标拖一样，图和读数跟着变。返回起点的值，往回翻时用它还原。
+function clickerSetSlider(slider, value) {
+  if (!slider || value == null || Number.isNaN(Number(value))) return;
+  slider.value = String(value);
+  slider.dispatchEvent(new Event("input", { bubbles: true }));
+}
+function clickerVisibleSlider(selector) {
+  return [...document.querySelectorAll(selector)].find((el) => el.getClientRects().length > 0 && !el.disabled) || null;
+}
+// opts（可选）：lo、hi 限定来回的范围；end() 给出停的位置（每次随机一点，但落在想要的范围里）。
+function clickerPick(list) { return list[Math.floor(Math.random() * list.length)]; }
+function clickerSweep(slider, opts = {}) {
+  return new Promise((resolve) => {
+    if (!slider || slider.disabled) { resolve(null); return; }
+    const min = Number(slider.min || 0), max = Number(slider.max || 1);
+    const lo = Math.max(min, opts.lo ?? min), hi = Math.min(max, opts.hi ?? max), span = (hi - lo) || 1;
+    const step = Number(slider.step) || (max - min) / 200;
+    const digits = (String(step).split(".")[1] || "").length;
+    const from = Number(slider.value);
+    const rand = (a, b) => a + Math.random() * (b - a);
+    const high = () => rand(lo + 0.72 * span, hi), low = () => rand(lo, lo + 0.28 * span);
+    let end = from, guard = 0;
+    if (typeof opts.end === "function") end = opts.end();
+    else while (Math.abs(end - from) < 0.3 * span && guard++ < 200) end = rand(lo + 0.08 * span, hi - 0.08 * span);
+    const points = [from, ...(from < lo + span / 2 ? [high(), low(), high()] : [low(), high(), low()]), end];
+    const legs = [];
+    let total = 0;
+    for (let i = 1; i < points.length; i += 1) {
+      const d = Math.max(550, 1300 * Math.abs(points[i] - points[i - 1]) / ((max - min) || 1)); // 速度按整条滑块算，窄范围来回也不会慢吞吞
+      legs.push({ a: points[i - 1], b: points[i], t0: total, d });
+      total += d;
+    }
+    const ease = (u) => (u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2);
+    const snap = (v) => Math.min(max, Math.max(min, Number((Math.round((v - min) / step) * step + min).toFixed(digits))));
+    let last = null, finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      if (snap(end) !== last) clickerSetSlider(slider, snap(end));
+      resolve(from);
+    };
+    const fallback = setTimeout(finish, total + 2000); // 预览框不在前台、动画停了时也能结束
+    const started = performance.now();
+    const frame = (now) => {
+      if (finished) return;
+      const t = Math.min(total, now - started);
+      const leg = legs.find((l) => t <= l.t0 + l.d) || legs[legs.length - 1];
+      const v = snap(leg.a + (leg.b - leg.a) * ease(Math.min(1, (t - leg.t0) / leg.d)));
+      if (v !== last) { last = v; clickerSetSlider(slider, v); }
+      if (t < total) requestAnimationFrame(frame);
+      else { clearTimeout(fallback); finish(); }
+    };
+    requestAnimationFrame(frame);
+  });
+}
 async function runClicker(dir) {
   const now = Date.now();
   if (clickerBusy || now - clickerLastAt < 250) return;

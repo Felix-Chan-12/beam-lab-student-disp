@@ -451,6 +451,7 @@
     const head=headHtml(), refocus=document.activeElement?.classList?.contains('disp-dot-track');
     document.getElementById('app').innerHTML=`<section class="panel force-story displacement-story ${value.stage===3?'deformation-story':''} ${head?'disp-has-head':''}" data-reveal-step="${value.stage===2?value.force_reveal_step:value.deformation_reveal_step}" data-disp-controlled="${Boolean(dynamic)}"><h1${g.count>1?` data-disp-title="${state.sub+1}"`:''}>${g.titles?.[state.sub]||g.title}</h1>${head}${curvesHtml()}<div class="force-composition"><div class="force-free-canvas" data-disp-substep="${state.sub}" aria-label="位移法图片与交互画布"><div class="disp-scene" data-disp-element="scene"><div class="disp-aspect ${g.id.startsWith('A1')&&!g.dynamic?'disp-wide':''}">${scene()}</div></div>${dots()}</div>${dynamic?controls():''}</div></section>`;
     rendered=`${activeId}:${state.sub}`;
+    if(before!==rendered)Object.assign(extra,{key:subKey(),done:0,undo:[]}); // 换了分镜：翻页笔的页内动作重新开始
     stopMorph(); morph.t=MORPHS[activeId]&&state.sub>MORPHS[activeId].at?1:0;
     // A1-0：从第2个分镜点到第3个，中间的「2个条件」框淡入。
     if(CONDS_SHOW[activeId]?.[state.sub]==='big'&&before===`${activeId}:${state.sub-1}`)document.querySelector('.disp-head')?.classList.add('disp-conds-enter');
@@ -788,7 +789,88 @@
   }
   // 翻页笔（2026-10-23，见 app.js「翻页笔」）：本页里能往前走的先走——A2-5 先红框、再蓝框；「第n根梁」卡片先揭开；再换分镜。
   // 走到本页头尾时返回 false，由 app.js 换页、换阶段。转场、A1-3 的 AI 动画播放时，按键不起作用（返回 true 吞掉）。
-  // A1-1 第3个分镜顶部梁的轮换不归翻页笔管。往回翻时停在上一个分镜（或上一页）的最后状态：卡片揭开、两个框都亮。
+  // 往回翻时停在上一个分镜（或上一页）的最后状态：卡片揭开、两个框都亮。
+  // 2026-10-24 起，分镜里还有几步也交给翻页笔（EXTRAS）：A1-0 第7个分镜点一下顶部的梁（并在那里出一个点击波纹）；
+  // A1-3 第1个分镜先点 AI、再滑一遍 Z₁；A2-1 第3个分镜滑一遍 Z₁；A2-4 点「定位平衡转角」。前进依次做，后退依次撤销。
+  const EXTRAS = { 'A1-0:6': ['cycle'], 'A1-3:0': ['ai', 'sweep'], 'A2-1:2': ['sweep'], 'A2-4:0': ['locate'] };
+  // A1-3 来回滑最后停在 Z₁ ≈ 0.019：Z₁ 一档 0.0012，0.019 附近只有第16档（0.01905），所以终点固定在这一档，每次随机的是来回的路线。
+  const SWEEP_OPTS = { 'A1-3:0': { end: () => 16 } };
+  const extra = { key: '', done: 0, undo: [] };
+  let sweeping = false;
+  const extraState = () => { if (extra.key !== subKey()) Object.assign(extra, { key: subKey(), done: 0, undo: [] }); return extra; };
+  const cycled = () => cycle.key === subKey() && cycle.use != null;
+  function extraDone(kind) {
+    if (kind === 'cycle') return cycled();
+    if (kind === 'ai') return aiState.done || aiState.running;
+    return false;
+  }
+  // 点击波纹：画在第一根被轮换的梁（第2根梁）的正中，提示「在这里点了一下」
+  function clickRipple(cells) {
+    const rects = cells.slice(0, 1).map(cell => cell.getBoundingClientRect()).filter(r => r.width && r.height);
+    if (!rects.length) return;
+    const left = Math.min(...rects.map(r => r.left)), right = Math.max(...rects.map(r => r.right));
+    const top = Math.min(...rects.map(r => r.top)), bottom = Math.max(...rects.map(r => r.bottom));
+    const dot = document.createElement('div');
+    dot.className = 'disp-click-ripple';
+    dot.style.left = `${(left + right) / 2}px`; dot.style.top = `${(top + bottom) / 2}px`;
+    dot.innerHTML = '<i></i>';
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 1400);
+  }
+  function restoreCycle() { Object.assign(cycle, { key: subKey(), use: null }); render(currentState); }
+  function quickExtra(kind, ripple) {
+    if (kind !== 'cycle') return undefined;
+    const cells = [...document.querySelectorAll('.disp-beam[data-cycle]')];
+    if (!cells.length) return null;
+    cycleBeams();
+    if (ripple) clickRipple(cells);
+    return restoreCycle;
+  }
+  const setFrameValue = n => { const slider = document.querySelector('[data-disp-slider]'); if (slider && n != null) { slider.value = String(n); } return setFrame(n); };
+  async function runExtra(kind) {
+    const quick = quickExtra(kind, true);
+    if (quick !== undefined) return quick;
+    const from = state.frame;
+    if (kind === 'ai') { await startAi(); return async () => { resetAi(); paintAi(); await setFrameValue(from); }; }
+    if (kind === 'locate') { document.querySelector('[data-disp-equilibrium]')?.click(); return () => setFrameValue(from); }
+    if (kind === 'sweep') {
+      sweeping = true;
+      try { await clickerSweep(document.querySelector('[data-disp-slider]'), SWEEP_OPTS[subKey()] || {}); } finally { sweeping = false; }
+      return () => setFrameValue(from);
+    }
+    return null;
+  }
+  async function extraStep(dir) {
+    const list = EXTRAS[subKey()];
+    if (!list) return false;
+    const ex = extraState();
+    if (dir > 0) {
+      while (ex.done < list.length && extraDone(list[ex.done])) { ex.undo.push(null); ex.done += 1; }
+      if (ex.done >= list.length) return false;
+      const undo = await runExtra(list[ex.done]);
+      ex.undo.push(undo || (() => {}));
+      ex.done += 1;
+      return true;
+    }
+    while (ex.done > 0 && ex.undo[ex.done - 1] === null) { ex.undo.pop(); ex.done -= 1; }
+    if (ex.done === 0) return false;
+    ex.done -= 1;
+    await ex.undo.pop()();
+    return true;
+  }
+  // 往回翻落到有 EXTRAS 的分镜：不花时间的（点顶部的梁）直接做完，AI、滑动不重做。
+  function landExtras() {
+    const list = EXTRAS[subKey()];
+    if (!list) return;
+    const ex = extraState();
+    for (const kind of list.slice(ex.done)) {
+      if (extraDone(kind)) { ex.undo.push(null); ex.done += 1; continue; }
+      const undo = quickExtra(kind, false);
+      if (undo === undefined) break;
+      ex.undo.push(undo || (() => {}));
+      ex.done += 1;
+    }
+  }
   function closeReveal() {
     Object.assign(reveal, { key: subKey(), open: false });
     document.querySelectorAll('.disp-reveal-card, .disp-reveal-mask').forEach(el => el.classList.remove('open'));
@@ -802,7 +884,9 @@
   async function clicker(dir) {
     const g = current();
     if (!g || !document.querySelector('.displacement-story')) return false;
-    if (morph.active || morph.pending || aiState.running) return true;
+    if (morph.active || morph.pending || aiState.running || sweeping) return true;
+    const ex = EXTRAS[subKey()] ? extraState() : null;
+    if (dir < 0 && ex && ex.done > 0 && await extraStep(dir)) return true;
     if (CLICK_FRAMES[activeId]) {
       const on = hl.page === activeId ? hl.on : [false, false];
       if (dir > 0 && !on[0]) { toggleHl(1); return true; }
@@ -815,16 +899,19 @@
       if (dir > 0 && !opened) { openReveal(); return true; }
       if (dir < 0 && opened) { closeReveal(); return true; }
     }
+    if (dir > 0 && await extraStep(dir)) return true;
     const sub = state.sub + dir;
     if (sub < 0 || sub >= g.count) return false;
     await change({ type: 'set_displacement_substep', value: sub });
     if (dir < 0 && !morph.pending && REVEALS[subKey()]) openReveal();
+    if (dir < 0 && !morph.pending) landExtras();
     return true;
   }
   function clickerEnd() {
     if (!document.querySelector('.displacement-story')) return;
     if (REVEALS[subKey()]) openReveal();
     setHlAll(true);
+    landExtras();
   }
   const countOf = value => (value && (Number(value.stage) === 2 || Number(value.stage) === 3) && groups.find(x => x.id === identity(value))?.count) || 1;
   window.BEAM_DISPLACEMENT={render,update,asset,clicker,clickerEnd,countOf};
