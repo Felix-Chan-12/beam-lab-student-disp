@@ -2389,10 +2389,19 @@ function clickerSweep(slider, opts = {}) {
     const finish = () => {
       if (finished) return;
       finished = true;
+      if (clickerActiveSweep?.slider === slider) clickerActiveSweep = null;
       if (snap(end) !== last) clickerSetSlider(slider, snap(end));
       resolve(from);
     };
     const fallback = setTimeout(finish, total + 2000); // 预览框不在前台、动画停了时也能结束
+    // opts.interruptible：滑的过程中再按一下「下一页」，就停在当前位置（不再滑到终点），接着进下一步（见 runClicker）
+    if (opts.interruptible) clickerActiveSweep = { slider, cancel: () => {
+      if (finished) return;
+      finished = true;
+      clearTimeout(fallback);
+      clickerActiveSweep = null;
+      resolve(from);
+    } };
     const started = performance.now();
     const frame = (now) => {
       if (finished) return;
@@ -2406,9 +2415,17 @@ function clickerSweep(slider, opts = {}) {
     requestAnimationFrame(frame);
   });
 }
-async function runClicker(dir) {
+let clickerActiveSweep = null; // 正在播放、可以被下一次按键打断的来回滑（目前只有 A2-1 第3个分镜）
+let clickerQueued = 0;
+async function runClicker(dir, queued = false) {
+  if (dir > 0 && !queued && clickerActiveSweep) {
+    // 来回滑还在播：这一下先停住滑动，等这一步收尾后立刻再走一步（进下一个分镜）
+    clickerQueued = dir;
+    clickerActiveSweep.cancel();
+    return;
+  }
   const now = Date.now();
-  if (clickerBusy || now - clickerLastAt < 250) return;
+  if (!queued && (clickerBusy || now - clickerLastAt < 250)) return;
   if (document.querySelector('[aria-busy="true"]')) return; // AI 动画播放中
   clickerLastAt = now;
   clickerBusy = true;
@@ -2429,6 +2446,11 @@ async function runClicker(dir) {
     console.error(error);
   } finally {
     clickerBusy = false;
+    if (clickerQueued) {
+      const next = clickerQueued;
+      clickerQueued = 0;
+      setTimeout(() => runClicker(next, true), 0);
+    }
   }
 }
 if (isPreview && window.parent !== window && !layoutMode) setupClickerPreview();

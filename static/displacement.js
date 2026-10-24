@@ -794,7 +794,8 @@
   // A1-3 第1个分镜先点 AI、再滑一遍 Z₁；A2-1 第3个分镜滑一遍 Z₁；A2-4 点「定位平衡转角」。前进依次做，后退依次撤销。
   const EXTRAS = { 'A1-0:6': ['cycle'], 'A1-3:0': ['ai', 'sweep'], 'A2-1:2': ['sweep'], 'A2-4:0': ['locate'] };
   // A1-3 来回滑最后停在 Z₁ ≈ 0.019：Z₁ 一档 0.0012，0.019 附近只有第16档（0.01905），所以终点固定在这一档，每次随机的是来回的路线。
-  const SWEEP_OPTS = { 'A1-3:0': { end: () => 16 } };
+  // A2-1 第3个分镜的来回滑可以打断：滑的时候再按一下，立刻停住并进第4个分镜。
+  const SWEEP_OPTS = { 'A1-3:0': { end: () => 16 }, 'A2-1:2': { interruptible: true } };
   const extra = { key: '', done: 0, undo: [] };
   let sweeping = false;
   const extraState = () => { if (extra.key !== subKey()) Object.assign(extra, { key: subKey(), done: 0, undo: [] }); return extra; };
