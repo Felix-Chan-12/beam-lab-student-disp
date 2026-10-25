@@ -118,6 +118,8 @@
     cbx: { label: "终点 X（页面宽 %）", unit: "%", min: -10, max: 110, step: 0.1, digits: 2 },
     cby: { label: "终点 Y（页面高 %）", unit: "%", min: -10, max: 110, step: 0.1, digits: 2 },
     cdir: { label: "终点方向", unit: "", min: 0, max: 2, step: 1, digits: 0, choices: ["从上往下", "从右往左", "从左往右"] },
+    cmy: { label: "横走的高度 Y（页面高 %）", unit: "%", min: -10, max: 110, step: 0.1, digits: 2 },
+    cmx: { label: "竖走的位置 X（页面宽 %，只用于从右、从左指过去）", unit: "%", min: -10, max: 110, step: 0.1, digits: 2 },
     fcolor: { label: "颜色", unit: "", min: 0, max: 16777215, step: 1, digits: 0, color: true },
     fop: { label: "不透明度", unit: "%", min: 0, max: 100, step: 1, digits: 0 },
     tdx: { label: "左右移动", unit: "", min: -200, max: 200, step: 0.5, digits: 1 },
@@ -184,7 +186,7 @@
     dispMark: ["mark"],
     dispFrame: ["x", "y", "w", "hh", "bw", "bcolor"],
     dispBox: ["x", "y", "w", "hh", "text"],
-    dispCurve: ["cax", "cay", "cbx", "cby", "cdir", "bw", "bcolor"],
+    dispCurve: ["cax", "cay", "cbx", "cby", "cdir", "cmy", "cmx", "bw", "bcolor"],
     dispCover: ["x", "y", "w", "hh", "fcolor", "fop", "bw", "bstyle", "bcolor"],
     dispRule: ["x", "y", "w", "hh", "fcolor", "fop"],
     dispSpot: ["x", "y", "w"],
@@ -220,7 +222,7 @@
     dispMark: ["mark"],
     dispFrame: ["left", "top", "width", "h", "bw", "bcolor"],
     dispBox: ["left", "top", "width", "h", "text"],
-    dispCurve: ["cax", "cay", "cbx", "cby", "cdir", "bw", "bcolor"],
+    dispCurve: ["cax", "cay", "cbx", "cby", "cdir", "cmy", "cmx", "bw", "bcolor"],
     dispCover: ["left", "top", "width", "h", "fcolor", "fop", "bw", "bstyle", "bcolor"],
     dispRule: ["left", "top", "width", "h", "fcolor", "fop"],
     dispSpot: ["left", "top", "width"],
@@ -270,7 +272,7 @@
     dispMark: "选这个条件后面的标记：不标、问号、叉、勾。每页、每个分镜分开保存；不标时这一行变灰。",
     dispFrame: "描边框：位置、大小按这根梁所在格子（顶部配图宽的约 1/4）的比例保存，所有页通用；线宽、颜色在下面改。哪一页显示：在「第n根梁用哪个矩形」里选。",
     dispBox: "「2个条件」框：位置、大小按顶部的比例保存；「文字大小」一起缩放框里的字。",
-    dispCurve: "起终点按白色页面（顶部＋画布）的宽、高百分比；「终点方向」选从上往下、从右往左或从左往右。每条曲线分开调，每页分开保存（A1-0、A1-1 第2和第3个分镜、A1-2 各是各的）。",
+    dispCurve: "起终点按白色页面（顶部＋画布）的宽、高百分比；「终点方向」选从上往下、从右往左或从左往右。「横走的高度」是中间横着走的那段的高度；「竖走的位置」是从右（左）指过去时竖着下来那段的位置。每条曲线分开调，每页分开保存（A1-0、A1-1 第2和第3个分镜、A1-2、A1-3 第2个分镜、A2-0 各是各的：A1-3 和 A2-0 是同一组箭头，两页要分别调）。",
     dispCover: "遮罩：位置、大小按这根梁所在格子（顶部配图宽的约 1/4）的比例保存，所有页通用；底色的颜色、不透明度，边框的粗细（线宽）、框线（实线 / 虚线 / 点线 / 不画）、颜色在下面改，边框不跟着底色变淡。哪一页显示：在「第n根梁用哪个矩形」里选。",
     dispCard: "「第n根梁」卡片：位置、大小按画面的比例保存；里面的字按卡片大小自动定，「大小」再按比例放大缩小。点卡片后它会淡出，要再调就换个分镜再回来。",
     dispDots: "分镜圆球的大小（直径），默认所有页通用，各页一样大。手机上圆球另按手指点按的大小显示，不受这里影响。",
@@ -385,6 +387,10 @@
     { key: "disp:dotSize", label: "位移法：分镜圆球大小（各页通用）", sel: "#app .disp-dot-track", kind: "dispDots", scope: "all" },
     { key: "disp:headRule", label: "位移法：顶部下面的分割线", sel: '#app [data-disp-element="headRule"]', kind: "dispRule", scope: "all" },
     { key: "disp:condsSpot", label: "位移法：中间的「2个条件」框（A1-0 第3个分镜）", sel: '#app [data-disp-element="condsSpot"]', kind: "dispSpot", scope: "all" },
+    { key: "disp:pinCurves", label: "位移法：A1-3 第2个分镜「显示箭头」的圆", sel: '#app [data-disp-element="pinCurves"]', kind: "dispSpot",
+      tip: "点一下出现顶部三根梁指过来的箭头（A2-0 一直显示）。默认在画布右下角；位置、大小按画布的比例保存；箭头没点开时在版面调试里淡淡显示。" },
+    { key: "disp:pinMoments", label: "位移法：A2-1 第1个分镜「显示弯矩图」的圆", sel: '#app [data-disp-element="pinMoments"]', kind: "dispSpot",
+      tip: "点一下出现右边模型的弯矩图和红、蓝虚线。默认在画布右下角；位置、大小按画布的比例保存；弯矩图没点开时在版面调试里淡淡显示。" },
     { key: "disp:hlDeform", label: "位移法：A2-5 红框（点「变形一致」出现）", sel: '#app [data-disp-element="hlDeform"]', kind: "dispFrame",
       tip: "点「1. 变形一致」出现的框：位置、大小按画面的比例保存；线宽、颜色在下面改，「变形一致」这几个字点开后也变成这个颜色。版面调试里没点开时淡淡显示，方便选中。" },
     { key: "disp:hlForce", label: "位移法：A2-5 蓝框（点「内力一致」出现）", sel: '#app [data-disp-element="hlForce"]', kind: "dispFrame",
@@ -749,7 +755,7 @@
       for (const key of ["fcolor", "fop", "bw", "bstyle", "bcolor"]) delete p[key];
     }
     if (entry.kind === "dispCurve") {
-      for (const key of ["cax", "cay", "cbx", "cby", "cdir", "bw"]) if (p[key] != null) d.push(`--disp-${key}: ${p[key]}${I}`);
+      for (const key of ["cax", "cay", "cbx", "cby", "cdir", "cmy", "cmx", "bw"]) if (p[key] != null) d.push(`--disp-${key}: ${p[key]}${I}`);
       if (p.bcolor != null) d.push(`--disp-bcolor: ${hexColor(p.bcolor)}${I}`);
       return d.join("; ");
     }

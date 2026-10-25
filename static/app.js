@@ -2269,7 +2269,7 @@ async function start() {
 // ===== 翻页笔（2026-10-23）=====
 // 默认关闭，只用鼠标。打开：「放大学生预览」后，点底部中间那行「BEAM LAB」小字（变浅橙＝已打开；再点一下关闭；本机记住）。
 // 打开后只在放大预览里起作用：PageDown／→ 下一页，PageUp／← 上一页；F5 不刷新；其他键不处理。版面调试（?edit=1）里不起作用。
-// 下一页：本页还有没点的就先点下一个（位移法：分镜圆球、A2-2／A2-3 的「第n根梁」卡片、A2-5 先红框后蓝框，见 displacement.js 的 clicker） → 下一步 → 下一阶段；
+// 下一页：本页还有没点的就先点下一个（位移法：分镜圆球、A2-2／A2-3 的「第n根梁」卡片、A1-3／A2-1 页内的圆，见 displacement.js 的 clicker） → 下一步 → 下一阶段；
 // 上一页反过来，退到上一页时停在那一页的最后状态。AI 按钮、候选值按钮、滑块不归翻页笔管。
 // 外层（控制台）收到按键就转给预览框；预览框里的页面自己判断该点圆球还是换页（离线时直接写课堂状态，控制台随后跟上）。
 const CLICKER_STORE_KEY = "beam-clicker-mode-disp";
@@ -2340,7 +2340,7 @@ function clickerTargetOf(state, dir) {
   if (step > 0) return { stage, step: step - 1 };
   return stage > 0 ? { stage: stage - 1, step: lastOf(stage - 1) } : null;
 }
-// 位移法：本页里先走 displacement.js 管的（分镜圆球、「第n根梁」卡片、A2-5 的红框蓝框）。
+// 位移法：本页里先走 displacement.js 管的（分镜圆球、「第n根梁」卡片、页内的圆）。
 async function clickerLocal(dir) {
   return window.BEAM_DISPLACEMENT?.clicker ? Boolean(await window.BEAM_DISPLACEMENT.clicker(dir)) : false;
 }

@@ -64,7 +64,8 @@
   const CYCLE_BEAMS = { 'A1-0:6': [2, 3] }; // A1-0 第7个分镜（右边的B点转不了）
   const cycle = { key: '', use: null };
   // 点「2个条件」里的某一条，画面里出现对应的框，这一条的字也变成框的颜色（再点一次收起）。只在下面这些页。
-  const CLICK_FRAMES = { 'A2-5': true };
+  // 2026-10-25 起 A2-5 不再点开强调（原来是 { 'A2-5': true }：先红框「变形一致」、再蓝框「内力一致」），这里留空；要恢复就填回去。
+  const CLICK_FRAMES = {};
   const hl = { page: '', on: [false, false] };
   const subKey = () => `${activeId}:${state.sub}`;
   function headHtml() {
@@ -96,17 +97,53 @@
   // 曲线箭头：从顶部第1、2、3根梁指向中间的图。起终点按白色页面（.force-story）的宽、高百分比；
   // 版面调试改过的值写在变量 --disp-cax 等里，没改过时用下面按图算出的默认位置（每页分开存）。
   const CURVE_START = [0.125, 0.39, 0.64]; // 三根梁在顶部配图里的横向位置（配图宽的比例）
-  // 每页（分镜）画哪几条：[第几根梁, 落点X, 落点Y（中间图的宽、高比例）, 终点方向（0 从上往下，1 从右往左，2 从左往右）]。
+  // 每页（分镜）画哪几条：[第几根梁, 落点X, 落点Y（中间图的宽、高比例）, 终点方向（0 从上往下，1 从右往左，2 从左往右）, 竖走的X, 横走的Y]。
+  // 后两项可以不写（按默认规则算）；写了的话也按中间图的宽、高比例。双图页（A1-3、A2-0）的「中间图」是整组双图。
+  // 横走的高度都在分镜圆球下面（A1-3 第2个分镜右上角有分镜圆球）；第1根梁横走得最低，三条线互不交叉。
+  const A13_CURVES = [
+    [1, 0.613, 0.097, 0, null, -0.0035],  // 第1根梁 → 拆开后的横梁（落在均布荷载上沿，q 的左边）
+    [2, 0.677, 0.097, 0, null, -0.0406],  // 第2根梁 → 拆开后的横梁（q 的右边）
+    [3, 0.924, 0.498, 1, 0.961, -0.0220]  // 第3根梁 → 木柱（从右边指过去：从 Z₁ 的线和字之间竖着下来，箭头尖离木柱右边一点）
+  ];
   const CURVES = {
     'A1-0:1': [[1, 0.46, 0.165, 0]], 'A1-0:2': [[1, 0.46, 0.165, 0]],     // A1-0-(2)：第1根梁 → 中间的空心箭头
     'A1-1:1': [[1, 0.19, 0.10, 0], [2, 0.44, 0.16, 0]],                  // A1-1 第2个分镜：第1根梁 → 左图，第2根梁 → 中图
     'A1-1:2': [[3, 0.576, 0.56, 1]],                                     // A1-1 第3个分镜：第3根梁 → 中图木柱（从右边指过去，竖线从 Z₁ 和等号之间穿过）
-    'A1-2:0': [[1, 0.80, 0.10, 0], [2, 0.915, 0.13, 0], [3, 0.94, 0.55, 1]] // A1-2：横梁、B端基础、木柱BC
+    'A1-2:0': [[1, 0.80, 0.10, 0], [2, 0.915, 0.13, 0], [3, 0.94, 0.55, 1]], // A1-2：横梁、B端基础、木柱BC
+    'A1-3:1': A13_CURVES,  // A1-3 第2个分镜：点右下角的圆才出现（见 PINS）
+    'A2-0:0': A13_CURVES   // A2-0：和 A1-3 第2个分镜同一组箭头，一直显示
   };
   const curvesHtml = (key = subKey()) => {
     const list = CURVES[key];
-    return !list ? '' : `<svg class="disp-curves" aria-hidden="true"><g class="disp-curve-gaps"></g>${list.map(([n, ex, ey, dir]) => `<g data-disp-element="curve-${n}" data-beam="${n}" data-ex="${ex}" data-ey="${ey}" data-bw="3" data-bcolor="${0xd86323}" data-cdir="${dir}"><path class="disp-curve-line"/><path class="disp-curve-head"/></g>`).join('')}</svg>`;
+    const pinned = PINS[key]?.show === 'curves' ? ` disp-pinned${pinHides('curves') ? ' disp-pin-off' : ''}` : '';
+    const opt = (name, v) => v == null ? '' : ` data-${name}="${v}"`;
+    return !list ? '' : `<svg class="disp-curves${pinned}" aria-hidden="true"><g class="disp-curve-gaps"></g>${list.map(([n, ex, ey, dir, mx, my]) => `<g data-disp-element="curve-${n}" data-beam="${n}" data-ex="${ex}" data-ey="${ey}"${opt('mx', mx)}${opt('my', my)} data-bw="3" data-bcolor="${0xd86323}" data-cdir="${dir}"><path class="disp-curve-line"/><path class="disp-curve-head"/></g>`).join('')}</svg>`;
   };
+  // 页内的圆（2026-10-25）：点一下才显示本分镜的一部分内容，再点一下收起；换分镜后复原。翻页笔：先按一下点开，再按才进下一步。
+  //   A1-3 第2个分镜：画布右下角一个圆（和右上角最后一个分镜圆球竖着对齐），点开后出现顶部三根梁指过来的箭头（A2-0 一直显示这几条）。
+  //   A2-1 第1个分镜：同样在画布右下角一个圆，点开后出现右边模型的弯矩图和红、蓝虚线箭头。
+  // where：圆放在哪里（canvas 画布右下角）；位置在版面调试里可调。
+  const PINS = {
+    'A1-3:1': { show: 'curves', where: 'canvas', el: 'pinCurves', label: '显示顶部三根梁指过来的箭头' },
+    'A2-1:0': { show: 'moments', where: 'canvas', el: 'pinMoments', label: '显示右边模型的弯矩图和红、蓝虚线' }
+  };
+  const pin = { key: '', on: false };
+  const pinOn = () => pin.key === subKey() && pin.on;
+  const pinHides = what => PINS[subKey()]?.show === what && !pinOn();
+  function pinHtml(where) {
+    const p = PINS[subKey()];
+    if (!p || p.where !== where) return '';
+    return `<button type="button" class="disp-pin disp-pin-${where}${pinOn() ? ' active' : ''}" data-disp-element="${p.el}" data-disp-pin aria-pressed="${pinOn()}" aria-label="${p.label}"></button>`;
+  }
+  function setPin(on) {
+    const p = PINS[subKey()];
+    if (!p) return;
+    Object.assign(pin, { key: subKey(), on });
+    document.querySelectorAll('[data-disp-pin]').forEach(el => { el.classList.toggle('active', on); el.setAttribute('aria-pressed', String(on)); });
+    if (p.show === 'curves') document.querySelectorAll('.disp-curves.disp-pinned').forEach(svg => svg.classList.toggle('disp-pin-off', !on));
+    if (p.show === 'moments') document.querySelectorAll('.disp-pair:not(.disp-mini) [data-moments]').forEach(svg => svg.toggleAttribute('data-pin-off', !on));
+    scheduleCurves();
+  }
   function drawCurves() {
     const svg = document.querySelector('.disp-curves'), story = svg?.closest('.force-story');
     if (!svg || !story) return;
@@ -114,7 +151,7 @@
     if (!box.width || !box.height) return;
     svg.setAttribute('viewBox', `0 0 ${box.width.toFixed(1)} ${box.height.toFixed(1)}`);
     const fig = story.querySelector('.disp-head-image')?.getBoundingClientRect();
-    const pic = story.querySelector('.disp-scene [data-disp-element="image"]')?.getBoundingClientRect();
+    const pic = story.querySelector('.disp-scene [data-disp-element="image"], .disp-scene [data-disp-element="compare"]')?.getBoundingClientRect();
     const f = n => n.toFixed(1);
     svg.querySelectorAll('g[data-disp-element^="curve-"]').forEach((g, i) => {
       // 默认位置（按当前版面量出来），写回 data- 属性，版面调试里显示的就是这些数。
@@ -130,8 +167,17 @@
       const head = Math.max(10, w * 3.4), r = box.width * .06;
       // 先竖直离开配图，在顶部和画布之间的空白处横过去，再圆滑地拐弯落到终点（全程光滑）。
       // 三条线横走的高度错开（第1根最低、第3根最高），互相不交叉。
+      // 从右（左）指过去时，竖着下来的那段默认在终点外侧页面宽 5% 处。
+      // CURVES 里写了 mx、my 的，按图定横走的高度、竖走的位置；版面调试改过的（--disp-cmy、--disp-cmx）优先。
       const dir = by >= ay ? 1 : -1;
-      const cy = ay + dir * Math.min(Math.abs(by - ay) * .5, box.height * (.07 - .025 * i));
+      let cy = ay + dir * Math.min(Math.abs(by - ay) * .5, box.height * (.07 - .025 * i));
+      let xr = bx + (mode === 2 ? -1 : 1) * box.width * .05;
+      if (pic && pic.width && g.dataset.my != null) cy = pic.top + g.dataset.my * pic.height - box.top;
+      if (pic && pic.width && g.dataset.mx != null) xr = pic.left + g.dataset.mx * pic.width - box.left;
+      g.dataset.cmy = pct(cy, box.height); g.dataset.cmx = pct(xr, box.width);
+      const tuned = key => Number.isFinite(parseFloat(cs.getPropertyValue(`--disp-${key}`)));
+      if (tuned('cmy')) cy = val('cmy') / 100 * box.height;
+      if (tuned('cmx')) xr = val('cmx') / 100 * box.width;
       // 一段「先横后竖」的圆角：从 (x0,y0) 横走到 x1，再竖着到 y1；圆角半径不超过两段长度的一半。
       const corner = (x0, y0, x1, y1, rad) => {
         const sx = x1 >= x0 ? 1 : -1, sy = y1 >= y0 ? 1 : -1, k = Math.max(.5, Math.min(rad, Math.abs(x1 - x0) / 2, Math.abs(y1 - y0) / 2));
@@ -141,7 +187,7 @@
       let d = `M${f(ax)},${f(ay)}`, tipD;
       if (mode === 1 || mode === 2) {
         // 从右（或左）横着指向终点：横走到终点外侧，竖着落到终点高度，再横着拐进去。
-        const side = mode === 1 ? 1 : -1, xr = bx + side * box.width * .05, ex = bx + side * head * .85;
+        const side = mode === 1 ? 1 : -1, ex = bx + side * head * .85;
         const k0 = Math.max(.5, Math.min(r, Math.abs(xr - ax) / 2, Math.abs(cy - ay))), sx0 = xr >= ax ? 1 : -1;
         d += ` C${f(ax)},${f(cy)} ${f(ax)},${f(cy)} ${f(ax + sx0 * k0)},${f(cy)}` + corner(ax + sx0 * k0, cy, xr, by, r);
         const k2 = Math.max(.5, Math.min(r, Math.abs(by - cy) / 2, Math.abs(xr - ex)));
@@ -174,6 +220,24 @@
       const r = canvas.getBoundingClientRect(), bw = parseFloat(getComputedStyle(canvas).borderTopWidth) || 0;
       if (bw && r.width) lines.push({ y: r.top + bw / 2 - box.top, h: bw, x0: r.left - box.left, x1: r.right - box.left });
     }
+    // 分镜圆球之间的横线（A1-3 第2个分镜，第3根梁的箭头从这里穿过）：横线在圆球中心的高度，两端到第一个、最后一个圆球的中心。
+    const track = story.querySelector('.disp-dot-track'), dot = track?.querySelector('.disp-dot');
+    if (track && dot) {
+      const r = track.getBoundingClientRect(), d = dot.getBoundingClientRect().width;
+      if (r.width) lines.push({ y: r.top + r.height / 2 - box.top, h: 3, x0: r.left + d / 2 + 3 - box.left, x1: r.right - d / 2 - 3 - box.left });
+    }
+    // 双图里B点的转角标记：灰虚线（原位置，水平）和彩色线（随 Z₁ 转动，斜的）。都只取前 78 个图内单位那一段。
+    const slants = [];
+    story.querySelectorAll('svg[data-disp-marks] path[stroke="#999"], svg[data-disp-marks] g[transform] > path').forEach(path => {
+      const m = path.getScreenCTM();
+      if (!m) return;
+      let p0, p1;
+      try { p0 = path.getPointAtLength(0); p1 = path.getPointAtLength(78); } catch (_) { return; }
+      const a = new DOMPoint(p0.x, p0.y).matrixTransform(m), b = new DOMPoint(p1.x, p1.y).matrixTransform(m);
+      const h = (parseFloat(getComputedStyle(path).strokeWidth) || 4) * Math.hypot(m.a, m.b);
+      if (Math.abs(a.y - b.y) < .01) lines.push({ y: a.y - box.top, h, x0: Math.min(a.x, b.x) - box.left, x1: Math.max(a.x, b.x) - box.left });
+      else slants.push({ x0: a.x - box.left, y0: a.y - box.top, x1: b.x - box.left, y1: b.y - box.top, h });
+    });
     let html = '';
     svg.querySelectorAll('.disp-curve-line').forEach(line => {
       let len = 0;
@@ -187,7 +251,23 @@
           const x = a.x + (b.x - a.x) * (L.y - a.y) / (b.y - a.y);
           if (x < L.x0 || x > L.x1) continue;
           const gw = w + 14, gh = L.h + 6;
-          html += `<rect x="${(x - gw / 2).toFixed(1)}" y="${(L.y - gh / 2).toFixed(1)}" width="${gw}" height="${gh.toFixed(1)}" fill="#fff"/>`;
+          // 断口离线头不到 8px 时，干脆断到线头，不留一小截。
+          let x0 = x - gw / 2, x1 = x + gw / 2;
+          if (x0 - L.x0 < 8) x0 = L.x0 - 1;
+          if (L.x1 - x1 < 8) x1 = L.x1 + 1;
+          html += `<rect x="${x0.toFixed(1)}" y="${(L.y - gh / 2).toFixed(1)}" width="${+(x1 - x0).toFixed(1)}" height="${gh.toFixed(1)}" fill="#fff"/>`;
+        }
+        // 斜线：求两段的交点，白块顺着斜线的方向摆。
+        for (const L of slants) {
+          const dx = b.x - a.x, dy = b.y - a.y, ex = L.x1 - L.x0, ey = L.y1 - L.y0, den = dx * ey - dy * ex;
+          if (!den) continue;
+          const t = ((L.x0 - a.x) * ey - (L.y0 - a.y) * ex) / den, u = ((L.x0 - a.x) * dy - (L.y0 - a.y) * dx) / den;
+          if (t < 0 || t >= 1 || u < 0 || u > 1) continue;
+          const len = Math.hypot(ex, ey), x = a.x + t * dx, y = a.y + t * dy, sin = Math.abs(den) / Math.hypot(dx, dy) / len;
+          const gw = (w + 14) / Math.max(.3, sin), gh = L.h + 6, deg = Math.atan2(ey, ex) * 180 / Math.PI;
+          // 顺着斜线量：断口离线头不到 8px 时，断到线头。
+          const back = u * len - gw / 2 < 8 ? u * len + 1 : gw / 2, ahead = (1 - u) * len - gw / 2 < 8 ? (1 - u) * len + 1 : gw / 2;
+          html += `<rect x="${(x - back).toFixed(1)}" y="${(y - gh / 2).toFixed(1)}" width="${(back + ahead).toFixed(1)}" height="${gh.toFixed(1)}" fill="#fff" transform="rotate(${deg.toFixed(2)} ${x.toFixed(1)} ${y.toFixed(1)})"/>`;
         }
         a = b;
       }
@@ -293,7 +373,7 @@
     const blueX = 3 * theta() * 460 * (1 - 28 / 153);
     svg.innerHTML = `<defs><marker id="red-tip" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto-start-reverse"><path d="M0,0 L7,3.5 L0,7" fill="#ff2934"/></marker><marker id="blue-tip" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto-start-reverse"><path d="M0,0 L7,3.5 L0,7" fill="#2543fa"/></marker></defs>
       ${two ? diagram(23, '#e97933') : ''}${diagram(515, '#3b69ac')}
-      <g fill="none" stroke-width="2.5" stroke-dasharray="6 3">
+      <g class="disp-mlines" fill="none" stroke-width="2.5" stroke-dasharray="6 3">
         ${line('right-red', 785, 120, 639, redY)}${line('right-blue', 834, 146, 670 + blueX, 260)}
         ${two ? line('cross-red', 639, redY, 147, redY) + line('cross-blue', 670 + blueX, 260, 178 + blueX, 260) : ''}
         ${connect ? line('left-red', 147, redY - 5, 234, 115) + line('left-blue', 178 + blueX, 255, 273, 141) + line('cut-red', 226, 72, 242, 148, 0) + line('cut-blue', 242, 148, 315, 133, 0) : ''}
@@ -316,7 +396,7 @@
     return `<div class="disp-pair ${mini ? 'disp-mini' : ''}" data-disp-element="${mini ? 'compactCompare' : 'compare'}">
       ${img(frameName('L'), 'disp-layer disp-frame-left', '待求解的对象', 'left')}
       ${img(frameName(split ? 'D-R' : 'R'), 'disp-layer disp-frame-right', '转动B点嵌固的基础', 'right')}
-      ${moments ? `<svg class="disp-layer disp-moments" viewBox="0 0 945 480" style="overflow:visible" data-moments="${moments}" data-connect="${connect}" data-disp-element="moments" role="img" aria-label="随转角变化的弯矩图"></svg>` : ''}
+      ${moments ? `<svg class="disp-layer disp-moments" viewBox="0 0 945 480" style="overflow:visible" data-moments="${moments}" data-connect="${connect}" data-disp-element="moments"${!mini && pinHides('moments') ? ' data-pin-off' : ''} role="img" aria-label="随转角变化的弯矩图"></svg>` : ''}
       ${overlay ? img('BEAM-02-A2-0.png', 'disp-layer', '单跨梁的载常数与形常数', 'overlay') : ''}
       ${marks ? `<svg class="disp-layer" viewBox="0 0 945 480" style="overflow:visible" data-disp-marks aria-hidden="true">${marksLayer(split)}</svg>` : ''}
     </div>`;
@@ -448,8 +528,9 @@
     if(cycle.key!==subKey())Object.assign(cycle,{key:subKey(),use:null}); // 换了页或分镜：顶部矩形恢复默认
     if(hl.page!==activeId)Object.assign(hl,{page:activeId,on:[false,false]}); // 换了页：A2-5 的红、蓝框收起
     if(reveal.key!==subKey())Object.assign(reveal,{key:subKey(),open:false}); // 换了分镜：「第n根梁」卡片重新盖上
+    if(pin.key!==subKey())Object.assign(pin,{key:subKey(),on:false}); // 换了分镜：页内的圆复位，它管的内容重新藏起来
     const head=headHtml(), refocus=document.activeElement?.classList?.contains('disp-dot-track');
-    document.getElementById('app').innerHTML=`<section class="panel force-story displacement-story ${value.stage===3?'deformation-story':''} ${head?'disp-has-head':''}" data-reveal-step="${value.stage===2?value.force_reveal_step:value.deformation_reveal_step}" data-disp-controlled="${Boolean(dynamic)}"><h1${g.count>1?` data-disp-title="${state.sub+1}"`:''}>${g.titles?.[state.sub]||g.title}</h1>${head}${curvesHtml()}<div class="force-composition"><div class="force-free-canvas" data-disp-substep="${state.sub}" aria-label="位移法图片与交互画布"><div class="disp-scene" data-disp-element="scene"><div class="disp-aspect ${g.id.startsWith('A1')&&!g.dynamic?'disp-wide':''}">${scene()}</div></div>${dots()}</div>${dynamic?controls():''}</div></section>`;
+    document.getElementById('app').innerHTML=`<section class="panel force-story displacement-story ${value.stage===3?'deformation-story':''} ${head?'disp-has-head':''}" data-reveal-step="${value.stage===2?value.force_reveal_step:value.deformation_reveal_step}" data-disp-controlled="${Boolean(dynamic)}"><h1${g.count>1?` data-disp-title="${state.sub+1}"`:''}>${g.titles?.[state.sub]||g.title}</h1>${head}${curvesHtml()}<div class="force-composition"><div class="force-free-canvas" data-disp-substep="${state.sub}" aria-label="位移法图片与交互画布"><div class="disp-scene" data-disp-element="scene"><div class="disp-aspect ${g.id.startsWith('A1')&&!g.dynamic?'disp-wide':''}">${scene()}</div></div>${dots()}${pinHtml('canvas')}</div>${dynamic?controls():''}</div></section>`;
     rendered=`${activeId}:${state.sub}`;
     if(before!==rendered)Object.assign(extra,{key:subKey(),done:0,undo:[]}); // 换了分镜：翻页笔的页内动作重新开始
     stopMorph(); morph.t=MORPHS[activeId]&&state.sub>MORPHS[activeId].at?1:0;
@@ -484,6 +565,7 @@
     document.querySelectorAll('.disp-frame-right').forEach(el=>{el.src=asset(frameName(split?'D-R':'R'));});
     document.querySelectorAll('[data-moments]').forEach(svg=>{moments(svg);fitTags(svg);});
     document.querySelectorAll('[data-disp-marks]').forEach(svg=>{svg.innerHTML=marksLayer(split);fitTags(svg);});
+    if(document.querySelector('.disp-curves'))scheduleCurves(); // 箭头穿过转角标记处的白色断口跟着 Z₁ 走
     prefetchNeighbours();
     const slider=document.querySelector('[data-disp-slider]');if(!slider)return;
     slider.value=state.frame;slider.setAttribute('aria-valuetext',`${theta().toFixed(5)} ql³/EI`);
@@ -510,6 +592,7 @@
     document.querySelector('[data-disp-ai-button]')?.addEventListener('click',startAi);
     document.querySelector('[data-disp-equilibrium]')?.addEventListener('click',()=>setFrame(10));
     document.querySelectorAll('.disp-beam[data-cycle]').forEach(cell=>cell.addEventListener('click',cycleBeams));
+    document.querySelectorAll('[data-disp-pin]').forEach(button=>button.addEventListener('click',()=>setPin(!pinOn())));
     document.querySelectorAll('.disp-reveal-card').forEach(card=>{
       card.addEventListener('click',openReveal);
       card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();openReveal();}});
@@ -787,9 +870,10 @@
     cancelAnimationFrame(morph.raf);
     Object.assign(morph, { active: false, dragging: false, raf: 0, pending: '' });
   }
-  // 翻页笔（2026-10-23，见 app.js「翻页笔」）：本页里能往前走的先走——A2-5 先红框、再蓝框；「第n根梁」卡片先揭开；再换分镜。
+  // 翻页笔（2026-10-23，见 app.js「翻页笔」）：本页里能往前走的先走——「第n根梁」卡片先揭开、页内的圆（PINS）先点开；再换分镜。
+  // （A2-5 先红框、再蓝框那两下，2026-10-25 起随 CLICK_FRAMES 一起去掉了。）
   // 走到本页头尾时返回 false，由 app.js 换页、换阶段。转场、A1-3 的 AI 动画播放时，按键不起作用（返回 true 吞掉）。
-  // 往回翻时停在上一个分镜（或上一页）的最后状态：卡片揭开、两个框都亮。
+  // 往回翻时停在上一个分镜（或上一页）的最后状态：卡片揭开、页内的圆点开。
   // 2026-10-24 起，分镜里还有几步也交给翻页笔（EXTRAS）：A1-0 第7个分镜点一下顶部的梁（并在那里出一个点击波纹）；
   // A1-3 第1个分镜先点 AI、再滑一遍 Z₁；A2-1 第3个分镜滑一遍 Z₁；A2-4 点「定位平衡转角」。前进依次做，后退依次撤销。
   const EXTRAS = { 'A1-0:6': ['cycle'], 'A1-3:0': ['ai', 'sweep'], 'A2-1:2': ['sweep'], 'A2-4:0': ['locate'] };
@@ -900,17 +984,24 @@
       if (dir > 0 && !opened) { openReveal(); return true; }
       if (dir < 0 && opened) { closeReveal(); return true; }
     }
+    if (PINS[subKey()]) {
+      const on = pinOn();
+      if (dir > 0 && !on) { setPin(true); return true; }
+      if (dir < 0 && on) { setPin(false); return true; }
+    }
     if (dir > 0 && await extraStep(dir)) return true;
     const sub = state.sub + dir;
     if (sub < 0 || sub >= g.count) return false;
     await change({ type: 'set_displacement_substep', value: sub });
     if (dir < 0 && !morph.pending && REVEALS[subKey()]) openReveal();
+    if (dir < 0 && !morph.pending && PINS[subKey()]) setPin(true);
     if (dir < 0 && !morph.pending) landExtras();
     return true;
   }
   function clickerEnd() {
     if (!document.querySelector('.displacement-story')) return;
     if (REVEALS[subKey()]) openReveal();
+    if (PINS[subKey()]) setPin(true);
     setHlAll(true);
     landExtras();
   }

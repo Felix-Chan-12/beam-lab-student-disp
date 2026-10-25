@@ -137,3 +137,17 @@ body .displacement-story .disp-reveal-card > span b { font-size:inherit !importa
 .disp-click-ripple > i { position: absolute; left: -10px; top: -10px; width: 20px; height: 20px; border-radius: 50%; background: #E8590C; box-shadow: 0 0 0 3px #fff; animation: disp-click-dot 1.2s ease-out forwards; }
 @keyframes disp-click-ring { 0% { transform: scale(.25); opacity: .95; } 100% { transform: scale(1.7); opacity: 0; } }
 @keyframes disp-click-dot { 0% { transform: scale(.4); opacity: 0; } 15% { transform: scale(1.15); opacity: 1; } 55% { transform: scale(1); opacity: 1; } 100% { transform: scale(.8); opacity: 0; } }
+/* 页内的圆（2026-10-25，见 displacement.js 的 PINS）：样子和分镜圆球一样，点开后变橙色，再点一下收起。 */
+.disp-pin { position:absolute;z-index:12;display:block;width:var(--disp-dot-size,25px);height:auto;aspect-ratio:1;min-width:0;min-height:0;margin:0;padding:0;border:2px solid #fff;border-radius:50%;background:#dce3ed;box-sizing:border-box;box-shadow:none;cursor:pointer;transition:background .2s,box-shadow .2s; }
+.disp-pin:hover { background:#cdd6e2; }
+.disp-pin.active { background:var(--orange);box-shadow:0 0 0 3px #fbe7d9; }
+.disp-pin:focus-visible { outline:2px solid var(--orange);outline-offset:3px; }
+/* A1-3 第2个分镜、A2-1 第1个分镜：画布右下角，和右上角最后一个分镜圆球竖着对齐，离下边和圆球离上边一样远。 */
+.disp-pin-canvas { right:calc(2% + 3px);bottom:calc(1.5% + 18px - var(--disp-dot-size,25px) / 2); }
+@media(max-width:699px) { .disp-pin { width:20px; } }
+/* 圆管的内容：点开时淡入；版面调试里没点开时淡淡显示，方便选中。 */
+.disp-curves.disp-pinned { transition:opacity .45s; }
+.disp-curves.disp-pin-off { opacity:0; }
+.displacement-story .disp-moments .moment-diagram, .displacement-story .disp-moments .disp-mlines { transition:opacity .45s; }
+.displacement-story .disp-moments[data-pin-off] .moment-diagram, .displacement-story .disp-moments[data-pin-off] .disp-mlines { opacity:0; }
+.disp-tune .disp-curves.disp-pin-off, .disp-tune .disp-moments[data-pin-off] .moment-diagram, .disp-tune .disp-moments[data-pin-off] .disp-mlines { opacity:.35; }
