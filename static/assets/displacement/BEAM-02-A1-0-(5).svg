@@ -50,7 +50,7 @@
        inkscape:collect="always"
        preserveAspectRatio="none"><path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307" /></marker><linearGradient
        id="gr1"
@@ -218,7 +218,7 @@
        inkscape:collect="always"
        preserveAspectRatio="none"><path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3" /></marker><marker
        style="overflow:visible"
@@ -234,7 +234,7 @@
        inkscape:collect="always"
        preserveAspectRatio="none"><path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-9" /></marker><marker
        style="overflow:visible"
@@ -250,7 +250,7 @@
        inkscape:collect="always"
        preserveAspectRatio="none"><path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-9-8" /></marker><linearGradient
        id="gr1-2"
@@ -353,7 +353,7 @@
        inkscape:collect="always"
        preserveAspectRatio="none"><path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-7" /></marker><marker
        style="overflow:visible"
@@ -369,7 +369,7 @@
        inkscape:collect="always"
        preserveAspectRatio="none"><path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-9-9" /></marker><marker
        style="overflow:visible"
@@ -385,7 +385,7 @@
        inkscape:collect="always"
        preserveAspectRatio="none"><path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-9-8-3" /></marker><marker
        style="overflow:visible"
@@ -400,7 +400,7 @@
        inkscape:isstock="true"
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid"><path
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         style="fill:#cccccc;fill-rule:evenodd;stroke:none"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          transform="scale(-0.5)"
          id="path303" /></marker><marker
@@ -416,7 +416,7 @@
        inkscape:isstock="true"
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid"><path
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         style="fill:#cccccc;fill-rule:evenodd;stroke:none"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          transform="scale(-0.5)"
          id="path303-0" /></marker><clipPath
@@ -805,7 +805,7 @@
        inkscape:collect="always"
        preserveAspectRatio="none"><path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-5-4-9" /></marker></defs><g
      inkscape:groupmode="layer"

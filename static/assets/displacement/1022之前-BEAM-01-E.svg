@@ -54,7 +54,7 @@
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
       <path
-         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt"
          d="M 3,-3 0,0 3,3"
          transform="rotate(180,0.125,0)"
          sodipodi:nodetypes="ccc"
@@ -75,7 +75,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307" />
     </marker>
@@ -230,7 +230,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-6" />
     </marker>
@@ -249,7 +249,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#2f5597;fill-rule:evenodd;stroke:#2f5597;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-6-1" />
     </marker>
@@ -268,7 +268,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#2f5597;fill-rule:evenodd;stroke:#2f5597;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-6-1-9" />
     </marker>
@@ -286,7 +286,7 @@
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
       <path
-         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt"
          d="M 3,-3 0,0 3,3"
          transform="rotate(180,0.125,0)"
          sodipodi:nodetypes="ccc"
@@ -307,7 +307,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#2f5597;fill-rule:evenodd;stroke:#2f5597;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-6-1-8" />
     </marker>
@@ -326,7 +326,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#2f5597;fill-rule:evenodd;stroke:#2f5597;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-6-1-9-1" />
     </marker>

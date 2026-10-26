@@ -56,7 +56,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307" />
     </marker>
@@ -291,7 +291,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3" />
     </marker>
@@ -310,7 +310,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-9" />
     </marker>
@@ -329,7 +329,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-9-8" />
     </marker>
@@ -397,7 +397,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-5" />
     </marker>
@@ -416,7 +416,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-9-2" />
     </marker>
@@ -435,7 +435,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-9-8-8" />
     </marker>
@@ -529,7 +529,7 @@
        preserveAspectRatio="none">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#ff3300;fill-rule:evenodd;stroke:#ff3300;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path307-3-5-4" />
     </marker>
@@ -1824,7 +1824,7 @@
        preserveAspectRatio="xMidYMid">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:none"
          d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
          sodipodi:nodetypes="sssss"
          id="path318" />
@@ -1843,7 +1843,7 @@
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
       <path
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:none"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          transform="scale(-0.5)"
          id="path303-0-0" />
@@ -2538,7 +2538,7 @@
        preserveAspectRatio="xMidYMid">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         style="fill:#0000ff;fill-rule:evenodd;stroke:none"
          d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
          sodipodi:nodetypes="sssss"
          id="path318-6" />
@@ -2557,7 +2557,7 @@
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
       <path
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         style="fill:#0000ff;fill-rule:evenodd;stroke:none"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          transform="scale(-0.5)"
          id="path303-0-0-6" />
@@ -2850,7 +2850,7 @@
        preserveAspectRatio="xMidYMid">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:none"
          d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
          sodipodi:nodetypes="sssss"
          id="path318-2" />
@@ -2869,7 +2869,7 @@
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
       <path
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:none"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          transform="scale(-0.5)"
          id="path303-0-0-1" />
@@ -2889,7 +2889,7 @@
        preserveAspectRatio="xMidYMid">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         style="fill:#0000ff;fill-rule:evenodd;stroke:none"
          d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
          sodipodi:nodetypes="sssss"
          id="path318-2-9" />
@@ -2908,7 +2908,7 @@
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
       <path
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         style="fill:#0000ff;fill-rule:evenodd;stroke:none"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          transform="scale(-0.5)"
          id="path303-0-0-1-1" />
