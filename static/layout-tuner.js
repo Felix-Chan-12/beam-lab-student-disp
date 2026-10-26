@@ -379,7 +379,7 @@
       { key: `disp:beamFrame${n}`, label: `位移法：第${n}根梁的描边框`, sel: `#app [data-disp-element="beamFrame${n}"]`, kind: "dispFrame", scope: "all" },
     ]),
     ...[1, 2, 3, 4, 5, 6, 7, 8].flatMap((sub) => [1, 2, 3].map((n) => ({ key: `disp:beamUse-${n}-${sub}`, label: `第${n}根梁用哪个矩形（第 ${sub} 个分镜）`, sel: `#app .disp-beam[data-beam="${n}"][data-sub="${sub}"]`, kind: "dispUse" }))),
-    ...[[1, "A2-2 第5个分镜", "−1/12ql²"], [2, "A2-2 第6个分镜", "+4i·Z₁"], [3, "A2-3 第5个分镜", "3i·Z₁"]].flatMap(([n, where, term]) => [
+    ...[[1, "A2-2 第5个分镜", "−1/12ql²"], [2, "A2-2 第6个分镜", "+4i·Z₁"], [3, "A2-3 点圆以后", "3i·Z₁"]].flatMap(([n, where, term]) => [
       { key: `disp:revealCard${n}`, label: `位移法：${where}「第${n}根梁」卡片`, sel: `#app [data-disp-element="revealCard${n}"]`, kind: "dispCard" },
       { key: `disp:revealMask${n}`, label: `位移法：${where} 公式「${term}」的遮挡`, sel: `#app [data-disp-element="revealMask${n}"]`, kind: "dispRule",
         tip: `白色遮挡，盖住公式里的「${term}」，点「第${n}根梁」卡片后和卡片一起淡出。位置、大小按画面的比例保存；颜色要和底色一样（默认白色）。` },

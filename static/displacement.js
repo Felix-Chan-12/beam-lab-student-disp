@@ -34,7 +34,9 @@
       titles: ['假设某一个Z₁就是真实值，先看两个截面的弯矩', '相应截面的弯矩，应当一致', '把单跨梁的杆端弯矩，对应到原结构', '截开取出小方块：两个截面弯矩必须平衡'] },
     // seq：分镜图名是 BEAM-02-A2-2-1、-2…（不带括号）。
     { id: 'A2-2', stage: 'A2', title: 'AB杆的弯矩：荷载一份，转角一份', count: 6, control: true, seq: true },
-    { id: 'A2-3', stage: 'A2', title: 'BC杆的弯矩：只有转角这一份', count: 5, control: true, seq: true },
+    // A2-3（2026-10-26 起）：只留一个圆。进页是第1张图（BEAM-02-A2-3-1），点圆直接到第5张（带「第3根梁」卡片），
+    //   再点卡片（或翻页笔再按一下）露出 3i·Z₁。frames 是每个分镜用第几张图；single 表示只画一个圆，点它在两个分镜之间切换。
+    { id: 'A2-3', stage: 'A2', title: 'BC杆的弯矩：只有转角这一份', count: 2, control: true, seq: true, frames: [1, 5], single: true },
     { id: 'A2-4', stage: 'A2', title: '补上结点平衡，这次能算了吗？', count: 1, dynamic: true, solution: true },
     { id: 'A2-5', stage: 'A2', title: '变形等效，再补内力平衡', count: 1, dynamic: true, solution: true },
     { id: 'A2-6', stage: 'A2', title: '再次判断：把B点当固定端得到的0.5ql，能信吗？', count: 1 },
@@ -414,13 +416,13 @@
     const spot = CONDS_SHOW[g.id]?.[state.sub] === 'big' ? condsSpot() : '';
     return img(picFile(g, state.sub), 'disp-layer', g.titles?.[state.sub] || g.title, 'image') + spot + revealHtml();
   }
-  // A2-2 第5、6个分镜，A2-3 第5个分镜：弯矩图先用「第n根梁」卡片盖住，公式里对应的那一项也先遮住；
+  // A2-2 第5、6个分镜，A2-3 点圆以后：弯矩图先用「第n根梁」卡片盖住，公式里对应的那一项也先遮住；
   // 点卡片，卡片和遮挡一起淡出，露出弯矩图和那一项。只在本机画面上，换分镜后复原。
   // 位置按图宽、图高的 %：[左, 上, 宽, 高]；card 盖弯矩图，mask 盖公式里的那一项。版面调试里可调。
   const REVEALS = {
     'A2-2:4': { n: 1, card: [52.8, 47, 16.2, 18.8], mask: [66, 82.8, 10.6, 13.9] },   // 盖住 1/12ql² 的弯矩图和「−1/12ql²」
     'A2-2:5': { n: 2, card: [52.8, 65.4, 16.2, 16.7], mask: [77.3, 83, 10.4, 13.7] }, // 盖住 4i·Z₁ 的弯矩图和「+4i·Z₁」
-    'A2-3:4': { n: 3, card: [52.8, 54.2, 16.2, 18.8], mask: [72.3, 83, 16.4, 13.7] }      // 盖住 3i·Z₁ 的弯矩图和「3i·Z₁」
+    'A2-3:1': { n: 3, card: [52.8, 54.2, 16.2, 18.8], mask: [72.3, 83, 16.4, 13.7] }      // A2-3 点圆以后（第5张图）：盖住 3i·Z₁ 的弯矩图和「3i·Z₁」
   };
   const reveal = { key: '', open: false };
   const boxStyle = ([l, t, w, h]) => `left:${l}%;top:${t}%;width:${w}%;height:${h}%`;
@@ -437,7 +439,7 @@
   }
   // 第 sub 个分镜的主图：A2-2、A2-3 是 BEAM-02-A2-2-1…；其余是 BEAM-02-A1-0-(1)…（按分镜编号）。
   function picFile(g, sub) {
-    if (g.seq) return `BEAM-02-${g.id}-${sub + 1}.png`;
+    if (g.seq) return `BEAM-02-${g.id}-${g.frames ? g.frames[sub] : sub + 1}.png`;
     return `BEAM-02-${g.id}${g.count > 1 ? `-(${sub + 1})` : ''}.png`;
   }
   // 「2个条件」框放大摆在画面中间时的位置（看不见的占位框；版面调试里调它的位置、宽度，高度按框的比例自动定）。
@@ -448,6 +450,8 @@
   // 圆球都不写编号；大小各页统一（displacement.css 里的 --disp-dot-size，版面调试的「分镜圆球大小」可改）。
   function dots() {
     const g=current(); if(g.count<2)return '';
+    // 只有一个圆的页（A2-3）：圆画在原来最后一个圆的位置，点一下在两个分镜之间切换。
+    if(g.single)return `<div class="disp-substeps disp-substeps-single" data-disp-element="substeps"><div class="disp-dot-track disp-dot-single" role="button" tabindex="0" aria-pressed="${state.sub>0}" aria-label="${g.id}：点一下显示下一个画面，再点一下回来"><span class="disp-dot ${state.sub>0?'active':''}"></span></div></div>`;
     const parts=[], at=MORPHS[g.id]?.at;
     for(let i=0;i<g.count;i++){
       parts.push(`<span class="disp-dot ${i===state.sub?'active':''}"></span>`);
@@ -602,6 +606,12 @@
       item.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleHl(Number(item.dataset.dispCond));}});
     });
     const track=document.querySelector('.disp-dot-track');if(!track)return;
+    if(track.classList.contains('disp-dot-single')){
+      const toggle=async()=>{await change({type:'set_displacement_substep',value:state.sub>0?0:1});document.querySelector('.disp-dot-single')?.focus({preventScroll:true});};
+      track.addEventListener('click',toggle);
+      track.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();toggle();}});
+      return;
+    }
     track.addEventListener('pointerdown',event=>{
       if(event.button!==0)return;event.preventDefault();
       // 按各圆球的实际圆心换算位置（A2-1 第3、4个圆球之间更宽）。
@@ -728,8 +738,8 @@
   // A2-2、A2-3：进页就把各分镜的图读进来，记下宽高；切分镜时画面框直接按这个宽高排，不闪、不跳。
   const naturalSize = new Map();
   function preloadSeq(g) {
-    for (let n = 1; n <= g.count; n++) {
-      const url = asset(`BEAM-02-${g.id}-${n}.png`);
+    for (let i = 0; i < g.count; i++) {
+      const url = asset(picFile(g, i));
       if (naturalSize.has(url)) continue;
       const image = new Image();
       image.onload = () => naturalSize.set(url, { w: image.naturalWidth, h: image.naturalHeight });

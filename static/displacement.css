@@ -151,3 +151,7 @@ body .displacement-story .disp-reveal-card > span b { font-size:inherit !importa
 .displacement-story .disp-moments .moment-diagram, .displacement-story .disp-moments .disp-mlines { transition:opacity .45s; }
 .displacement-story .disp-moments[data-pin-off] .moment-diagram, .displacement-story .disp-moments[data-pin-off] .disp-mlines { opacity:0; }
 .disp-tune .disp-curves.disp-pin-off, .disp-tune .disp-moments[data-pin-off] .moment-diagram, .disp-tune .disp-moments[data-pin-off] .disp-mlines { opacity:.35; }
+/* 只有一个圆的页（A2-3，2026-10-26）：圆放在原来最后一个圆的位置（右端），没有连线，点一下切换。 */
+.displacement-story .disp-substeps-single { align-items:flex-end; }
+.disp-dot-track.disp-dot-single { width:auto;cursor:pointer; }
+.disp-dot-track.disp-dot-single::before { display:none; }
